@@ -54,6 +54,8 @@ class Municipio (models.Model):
 
     microregiao = models.ForeignKey(MicroRegiao,on_delete=models.CASCADE)
 
+    estado = models.ForeignKey(Estado,on_delete=models.CASCADE)
+
     def __str__(self):
         return self.nome
 
