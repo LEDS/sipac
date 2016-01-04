@@ -28,7 +28,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0502284" vertical-offset="210" max-vertical-offset="990">
+            <state vertical-scroll-proportion="1.369863" vertical-offset="0" max-vertical-offset="990">
               <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
               <folding />
             </state>
@@ -557,7 +557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0502284" vertical-offset="210" max-vertical-offset="990">
+        <state vertical-scroll-proportion="1.369863" vertical-offset="0" max-vertical-offset="990">
           <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
           <folding />
         </state>
