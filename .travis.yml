@@ -11,7 +11,7 @@ branches:
 install:
   - pip install -r requirements.txt
 script: 
-  - python jediteca/manage.py test
+  - python sipac/manage.py test
   - nosetests
 
 after_script:
