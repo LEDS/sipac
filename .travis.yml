@@ -1,9 +1,17 @@
 language: python
 python:
   - "3.4"
+addons:
+  postgresql: "9.4"
+services:
+  - postgresql  
+  
 before_install:
   - wget http://repo1.maven.org/maven2/org/codehaus/sonar/runner/sonar-runner-dist/2.4/sonar-runner-dist-2.4.zip
   - unzip sonar-runner-dist-2.4.zip
+#before_script:
+#  -
+
 branches:
   only:
     - master
