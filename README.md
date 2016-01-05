@@ -6,7 +6,7 @@ Esse modulo é um serviço web que utiliza a arquitetura RestFull que permite ao
 
 Esse modulo está organizado da seguite forma:
 * __Dados de Teste__: essa pasta contém os dados utilizados para realizar teste no modulo. Através desses dados que as transformações foram desenvolvidas;
-* __Transformações__: as transformações são as responsáveis por ler o conteúdo presente na pasta CVS da pasta Dados de Teste e salvar na banco de dados;
+* __Transformações__: as transformações são as responsáveis por ler o conteúdo presente na pasta CVS da pasta Dados de Teste e salvar na banco de dados. Os transformadores foram criados utilizando a tecnologia [Data Integration (or Kettle)] (http://community.pentaho.com/projects/data-integration/) do Pentaho;
 * __sipac__: serviço web
 
-Para maiores detalhes sobre o projeto favor entrar no [site do projeto](http://leds.sr.ifes.edu.br/portfolio/sipac-sistema-de-informacoes-da-producao-agropecuaria-capixaba/) na página do [Leds](http://leds.sr.ifes.edu.br)
+Para maiores detalhes sobre o projeto favor entrar no [site do projeto](http://leds.sr.ifes.edu.br/portfolio/sipac-sistema-de-informacoes-da-producao-agropecuaria-capixaba/) na página do [Leds](http://leds.sr.ifes.edu.br) e na wiki deste respositório. 
