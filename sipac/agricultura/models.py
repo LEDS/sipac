@@ -31,7 +31,7 @@ class Producao(models.Model):
     mesoregiao = models.ForeignKey(MesoRegiao,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.ano + self.mes
+        return "Producao"
 
     class Meta:
-        ordering = ['ano','mes']
+        ordering = ['ano']
