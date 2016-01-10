@@ -11,9 +11,11 @@ class ProdutoAdmin(admin.ModelAdmin):
 
 class ProducaoAdmin(admin.ModelAdmin):
 
-    list_display = ('preco','produto_nome_display',
+    list_display = ('ano', 'mes','preco','produto_nome_display',
                     'municipio_nome_display','microregiao_nome_display',
                     'mesorgiao_nome_display')
+
+    list_filter = ['ano','mes']
 
     def produto_nome_display(self, obj):
 

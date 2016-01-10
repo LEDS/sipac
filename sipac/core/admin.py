@@ -29,5 +29,4 @@ class MunicipioAdmin(admin.ModelAdmin):
 
 admin.site.register(Municipio,MunicipioAdmin)
 
-#Produto é uma dimensão
-#Valor do produto é uma medida
+admin.site.register(Data)

@@ -15,6 +15,10 @@ class Produto(models.Model):
 
 class Producao(models.Model):
 
+    ano = models.IntegerField()
+
+    mes = models.IntegerField()
+
     data = models.ForeignKey(Data,on_delete=models.CASCADE)
 
     preco = models.FloatField()
