@@ -1,5 +1,5 @@
 from django.db import models
-from core.models import Municipio, MicroRegiao,MesoRegiao
+from core.models import Municipio, MicroRegiao,MesoRegiao,Data
 
 class Produto(models.Model):
 
@@ -13,12 +13,9 @@ class Produto(models.Model):
     class Meta:
         ordering = ['nome']
 
-
 class Producao(models.Model):
 
-    ano = models.IntegerField()
-
-    mes = models.IntegerField()
+    data = models.ForeignKey(Data,on_delete=models.CASCADE)
 
     preco = models.FloatField()
 
@@ -34,4 +31,4 @@ class Producao(models.Model):
         return "Producao"
 
     class Meta:
-        ordering = ['ano']
+        ordering = ['data']

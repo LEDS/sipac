@@ -1,0 +1,5465 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.4.5
+-- Dumped by pg_dump version 9.4.0
+-- Started on 2016-01-10 00:30:18 BRST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 203 (class 3079 OID 12123)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2485 (class 0 OID 0)
+-- Dependencies: 203
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 200 (class 1259 OID 32770)
+-- Name: agricultura_producao; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE agricultura_producao (
+    id integer NOT NULL,
+    ano integer NOT NULL,
+    mes integer NOT NULL,
+    preco double precision NOT NULL,
+    mesoregiao_id integer NOT NULL,
+    microregiao_id integer NOT NULL,
+    municipio_id integer NOT NULL,
+    produto_id integer NOT NULL
+);
+
+
+ALTER TABLE agricultura_producao OWNER TO postgres;
+
+--
+-- TOC entry 199 (class 1259 OID 32768)
+-- Name: agricultura_producao_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE agricultura_producao_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE agricultura_producao_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2486 (class 0 OID 0)
+-- Dependencies: 199
+-- Name: agricultura_producao_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE agricultura_producao_id_seq OWNED BY agricultura_producao.id;
+
+
+--
+-- TOC entry 202 (class 1259 OID 32778)
+-- Name: agricultura_produto; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE agricultura_produto (
+    id integer NOT NULL,
+    nome character varying(100) NOT NULL,
+    codigo integer NOT NULL
+);
+
+
+ALTER TABLE agricultura_produto OWNER TO postgres;
+
+--
+-- TOC entry 201 (class 1259 OID 32776)
+-- Name: agricultura_produto_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE agricultura_produto_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE agricultura_produto_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2487 (class 0 OID 0)
+-- Dependencies: 201
+-- Name: agricultura_produto_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE agricultura_produto_id_seq OWNED BY agricultura_produto.id;
+
+
+--
+-- TOC entry 179 (class 1259 OID 24817)
+-- Name: auth_group; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_group (
+    id integer NOT NULL,
+    name character varying(80) NOT NULL
+);
+
+
+ALTER TABLE auth_group OWNER TO postgres;
+
+--
+-- TOC entry 178 (class 1259 OID 24815)
+-- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_group_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2488 (class 0 OID 0)
+-- Dependencies: 178
+-- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_group_id_seq OWNED BY auth_group.id;
+
+
+--
+-- TOC entry 181 (class 1259 OID 24827)
+-- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_group_permissions (
+    id integer NOT NULL,
+    group_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE auth_group_permissions OWNER TO postgres;
+
+--
+-- TOC entry 180 (class 1259 OID 24825)
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_group_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_group_permissions_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2489 (class 0 OID 0)
+-- Dependencies: 180
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_group_permissions_id_seq OWNED BY auth_group_permissions.id;
+
+
+--
+-- TOC entry 177 (class 1259 OID 24809)
+-- Name: auth_permission; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_permission (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    content_type_id integer NOT NULL,
+    codename character varying(100) NOT NULL
+);
+
+
+ALTER TABLE auth_permission OWNER TO postgres;
+
+--
+-- TOC entry 176 (class 1259 OID 24807)
+-- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_permission_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_permission_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2490 (class 0 OID 0)
+-- Dependencies: 176
+-- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_permission_id_seq OWNED BY auth_permission.id;
+
+
+--
+-- TOC entry 183 (class 1259 OID 24835)
+-- Name: auth_user; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_user (
+    id integer NOT NULL,
+    password character varying(128) NOT NULL,
+    last_login timestamp with time zone,
+    is_superuser boolean NOT NULL,
+    username character varying(30) NOT NULL,
+    first_name character varying(30) NOT NULL,
+    last_name character varying(30) NOT NULL,
+    email character varying(254) NOT NULL,
+    is_staff boolean NOT NULL,
+    is_active boolean NOT NULL,
+    date_joined timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE auth_user OWNER TO postgres;
+
+--
+-- TOC entry 185 (class 1259 OID 24845)
+-- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_user_groups (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    group_id integer NOT NULL
+);
+
+
+ALTER TABLE auth_user_groups OWNER TO postgres;
+
+--
+-- TOC entry 184 (class 1259 OID 24843)
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_user_groups_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_user_groups_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2491 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_user_groups_id_seq OWNED BY auth_user_groups.id;
+
+
+--
+-- TOC entry 182 (class 1259 OID 24833)
+-- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_user_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_user_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2492 (class 0 OID 0)
+-- Dependencies: 182
+-- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_user_id_seq OWNED BY auth_user.id;
+
+
+--
+-- TOC entry 187 (class 1259 OID 24853)
+-- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_user_user_permissions (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE auth_user_user_permissions OWNER TO postgres;
+
+--
+-- TOC entry 186 (class 1259 OID 24851)
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_user_user_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE auth_user_user_permissions_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2493 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_user_user_permissions_id_seq OWNED BY auth_user_user_permissions.id;
+
+
+--
+-- TOC entry 191 (class 1259 OID 24938)
+-- Name: core_estado; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE core_estado (
+    id integer NOT NULL,
+    nome character varying(50) NOT NULL,
+    codigo integer NOT NULL
+);
+
+
+ALTER TABLE core_estado OWNER TO postgres;
+
+--
+-- TOC entry 190 (class 1259 OID 24936)
+-- Name: core_estado_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE core_estado_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE core_estado_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2494 (class 0 OID 0)
+-- Dependencies: 190
+-- Name: core_estado_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE core_estado_id_seq OWNED BY core_estado.id;
+
+
+--
+-- TOC entry 193 (class 1259 OID 24946)
+-- Name: core_mesoregiao; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE core_mesoregiao (
+    id integer NOT NULL,
+    nome character varying(50) NOT NULL,
+    codigo integer NOT NULL,
+    estado_id integer NOT NULL
+);
+
+
+ALTER TABLE core_mesoregiao OWNER TO postgres;
+
+--
+-- TOC entry 192 (class 1259 OID 24944)
+-- Name: core_mesoregiao_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE core_mesoregiao_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE core_mesoregiao_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2495 (class 0 OID 0)
+-- Dependencies: 192
+-- Name: core_mesoregiao_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE core_mesoregiao_id_seq OWNED BY core_mesoregiao.id;
+
+
+--
+-- TOC entry 195 (class 1259 OID 24954)
+-- Name: core_microregiao; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE core_microregiao (
+    id integer NOT NULL,
+    nome character varying(50) NOT NULL,
+    codigo integer NOT NULL,
+    mesoregiao_id integer NOT NULL
+);
+
+
+ALTER TABLE core_microregiao OWNER TO postgres;
+
+--
+-- TOC entry 194 (class 1259 OID 24952)
+-- Name: core_microregiao_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE core_microregiao_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE core_microregiao_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2496 (class 0 OID 0)
+-- Dependencies: 194
+-- Name: core_microregiao_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE core_microregiao_id_seq OWNED BY core_microregiao.id;
+
+
+--
+-- TOC entry 197 (class 1259 OID 24962)
+-- Name: core_municipio; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE core_municipio (
+    id integer NOT NULL,
+    nome character varying(50) NOT NULL,
+    codigo integer NOT NULL,
+    codigo_completo bigint NOT NULL,
+    microregiao_id integer NOT NULL,
+    estado_id integer NOT NULL
+);
+
+
+ALTER TABLE core_municipio OWNER TO postgres;
+
+--
+-- TOC entry 196 (class 1259 OID 24960)
+-- Name: core_municipio_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE core_municipio_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE core_municipio_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2497 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: core_municipio_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE core_municipio_id_seq OWNED BY core_municipio.id;
+
+
+--
+-- TOC entry 189 (class 1259 OID 24913)
+-- Name: django_admin_log; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE django_admin_log (
+    id integer NOT NULL,
+    action_time timestamp with time zone NOT NULL,
+    object_id text,
+    object_repr character varying(200) NOT NULL,
+    action_flag smallint NOT NULL,
+    change_message text NOT NULL,
+    content_type_id integer,
+    user_id integer NOT NULL,
+    CONSTRAINT django_admin_log_action_flag_check CHECK ((action_flag >= 0))
+);
+
+
+ALTER TABLE django_admin_log OWNER TO postgres;
+
+--
+-- TOC entry 188 (class 1259 OID 24911)
+-- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE django_admin_log_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE django_admin_log_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2498 (class 0 OID 0)
+-- Dependencies: 188
+-- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE django_admin_log_id_seq OWNED BY django_admin_log.id;
+
+
+--
+-- TOC entry 175 (class 1259 OID 24799)
+-- Name: django_content_type; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE django_content_type (
+    id integer NOT NULL,
+    app_label character varying(100) NOT NULL,
+    model character varying(100) NOT NULL
+);
+
+
+ALTER TABLE django_content_type OWNER TO postgres;
+
+--
+-- TOC entry 174 (class 1259 OID 24797)
+-- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE django_content_type_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE django_content_type_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2499 (class 0 OID 0)
+-- Dependencies: 174
+-- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE django_content_type_id_seq OWNED BY django_content_type.id;
+
+
+--
+-- TOC entry 173 (class 1259 OID 24788)
+-- Name: django_migrations; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE django_migrations (
+    id integer NOT NULL,
+    app character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    applied timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE django_migrations OWNER TO postgres;
+
+--
+-- TOC entry 172 (class 1259 OID 24786)
+-- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE django_migrations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE django_migrations_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2500 (class 0 OID 0)
+-- Dependencies: 172
+-- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE django_migrations_id_seq OWNED BY django_migrations.id;
+
+
+--
+-- TOC entry 198 (class 1259 OID 24980)
+-- Name: django_session; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE django_session (
+    session_key character varying(40) NOT NULL,
+    session_data text NOT NULL,
+    expire_date timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE django_session OWNER TO postgres;
+
+--
+-- TOC entry 2252 (class 2604 OID 32773)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY agricultura_producao ALTER COLUMN id SET DEFAULT nextval('agricultura_producao_id_seq'::regclass);
+
+
+--
+-- TOC entry 2253 (class 2604 OID 32781)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY agricultura_produto ALTER COLUMN id SET DEFAULT nextval('agricultura_produto_id_seq'::regclass);
+
+
+--
+-- TOC entry 2241 (class 2604 OID 24820)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_group ALTER COLUMN id SET DEFAULT nextval('auth_group_id_seq'::regclass);
+
+
+--
+-- TOC entry 2242 (class 2604 OID 24830)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_group_permissions ALTER COLUMN id SET DEFAULT nextval('auth_group_permissions_id_seq'::regclass);
+
+
+--
+-- TOC entry 2240 (class 2604 OID 24812)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_permission ALTER COLUMN id SET DEFAULT nextval('auth_permission_id_seq'::regclass);
+
+
+--
+-- TOC entry 2243 (class 2604 OID 24838)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_user ALTER COLUMN id SET DEFAULT nextval('auth_user_id_seq'::regclass);
+
+
+--
+-- TOC entry 2244 (class 2604 OID 24848)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_user_groups ALTER COLUMN id SET DEFAULT nextval('auth_user_groups_id_seq'::regclass);
+
+
+--
+-- TOC entry 2245 (class 2604 OID 24856)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_user_user_permissions ALTER COLUMN id SET DEFAULT nextval('auth_user_user_permissions_id_seq'::regclass);
+
+
+--
+-- TOC entry 2248 (class 2604 OID 24941)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY core_estado ALTER COLUMN id SET DEFAULT nextval('core_estado_id_seq'::regclass);
+
+
+--
+-- TOC entry 2249 (class 2604 OID 24949)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY core_mesoregiao ALTER COLUMN id SET DEFAULT nextval('core_mesoregiao_id_seq'::regclass);
+
+
+--
+-- TOC entry 2250 (class 2604 OID 24957)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY core_microregiao ALTER COLUMN id SET DEFAULT nextval('core_microregiao_id_seq'::regclass);
+
+
+--
+-- TOC entry 2251 (class 2604 OID 24965)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY core_municipio ALTER COLUMN id SET DEFAULT nextval('core_municipio_id_seq'::regclass);
+
+
+--
+-- TOC entry 2246 (class 2604 OID 24916)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY django_admin_log ALTER COLUMN id SET DEFAULT nextval('django_admin_log_id_seq'::regclass);
+
+
+--
+-- TOC entry 2239 (class 2604 OID 24802)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY django_content_type ALTER COLUMN id SET DEFAULT nextval('django_content_type_id_seq'::regclass);
+
+
+--
+-- TOC entry 2238 (class 2604 OID 24791)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY django_migrations ALTER COLUMN id SET DEFAULT nextval('django_migrations_id_seq'::regclass);
+
+
+--
+-- TOC entry 2475 (class 0 OID 32770)
+-- Dependencies: 200
+-- Data for Name: agricultura_producao; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY agricultura_producao (id, ano, mes, preco, mesoregiao_id, microregiao_id, municipio_id, produto_id) FROM stdin;
+9	2015	12	850	75	7	46	602
+10	2015	12	1000	73	2	18	602
+11	2015	12	1200	76	11	70	602
+12	2015	12	1000	73	3	24	602
+13	2015	12	850	75	10	65	602
+14	2015	12	1000	73	3	25	602
+15	2015	12	1000	73	1	15	602
+17	2015	12	1000	73	3	26	602
+19	2015	12	1000	73	1	16	602
+20	2015	12	1000	75	8	53	602
+21	2015	12	4850	75	8	54	602
+23	2015	12	1000	73	1	17	602
+26	2015	12	1000	73	2	20	602
+27	2015	12	1000	73	3	29	602
+28	2015	12	900	76	13	91	602
+29	2015	12	830	75	8	57	602
+30	2015	12	1000	73	3	30	602
+31	2015	12	750	76	12	88	602
+32	2015	12	600	75	7	46	772
+33	2015	12	550	73	2	18	772
+34	2015	12	550	73	1	14	772
+35	2015	12	530	76	11	70	772
+36	2015	12	600	75	10	64	772
+37	2015	12	600	75	10	64	772
+38	2015	12	500	75	10	64	772
+39	2015	12	500	75	10	64	772
+40	2015	12	550	73	3	24	772
+42	2015	12	600	76	12	79	772
+43	2015	12	600	74	6	39	772
+45	2015	12	550	73	3	25	772
+46	2015	12	550	73	3	25	772
+47	2015	12	550	73	1	15	772
+48	2015	12	550	73	2	19	772
+49	2015	12	0	73	2	19	772
+50	2015	12	580	76	12	81	772
+51	2015	12	600	75	7	47	772
+52	2015	12	600	76	12	82	772
+53	2015	12	500	75	9	59	772
+55	2015	12	550	73	3	26	772
+56	2015	12	550	73	3	26	772
+57	2015	12	550	74	5	35	772
+58	2015	12	0	74	5	35	772
+59	2015	12	540	75	7	48	772
+60	2015	12	580	76	11	71	772
+61	2015	12	500	75	7	49	772
+62	2015	12	600	75	7	49	772
+63	2015	12	580	76	11	72	772
+64	2015	12	700	74	6	40	772
+65	2015	12	700	74	6	40	772
+66	2015	12	700	74	6	40	772
+67	2015	12	600	73	3	27	772
+68	2015	12	600	76	11	73	772
+69	2015	12	600	75	10	66	772
+70	2015	12	500	75	10	66	772
+71	2015	12	600	76	11	74	772
+72	2015	12	600	74	6	41	772
+73	2015	12	600	74	6	41	772
+74	2015	12	530	76	11	75	772
+75	2015	12	500	75	10	67	772
+77	2015	12	600	76	11	76	772
+78	2015	12	500	75	8	53	772
+79	2015	12	550	75	8	53	772
+81	2015	12	600	75	8	54	772
+82	2015	12	600	75	8	54	772
+83	2015	12	700	75	8	54	772
+84	2015	12	530	76	11	77	772
+85	2015	12	600	74	5	36	772
+86	2015	12	0	74	5	36	772
+88	2015	12	600	74	6	42	772
+89	2015	12	540	75	7	50	772
+90	2015	12	600	74	6	43	772
+91	2015	12	550	73	1	17	772
+92	2015	12	500	75	7	51	772
+93	2015	12	550	73	3	28	772
+94	2015	12	600	76	12	85	772
+95	2015	12	600	74	4	31	772
+96	2015	12	0	74	4	31	772
+97	2015	12	0	74	4	32	772
+98	2015	12	0	74	4	32	772
+100	2015	12	580	76	11	78	772
+102	2015	12	550	73	2	20	772
+103	2015	12	550	73	2	20	772
+104	2015	12	0	73	2	20	772
+105	2015	12	550	73	3	29	772
+106	2015	12	550	74	5	37	772
+107	2015	12	550	74	5	37	772
+108	2015	12	0	74	5	37	772
+109	2015	12	0	74	5	37	772
+110	2015	12	580	74	4	33	772
+111	2015	12	580	74	4	33	772
+112	2015	12	600	75	10	68	772
+113	2015	12	500	75	10	68	772
+114	2015	12	580	74	4	34	772
+116	2015	12	500	76	13	91	772
+117	2015	12	500	74	6	44	772
+118	2015	12	450	75	10	69	772
+119	2015	12	500	75	10	69	772
+120	2015	12	600	75	8	55	772
+121	2015	12	700	75	8	56	772
+122	2015	12	700	75	8	57	772
+123	2015	12	700	75	8	57	772
+124	2015	12	550	73	3	30	772
+125	2015	12	500	73	2	21	772
+126	2015	12	600	76	12	87	772
+127	2015	12	550	74	5	38	772
+128	2015	12	550	74	5	38	772
+129	2015	12	0	74	5	38	772
+130	2015	12	0	74	5	38	772
+131	2015	12	550	75	8	58	772
+132	2015	12	500	74	6	45	772
+133	2015	12	545	76	12	88	772
+134	2015	12	600	75	7	52	772
+135	2015	12	550	73	2	22	772
+136	2015	12	0	73	2	22	772
+137	2015	12	600	73	2	23	772
+138	2015	12	0	75	9	62	772
+139	2015	12	60	75	7	46	646
+140	2015	12	50	73	2	18	646
+141	2015	12	50	73	1	14	646
+142	2015	12	100	76	11	70	646
+143	2015	12	50	75	10	64	646
+144	2015	12	50	73	3	24	646
+145	2015	12	45	75	10	65	646
+146	2015	12	40	74	6	39	646
+147	2015	12	65	76	12	80	646
+148	2015	12	35	73	2	19	646
+149	2015	12	65	76	12	82	646
+150	2015	12	55	75	9	59	646
+151	2015	12	85	76	12	83	646
+152	2015	12	50	73	3	26	646
+153	2015	12	33	74	5	35	646
+154	2015	12	35	75	7	49	646
+155	2015	12	100	76	11	72	646
+156	2015	12	50	73	1	16	646
+157	2015	12	460	74	6	40	646
+158	2015	12	120	76	11	73	646
+159	2015	12	45	75	10	66	646
+160	2015	12	40	74	6	41	646
+161	2015	12	100	76	11	75	646
+162	2015	12	45	75	10	67	646
+163	2015	12	65	76	11	76	646
+164	2015	12	35	75	8	53	646
+165	2015	12	45	76	13	89	646
+166	2015	12	35	75	8	54	646
+167	2015	12	35	75	8	54	646
+168	2015	12	100	76	11	77	646
+169	2015	12	40	74	6	42	646
+170	2015	12	65	75	7	50	646
+171	2015	12	40	74	6	43	646
+172	2015	12	45	76	13	90	646
+173	2015	12	50	73	3	28	646
+174	2015	12	33	74	4	31	646
+175	2015	12	33	74	4	32	646
+176	2015	12	33	73	2	20	646
+177	2015	12	50	73	3	29	646
+178	2015	12	35	74	5	37	646
+179	2015	12	33	74	4	33	646
+180	2015	12	45	76	13	91	646
+181	2015	12	40	74	6	44	646
+182	2015	12	45	75	10	69	646
+183	2015	12	700	75	8	55	646
+184	2015	12	110	75	8	57	646
+185	2015	12	50	73	3	30	646
+186	2015	12	33	74	5	38	646
+187	2015	12	50	75	8	58	646
+188	2015	12	40	74	6	45	646
+189	2015	12	65	76	12	88	646
+190	2015	12	0	75	7	52	646
+191	2015	12	600	75	9	61	646
+192	2015	12	44	75	9	62	646
+193	2015	12	2500	73	2	18	694
+194	2015	12	2500	73	2	18	694
+195	2015	12	2500	73	1	14	694
+196	2015	12	2500	73	1	14	694
+197	2015	12	2500	73	3	24	694
+198	2015	12	2500	73	3	24	694
+199	2015	12	2500	73	3	25	694
+200	2015	12	2500	73	3	25	694
+201	2015	12	2500	73	1	15	694
+202	2015	12	2500	73	1	15	694
+203	2015	12	2000	73	2	19	694
+204	2015	12	0	73	2	19	694
+205	2015	12	2500	73	3	26	694
+206	2015	12	2500	73	3	26	694
+207	2015	12	0	74	5	35	694
+208	2015	12	2800	75	7	49	694
+209	2015	12	2500	73	1	16	694
+210	2015	12	2500	73	1	16	694
+211	2015	12	2800	75	8	53	694
+212	2015	12	1950	75	8	53	694
+213	2015	12	2100	74	5	36	694
+214	2015	12	2166	74	5	36	694
+215	2015	12	2500	73	1	17	694
+216	2015	12	2500	73	3	28	694
+217	2015	12	2500	73	3	28	694
+218	2015	12	2000	74	4	31	694
+219	2015	12	0	74	4	32	694
+220	2015	12	2000	73	2	20	694
+221	2015	12	2500	73	3	29	694
+222	2015	12	2500	73	3	29	694
+223	2015	12	2500	73	3	29	694
+224	2015	12	2000	74	5	37	694
+225	2015	12	2000	74	5	37	694
+226	2015	12	1700	74	4	33	694
+227	2015	12	2000	74	4	33	694
+228	2015	12	2000	74	4	34	694
+229	2015	12	2800	75	8	56	694
+230	2015	12	2300	75	8	56	694
+231	2015	12	2500	73	3	30	694
+232	2015	12	2500	73	3	30	694
+233	2015	12	2000	74	5	38	694
+234	2015	12	0	74	5	38	694
+235	2015	12	2450	75	8	58	694
+236	2015	12	2450	75	8	58	694
+237	2015	12	2200	73	2	22	694
+238	2015	12	1415	75	7	46	695
+239	2015	12	1600	75	7	46	695
+240	2015	12	0	75	7	46	695
+241	2015	12	0	75	7	46	695
+242	2015	12	2900	76	11	70	695
+243	2015	12	2000	76	11	70	695
+244	2015	12	3000	75	10	64	695
+245	2015	12	2500	75	10	64	695
+246	2015	12	2500	75	10	64	695
+248	2015	12	2500	75	10	65	695
+250	2015	12	2800	76	12	79	695
+251	2015	12	2500	76	12	79	695
+252	2015	12	2500	74	6	39	695
+253	2015	12	2500	74	6	39	695
+254	2015	12	2167	74	6	39	695
+258	2015	12	2000	76	12	81	695
+259	2015	12	3000	75	7	47	695
+260	2015	12	2800	75	7	47	695
+263	2015	12	2400	75	9	59	695
+266	2015	12	1625	76	12	83	695
+268	2015	12	2345	75	7	48	695
+269	2015	12	1580	75	7	48	695
+270	2015	12	0	75	7	48	695
+271	2015	12	2500	76	11	71	695
+272	2015	12	2500	76	11	71	695
+273	2015	12	2400	75	7	49	695
+274	2015	12	2000	75	7	49	695
+275	2015	12	2800	76	11	72	695
+276	2015	12	2500	76	11	72	695
+277	2015	12	2500	74	6	40	695
+278	2015	12	2500	74	6	40	695
+279	2015	12	2500	74	6	40	695
+280	2015	12	2500	74	6	40	695
+281	2015	12	2500	73	3	27	695
+282	2015	12	2300	73	3	27	695
+283	2015	12	2800	76	11	73	695
+284	2015	12	2000	76	11	73	695
+285	2015	12	3000	75	10	66	695
+286	2015	12	2500	75	10	66	695
+287	2015	12	2200	75	10	66	695
+288	2015	12	3300	76	11	74	695
+289	2015	12	2000	76	11	74	695
+290	2015	12	2550	74	6	41	695
+291	2015	12	2200	74	6	41	695
+292	2015	12	2500	76	11	75	695
+293	2015	12	2100	76	11	75	695
+295	2015	12	2500	75	10	67	695
+296	2015	12	2800	75	10	67	695
+297	2015	12	3000	76	11	76	695
+298	2015	12	2600	76	11	76	695
+299	2015	12	2400	75	8	53	695
+300	2015	12	1800	75	8	53	695
+302	2015	12	2500	76	13	89	695
+303	2015	12	2800	76	13	89	695
+304	2015	12	2400	75	8	54	695
+305	2015	12	2400	75	8	54	695
+306	2015	12	2400	75	8	54	695
+307	2015	12	2800	76	11	77	695
+308	2015	12	1900	76	11	77	695
+310	2015	12	2000	76	12	84	695
+311	2015	12	2450	74	6	42	695
+312	2015	12	2200	74	6	42	695
+313	2015	12	2350	75	7	50	695
+314	2015	12	0	75	7	50	695
+315	2015	12	1585	75	7	50	695
+316	2015	12	2450	74	6	43	695
+317	2015	12	2450	74	6	43	695
+318	2015	12	2400	75	7	51	695
+319	2015	12	1800	75	7	51	695
+320	2015	12	2350	76	12	85	695
+322	2015	12	2600	76	11	78	695
+323	2015	12	2100	76	11	78	695
+324	2015	12	2200	76	12	86	695
+325	2015	12	1520	76	12	86	695
+327	2015	12	2000	75	10	68	695
+328	2015	12	2800	75	10	68	695
+330	2015	12	2500	76	13	91	695
+331	2015	12	2500	74	6	44	695
+332	2015	12	2200	74	6	44	695
+333	2015	12	3000	75	10	69	695
+334	2015	12	2500	75	10	69	695
+335	2015	12	2400	75	8	55	695
+336	2015	12	1900	75	8	55	695
+337	2015	12	2400	75	8	56	695
+338	2015	12	1800	75	8	56	695
+339	2015	12	2500	75	8	57	695
+340	2015	12	2500	75	8	57	695
+341	2015	12	2500	75	8	57	695
+342	2015	12	2500	75	8	57	695
+343	2015	12	2500	73	2	21	695
+344	2015	12	2300	73	2	21	695
+345	2015	12	2800	76	12	87	695
+346	2015	12	2500	76	12	87	695
+347	2015	12	2000	74	5	38	695
+348	2015	12	0	74	5	38	695
+349	2015	12	2500	74	6	45	695
+350	2015	12	2450	74	6	45	695
+352	2015	12	1620	76	12	88	695
+353	2015	12	1	75	7	52	695
+354	2015	12	1620	75	7	52	695
+355	2015	12	1620	75	7	52	695
+356	2015	12	2400	75	9	61	695
+357	2015	12	2400	75	9	61	695
+358	2015	12	2000	75	9	61	695
+359	2015	12	2000	75	9	61	695
+360	2015	12	2450	73	2	23	695
+361	2015	12	2450	73	2	23	695
+362	2015	12	0	75	9	62	695
+363	2015	12	0	75	9	62	695
+364	2015	12	160	75	7	46	647
+365	2015	12	50	73	2	18	647
+366	2015	12	50	73	1	14	647
+367	2015	12	100	76	11	70	647
+368	2015	12	50	75	10	64	647
+369	2015	12	50	73	3	24	647
+370	2015	12	40	75	10	65	647
+371	2015	12	100	76	12	79	647
+372	2015	12	40	74	6	39	647
+373	2015	12	185	76	12	80	647
+374	2015	12	50	73	3	25	647
+375	2015	12	50	73	1	15	647
+376	2015	12	100	76	12	81	647
+377	2015	12	150	75	7	47	647
+379	2015	12	150	75	9	59	647
+380	2015	12	100	76	11	71	647
+381	2015	12	100	76	11	72	647
+382	2015	12	50	73	1	16	647
+383	2015	12	34	74	6	40	647
+384	2015	12	40	73	3	27	647
+385	2015	12	100	76	11	73	647
+386	2015	12	45	75	10	66	647
+387	2015	12	40	74	6	41	647
+388	2015	12	100	76	11	75	647
+389	2015	12	50	75	10	67	647
+390	2015	12	100	76	11	76	647
+391	2015	12	150	75	8	53	647
+392	2015	12	150	75	8	54	647
+393	2015	12	100	76	11	77	647
+394	2015	12	100	76	12	84	647
+395	2015	12	40	74	6	42	647
+396	2015	12	33	74	6	43	647
+397	2015	12	100	76	11	78	647
+398	2015	12	165	76	12	86	647
+399	2015	12	50	73	3	29	647
+400	2015	12	60	75	10	68	647
+401	2015	12	50	76	13	91	647
+402	2015	12	40	74	6	44	647
+403	2015	12	50	75	10	69	647
+404	2015	12	150	75	8	55	647
+405	2015	12	50	73	3	30	647
+406	2015	12	41	73	2	21	647
+407	2015	12	100	76	12	87	647
+408	2015	12	39	75	9	60	647
+409	2015	12	37	74	6	45	647
+410	2015	12	150	75	9	61	647
+411	2015	12	160	75	7	46	775
+412	2015	12	550	73	2	18	775
+413	2015	12	150	76	11	70	775
+414	2015	12	350	75	10	64	775
+415	2015	12	250	75	10	65	775
+416	2015	12	350	75	10	65	775
+417	2015	12	150	76	12	79	775
+418	2015	12	185	76	12	80	775
+419	2015	12	550	73	3	25	775
+420	2015	12	150	76	12	81	775
+421	2015	12	170	75	7	47	775
+422	2015	12	185	76	12	82	775
+423	2015	12	180	76	12	83	775
+424	2015	12	550	73	3	26	775
+425	2015	12	210	75	7	48	775
+426	2015	12	150	76	11	71	775
+427	2015	12	150	76	11	72	775
+428	2015	12	550	73	1	16	775
+429	2015	12	150	75	10	66	775
+430	2015	12	170	76	11	74	775
+431	2015	12	150	76	11	75	775
+432	2015	12	150	75	10	67	775
+433	2015	12	150	75	8	53	775
+434	2015	12	150	75	8	53	775
+435	2015	12	150	76	13	89	775
+436	2015	12	150	75	8	54	775
+437	2015	12	170	76	11	77	775
+438	2015	12	150	76	12	84	775
+439	2015	12	320	76	13	90	775
+440	2015	12	150	75	7	51	775
+441	2015	12	185	76	12	85	775
+442	2015	12	50	74	4	32	775
+443	2015	12	160	76	11	78	775
+444	2015	12	185	76	12	86	775
+445	2015	12	150	75	10	68	775
+446	2015	12	250	76	13	91	775
+447	2015	12	250	75	10	69	775
+448	2015	12	150	76	12	87	775
+449	2015	12	225	75	9	60	775
+450	2015	12	210	76	12	88	775
+451	2015	12	220	75	7	52	775
+452	2015	12	1100	73	2	18	576
+453	2015	12	1100	73	1	15	576
+454	2015	12	1300	73	2	19	576
+455	2015	12	1100	73	3	26	576
+456	2015	12	1100	74	5	35	576
+457	2015	12	1100	74	5	35	576
+458	2015	12	1100	73	1	16	576
+459	2015	12	880	76	13	89	576
+460	2015	12	1500	74	5	36	576
+461	2015	12	0	74	5	36	576
+462	2015	12	1100	73	1	17	576
+463	2015	12	950	76	13	90	576
+464	2015	12	950	76	13	90	576
+465	2015	12	1100	74	4	31	576
+466	2015	12	1200	73	2	20	576
+467	2015	12	1200	73	2	20	576
+468	2015	12	1100	73	3	29	576
+469	2015	12	1000	74	5	37	576
+470	2015	12	1000	74	5	37	576
+471	2015	12	1000	74	4	33	576
+472	2015	12	1000	74	4	34	576
+473	2015	12	1200	76	13	91	576
+474	2015	12	1100	73	3	30	576
+475	2015	12	1000	74	5	38	576
+476	2015	12	1000	74	5	38	576
+477	2015	12	1100	73	2	22	576
+478	2015	12	600	73	2	18	769
+479	2015	12	600	73	1	14	769
+480	2015	12	600	73	1	15	769
+481	2015	12	600	73	2	19	769
+482	2015	12	600	73	3	26	769
+483	2015	12	600	74	5	35	769
+484	2015	12	600	74	5	35	769
+485	2015	12	1100	74	6	40	769
+486	2015	12	400	73	3	27	769
+487	2015	12	600	74	5	36	769
+488	2015	12	500	76	13	90	769
+489	2015	12	600	73	3	28	769
+490	2015	12	600	73	2	20	769
+491	2015	12	600	73	3	29	769
+492	2015	12	610	74	5	37	769
+493	2015	12	600	74	4	33	769
+495	2015	12	600	76	13	91	769
+496	2015	12	600	73	3	30	769
+497	2015	12	600	73	2	22	769
+498	2015	12	400	73	2	23	769
+499	2015	12	4800	75	7	46	594
+500	2015	12	7600	75	7	49	594
+501	2015	12	7600	75	7	49	594
+502	2015	12	7700	75	8	54	594
+503	2015	12	7700	75	8	56	594
+504	2015	12	1480	75	7	46	615
+505	2015	12	1250	75	10	64	615
+506	2015	12	1450	76	12	83	615
+507	2015	12	1000	75	7	49	615
+508	2015	12	1300	75	7	49	615
+509	2015	12	1400	76	11	78	615
+510	2015	12	1400	76	11	78	615
+511	2015	12	1800	76	11	78	615
+512	2015	12	1850	75	8	56	615
+513	2015	12	985	76	12	88	615
+514	2015	12	1485	75	7	52	615
+515	2015	12	1950	75	7	49	660
+516	2015	12	1950	75	8	56	660
+517	2015	12	300	73	1	14	759
+518	2015	12	300	73	3	24	759
+519	2015	12	80	74	6	39	759
+520	2015	12	60	76	12	80	759
+521	2015	12	300	73	3	25	759
+522	2015	12	300	73	1	15	759
+523	2015	12	50	73	2	19	759
+524	2015	12	50	73	2	19	759
+525	2015	12	110	76	12	82	759
+527	2015	12	300	73	3	26	759
+528	2015	12	50	74	5	35	759
+529	2015	12	300	73	1	16	759
+530	2015	12	58	74	6	40	759
+531	2015	12	100	74	6	41	759
+532	2015	12	85	75	8	53	759
+533	2015	12	600	76	13	89	759
+534	2015	12	50	74	5	36	759
+535	2015	12	70	74	6	42	759
+536	2015	12	320	76	13	90	759
+537	2015	12	300	73	3	28	759
+538	2015	12	320	76	12	85	759
+539	2015	12	45	74	4	31	759
+540	2015	12	50	74	4	32	759
+542	2015	12	60	73	2	20	759
+543	2015	12	50	74	5	37	759
+544	2015	12	50	74	4	33	759
+545	2015	12	50	74	4	34	759
+546	2015	12	120	76	13	91	759
+547	2015	12	70	74	6	44	759
+548	2015	12	600	75	10	69	759
+549	2015	12	300	73	3	30	759
+550	2015	12	70	73	2	21	759
+551	2015	12	50	74	5	38	759
+552	2015	12	80	74	6	45	759
+553	2015	12	160	76	12	88	759
+554	2015	12	60	73	2	22	759
+555	2015	12	80	75	9	62	759
+556	2015	12	620	75	7	46	578
+557	2015	12	700	73	1	14	578
+558	2015	12	160	75	10	64	578
+559	2015	12	1500	75	10	65	578
+560	2015	12	650	73	2	19	578
+561	2015	12	535	76	12	82	578
+562	2015	12	690	74	5	35	578
+563	2015	12	690	74	5	35	578
+564	2015	12	700	75	7	49	578
+565	2015	12	650	76	11	72	578
+566	2015	12	700	73	1	16	578
+567	2015	12	960	74	6	40	578
+568	2015	12	700	75	8	54	578
+569	2015	12	650	74	5	36	578
+570	2015	12	585	75	7	50	578
+571	2015	12	400	76	13	90	578
+572	2015	12	650	74	4	31	578
+573	2015	12	650	74	4	32	578
+574	2015	12	585	76	12	86	578
+575	2015	12	650	73	2	20	578
+576	2015	12	700	73	3	29	578
+577	2015	12	600	74	5	37	578
+578	2015	12	650	74	4	33	578
+579	2015	12	620	74	4	34	578
+580	2015	12	1500	76	13	91	578
+581	2015	12	1100	75	8	57	578
+582	2015	12	700	73	3	30	578
+583	2015	12	0	74	5	38	578
+584	2015	12	525	75	7	52	578
+585	2015	12	1900	75	7	51	588
+586	2015	12	1500	73	2	19	591
+587	2015	12	1350	75	7	49	591
+588	2015	12	1350	76	11	76	591
+589	2015	12	1350	75	8	54	591
+590	2015	12	1350	75	7	51	591
+591	2015	12	920	76	12	86	591
+592	2015	12	1800	73	2	20	591
+593	2015	12	1500	74	4	33	591
+594	2015	12	1600	74	4	34	591
+595	2015	12	350	76	13	91	591
+596	2015	12	1350	75	8	55	591
+597	2015	12	1000	75	8	56	591
+598	2015	12	1070	75	8	57	591
+599	2015	12	1500	74	5	38	591
+600	2015	12	920	76	12	88	591
+601	2015	12	875	75	7	52	591
+602	2015	12	1800	73	2	22	591
+603	2015	12	700	75	7	51	596
+604	2015	12	2600	75	7	49	626
+605	2015	12	2600	75	7	51	626
+606	2015	12	2600	75	8	56	626
+607	2015	12	2100	74	5	38	626
+608	2015	12	1400	75	7	51	666
+609	2015	12	1625	76	12	82	677
+610	2015	12	1900	75	7	49	677
+611	2015	12	1900	75	7	51	677
+612	2015	12	0	73	2	20	677
+613	2015	12	450	76	13	91	677
+614	2015	12	1900	75	8	55	677
+615	2015	12	1900	75	8	56	677
+616	2015	12	2800	74	5	38	677
+617	2015	12	2000	75	10	64	679
+618	2015	12	900	75	7	49	679
+619	2015	12	900	75	7	51	679
+620	2015	12	900	75	8	56	679
+621	2015	12	1600	75	7	51	691
+622	2015	12	620	75	7	46	814
+623	2015	12	150	75	10	64	814
+624	2015	12	610	76	12	83	814
+625	2015	12	400	75	7	49	814
+626	2015	12	580	76	11	76	814
+627	2015	12	400	75	8	54	814
+628	2015	12	400	75	7	51	814
+629	2015	12	300	76	11	78	814
+630	2015	12	400	75	8	55	814
+631	2015	12	400	75	8	56	814
+632	2015	12	380	75	8	57	814
+633	2015	12	485	76	12	88	814
+634	2015	12	620	75	7	52	814
+635	2015	12	2200	75	7	51	815
+636	2015	12	2850	76	12	82	824
+637	2015	12	285	76	12	86	824
+638	2015	12	825	76	12	82	579
+639	2015	12	900	75	7	49	579
+640	2015	12	900	75	7	49	579
+641	2015	12	900	75	8	53	579
+642	2015	12	900	75	8	54	579
+643	2015	12	900	75	7	51	579
+644	2015	12	785	76	12	86	579
+645	2015	12	900	75	8	55	579
+646	2015	12	900	75	8	56	579
+647	2015	12	435	75	7	52	579
+648	2015	12	850	75	7	49	616
+649	2015	12	850	75	8	53	616
+650	2015	12	850	75	8	54	616
+651	2015	12	850	75	7	51	616
+652	2015	12	850	75	8	55	616
+653	2015	12	850	75	8	56	616
+654	2015	12	190	75	10	64	668
+655	2015	12	550	75	7	49	668
+656	2015	12	550	75	7	51	668
+657	2015	12	550	75	8	55	668
+658	2015	12	550	75	8	56	668
+659	2015	12	578	75	8	57	668
+660	2015	12	950	75	10	64	728
+661	2015	12	1000	76	12	79	728
+662	2015	12	1900	73	2	19	728
+663	2015	12	1050	76	12	82	728
+664	2015	12	1800	74	5	35	728
+665	2015	12	1200	75	7	49	728
+666	2015	12	1200	75	8	53	728
+667	2015	12	1200	75	8	54	728
+668	2015	12	1200	75	7	51	728
+669	2015	12	1050	76	12	86	728
+670	2015	12	800	75	10	69	728
+671	2015	12	1200	75	8	55	728
+672	2015	12	1200	75	8	56	728
+673	2015	12	1310	75	8	57	728
+674	2015	12	1300	75	8	55	767
+675	2015	12	3350	75	7	46	776
+676	2015	12	800	75	10	64	776
+677	2015	12	7000	75	7	47	776
+678	2015	12	3900	76	12	83	776
+679	2015	12	5500	75	7	49	776
+680	2015	12	9000	76	11	76	776
+681	2015	12	9000	76	11	77	776
+682	2015	12	5500	75	7	51	776
+683	2015	12	7000	76	11	78	776
+684	2015	12	5000	75	8	56	776
+685	2015	12	3720	76	12	88	776
+686	2015	12	300	74	6	39	796
+687	2015	12	800	75	7	49	796
+688	2015	12	700	75	8	53	796
+689	2015	12	800	75	7	51	796
+690	2015	12	785	76	12	86	796
+691	2015	12	800	75	8	55	796
+692	2015	12	800	75	8	56	796
+693	2015	12	900	75	8	57	796
+694	2015	12	620	75	10	64	804
+695	2015	12	1385	76	12	82	804
+696	2015	12	1100	75	7	49	804
+697	2015	12	1100	75	7	51	804
+698	2015	12	985	76	12	86	804
+699	2015	12	1100	75	8	55	804
+700	2015	12	1100	75	8	56	804
+701	2015	12	1537	75	8	57	804
+702	2015	12	1200	75	8	58	804
+703	2015	12	1320	75	7	52	804
+704	2015	12	0	75	7	46	810
+705	2015	12	1220	75	7	46	810
+706	2015	12	1400	76	12	79	810
+707	2015	12	1285	76	12	80	810
+708	2015	12	1200	73	3	25	810
+709	2015	12	1900	73	2	19	810
+710	2015	12	2120	76	12	82	810
+711	2015	12	1750	75	9	59	810
+712	2015	12	1750	75	9	59	810
+713	2015	12	1500	74	5	35	810
+714	2015	12	1750	75	8	53	810
+715	2015	12	1750	75	8	54	810
+716	2015	12	0	75	7	50	810
+717	2015	12	1220	76	12	86	810
+718	2015	12	3000	73	2	20	810
+719	2015	12	1800	74	4	33	810
+720	2015	12	1900	74	4	34	810
+721	2015	12	600	75	10	69	810
+722	2015	12	1750	75	8	55	810
+723	2015	12	2770	75	8	57	810
+724	2015	12	1750	75	9	61	810
+725	2015	12	1385	75	7	46	826
+726	2015	12	2000	75	10	64	826
+727	2015	12	1750	75	10	65	826
+728	2015	12	1700	74	6	39	826
+729	2015	12	1250	76	12	80	826
+730	2015	12	1100	73	3	25	826
+731	2015	12	1500	73	2	19	826
+732	2015	12	1700	75	7	47	826
+733	2015	12	1385	76	12	82	826
+734	2015	12	1385	76	12	83	826
+735	2015	12	1220	75	7	48	826
+736	2015	12	1400	75	7	49	826
+737	2015	12	1700	76	11	72	826
+738	2015	12	1100	73	1	16	826
+739	2015	12	1700	76	11	73	826
+740	2015	12	2000	75	10	66	826
+741	2015	12	1700	76	11	74	826
+742	2015	12	1700	76	11	75	826
+743	2015	12	1700	76	11	76	826
+744	2015	12	1400	75	8	53	826
+745	2015	12	1400	75	8	54	826
+746	2015	12	1250	75	7	50	826
+747	2015	12	1100	73	1	17	826
+748	2015	12	1400	75	7	51	826
+749	2015	12	1500	74	4	31	826
+750	2015	12	1700	76	11	78	826
+751	2015	12	1350	76	12	86	826
+752	2015	12	1500	73	2	20	826
+753	2015	12	2000	76	13	91	826
+754	2015	12	1400	75	8	55	826
+755	2015	12	1400	75	8	56	826
+756	2015	12	1590	75	8	57	826
+757	2015	12	1100	75	8	58	826
+758	2015	12	1590	75	9	60	826
+759	2015	12	1500	74	6	45	826
+760	2015	12	1245	76	12	88	826
+761	2015	12	1320	75	7	52	826
+762	2015	12	4650	75	7	46	613
+763	2015	12	90	75	10	64	613
+764	2015	12	3000	75	7	47	613
+765	2015	12	3600	75	7	49	613
+766	2015	12	3500	76	11	76	613
+767	2015	12	3600	75	7	51	613
+768	2015	12	1600	76	11	78	613
+769	2015	12	1600	76	11	78	613
+770	2015	12	3600	75	8	56	613
+771	2015	12	3825	76	12	88	613
+772	2015	12	4600	75	7	52	613
+773	2015	12	1000	75	7	49	614
+774	2015	12	1300	73	1	16	614
+775	2015	12	1500	74	4	34	614
+776	2015	12	1450	76	13	91	614
+777	2015	12	1000	75	8	55	614
+778	2015	12	1000	75	8	56	614
+779	2015	12	685	76	12	83	618
+780	2015	12	800	75	7	49	618
+781	2015	12	800	75	8	54	618
+782	2015	12	800	75	7	51	618
+783	2015	12	800	75	8	56	618
+784	2015	12	720	75	7	52	618
+785	2015	12	1300	75	8	55	649
+786	2015	12	825	76	12	83	662
+787	2015	12	1100	75	7	49	662
+788	2015	12	1100	75	7	51	662
+789	2015	12	1100	75	8	55	662
+790	2015	12	1100	75	8	56	662
+791	2015	12	1400	75	8	57	662
+792	2015	12	820	75	7	52	662
+793	2015	12	0	75	7	46	718
+794	2015	12	1420	75	7	46	718
+795	2015	12	950	73	1	14	718
+796	2015	12	700	75	10	64	718
+797	2015	12	125	75	10	65	718
+798	2015	12	1420	76	12	80	718
+799	2015	12	950	73	3	25	718
+800	2015	12	1400	75	7	47	718
+801	2015	12	1400	75	7	47	718
+802	2015	12	1385	76	12	82	718
+803	2015	12	1400	75	9	59	718
+804	2015	12	1400	75	9	59	718
+805	2015	12	1385	76	12	83	718
+806	2015	12	1385	76	12	83	718
+807	2015	12	1285	75	7	48	718
+808	2015	12	1285	75	7	48	718
+809	2015	12	1400	75	7	49	718
+810	2015	12	1400	76	11	72	718
+811	2015	12	950	73	1	16	718
+812	2015	12	1900	75	10	66	718
+813	2015	12	900	76	11	75	718
+814	2015	12	900	76	11	75	718
+815	2015	12	1500	75	10	67	718
+816	2015	12	1400	75	8	53	718
+817	2015	12	1400	75	8	54	718
+818	2015	12	1350	75	7	50	718
+819	2015	12	1400	75	7	51	718
+820	2015	12	1600	76	11	78	718
+821	2015	12	1600	76	11	78	718
+822	2015	12	1365	76	12	86	718
+823	2015	12	1650	73	2	20	718
+824	2015	12	950	73	3	29	718
+825	2015	12	600	75	10	69	718
+826	2015	12	1400	75	8	55	718
+827	2015	12	1400	75	8	55	718
+828	2015	12	1400	75	8	56	718
+829	2015	12	1710	75	8	57	718
+830	2015	12	1285	76	12	88	718
+831	2015	12	1425	75	7	52	718
+832	2015	12	1425	75	7	52	718
+833	2015	12	1600	73	2	22	718
+834	2015	12	750	75	7	51	811
+835	2015	12	750	75	8	56	811
+836	2015	12	2100	75	7	49	845
+837	2015	12	2100	75	8	55	845
+838	2015	12	2100	75	8	56	845
+839	2015	12	2500	75	7	51	661
+840	2015	12	500	76	13	91	661
+841	2015	12	2500	75	8	55	661
+842	2015	12	2500	75	8	56	661
+843	2015	12	8500	74	5	38	661
+844	2015	12	2900	75	7	51	672
+845	2015	12	2900	75	8	56	672
+846	2015	12	8500	74	5	38	672
+847	2015	12	1800	75	10	64	708
+848	2015	12	2400	75	7	49	708
+849	2015	12	2400	75	7	51	708
+850	2015	12	2400	75	8	55	708
+851	2015	12	2400	75	8	56	708
+852	2015	12	1790	75	8	57	708
+853	2015	12	9300	75	8	53	802
+854	2015	12	2350	75	7	51	818
+855	2015	12	400	76	13	91	818
+856	2015	12	2350	75	8	56	818
+857	2015	12	8600	74	5	38	818
+858	2015	12	29000	75	7	49	673
+859	2015	12	29000	75	8	56	673
+860	2015	12	585	75	7	46	771
+861	2015	12	550	73	2	18	771
+862	2015	12	550	73	1	14	771
+863	2015	12	320	75	10	64	771
+865	2015	12	1200	76	12	79	771
+866	2015	12	615	76	12	80	771
+867	2015	12	550	73	1	15	771
+868	2015	12	1500	73	2	19	771
+869	2015	12	850	76	12	82	771
+870	2015	12	720	76	12	83	771
+871	2015	12	550	73	3	26	771
+872	2015	12	1000	75	7	49	771
+873	2015	12	600	73	3	27	771
+874	2015	12	1500	75	10	66	771
+876	2015	12	1500	76	13	89	771
+877	2015	12	650	76	12	85	771
+878	2015	12	1500	74	4	32	771
+879	2015	12	620	76	12	86	771
+880	2015	12	1500	73	2	20	771
+881	2015	12	550	73	3	29	771
+882	2015	12	1500	74	4	33	771
+883	2015	12	1400	76	13	91	771
+884	2015	12	1400	75	10	69	771
+885	2015	12	1500	74	5	38	771
+886	2015	12	620	76	12	88	771
+887	2015	12	615	75	7	52	771
+888	2015	12	1000	75	9	61	771
+889	2015	12	930	75	7	46	731
+890	2015	12	900	73	2	18	731
+891	2015	12	900	73	1	14	731
+892	2015	12	1000	76	11	70	731
+893	2015	12	1000	75	10	64	731
+895	2015	12	1000	74	6	39	731
+896	2015	12	785	76	12	80	731
+897	2015	12	900	73	3	25	731
+898	2015	12	800	73	2	19	731
+899	2015	12	800	73	2	19	731
+901	2015	12	825	76	12	82	731
+902	2015	12	700	75	9	59	731
+903	2015	12	810	76	12	83	731
+904	2015	12	900	73	3	26	731
+905	2015	12	810	75	7	48	731
+906	2015	12	1000	76	11	71	731
+907	2015	12	900	75	7	49	731
+908	2015	12	900	75	7	49	731
+910	2015	12	900	73	1	16	731
+911	2015	12	1100	74	6	40	731
+912	2015	12	710	73	3	27	731
+913	2015	12	1000	76	11	73	731
+914	2015	12	1000	75	10	66	731
+915	2015	12	1000	76	11	74	731
+916	2015	12	710	74	6	41	731
+918	2015	12	980	75	10	67	731
+919	2015	12	900	76	11	76	731
+920	2015	12	850	76	13	89	731
+921	2015	12	900	75	8	54	731
+922	2015	12	1000	76	11	77	731
+923	2015	12	800	74	5	36	731
+924	2015	12	650	74	5	36	731
+925	2015	12	1000	76	12	84	731
+926	2015	12	900	74	6	42	731
+927	2015	12	785	75	7	50	731
+928	2015	12	785	75	7	50	731
+929	2015	12	900	74	6	43	731
+930	2015	12	900	73	1	17	731
+931	2015	12	900	75	7	51	731
+932	2015	12	720	76	12	85	731
+933	2015	12	950	76	11	78	731
+934	2015	12	650	76	12	86	731
+935	2015	12	700	73	2	20	731
+936	2015	12	1200	76	13	91	731
+937	2015	12	700	75	10	69	731
+938	2015	12	900	75	8	55	731
+939	2015	12	1100	75	8	56	731
+940	2015	12	1100	75	8	57	731
+941	2015	12	900	73	3	30	731
+942	2015	12	970	73	2	21	731
+943	2015	12	1000	76	12	87	731
+944	2015	12	900	75	8	58	731
+945	2015	12	1100	75	9	60	731
+946	2015	12	1000	74	6	45	731
+947	2015	12	875	76	12	88	731
+948	2015	12	850	75	7	52	731
+949	2015	12	700	75	9	61	731
+950	2015	12	710	73	2	23	731
+951	2015	12	0	75	7	46	840
+952	2015	12	5000	75	10	64	840
+953	2015	12	3500	73	1	15	840
+954	2015	12	3250	76	12	83	840
+955	2015	12	5000	75	7	49	840
+956	2015	12	3500	73	1	16	840
+957	2015	12	8000	76	11	74	840
+959	2015	12	2500	75	10	67	840
+960	2015	12	6000	76	11	76	840
+961	2015	12	3500	73	1	17	840
+962	2015	12	5000	75	7	51	840
+963	2015	12	4000	74	4	31	840
+964	2015	12	6000	76	11	78	840
+965	2015	12	4000	73	2	20	840
+966	2015	12	5000	75	8	55	840
+967	2015	12	5000	75	8	56	840
+968	2015	12	6000	75	8	57	840
+969	2015	12	3900	76	12	88	840
+970	2015	12	4350	75	7	52	840
+971	2015	12	4350	75	7	52	840
+972	2015	12	5000	75	10	64	842
+973	2015	12	2500	75	10	65	842
+974	2015	12	4500	73	2	19	842
+975	2015	12	3500	76	12	83	842
+976	2015	12	5000	75	7	49	842
+977	2015	12	0	74	6	41	842
+978	2015	12	6000	76	11	75	842
+979	2015	12	5000	75	7	51	842
+980	2015	12	5000	75	8	56	842
+981	2015	12	6000	75	8	57	842
+982	2015	12	0	74	5	38	842
+983	2015	12	3900	76	12	88	842
+984	2015	12	4555	75	7	52	842
+985	2015	12	4000	73	2	22	842
+986	2015	12	2420	75	7	46	741
+987	2015	12	2420	75	7	46	741
+988	2015	12	1100	73	2	18	741
+989	2015	12	1800	76	11	70	741
+990	2015	12	1400	75	10	64	741
+991	2015	12	3200	76	12	80	741
+992	2015	12	2185	76	12	82	741
+993	2015	12	1800	75	9	59	741
+994	2015	12	1100	73	3	26	741
+995	2015	12	2800	74	5	35	741
+996	2015	12	2100	75	7	48	741
+997	2015	12	2512	75	7	49	741
+998	2015	12	1100	73	1	16	741
+999	2015	12	3000	74	6	40	741
+1000	2015	12	1400	76	11	73	741
+1001	2015	12	1400	75	10	66	741
+1003	2015	12	850	75	10	67	741
+1004	2015	12	1400	76	11	76	741
+1005	2015	12	2000	75	8	53	741
+1007	2015	12	2000	75	8	54	741
+1008	2015	12	1400	76	11	77	741
+1009	2015	12	2120	75	7	50	741
+1010	2015	12	2120	75	7	50	741
+1011	2015	12	2000	74	6	43	741
+1012	2015	12	1800	75	7	51	741
+1013	2015	12	1400	76	11	78	741
+1014	2015	12	1825	76	12	86	741
+1015	2015	12	3000	73	2	20	741
+1016	2015	12	1400	76	13	91	741
+1017	2015	12	1300	75	10	69	741
+1018	2015	12	1800	75	8	55	741
+1019	2015	12	1800	75	8	56	741
+1020	2015	12	3000	75	8	57	741
+1021	2015	12	1000	73	2	21	741
+1022	2015	12	1800	76	12	87	741
+1023	2015	12	0	74	5	38	741
+1024	2015	12	2700	74	5	38	741
+1025	2015	12	3000	75	9	60	741
+1026	2015	12	1000	74	6	45	741
+1027	2015	12	1850	75	7	52	741
+1028	2015	12	1800	75	9	61	741
+1029	2015	12	850	75	7	46	825
+1030	2015	12	650	73	1	14	825
+1031	2015	12	1200	75	10	64	825
+1032	2015	12	860	76	12	80	825
+1033	2015	12	900	75	7	47	825
+1034	2015	12	850	76	12	82	825
+1035	2015	12	450	75	9	59	825
+1036	2015	12	850	76	12	83	825
+1037	2015	12	750	75	7	48	825
+1038	2015	12	750	75	7	48	825
+1039	2015	12	800	75	7	49	825
+1040	2015	12	700	74	6	40	825
+1041	2015	12	900	76	11	73	825
+1042	2015	12	800	75	10	66	825
+1044	2015	12	420	74	6	41	825
+1045	2015	12	700	75	10	67	825
+1046	2015	12	470	74	6	43	825
+1047	2015	12	800	75	7	51	825
+1049	2015	12	800	76	11	78	825
+1050	2015	12	565	76	12	86	825
+1051	2015	12	800	75	8	55	825
+1052	2015	12	800	75	8	56	825
+1053	2015	12	700	75	8	57	825
+1054	2015	12	600	76	12	87	825
+1055	2015	12	560	76	12	88	825
+1056	2015	12	650	75	7	52	825
+1057	2015	12	800	75	9	61	825
+1058	2015	12	865	75	7	46	575
+1059	2015	12	900	75	7	47	575
+1060	2015	12	2250	76	12	83	575
+1061	2015	12	2100	75	7	49	575
+1062	2015	12	1500	75	10	67	575
+1063	2015	12	2100	75	8	54	575
+1064	2015	12	1000	76	11	78	575
+1065	2015	12	2100	75	8	56	575
+1066	2015	12	2150	76	12	88	575
+1067	2015	12	2650	75	7	52	575
+1068	2015	12	500	75	10	64	582
+1069	2015	12	600	75	10	67	582
+1070	2015	12	800	76	11	70	585
+1071	2015	12	1400	75	10	65	585
+1072	2015	12	1500	75	10	66	585
+1073	2015	12	525	75	10	67	585
+1074	2015	12	1300	76	13	90	585
+1075	2015	12	1200	75	10	68	585
+1076	2015	12	1300	76	13	91	585
+1077	2015	12	250	75	10	69	585
+1078	2015	12	785	75	7	46	612
+1079	2015	12	960	73	2	18	612
+1080	2015	12	960	73	1	14	612
+1081	2015	12	950	76	11	70	612
+1082	2015	12	1250	75	10	64	612
+1083	2015	12	960	73	3	24	612
+1084	2015	12	960	73	3	24	612
+1085	2015	12	1200	75	10	65	612
+1086	2015	12	600	76	12	79	612
+1087	2015	12	970	74	6	39	612
+1088	2015	12	970	74	6	39	612
+1089	2015	12	785	76	12	80	612
+1090	2015	12	960	73	3	25	612
+1091	2015	12	960	73	1	15	612
+1092	2015	12	960	73	1	15	612
+1093	2015	12	700	73	2	19	612
+1094	2015	12	900	76	12	81	612
+1095	2015	12	950	75	7	47	612
+1096	2015	12	1020	76	12	82	612
+1097	2015	12	650	75	9	59	612
+1098	2015	12	650	75	9	59	612
+1099	2015	12	785	76	12	83	612
+1100	2015	12	960	73	3	26	612
+1101	2015	12	680	74	5	35	612
+1102	2015	12	680	74	5	35	612
+1103	2015	12	725	75	7	48	612
+1104	2015	12	900	76	11	71	612
+1105	2015	12	1200	75	7	49	612
+1106	2015	12	1200	75	7	49	612
+1107	2015	12	950	76	11	72	612
+1108	2015	12	960	73	1	16	612
+1109	2015	12	880	74	6	40	612
+1110	2015	12	880	74	6	40	612
+1111	2015	12	700	73	3	27	612
+1112	2015	12	950	76	11	73	612
+1113	2015	12	1240	75	10	66	612
+1114	2015	12	950	76	11	74	612
+1115	2015	12	950	76	11	74	612
+1116	2015	12	900	74	6	41	612
+1117	2015	12	900	74	6	41	612
+1118	2015	12	950	76	11	75	612
+1119	2015	12	1280	75	10	67	612
+1120	2015	12	950	76	11	76	612
+1121	2015	12	1600	75	8	53	612
+1122	2015	12	1600	75	8	53	612
+1123	2015	12	1100	76	13	89	612
+1124	2015	12	1100	75	8	54	612
+1125	2015	12	1500	75	8	54	612
+1126	2015	12	950	76	11	77	612
+1127	2015	12	550	74	5	36	612
+1128	2015	12	900	74	6	42	612
+1129	2015	12	900	74	6	42	612
+1130	2015	12	720	75	7	50	612
+1131	2015	12	960	74	6	43	612
+1132	2015	12	960	74	6	43	612
+1133	2015	12	960	73	1	17	612
+1134	2015	12	1900	75	7	51	612
+1135	2015	12	960	73	3	28	612
+1136	2015	12	960	73	3	28	612
+1137	2015	12	785	76	12	85	612
+1138	2015	12	750	74	4	31	612
+1139	2015	12	800	74	4	32	612
+1140	2015	12	1100	76	11	78	612
+1141	2015	12	785	76	12	86	612
+1142	2015	12	800	73	2	20	612
+1143	2015	12	800	73	2	20	612
+1144	2015	12	960	73	3	29	612
+1145	2015	12	500	74	5	37	612
+1146	2015	12	800	74	4	33	612
+1147	2015	12	1000	75	10	68	612
+1148	2015	12	800	74	4	34	612
+1149	2015	12	800	74	4	34	612
+1150	2015	12	1100	76	13	91	612
+1151	2015	12	900	74	6	44	612
+1152	2015	12	1200	75	10	69	612
+1153	2015	12	1200	75	8	55	612
+1154	2015	12	1500	75	8	55	612
+1155	2015	12	1000	75	8	56	612
+1156	2015	12	500	75	8	57	612
+1157	2015	12	520	75	8	57	612
+1158	2015	12	960	73	3	30	612
+1159	2015	12	1000	73	2	21	612
+1160	2015	12	600	76	12	87	612
+1161	2015	12	550	74	5	38	612
+1162	2015	12	550	74	5	38	612
+1163	2015	12	960	75	8	58	612
+1164	2015	12	750	75	9	60	612
+1165	2015	12	900	74	6	45	612
+1166	2015	12	900	74	6	45	612
+1167	2015	12	785	76	12	88	612
+1168	2015	12	785	75	7	52	612
+1169	2015	12	1000	75	9	61	612
+1170	2015	12	800	73	2	22	612
+1171	2015	12	800	73	2	22	612
+1172	2015	12	900	73	2	23	612
+1173	2015	12	1000	75	10	64	648
+1174	2015	12	0	75	8	57	648
+1175	2015	12	950	75	8	57	648
+1176	2015	12	1210	75	7	46	712
+1177	2015	12	1250	75	7	46	712
+1178	2015	12	1200	76	11	70	712
+1179	2015	12	1400	75	10	64	712
+1180	2015	12	1000	76	12	80	712
+1181	2015	12	1100	73	3	25	712
+1182	2015	12	1800	73	2	19	712
+1183	2015	12	935	76	12	82	712
+1184	2015	12	1385	76	12	83	712
+1185	2015	12	1100	73	3	26	712
+1186	2015	12	1600	75	7	49	712
+1187	2015	12	1600	75	7	49	712
+1188	2015	12	1100	73	1	16	712
+1189	2015	12	1300	75	10	66	712
+1190	2015	12	1250	75	10	67	712
+1191	2015	12	1600	75	8	53	712
+1192	2015	12	750	76	13	89	712
+1193	2015	12	1600	75	8	54	712
+1194	2015	12	1100	74	6	43	712
+1195	2015	12	1420	76	12	85	712
+1196	2015	12	1800	74	4	31	712
+1197	2015	12	1800	74	4	32	712
+1198	2015	12	1800	74	5	37	712
+1199	2015	12	1800	74	4	33	712
+1201	2015	12	1800	74	4	34	712
+1202	2015	12	1600	75	8	55	712
+1203	2015	12	1600	75	8	56	712
+1204	2015	12	1930	75	8	57	712
+1205	2015	12	1100	75	8	58	712
+1206	2015	12	1650	75	7	52	712
+1207	2015	12	750	76	13	91	714
+1208	2015	12	0	75	7	46	736
+1209	2015	12	5000	75	10	64	736
+1210	2015	12	7000	75	7	47	736
+1211	2015	12	5000	75	7	49	736
+1213	2015	12	12000	75	7	51	736
+1214	2015	12	5000	75	8	56	736
+1215	2015	12	890	74	6	39	757
+1216	2015	12	700	73	2	19	757
+1217	2015	12	700	74	5	35	757
+1218	2015	12	1000	75	8	53	757
+1219	2015	12	1000	76	13	89	757
+1220	2015	12	1100	75	8	54	757
+1221	2015	12	700	74	5	36	757
+1222	2015	12	500	74	6	43	757
+1223	2015	12	700	74	4	31	757
+1224	2015	12	700	74	4	32	757
+1225	2015	12	700	73	2	20	757
+1226	2015	12	700	74	5	37	757
+1227	2015	12	700	74	4	33	757
+1228	2015	12	850	76	13	91	757
+1229	2015	12	650	74	5	38	757
+1230	2015	12	500	75	8	58	757
+1231	2015	12	770	74	6	45	757
+1232	2015	12	600	73	2	23	757
+1233	2015	12	2580	75	7	46	761
+1234	2015	12	800	73	2	18	761
+1235	2015	12	800	73	1	14	761
+1236	2015	12	800	76	11	70	761
+1237	2015	12	800	73	3	24	761
+1238	2015	12	800	75	10	65	761
+1239	2015	12	800	76	12	79	761
+1240	2015	12	800	74	6	39	761
+1241	2015	12	1920	76	12	80	761
+1242	2015	12	800	73	3	25	761
+1243	2015	12	800	73	1	15	761
+1244	2015	12	600	73	2	19	761
+1246	2015	12	800	73	3	26	761
+1247	2015	12	800	73	1	16	761
+1248	2015	12	400	73	3	27	761
+1249	2015	12	500	75	10	66	761
+1250	2015	12	1600	75	8	53	761
+1251	2015	12	1600	75	8	54	761
+1252	2015	12	0	75	7	50	761
+1253	2015	12	800	74	6	43	761
+1254	2015	12	800	73	1	17	761
+1255	2015	12	800	73	3	28	761
+1256	2015	12	600	73	2	20	761
+1257	2015	12	800	73	3	29	761
+1258	2015	12	500	75	10	68	761
+1259	2015	12	700	76	13	91	761
+1260	2015	12	1000	75	8	57	761
+1261	2015	12	800	73	3	30	761
+1262	2015	12	800	73	2	21	761
+1263	2015	12	600	74	5	38	761
+1264	2015	12	800	75	8	58	761
+1265	2015	12	800	73	2	23	761
+1266	2015	12	2850	75	7	46	765
+1267	2015	12	1500	73	1	14	765
+1268	2015	12	1300	76	11	70	765
+1269	2015	12	1800	75	10	64	765
+1270	2015	12	2500	75	10	65	765
+1271	2015	12	1700	74	6	39	765
+1272	2015	12	2100	73	2	19	765
+1273	2015	12	1500	73	3	26	765
+1274	2015	12	2000	74	5	35	765
+1275	2015	12	2200	75	7	49	765
+1276	2015	12	1200	73	3	27	765
+1277	2015	12	1500	75	10	66	765
+1278	2015	12	1500	75	10	67	765
+1279	2015	12	750	76	13	89	765
+1280	2015	12	2200	75	8	54	765
+1281	2015	12	0	74	5	36	765
+1282	2015	12	1500	74	5	36	765
+1283	2015	12	2220	75	7	50	765
+1284	2015	12	2000	74	6	43	765
+1285	2015	12	1500	73	1	17	765
+1286	2015	12	2500	76	13	90	765
+1287	2015	12	2200	75	7	51	765
+1289	2015	12	2000	74	4	31	765
+1290	2015	12	2100	74	4	32	765
+1291	2015	12	3850	76	12	86	765
+1292	2015	12	2100	73	2	20	765
+1293	2015	12	2000	74	5	37	765
+1294	2015	12	2000	74	4	33	765
+1295	2015	12	1520	75	10	68	765
+1296	2015	12	1800	76	13	91	765
+1297	2015	12	1200	74	6	44	765
+1298	2015	12	1650	75	10	69	765
+1299	2015	12	2200	75	8	56	765
+1300	2015	12	1500	73	3	30	765
+1301	2015	12	2200	74	5	38	765
+1302	2015	12	1300	74	6	45	765
+1303	2015	12	2100	73	2	22	765
+1304	2015	12	2000	73	2	23	765
+1305	2015	12	1500	75	10	64	799
+1307	2015	12	2850	75	7	52	799
+1308	2015	12	600	75	7	46	670
+1309	2015	12	490	73	2	18	670
+1310	2015	12	490	73	1	14	670
+1311	2015	12	600	76	11	70	670
+1312	2015	12	500	75	10	64	670
+1313	2015	12	490	73	3	24	670
+1314	2015	12	500	75	10	65	670
+1315	2015	12	550	74	6	39	670
+1316	2015	12	550	74	6	39	670
+1317	2015	12	760	76	12	80	670
+1318	2015	12	490	73	3	25	670
+1319	2015	12	490	73	1	15	670
+1320	2015	12	650	73	2	19	670
+1321	2015	12	650	73	2	19	670
+1322	2015	12	650	76	12	82	670
+1323	2015	12	600	75	9	59	670
+1324	2015	12	650	76	12	83	670
+1325	2015	12	490	73	3	26	670
+1326	2015	12	650	74	5	35	670
+1327	2015	12	650	74	5	35	670
+1328	2015	12	490	73	1	16	670
+1329	2015	12	800	74	6	40	670
+1330	2015	12	800	74	6	40	670
+1331	2015	12	520	73	3	27	670
+1332	2015	12	500	75	10	66	670
+1333	2015	12	600	74	6	41	670
+1334	2015	12	600	74	6	41	670
+1335	2015	12	500	75	10	67	670
+1336	2015	12	600	75	8	53	670
+1337	2015	12	500	76	13	89	670
+1338	2015	12	600	75	8	54	670
+1339	2015	12	700	74	5	36	670
+1340	2015	12	530	74	6	42	670
+1341	2015	12	650	75	7	50	670
+1342	2015	12	600	74	6	43	670
+1343	2015	12	490	73	1	17	670
+1344	2015	12	500	76	13	90	670
+1345	2015	12	490	73	3	28	670
+1346	2015	12	650	76	12	85	670
+1347	2015	12	700	74	4	31	670
+1348	2015	12	650	76	12	86	670
+1349	2015	12	700	73	2	20	670
+1350	2015	12	700	73	2	20	670
+1351	2015	12	490	73	3	29	670
+1352	2015	12	650	74	5	37	670
+1353	2015	12	650	74	5	37	670
+1354	2015	12	650	74	4	33	670
+1355	2015	12	500	75	10	68	670
+1356	2015	12	650	74	4	34	670
+1357	2015	12	650	74	4	34	670
+1358	2015	12	500	76	13	91	670
+1359	2015	12	480	74	6	44	670
+1360	2015	12	480	74	6	44	670
+1361	2015	12	500	75	10	69	670
+1362	2015	12	490	73	3	30	670
+1363	2015	12	520	73	2	21	670
+1364	2015	12	520	73	2	21	670
+1365	2015	12	700	74	5	38	670
+1366	2015	12	490	75	8	58	670
+1367	2015	12	800	75	9	60	670
+1368	2015	12	600	74	6	45	670
+1369	2015	12	600	74	6	45	670
+1370	2015	12	600	75	9	61	670
+1371	2015	12	700	73	2	22	670
+1372	2015	12	520	73	2	23	670
+1373	2015	12	640	75	9	62	670
+1374	2015	12	655	75	9	62	670
+1376	2015	12	5000	74	5	38	785
+1377	2015	12	5000	74	5	38	785
+1378	2015	12	0	75	9	60	785
+1379	2015	12	4350	75	7	46	638
+1380	2015	12	5430	73	1	14	638
+1381	2015	12	5100	76	11	70	638
+1382	2015	12	3500	75	10	64	638
+1383	2015	12	3000	75	10	64	638
+1384	2015	12	5430	73	3	24	638
+1385	2015	12	5100	76	12	79	638
+1387	2015	12	5430	73	3	25	638
+1388	2015	12	5430	73	3	25	638
+1389	2015	12	5100	76	12	81	638
+1390	2015	12	5100	75	7	47	638
+1392	2015	12	5000	75	9	59	638
+1393	2015	12	4350	76	12	83	638
+1394	2015	12	5430	73	3	26	638
+1395	2015	12	4350	75	7	48	638
+1396	2015	12	5100	76	11	71	638
+1397	2015	12	5400	75	7	49	638
+1398	2015	12	5400	75	7	49	638
+1399	2015	12	5100	76	11	72	638
+1400	2015	12	5430	73	1	16	638
+1401	2015	12	7250	74	6	40	638
+1402	2015	12	5100	76	11	73	638
+1403	2015	12	3000	75	10	66	638
+1404	2015	12	5500	76	11	74	638
+1405	2015	12	5500	74	6	41	638
+1406	2015	12	5100	76	11	75	638
+1407	2015	12	2500	75	10	67	638
+1408	2015	12	5100	76	11	76	638
+1409	2015	12	5400	75	8	53	638
+1410	2015	12	5400	75	8	54	638
+1411	2015	12	5400	75	8	54	638
+1412	2015	12	4900	76	11	77	638
+1413	2015	12	5600	76	11	77	638
+1414	2015	12	5100	76	12	84	638
+1415	2015	12	5500	74	6	42	638
+1416	2015	12	4350	75	7	50	638
+1417	2015	12	5430	73	1	17	638
+1418	2015	12	5400	75	7	51	638
+1419	2015	12	4350	76	12	85	638
+1420	2015	12	5100	76	11	78	638
+1421	2015	12	4350	76	12	86	638
+1422	2015	12	5430	73	3	29	638
+1423	2015	12	3000	75	10	69	638
+1424	2015	12	5400	75	8	55	638
+1425	2015	12	5400	75	8	56	638
+1426	2015	12	7250	75	8	57	638
+1427	2015	12	5600	76	12	87	638
+1428	2015	12	5430	75	8	58	638
+1429	2015	12	4350	76	12	88	638
+1430	2015	12	4350	75	7	52	638
+1431	2015	12	5400	75	9	61	638
+1432	2015	12	0	75	7	46	639
+1433	2015	12	0	75	7	46	639
+1434	2015	12	5330	73	2	18	639
+1435	2015	12	5330	73	2	18	639
+1436	2015	12	5330	73	1	14	639
+1437	2015	12	5330	73	1	14	639
+1438	2015	12	5300	76	11	70	639
+1439	2015	12	5083	75	10	64	639
+1440	2015	12	5083	75	10	64	639
+1441	2015	12	5330	73	3	24	639
+1442	2015	12	5330	73	3	24	639
+1443	2015	12	5083	75	10	65	639
+1444	2015	12	5083	75	10	65	639
+1445	2015	12	5300	76	12	79	639
+1446	2015	12	5100	74	6	39	639
+1447	2015	12	5100	74	6	39	639
+1449	2015	12	5600	76	12	80	639
+1450	2015	12	5330	73	3	25	639
+1451	2015	12	5330	73	3	25	639
+1452	2015	12	5330	73	1	15	639
+1453	2015	12	5330	73	1	15	639
+1454	2015	12	5500	73	2	19	639
+1455	2015	12	5600	76	12	81	639
+1456	2015	12	4375	76	12	82	639
+1457	2015	12	4375	76	12	82	639
+1458	2015	12	4800	75	9	59	639
+1459	2015	12	5660	76	12	83	639
+1460	2015	12	4370	76	12	83	639
+1461	2015	12	5330	73	3	26	639
+1462	2015	12	5330	73	3	26	639
+1463	2015	12	5500	74	5	35	639
+1464	2015	12	5500	74	5	35	639
+1465	2015	12	4370	75	7	48	639
+1466	2015	12	4370	75	7	48	639
+1467	2015	12	4700	75	7	49	639
+1468	2015	12	5330	73	1	16	639
+1469	2015	12	5330	73	1	16	639
+1470	2015	12	5929	74	6	40	639
+1471	2015	12	5929	74	6	40	639
+1472	2015	12	5080	73	3	27	639
+1473	2015	12	5080	73	3	27	639
+1474	2015	12	5083	75	10	66	639
+1475	2015	12	5500	74	6	41	639
+1476	2015	12	5080	74	6	41	639
+1477	2015	12	5083	75	10	67	639
+1478	2015	12	5083	75	10	67	639
+1479	2015	12	5500	76	11	76	639
+1480	2015	12	4850	75	8	53	639
+1481	2015	12	4850	75	8	53	639
+1482	2015	12	3500	76	13	89	639
+1483	2015	12	4850	75	8	54	639
+1484	2015	12	5300	76	11	77	639
+1485	2015	12	5200	74	5	36	639
+1486	2015	12	5200	74	5	36	639
+1487	2015	12	5300	76	12	84	639
+1488	2015	12	5500	74	6	42	639
+1489	2015	12	5300	74	6	42	639
+1490	2015	12	4370	75	7	50	639
+1491	2015	12	4370	75	7	50	639
+1492	2015	12	5200	74	6	43	639
+1493	2015	12	5200	74	6	43	639
+1494	2015	12	5330	73	1	17	639
+1495	2015	12	5330	73	1	17	639
+1496	2015	12	5330	73	3	28	639
+1497	2015	12	4370	76	12	85	639
+1498	2015	12	4370	76	12	85	639
+1499	2015	12	5100	74	4	31	639
+1500	2015	12	5100	74	4	31	639
+1501	2015	12	5000	74	4	32	639
+1502	2015	12	5300	76	11	78	639
+1503	2015	12	5300	76	11	78	639
+1504	2015	12	4375	76	12	86	639
+1505	2015	12	4375	76	12	86	639
+1506	2015	12	5000	73	2	20	639
+1507	2015	12	5000	73	2	20	639
+1508	2015	12	5330	73	3	29	639
+1509	2015	12	5330	73	3	29	639
+1510	2015	12	5000	74	5	37	639
+1511	2015	12	5000	74	5	37	639
+1512	2015	12	5200	74	4	33	639
+1513	2015	12	5200	74	4	33	639
+1514	2015	12	5083	75	10	68	639
+1515	2015	12	2000	75	10	68	639
+1516	2015	12	5000	74	4	34	639
+1517	2015	12	5000	74	4	34	639
+1518	2015	12	5083	76	13	91	639
+1519	2015	12	5080	74	6	44	639
+1520	2015	12	5080	74	6	44	639
+1521	2015	12	5083	75	10	69	639
+1522	2015	12	5500	75	8	55	639
+1523	2015	12	5500	75	8	55	639
+1524	2015	12	5800	75	8	57	639
+1525	2015	12	5800	75	8	57	639
+1526	2015	12	5330	73	3	30	639
+1527	2015	12	5100	73	2	21	639
+1528	2015	12	5100	73	2	21	639
+1529	2015	12	5400	76	12	87	639
+1530	2015	12	5000	74	5	38	639
+1531	2015	12	5200	75	8	58	639
+1532	2015	12	5929	75	9	60	639
+1533	2015	12	5929	75	9	60	639
+1534	2015	12	5000	74	6	45	639
+1535	2015	12	5000	74	6	45	639
+1536	2015	12	3375	76	12	88	639
+1537	2015	12	5300	75	9	61	639
+1538	2015	12	5000	73	2	22	639
+1539	2015	12	5083	73	2	23	639
+1540	2015	12	6885	75	7	46	635
+1541	2015	12	7000	73	2	18	635
+1542	2015	12	7000	73	2	18	635
+1544	2015	12	4200	75	10	64	635
+1545	2015	12	2800	75	10	65	635
+1546	2015	12	7000	74	6	39	635
+1547	2015	12	7000	73	3	25	635
+1548	2015	12	7000	73	1	15	635
+1549	2015	12	0	73	2	19	635
+1550	2015	12	9000	73	2	19	635
+1551	2015	12	3200	76	12	82	635
+1552	2015	12	7000	73	3	26	635
+1553	2015	12	9000	74	5	35	635
+1554	2015	12	7000	73	1	16	635
+1555	2015	12	9230	74	6	40	635
+1556	2015	12	7300	73	3	27	635
+1557	2015	12	7300	73	3	27	635
+1558	2015	12	3000	75	10	66	635
+1559	2015	12	7000	74	6	41	635
+1560	2015	12	2600	75	10	67	635
+1561	2015	12	9000	75	8	53	635
+1562	2015	12	9000	75	8	53	635
+1563	2015	12	9000	75	8	54	635
+1564	2015	12	9000	75	8	54	635
+1565	2015	12	9000	74	5	36	635
+1566	2015	12	7200	74	6	42	635
+1567	2015	12	7200	74	6	42	635
+1568	2015	12	6200	75	7	50	635
+1569	2015	12	8000	74	6	43	635
+1570	2015	12	7000	73	3	28	635
+1571	2015	12	7000	73	3	28	635
+1573	2015	12	9000	73	2	20	635
+1574	2015	12	7000	73	3	29	635
+1575	2015	12	7000	73	3	29	635
+1576	2015	12	9000	74	4	33	635
+1578	2015	12	7300	74	6	44	635
+1579	2015	12	2500	75	10	69	635
+1580	2015	12	9000	75	8	55	635
+1581	2015	12	9000	75	8	56	635
+1582	2015	12	9229	75	8	57	635
+1583	2015	12	0	75	8	57	635
+1584	2015	12	7000	73	3	30	635
+1585	2015	12	7300	73	2	21	635
+1586	2015	12	9000	74	5	38	635
+1587	2015	12	8000	75	8	58	635
+1588	2015	12	7300	74	6	45	635
+1589	2015	12	7000	73	2	23	635
+1590	2015	12	26000	73	2	18	803
+1591	2015	12	0	73	1	14	803
+1592	2015	12	0	73	3	24	803
+1594	2015	12	28000	74	6	39	803
+1595	2015	12	22000	73	2	19	803
+1596	2015	12	26000	73	3	26	803
+1597	2015	12	22000	74	5	35	803
+1598	2015	12	26000	73	1	16	803
+1599	2015	12	30000	74	6	40	803
+1600	2015	12	29000	73	3	27	803
+1602	2015	12	29000	74	6	41	803
+1603	2015	12	22000	74	5	36	803
+1604	2015	12	28000	74	6	43	803
+1605	2015	12	0	73	3	28	803
+1606	2015	12	22000	74	4	31	803
+1607	2015	12	0	74	4	32	803
+1608	2015	12	22000	73	2	20	803
+1609	2015	12	0	73	3	29	803
+1610	2015	12	22000	74	5	37	803
+1611	2015	12	22500	74	4	33	803
+1612	2015	12	22000	74	4	34	803
+1614	2015	12	29000	74	6	44	803
+1615	2015	12	30000	75	8	57	803
+1616	2015	12	26000	73	3	30	803
+1617	2015	12	27900	73	2	21	803
+1618	2015	12	22000	74	5	38	803
+1619	2015	12	0	75	9	60	803
+1620	2015	12	29000	74	6	45	803
+1621	2015	12	22000	73	2	22	803
+1622	2015	12	27000	73	2	23	803
+1623	2015	12	5000	75	9	59	838
+1624	2015	12	5000	75	7	49	838
+1625	2015	12	5000	75	9	61	838
+1626	2015	12	2100	73	2	18	622
+1627	2015	12	0	73	1	14	622
+1629	2015	12	2000	75	10	64	622
+1630	2015	12	0	73	3	24	622
+1631	2015	12	2000	75	10	65	622
+1632	2015	12	2400	76	12	79	622
+1633	2015	12	2100	74	6	39	622
+1634	2015	12	1850	76	12	80	622
+1635	2015	12	2100	73	1	15	622
+1636	2015	12	2500	73	2	19	622
+1637	2015	12	2500	73	2	19	622
+1638	2015	12	2100	76	12	82	622
+1639	2015	12	2400	75	9	59	622
+1640	2015	12	0	73	3	26	622
+1641	2015	12	2500	74	5	35	622
+1642	2015	12	2500	74	5	35	622
+1643	2015	12	2100	73	1	16	622
+1644	2015	12	2450	74	6	40	622
+1645	2015	12	2015	75	10	66	622
+1646	2015	12	2100	74	6	41	622
+1647	2015	12	1850	75	10	67	622
+1648	2015	12	1950	76	13	89	622
+1649	2015	12	2500	74	5	36	622
+1650	2015	12	2500	74	5	36	622
+1651	2015	12	2100	74	6	42	622
+1652	2015	12	2100	74	6	43	622
+1653	2015	12	2000	76	13	90	622
+1654	2015	12	2020	76	12	85	622
+1655	2015	12	2500	74	4	31	622
+1656	2015	12	2500	74	4	31	622
+1657	2015	12	2500	73	2	20	622
+1658	2015	12	2100	73	3	29	622
+1659	2015	12	2500	74	5	37	622
+1660	2015	12	2500	74	5	37	622
+1661	2015	12	2500	74	4	33	622
+1662	2015	12	2500	74	4	33	622
+1663	2015	12	2000	75	10	68	622
+1664	2015	12	2000	76	13	91	622
+1665	2015	12	2100	74	6	44	622
+1666	2015	12	2000	75	10	69	622
+1667	2015	12	0	75	8	57	622
+1668	2015	12	0	75	8	57	622
+1669	2015	12	2100	73	3	30	622
+1670	2015	12	2100	73	2	21	622
+1671	2015	12	2500	74	5	38	622
+1672	2015	12	2450	75	9	60	622
+1673	2015	12	2100	74	6	45	622
+1674	2015	12	2400	75	9	61	622
+1675	2015	12	0	73	2	22	622
+1676	2015	12	2100	73	2	23	622
+1678	2015	12	1200	75	7	46	795
+1679	2015	12	4000	76	11	70	795
+1680	2015	12	4250	75	10	64	795
+1681	2015	12	4500	75	10	65	795
+1682	2015	12	4800	76	12	79	795
+1683	2015	12	1250	76	12	80	795
+1684	2015	12	2250	73	2	19	795
+1685	2015	12	4000	76	12	81	795
+1686	2015	12	4000	75	7	47	795
+1687	2015	12	1250	76	12	82	795
+1688	2015	12	1250	76	12	83	795
+1689	2015	12	1220	75	7	48	795
+1690	2015	12	5900	75	7	49	795
+1691	2015	12	5900	75	7	49	795
+1692	2015	12	1200	74	6	40	795
+1693	2015	12	4500	75	10	66	795
+1694	2015	12	0	74	6	41	795
+1695	2015	12	4000	76	11	75	795
+1696	2015	12	4500	75	10	67	795
+1697	2015	12	5900	75	8	54	795
+1698	2015	12	2300	74	5	36	795
+1699	2015	12	0	74	6	42	795
+1700	2015	12	1250	75	7	50	795
+1701	2015	12	0	74	6	43	795
+1702	2015	12	5900	75	7	51	795
+1703	2015	12	1250	76	12	85	795
+1704	2015	12	4800	76	11	78	795
+1705	2015	12	1220	76	12	86	795
+1706	2015	12	2300	73	2	20	795
+1707	2015	12	4000	75	10	69	795
+1708	2015	12	5900	75	8	55	795
+1709	2015	12	5900	75	8	55	795
+1710	2015	12	5900	75	8	56	795
+1711	2015	12	1200	75	8	57	795
+1712	2015	12	4000	76	12	87	795
+1713	2015	12	1200	75	9	60	795
+1714	2015	12	1100	75	7	52	795
+1715	2015	12	5900	75	9	61	795
+1717	2015	12	600	75	7	46	760
+1718	2015	12	500	73	2	18	760
+1719	2015	12	500	73	1	14	760
+1720	2015	12	600	76	11	70	760
+1721	2015	12	600	75	10	64	760
+1722	2015	12	500	73	3	24	760
+1723	2015	12	500	75	10	65	760
+1724	2015	12	600	76	12	79	760
+1725	2015	12	90	74	6	39	760
+1726	2015	12	600	76	12	80	760
+1727	2015	12	500	73	3	25	760
+1728	2015	12	500	73	1	15	760
+1729	2015	12	1200	73	2	19	760
+1730	2015	12	600	76	12	81	760
+1731	2015	12	635	76	12	82	760
+1732	2015	12	600	75	9	59	760
+1733	2015	12	585	76	12	83	760
+1734	2015	12	500	73	3	26	760
+1735	2015	12	1200	74	5	35	760
+1736	2015	12	600	75	7	49	760
+1737	2015	12	800	74	6	40	760
+1738	2015	12	90	73	3	27	760
+1739	2015	12	600	76	11	73	760
+1740	2015	12	600	75	10	66	760
+1741	2015	12	80	74	6	41	760
+1742	2015	12	600	76	11	75	760
+1743	2015	12	600	75	10	67	760
+1744	2015	12	600	76	11	76	760
+1745	2015	12	600	75	8	53	760
+1746	2015	12	600	75	8	54	760
+1747	2015	12	600	76	11	77	760
+1748	2015	12	1200	74	5	36	760
+1749	2015	12	600	76	12	84	760
+1750	2015	12	80	74	6	42	760
+1751	2015	12	620	75	7	50	760
+1752	2015	12	80	74	6	43	760
+1753	2015	12	600	75	7	51	760
+1754	2015	12	500	73	3	28	760
+1755	2015	12	600	76	12	85	760
+1756	2015	12	1200	74	4	31	760
+1757	2015	12	1300	74	4	32	760
+1758	2015	12	600	76	11	78	760
+1759	2015	12	585	76	12	86	760
+1760	2015	12	1200	73	2	20	760
+1761	2015	12	500	73	3	29	760
+1762	2015	12	1000	74	5	37	760
+1763	2015	12	1200	74	4	33	760
+1764	2015	12	550	75	10	68	760
+1765	2015	12	1200	74	4	34	760
+1766	2015	12	600	76	13	91	760
+1767	2015	12	70	74	6	44	760
+1768	2015	12	600	75	8	55	760
+1769	2015	12	600	75	8	56	760
+1770	2015	12	700	75	8	57	760
+1771	2015	12	500	73	3	30	760
+1772	2015	12	600	76	12	87	760
+1773	2015	12	1200	74	5	38	760
+1774	2015	12	500	75	8	58	760
+1775	2015	12	870	75	9	60	760
+1776	2015	12	80	74	6	45	760
+1777	2015	12	600	75	7	52	760
+1778	2015	12	600	75	9	61	760
+1779	2015	12	1200	73	2	22	760
+1780	2015	12	80	73	2	23	760
+1781	2015	11	850	75	7	46	602
+1782	2015	11	1000	73	2	18	602
+1783	2015	11	1200	76	11	70	602
+1784	2015	11	1000	73	3	24	602
+1785	2015	11	850	75	10	65	602
+1786	2015	11	1000	73	3	25	602
+1787	2015	11	1000	73	1	15	602
+1789	2015	11	1000	73	3	26	602
+1791	2015	11	1000	73	1	16	602
+1792	2015	11	1000	75	8	53	602
+1793	2015	11	4850	75	8	54	602
+1795	2015	11	1000	73	1	17	602
+1798	2015	11	1000	73	2	20	602
+1799	2015	11	1000	73	3	29	602
+1800	2015	11	900	76	13	91	602
+1801	2015	11	830	75	8	57	602
+1802	2015	11	1000	73	3	30	602
+1803	2015	11	750	76	12	88	602
+1804	2015	11	600	75	7	46	772
+1805	2015	11	550	73	2	18	772
+1806	2015	11	550	73	1	14	772
+1807	2015	11	530	76	11	70	772
+1808	2015	11	600	75	10	64	772
+1809	2015	11	600	75	10	64	772
+1810	2015	11	500	75	10	64	772
+1812	2015	11	550	73	3	24	772
+1814	2015	11	600	76	12	79	772
+1815	2015	11	600	74	6	39	772
+1817	2015	11	550	73	3	25	772
+1818	2015	11	550	73	3	25	772
+1819	2015	11	550	73	1	15	772
+1820	2015	11	550	73	2	19	772
+1822	2015	11	580	76	12	81	772
+1823	2015	11	600	75	7	47	772
+1824	2015	11	600	76	12	82	772
+1825	2015	11	500	75	9	59	772
+1827	2015	11	550	73	3	26	772
+1828	2015	11	550	73	3	26	772
+1829	2015	11	550	74	5	35	772
+1831	2015	11	540	75	7	48	772
+1832	2015	11	580	76	11	71	772
+1833	2015	11	500	75	7	49	772
+1834	2015	11	600	75	7	49	772
+1835	2015	11	580	76	11	72	772
+1836	2015	11	830	74	6	40	772
+1837	2015	11	830	74	6	40	772
+1838	2015	11	830	74	6	40	772
+1839	2015	11	600	73	3	27	772
+1840	2015	11	600	76	11	73	772
+1841	2015	11	600	75	10	66	772
+1842	2015	11	500	75	10	66	772
+1843	2015	11	600	76	11	74	772
+1844	2015	11	600	74	6	41	772
+1845	2015	11	600	74	6	41	772
+1846	2015	11	530	76	11	75	772
+1847	2015	11	500	75	10	67	772
+1849	2015	11	600	76	11	76	772
+1850	2015	11	500	75	8	53	772
+1851	2015	11	550	75	8	53	772
+1853	2015	11	600	75	8	54	772
+1854	2015	11	600	75	8	54	772
+1855	2015	11	600	75	8	54	772
+1856	2015	11	530	76	11	77	772
+1857	2015	11	600	74	5	36	772
+1860	2015	11	600	74	6	42	772
+1861	2015	11	540	75	7	50	772
+1862	2015	11	600	74	6	43	772
+1863	2015	11	550	73	1	17	772
+1864	2015	11	500	75	7	51	772
+1865	2015	11	550	73	3	28	772
+1866	2015	11	600	76	12	85	772
+1867	2015	11	600	74	4	31	772
+1872	2015	11	580	76	11	78	772
+1874	2015	11	550	73	2	20	772
+1875	2015	11	550	73	2	20	772
+1877	2015	11	550	73	3	29	772
+1878	2015	11	550	74	5	37	772
+1879	2015	11	550	74	5	37	772
+1882	2015	11	580	74	4	33	772
+1883	2015	11	580	74	4	33	772
+1884	2015	11	600	75	10	68	772
+1885	2015	11	500	75	10	68	772
+1886	2015	11	580	74	4	34	772
+1889	2015	11	500	74	6	44	772
+1890	2015	11	450	75	10	69	772
+1891	2015	11	500	75	10	69	772
+1892	2015	11	600	75	8	55	772
+1893	2015	11	600	75	8	56	772
+1894	2015	11	883	75	8	57	772
+1895	2015	11	883	75	8	57	772
+1896	2015	11	550	73	3	30	772
+1897	2015	11	500	73	2	21	772
+1898	2015	11	600	76	12	87	772
+1899	2015	11	550	74	5	38	772
+1900	2015	11	550	74	5	38	772
+1903	2015	11	550	75	8	58	772
+1904	2015	11	500	74	6	45	772
+1905	2015	11	545	76	12	88	772
+1906	2015	11	600	75	7	52	772
+1907	2015	11	550	73	2	22	772
+1909	2015	11	600	73	2	23	772
+1913	2015	11	0	73	1	14	646
+1914	2015	11	100	76	11	70	646
+1915	2015	11	50	75	10	64	646
+1917	2015	11	45	75	10	65	646
+1918	2015	11	40	74	6	39	646
+1919	2015	11	65	76	12	80	646
+1920	2015	11	35	73	2	19	646
+1922	2015	11	55	75	9	59	646
+1923	2015	11	85	76	12	83	646
+1925	2015	11	33	74	5	35	646
+1926	2015	11	33	75	7	49	646
+1927	2015	11	100	76	11	72	646
+1929	2015	11	460	74	6	40	646
+1930	2015	11	120	76	11	73	646
+1931	2015	11	45	75	10	66	646
+1932	2015	11	40	74	6	41	646
+1933	2015	11	100	76	11	75	646
+1934	2015	11	45	75	10	67	646
+1935	2015	11	32	76	11	76	646
+1936	2015	11	33	75	8	53	646
+1937	2015	11	45	76	13	89	646
+1938	2015	11	33	75	8	54	646
+1939	2015	11	33	75	8	54	646
+1940	2015	11	100	76	11	77	646
+1941	2015	11	40	74	6	42	646
+1942	2015	11	65	75	7	50	646
+1943	2015	11	40	74	6	43	646
+1944	2015	11	45	76	13	90	646
+1946	2015	11	33	74	4	31	646
+1947	2015	11	33	74	4	32	646
+1948	2015	11	33	73	2	20	646
+1950	2015	11	35	74	5	37	646
+1951	2015	11	33	74	4	33	646
+1952	2015	11	45	76	13	91	646
+1953	2015	11	40	74	6	44	646
+1954	2015	11	45	75	10	69	646
+1955	2015	11	33	75	8	55	646
+1956	2015	11	110	75	8	57	646
+1958	2015	11	33	74	5	38	646
+1959	2015	11	50	75	8	58	646
+1960	2015	11	40	74	6	45	646
+1963	2015	11	600	75	9	61	646
+1965	2015	11	2500	73	2	18	694
+1966	2015	11	2500	73	2	18	694
+1967	2015	11	2500	73	1	14	694
+1968	2015	11	2500	73	1	14	694
+1969	2015	11	2500	73	3	24	694
+1970	2015	11	2500	73	3	24	694
+1971	2015	11	2500	73	3	25	694
+1972	2015	11	2500	73	3	25	694
+1973	2015	11	2500	73	1	15	694
+1974	2015	11	2500	73	1	15	694
+1975	2015	11	2000	73	2	19	694
+1977	2015	11	2500	73	3	26	694
+1978	2015	11	2500	73	3	26	694
+1980	2015	11	2800	75	7	49	694
+1981	2015	11	2500	73	1	16	694
+1982	2015	11	2500	73	1	16	694
+1983	2015	11	2800	75	8	53	694
+1984	2015	11	1950	75	8	53	694
+1985	2015	11	2100	74	5	36	694
+1986	2015	11	2166	74	5	36	694
+1987	2015	11	2500	73	1	17	694
+1988	2015	11	2500	73	3	28	694
+1989	2015	11	2500	73	3	28	694
+1990	2015	11	2000	74	4	31	694
+1991	2015	11	0	74	4	32	694
+1992	2015	11	2000	73	2	20	694
+1993	2015	11	2500	73	3	29	694
+1994	2015	11	2500	73	3	29	694
+1995	2015	11	2500	73	3	29	694
+1996	2015	11	2000	74	5	37	694
+1997	2015	11	2000	74	5	37	694
+1998	2015	11	1700	74	4	33	694
+1999	2015	11	2000	74	4	33	694
+2000	2015	11	2000	74	4	34	694
+2001	2015	11	2800	75	8	56	694
+2002	2015	11	2300	75	8	56	694
+2003	2015	11	2500	73	3	30	694
+2004	2015	11	2500	73	3	30	694
+2005	2015	11	2000	74	5	38	694
+2007	2015	11	2500	75	8	58	694
+2008	2015	11	2500	75	8	58	694
+2009	2015	11	2200	73	2	22	694
+2010	2015	11	1415	75	7	46	695
+2011	2015	11	1600	75	7	46	695
+2014	2015	11	2900	76	11	70	695
+2015	2015	11	2000	76	11	70	695
+2016	2015	11	3000	75	10	64	695
+2017	2015	11	2500	75	10	64	695
+2018	2015	11	2500	75	10	64	695
+2020	2015	11	2500	75	10	65	695
+2022	2015	11	2800	76	12	79	695
+2023	2015	11	2500	76	12	79	695
+2024	2015	11	2500	74	6	39	695
+2025	2015	11	2500	74	6	39	695
+2026	2015	11	2167	74	6	39	695
+2030	2015	11	2000	76	12	81	695
+2031	2015	11	3000	75	7	47	695
+2032	2015	11	2800	75	7	47	695
+2035	2015	11	2400	75	9	59	695
+2038	2015	11	1625	76	12	83	695
+2040	2015	11	2345	75	7	48	695
+2041	2015	11	1580	75	7	48	695
+2043	2015	11	2500	76	11	71	695
+2044	2015	11	2500	76	11	71	695
+2045	2015	11	2400	75	7	49	695
+2046	2015	11	1700	75	7	49	695
+2047	2015	11	2800	76	11	72	695
+2048	2015	11	2500	76	11	72	695
+2049	2015	11	2780	74	6	40	695
+2050	2015	11	2780	74	6	40	695
+2051	2015	11	2780	74	6	40	695
+2052	2015	11	2780	74	6	40	695
+2053	2015	11	2500	73	3	27	695
+2054	2015	11	2300	73	3	27	695
+2055	2015	11	2800	76	11	73	695
+2056	2015	11	2000	76	11	73	695
+2057	2015	11	3000	75	10	66	695
+2058	2015	11	2500	75	10	66	695
+2060	2015	11	3300	76	11	74	695
+2061	2015	11	2000	76	11	74	695
+2062	2015	11	2550	74	6	41	695
+2063	2015	11	2200	74	6	41	695
+2064	2015	11	2500	76	11	75	695
+2065	2015	11	2100	76	11	75	695
+2067	2015	11	2500	75	10	67	695
+2069	2015	11	3000	76	11	76	695
+2070	2015	11	2600	76	11	76	695
+2071	2015	11	2400	75	8	53	695
+2072	2015	11	1800	75	8	53	695
+2074	2015	11	2500	76	13	89	695
+2076	2015	11	2400	75	8	54	695
+2077	2015	11	1900	75	8	54	695
+2078	2015	11	1900	75	8	54	695
+2079	2015	11	2800	76	11	77	695
+2080	2015	11	1900	76	11	77	695
+2082	2015	11	2000	76	12	84	695
+2083	2015	11	2450	74	6	42	695
+2084	2015	11	2200	74	6	42	695
+2085	2015	11	2350	75	7	50	695
+2087	2015	11	1585	75	7	50	695
+2088	2015	11	2450	74	6	43	695
+2089	2015	11	2450	74	6	43	695
+2090	2015	11	2400	75	7	51	695
+2091	2015	11	1800	75	7	51	695
+2092	2015	11	2350	76	12	85	695
+2094	2015	11	2600	76	11	78	695
+2095	2015	11	3200	76	11	78	695
+2096	2015	11	2200	76	12	86	695
+2097	2015	11	1520	76	12	86	695
+2099	2015	11	2000	75	10	68	695
+2102	2015	11	2500	76	13	91	695
+2103	2015	11	2500	74	6	44	695
+2104	2015	11	2200	74	6	44	695
+2105	2015	11	3000	75	10	69	695
+2106	2015	11	2500	75	10	69	695
+2107	2015	11	2400	75	8	55	695
+2108	2015	11	1900	75	8	55	695
+2109	2015	11	2400	75	8	56	695
+2110	2015	11	1800	75	8	56	695
+2111	2015	11	2180	75	8	57	695
+2112	2015	11	2180	75	8	57	695
+2113	2015	11	2100	75	8	57	695
+2114	2015	11	2100	75	8	57	695
+2115	2015	11	2500	73	2	21	695
+2116	2015	11	2300	73	2	21	695
+2117	2015	11	2800	76	12	87	695
+2118	2015	11	2500	76	12	87	695
+2119	2015	11	2000	74	5	38	695
+2121	2015	11	2500	74	6	45	695
+2122	2015	11	2450	74	6	45	695
+2124	2015	11	1620	76	12	88	695
+2125	2015	11	1	75	7	52	695
+2126	2015	11	1620	75	7	52	695
+2127	2015	11	1620	75	7	52	695
+2128	2015	11	2400	75	9	61	695
+2129	2015	11	2400	75	9	61	695
+2130	2015	11	2000	75	9	61	695
+2131	2015	11	2000	75	9	61	695
+2132	2015	11	2450	73	2	23	695
+2133	2015	11	2450	73	2	23	695
+2138	2015	11	0	73	1	14	647
+2139	2015	11	100	76	11	70	647
+2140	2015	11	50	75	10	64	647
+2142	2015	11	40	75	10	65	647
+2143	2015	11	120	76	12	79	647
+2144	2015	11	40	74	6	39	647
+2148	2015	11	100	76	12	81	647
+2149	2015	11	150	75	7	47	647
+2151	2015	11	55	75	9	59	647
+2152	2015	11	100	76	11	71	647
+2153	2015	11	100	76	11	72	647
+2155	2015	11	35	74	6	40	647
+2156	2015	11	40	73	3	27	647
+2157	2015	11	100	76	11	73	647
+2158	2015	11	45	75	10	66	647
+2159	2015	11	40	74	6	41	647
+2160	2015	11	100	76	11	75	647
+2161	2015	11	50	75	10	67	647
+2162	2015	11	100	76	11	76	647
+2163	2015	11	150	75	8	53	647
+2164	2015	11	150	75	8	54	647
+2165	2015	11	100	76	11	77	647
+2166	2015	11	100	76	12	84	647
+2167	2015	11	40	74	6	42	647
+2168	2015	11	33	74	6	43	647
+2170	2015	11	165	76	12	86	647
+2173	2015	11	50	76	13	91	647
+2174	2015	11	40	74	6	44	647
+2175	2015	11	50	75	10	69	647
+2176	2015	11	150	75	8	55	647
+2178	2015	11	41	73	2	21	647
+2179	2015	11	150	76	12	87	647
+2181	2015	11	37	74	6	45	647
+2182	2015	11	150	75	9	61	647
+2184	2015	11	550	73	2	18	775
+2185	2015	11	150	76	11	70	775
+2186	2015	11	350	75	10	64	775
+2187	2015	11	250	75	10	65	775
+2189	2015	11	150	76	12	79	775
+2190	2015	11	185	76	12	80	775
+2191	2015	11	550	73	3	25	775
+2192	2015	11	150	76	12	81	775
+2193	2015	11	170	75	7	47	775
+2195	2015	11	260	76	12	83	775
+2196	2015	11	550	73	3	26	775
+2197	2015	11	230	75	7	48	775
+2198	2015	11	150	76	11	71	775
+2199	2015	11	150	76	11	72	775
+2200	2015	11	550	73	1	16	775
+2201	2015	11	150	75	10	66	775
+2202	2015	11	170	76	11	74	775
+2203	2015	11	150	76	11	75	775
+2204	2015	11	150	75	10	67	775
+2205	2015	11	150	75	8	53	775
+2206	2015	11	150	75	8	53	775
+2207	2015	11	150	76	13	89	775
+2209	2015	11	170	76	11	77	775
+2210	2015	11	150	76	12	84	775
+2211	2015	11	320	76	13	90	775
+2212	2015	11	150	75	7	51	775
+2214	2015	11	50	74	4	32	775
+2215	2015	11	160	76	11	78	775
+2217	2015	11	150	75	10	68	775
+2218	2015	11	250	76	13	91	775
+2219	2015	11	250	75	10	69	775
+2220	2015	11	150	76	12	87	775
+2221	2015	11	225	75	9	60	775
+2222	2015	11	275	76	12	88	775
+2226	2015	11	1000	73	2	19	576
+2228	2015	11	1100	74	5	35	576
+2229	2015	11	1100	74	5	35	576
+2231	2015	11	880	76	13	89	576
+2232	2015	11	1500	74	5	36	576
+2235	2015	11	950	76	13	90	576
+2236	2015	11	950	76	13	90	576
+2237	2015	11	1100	74	4	31	576
+2238	2015	11	1200	73	2	20	576
+2239	2015	11	1200	73	2	20	576
+2241	2015	11	1000	74	5	37	576
+2242	2015	11	1000	74	5	37	576
+2243	2015	11	1000	74	4	33	576
+2244	2015	11	1000	74	4	34	576
+2245	2015	11	800	76	13	91	576
+2247	2015	11	1000	74	5	38	576
+2248	2015	11	1000	74	5	38	576
+2249	2015	11	1100	73	2	22	576
+2251	2015	11	0	73	1	14	769
+2253	2015	11	600	73	2	19	769
+2255	2015	11	600	74	5	35	769
+2256	2015	11	600	74	5	35	769
+2257	2015	11	800	74	6	40	769
+2258	2015	11	400	73	3	27	769
+2259	2015	11	600	74	5	36	769
+2260	2015	11	600	76	13	90	769
+2262	2015	11	600	73	2	20	769
+2264	2015	11	610	74	5	37	769
+2265	2015	11	600	74	4	33	769
+2267	2015	11	600	76	13	91	769
+2269	2015	11	600	73	2	22	769
+2270	2015	11	400	73	2	23	769
+2271	2015	11	4800	75	7	46	594
+2272	2015	11	7000	75	7	49	594
+2273	2015	11	7000	75	7	49	594
+2274	2015	11	5700	75	8	54	594
+2275	2015	11	7000	75	8	56	594
+2276	2015	11	1480	75	7	46	615
+2278	2015	11	1450	76	12	83	615
+2279	2015	11	1000	75	7	49	615
+2280	2015	11	1300	75	7	49	615
+2281	2015	11	2100	76	11	78	615
+2282	2015	11	2100	76	11	78	615
+2284	2015	11	1300	75	8	56	615
+2285	2015	11	1485	76	12	88	615
+2286	2015	11	1485	75	7	52	615
+2287	2015	11	1900	75	7	49	660
+2288	2015	11	3000	75	8	56	660
+2289	2015	11	0	73	1	14	759
+2291	2015	11	70	74	6	39	759
+2295	2015	11	60	73	2	19	759
+2296	2015	11	60	73	2	19	759
+2297	2015	11	125	76	12	82	759
+2300	2015	11	50	74	5	35	759
+2302	2015	11	50	74	6	40	759
+2303	2015	11	100	74	6	41	759
+2304	2015	11	52	75	8	53	759
+2305	2015	11	600	76	13	89	759
+2306	2015	11	50	74	5	36	759
+2307	2015	11	60	74	6	42	759
+2308	2015	11	320	76	13	90	759
+2311	2015	11	50	74	4	31	759
+2312	2015	11	50	74	4	32	759
+2314	2015	11	60	73	2	20	759
+2315	2015	11	50	74	5	37	759
+2316	2015	11	52	74	4	33	759
+2317	2015	11	50	74	4	34	759
+2318	2015	11	120	76	13	91	759
+2319	2015	11	70	74	6	44	759
+2320	2015	11	600	75	10	69	759
+2322	2015	11	70	73	2	21	759
+2323	2015	11	55	74	5	38	759
+2324	2015	11	80	74	6	45	759
+2326	2015	11	60	73	2	22	759
+2327	2015	11	80	75	9	62	759
+2328	2015	11	585	75	7	46	578
+2329	2015	11	0	73	1	14	578
+2330	2015	11	160	75	10	64	578
+2331	2015	11	1500	75	10	65	578
+2332	2015	11	650	73	2	19	578
+2334	2015	11	690	74	5	35	578
+2335	2015	11	690	74	5	35	578
+2336	2015	11	750	75	7	49	578
+2337	2015	11	900	76	11	72	578
+2339	2015	11	910	74	6	40	578
+2340	2015	11	750	75	8	54	578
+2341	2015	11	650	74	5	36	578
+2342	2015	11	585	75	7	50	578
+2343	2015	11	160	76	13	90	578
+2344	2015	11	650	74	4	31	578
+2345	2015	11	650	74	4	32	578
+2347	2015	11	650	73	2	20	578
+2349	2015	11	600	74	5	37	578
+2350	2015	11	650	74	4	33	578
+2351	2015	11	620	74	4	34	578
+2352	2015	11	1500	76	13	91	578
+2353	2015	11	1800	75	8	57	578
+2357	2015	11	1700	75	7	51	588
+2358	2015	11	1500	73	2	19	591
+2359	2015	11	1000	75	7	49	591
+2360	2015	11	4750	76	11	76	591
+2361	2015	11	1000	75	8	54	591
+2362	2015	11	1000	75	7	51	591
+2364	2015	11	1800	73	2	20	591
+2365	2015	11	1500	74	4	33	591
+2366	2015	11	1600	74	4	34	591
+2368	2015	11	1000	75	8	55	591
+2369	2015	11	1000	75	8	56	591
+2370	2015	11	1700	75	8	57	591
+2371	2015	11	1500	74	5	38	591
+2374	2015	11	1800	73	2	22	591
+2375	2015	11	600	75	7	51	596
+2376	2015	11	1800	75	7	49	626
+2377	2015	11	1800	75	7	51	626
+2378	2015	11	1800	75	8	56	626
+2379	2015	11	2100	74	5	38	626
+2380	2015	11	1200	75	7	51	666
+2382	2015	11	1700	75	7	49	677
+2383	2015	11	1700	75	7	51	677
+2385	2015	11	450	76	13	91	677
+2386	2015	11	1700	75	8	55	677
+2387	2015	11	1700	75	8	56	677
+2388	2015	11	2800	74	5	38	677
+2389	2015	11	2000	75	10	64	679
+2390	2015	11	500	75	7	49	679
+2391	2015	11	500	75	7	51	679
+2392	2015	11	500	75	8	56	679
+2393	2015	11	1600	75	7	51	691
+2395	2015	11	150	75	10	64	814
+2397	2015	11	350	75	7	49	814
+2398	2015	11	75	76	11	76	814
+2399	2015	11	350	75	8	54	814
+2400	2015	11	350	75	7	51	814
+2401	2015	11	800	76	11	78	814
+2402	2015	11	350	75	8	55	814
+2403	2015	11	350	75	8	56	814
+2404	2015	11	350	75	8	57	814
+2405	2015	11	485	76	12	88	814
+2407	2015	11	2200	75	7	51	815
+2411	2015	11	500	75	7	49	579
+2412	2015	11	500	75	7	49	579
+2413	2015	11	500	75	8	53	579
+2414	2015	11	500	75	8	54	579
+2415	2015	11	500	75	7	51	579
+2417	2015	11	500	75	8	55	579
+2418	2015	11	500	75	8	56	579
+2420	2015	11	750	75	7	49	616
+2421	2015	11	750	75	8	53	616
+2422	2015	11	750	75	7	51	616
+2423	2015	11	750	75	8	55	616
+2424	2015	11	750	75	8	56	616
+2425	2015	11	190	75	10	64	668
+2426	2015	11	250	75	7	49	668
+2427	2015	11	250	75	7	51	668
+2428	2015	11	250	75	8	55	668
+2429	2015	11	250	75	8	56	668
+2430	2015	11	500	75	8	57	668
+2431	2015	11	950	75	10	64	728
+2432	2015	11	700	76	12	79	728
+2433	2015	11	1900	73	2	19	728
+2435	2015	11	1800	74	5	35	728
+2436	2015	11	1100	75	7	49	728
+2437	2015	11	1100	75	8	53	728
+2438	2015	11	1100	75	7	51	728
+2440	2015	11	800	75	10	69	728
+2441	2015	11	1100	75	8	55	728
+2442	2015	11	1100	75	8	56	728
+2443	2015	11	1390	75	8	57	728
+2444	2015	11	1400	75	8	55	767
+2445	2015	11	3900	75	7	46	776
+2446	2015	11	800	75	10	64	776
+2447	2015	11	7000	75	7	47	776
+2448	2015	11	3900	76	12	83	776
+2449	2015	11	5000	75	7	49	776
+2450	2015	11	10000	76	11	76	776
+2451	2015	11	10000	76	11	77	776
+2452	2015	11	5000	75	7	51	776
+2453	2015	11	8000	76	11	78	776
+2454	2015	11	5000	75	8	56	776
+2455	2015	11	3720	76	12	88	776
+2456	2015	11	300	74	6	39	796
+2457	2015	11	700	75	7	49	796
+2458	2015	11	700	75	8	53	796
+2459	2015	11	700	75	7	51	796
+2461	2015	11	700	75	8	55	796
+2462	2015	11	700	75	8	56	796
+2463	2015	11	700	75	8	57	796
+2464	2015	11	620	75	10	64	804
+2466	2015	11	1200	75	7	49	804
+2467	2015	11	1200	75	7	51	804
+2469	2015	11	1200	75	8	55	804
+2470	2015	11	1200	75	8	56	804
+2471	2015	11	1400	75	8	57	804
+2476	2015	11	1200	76	12	79	810
+2477	2015	11	2150	76	12	80	810
+2479	2015	11	1900	73	2	19	810
+2481	2015	11	1700	75	9	59	810
+2482	2015	11	1700	75	9	59	810
+2483	2015	11	1500	74	5	35	810
+2484	2015	11	1700	75	8	53	810
+2485	2015	11	1700	75	8	54	810
+2488	2015	11	3000	73	2	20	810
+2489	2015	11	1800	74	4	33	810
+2490	2015	11	1900	74	4	34	810
+2491	2015	11	600	75	10	69	810
+2492	2015	11	1700	75	8	55	810
+2493	2015	11	3160	75	8	57	810
+2494	2015	11	1700	75	9	61	810
+2496	2015	11	2000	75	10	64	826
+2497	2015	11	1750	75	10	65	826
+2498	2015	11	2000	74	6	39	826
+2499	2015	11	975	76	12	80	826
+2501	2015	11	1000	73	2	19	826
+2502	2015	11	1100	75	7	47	826
+2506	2015	11	1000	75	7	49	826
+2507	2015	11	1100	76	11	72	826
+2509	2015	11	1100	76	11	73	826
+2510	2015	11	2000	75	10	66	826
+2511	2015	11	1100	76	11	74	826
+2512	2015	11	1100	76	11	75	826
+2513	2015	11	1100	76	11	76	826
+2514	2015	11	1000	75	8	53	826
+2515	2015	11	1000	75	8	54	826
+2518	2015	11	1000	75	7	51	826
+2519	2015	11	1000	74	4	31	826
+2520	2015	11	2300	76	11	78	826
+2522	2015	11	1200	73	2	20	826
+2523	2015	11	2000	76	13	91	826
+2524	2015	11	1000	75	8	55	826
+2525	2015	11	1000	75	8	56	826
+2526	2015	11	1250	75	8	57	826
+2528	2015	11	1250	75	9	60	826
+2529	2015	11	1000	74	6	45	826
+2533	2015	11	90	75	10	64	613
+2534	2015	11	3000	75	7	47	613
+2535	2015	11	3000	75	7	49	613
+2536	2015	11	3500	76	11	76	613
+2537	2015	11	3000	75	7	51	613
+2538	2015	11	3200	76	11	78	613
+2539	2015	11	3200	76	11	78	613
+2540	2015	11	2000	75	8	56	613
+2543	2015	11	800	75	7	49	614
+2545	2015	11	1500	74	4	34	614
+2546	2015	11	1450	76	13	91	614
+2547	2015	11	800	75	8	55	614
+2548	2015	11	800	75	8	56	614
+2550	2015	11	600	75	7	49	618
+2551	2015	11	600	75	8	54	618
+2552	2015	11	600	75	7	51	618
+2553	2015	11	600	75	8	56	618
+2557	2015	11	1200	75	7	49	662
+2558	2015	11	1200	75	7	51	662
+2559	2015	11	1200	75	8	55	662
+2560	2015	11	1200	75	8	56	662
+2561	2015	11	1300	75	8	57	662
+2565	2015	11	0	73	1	14	718
+2566	2015	11	700	75	10	64	718
+2567	2015	11	125	75	10	65	718
+2570	2015	11	1000	75	7	47	718
+2571	2015	11	1000	75	7	47	718
+2573	2015	11	900	75	9	59	718
+2574	2015	11	900	75	9	59	718
+2579	2015	11	800	75	7	49	718
+2580	2015	11	900	76	11	72	718
+2582	2015	11	1900	75	10	66	718
+2583	2015	11	900	76	11	75	718
+2584	2015	11	900	76	11	75	718
+2585	2015	11	1500	75	10	67	718
+2587	2015	11	900	75	8	54	718
+2589	2015	11	900	75	7	51	718
+2590	2015	11	1300	76	11	78	718
+2591	2015	11	1300	76	11	78	718
+2593	2015	11	1200	73	2	20	718
+2595	2015	11	600	75	10	69	718
+2596	2015	11	900	75	8	55	718
+2597	2015	11	900	75	8	55	718
+2598	2015	11	1150	75	8	56	718
+2599	2015	11	1500	75	8	57	718
+2603	2015	11	1100	73	2	22	718
+2604	2015	11	650	75	7	51	811
+2605	2015	11	650	75	8	56	811
+2606	2015	11	1700	75	7	49	845
+2607	2015	11	1700	75	8	55	845
+2608	2015	11	1700	75	8	56	845
+2609	2015	11	3000	75	7	51	661
+2610	2015	11	500	76	13	91	661
+2611	2015	11	3000	75	8	55	661
+2612	2015	11	3000	75	8	56	661
+2613	2015	11	8500	74	5	38	661
+2614	2015	11	3000	75	7	51	672
+2615	2015	11	3000	75	8	56	672
+2616	2015	11	8500	74	5	38	672
+2618	2015	11	1500	75	7	49	708
+2619	2015	11	1500	75	7	51	708
+2620	2015	11	1500	75	8	55	708
+2621	2015	11	1500	75	8	56	708
+2622	2015	11	1550	75	8	57	708
+2623	2015	11	9000	75	8	53	802
+2624	2015	11	2500	75	7	51	818
+2625	2015	11	400	76	13	91	818
+2626	2015	11	2500	75	8	56	818
+2627	2015	11	8600	74	5	38	818
+2628	2015	11	24000	75	7	49	673
+2629	2015	11	24000	75	8	56	673
+2631	2015	11	550	73	2	18	771
+2632	2015	11	550	73	1	14	771
+2633	2015	11	320	75	10	64	771
+2635	2015	11	900	76	12	79	771
+2636	2015	11	615	76	12	80	771
+2637	2015	11	550	73	1	15	771
+2638	2015	11	1500	73	2	19	771
+2639	2015	11	850	76	12	82	771
+2640	2015	11	720	76	12	83	771
+2641	2015	11	550	73	3	26	771
+2642	2015	11	1400	75	7	49	771
+2643	2015	11	600	73	3	27	771
+2644	2015	11	1500	75	10	66	771
+2646	2015	11	1500	76	13	89	771
+2647	2015	11	650	76	12	85	771
+2648	2015	11	1500	74	4	32	771
+2650	2015	11	1500	73	2	20	771
+2651	2015	11	550	73	3	29	771
+2652	2015	11	1500	74	4	33	771
+2653	2015	11	1400	76	13	91	771
+2654	2015	11	1400	75	10	69	771
+2655	2015	11	1500	74	5	38	771
+2656	2015	11	620	76	12	88	771
+2658	2015	11	1400	75	9	61	771
+2659	2015	11	930	75	7	46	731
+2661	2015	11	0	73	1	14	731
+2662	2015	11	900	76	11	70	731
+2663	2015	11	1000	75	10	64	731
+2665	2015	11	710	74	6	39	731
+2666	2015	11	785	76	12	80	731
+2668	2015	11	800	73	2	19	731
+2669	2015	11	800	73	2	19	731
+2671	2015	11	825	76	12	82	731
+2672	2015	11	810	76	12	83	731
+2674	2015	11	810	75	7	48	731
+2675	2015	11	950	76	11	71	731
+2676	2015	11	900	75	7	49	731
+2677	2015	11	900	75	7	49	731
+2680	2015	11	1100	74	6	40	731
+2681	2015	11	710	73	3	27	731
+2682	2015	11	950	76	11	73	731
+2683	2015	11	1000	75	10	66	731
+2684	2015	11	950	76	11	74	731
+2685	2015	11	710	74	6	41	731
+2687	2015	11	980	75	10	67	731
+2688	2015	11	900	76	11	76	731
+2689	2015	11	850	76	13	89	731
+2690	2015	11	900	75	8	54	731
+2691	2015	11	900	76	11	77	731
+2692	2015	11	800	74	5	36	731
+2693	2015	11	650	74	5	36	731
+2694	2015	11	900	76	12	84	731
+2695	2015	11	710	74	6	42	731
+2696	2015	11	785	75	7	50	731
+2697	2015	11	785	75	7	50	731
+2698	2015	11	900	74	6	43	731
+2700	2015	11	900	75	7	51	731
+2701	2015	11	720	76	12	85	731
+2702	2015	11	1100	76	11	78	731
+2703	2015	11	650	76	12	86	731
+2704	2015	11	700	73	2	20	731
+2705	2015	11	1200	76	13	91	731
+2706	2015	11	700	75	10	69	731
+2707	2015	11	900	75	8	55	731
+2708	2015	11	700	75	8	56	731
+2709	2015	11	1100	75	8	57	731
+2711	2015	11	970	73	2	21	731
+2712	2015	11	950	76	12	87	731
+2714	2015	11	1100	75	9	60	731
+2715	2015	11	740	74	6	45	731
+2716	2015	11	875	76	12	88	731
+2717	2015	11	850	75	7	52	731
+2718	2015	11	700	75	9	61	731
+2719	2015	11	710	73	2	23	731
+2721	2015	11	5000	75	10	64	840
+2723	2015	11	3250	76	12	83	840
+2726	2015	11	8000	76	11	74	840
+2732	2015	11	4000	74	4	31	840
+2733	2015	11	6000	76	11	78	840
+2734	2015	11	4000	73	2	20	840
+2737	2015	11	6000	75	8	57	840
+2741	2015	11	5000	75	10	64	842
+2742	2015	11	2500	75	10	65	842
+2743	2015	11	3500	73	2	19	842
+2744	2015	11	3500	76	12	83	842
+2750	2015	11	6000	75	8	57	842
+2753	2015	11	4555	75	7	52	842
+2754	2015	11	3000	73	2	22	842
+2758	2015	11	1000	76	11	70	741
+2759	2015	11	1400	75	10	64	741
+2760	2015	11	3200	76	12	80	741
+2762	2015	11	1100	75	9	59	741
+2764	2015	11	2300	74	5	35	741
+2766	2015	11	2112	75	7	49	741
+2768	2015	11	2500	74	6	40	741
+2769	2015	11	1300	76	11	73	741
+2770	2015	11	1400	75	10	66	741
+2772	2015	11	850	75	10	67	741
+2773	2015	11	1300	76	11	76	741
+2774	2015	11	2000	75	8	53	741
+2776	2015	11	1100	75	8	54	741
+2777	2015	11	1000	76	11	77	741
+2778	2015	11	725	75	7	50	741
+2780	2015	11	2000	74	6	43	741
+2781	2015	11	1100	75	7	51	741
+2782	2015	11	1000	76	11	78	741
+2783	2015	11	1825	76	12	86	741
+2784	2015	11	2300	73	2	20	741
+2785	2015	11	1400	76	13	91	741
+2786	2015	11	1300	75	10	69	741
+2787	2015	11	1100	75	8	55	741
+2788	2015	11	1400	75	8	56	741
+2789	2015	11	2500	75	8	57	741
+2790	2015	11	1000	73	2	21	741
+2791	2015	11	1300	76	12	87	741
+2793	2015	11	2000	74	5	38	741
+2794	2015	11	2500	75	9	60	741
+2795	2015	11	1000	74	6	45	741
+2797	2015	11	1100	75	9	61	741
+2798	2015	11	850	75	7	46	825
+2799	2015	11	0	73	1	14	825
+2800	2015	11	1200	75	10	64	825
+2801	2015	11	860	76	12	80	825
+2802	2015	11	900	75	7	47	825
+2803	2015	11	850	76	12	82	825
+2804	2015	11	450	75	9	59	825
+2805	2015	11	850	76	12	83	825
+2806	2015	11	750	75	7	48	825
+2807	2015	11	750	75	7	48	825
+2808	2015	11	800	75	7	49	825
+2809	2015	11	700	74	6	40	825
+2810	2015	11	900	76	11	73	825
+2811	2015	11	800	75	10	66	825
+2813	2015	11	420	74	6	41	825
+2814	2015	11	700	75	10	67	825
+2816	2015	11	470	74	6	43	825
+2817	2015	11	800	75	7	51	825
+2820	2015	11	565	76	12	86	825
+2821	2015	11	800	75	8	55	825
+2822	2015	11	800	75	8	56	825
+2823	2015	11	700	75	8	57	825
+2824	2015	11	600	76	12	87	825
+2825	2015	11	560	76	12	88	825
+2826	2015	11	650	75	7	52	825
+2827	2015	11	800	75	9	61	825
+2828	2015	11	865	75	7	46	575
+2829	2015	11	700	75	7	47	575
+2830	2015	11	2250	76	12	83	575
+2831	2015	11	1800	75	7	49	575
+2832	2015	11	1500	75	10	67	575
+2833	2015	11	1800	75	8	54	575
+2834	2015	11	500	76	11	78	575
+2835	2015	11	1600	75	8	56	575
+2836	2015	11	2150	76	12	88	575
+2837	2015	11	2650	75	7	52	575
+2838	2015	11	500	75	10	64	582
+2839	2015	11	600	75	10	67	582
+2841	2015	11	1400	75	10	65	585
+2842	2015	11	1500	75	10	66	585
+2843	2015	11	525	75	10	67	585
+2844	2015	11	625	76	13	90	585
+2845	2015	11	1200	75	10	68	585
+2846	2015	11	1300	76	13	91	585
+2847	2015	11	250	75	10	69	585
+2850	2015	11	960	73	1	14	612
+2851	2015	11	700	76	11	70	612
+2852	2015	11	1250	75	10	64	612
+2853	2015	11	960	73	3	24	612
+2854	2015	11	960	73	3	24	612
+2855	2015	11	1200	75	10	65	612
+2857	2015	11	970	74	6	39	612
+2858	2015	11	970	74	6	39	612
+2860	2015	11	960	73	3	25	612
+2861	2015	11	960	73	1	15	612
+2862	2015	11	960	73	1	15	612
+2863	2015	11	500	73	2	19	612
+2864	2015	11	600	76	12	81	612
+2865	2015	11	1000	75	7	47	612
+2867	2015	11	650	75	9	59	612
+2868	2015	11	650	75	9	59	612
+2870	2015	11	960	73	3	26	612
+2871	2015	11	550	74	5	35	612
+2872	2015	11	550	74	5	35	612
+2874	2015	11	900	76	11	71	612
+2875	2015	11	1100	75	7	49	612
+2876	2015	11	1100	75	7	49	612
+2877	2015	11	1000	76	11	72	612
+2878	2015	11	960	73	1	16	612
+2879	2015	11	1070	74	6	40	612
+2880	2015	11	1070	74	6	40	612
+2881	2015	11	700	73	3	27	612
+2882	2015	11	1000	76	11	73	612
+2883	2015	11	1240	75	10	66	612
+2884	2015	11	900	76	11	74	612
+2885	2015	11	900	76	11	74	612
+2886	2015	11	900	74	6	41	612
+2887	2015	11	900	74	6	41	612
+2888	2015	11	900	76	11	75	612
+2889	2015	11	1280	75	10	67	612
+2890	2015	11	1000	76	11	76	612
+2891	2015	11	1200	75	8	53	612
+2892	2015	11	1200	75	8	53	612
+2893	2015	11	1100	76	13	89	612
+2894	2015	11	1100	75	8	54	612
+2895	2015	11	1100	75	8	54	612
+2896	2015	11	700	76	11	77	612
+2897	2015	11	550	74	5	36	612
+2898	2015	11	900	74	6	42	612
+2899	2015	11	900	74	6	42	612
+2901	2015	11	960	74	6	43	612
+2902	2015	11	960	74	6	43	612
+2903	2015	11	960	73	1	17	612
+2904	2015	11	1500	75	7	51	612
+2905	2015	11	960	73	3	28	612
+2906	2015	11	960	73	3	28	612
+2908	2015	11	650	74	4	31	612
+2909	2015	11	550	74	4	32	612
+2910	2015	11	1300	76	11	78	612
+2912	2015	11	600	73	2	20	612
+2913	2015	11	600	73	2	20	612
+2914	2015	11	960	73	3	29	612
+2915	2015	11	500	74	5	37	612
+2916	2015	11	950	74	4	33	612
+2917	2015	11	1000	75	10	68	612
+2918	2015	11	1000	74	4	34	612
+2919	2015	11	500	74	4	34	612
+2920	2015	11	1100	76	13	91	612
+2921	2015	11	900	74	6	44	612
+2922	2015	11	1200	75	10	69	612
+2923	2015	11	900	75	8	55	612
+2924	2015	11	1000	75	8	55	612
+2925	2015	11	900	75	8	56	612
+2926	2015	11	320	75	8	57	612
+2927	2015	11	500	75	8	57	612
+2928	2015	11	960	73	3	30	612
+2929	2015	11	1000	73	2	21	612
+2930	2015	11	600	76	12	87	612
+2931	2015	11	550	74	5	38	612
+2932	2015	11	550	74	5	38	612
+2933	2015	11	960	75	8	58	612
+2934	2015	11	550	75	9	60	612
+2935	2015	11	870	74	6	45	612
+2936	2015	11	870	74	6	45	612
+2937	2015	11	785	76	12	88	612
+2939	2015	11	900	75	9	61	612
+2940	2015	11	650	73	2	22	612
+2941	2015	11	650	73	2	22	612
+2942	2015	11	900	73	2	23	612
+2943	2015	11	1000	75	10	64	648
+2945	2015	11	950	75	8	57	648
+2946	2015	11	1210	75	7	46	712
+2947	2015	11	1250	75	7	46	712
+2948	2015	11	1300	76	11	70	712
+2949	2015	11	1400	75	10	64	712
+2950	2015	11	1000	76	12	80	712
+2952	2015	11	1800	73	2	19	712
+2953	2015	11	935	76	12	82	712
+2954	2015	11	1385	76	12	83	712
+2956	2015	11	1300	75	7	49	712
+2957	2015	11	1300	75	7	49	712
+2960	2015	11	1250	75	10	67	712
+2961	2015	11	1300	75	8	53	712
+2963	2015	11	1300	75	8	54	712
+2964	2015	11	1100	74	6	43	712
+2965	2015	11	1420	76	12	85	712
+2966	2015	11	2000	74	4	31	712
+2967	2015	11	1200	74	4	32	712
+2968	2015	11	1800	74	5	37	712
+2969	2015	11	1800	74	4	33	712
+2971	2015	11	1800	74	4	34	712
+2972	2015	11	1300	75	8	55	712
+2973	2015	11	1300	75	8	56	712
+2974	2015	11	610	75	8	57	712
+2976	2015	11	1650	75	7	52	712
+2977	2015	11	750	76	13	91	714
+2979	2015	11	5000	75	10	64	736
+2983	2015	11	12000	75	7	51	736
+2985	2015	11	890	74	6	39	757
+2986	2015	11	500	73	2	19	757
+2987	2015	11	500	74	5	35	757
+2988	2015	11	1000	75	8	53	757
+2989	2015	11	1000	76	13	89	757
+2990	2015	11	1000	75	8	54	757
+2991	2015	11	550	74	5	36	757
+2992	2015	11	500	74	6	43	757
+2993	2015	11	1000	74	4	31	757
+2994	2015	11	500	74	4	32	757
+2995	2015	11	550	73	2	20	757
+2996	2015	11	500	74	5	37	757
+2997	2015	11	500	74	4	33	757
+2998	2015	11	850	76	13	91	757
+2999	2015	11	550	74	5	38	757
+3001	2015	11	770	74	6	45	757
+3002	2015	11	600	73	2	23	757
+3003	2015	11	2580	75	7	46	761
+3005	2015	11	0	73	1	14	761
+3008	2015	11	800	75	10	65	761
+3010	2015	11	800	74	6	39	761
+3011	2015	11	1920	76	12	80	761
+3018	2015	11	400	73	3	27	761
+3019	2015	11	500	75	10	66	761
+3021	2015	11	800	75	8	54	761
+3023	2015	11	800	74	6	43	761
+3028	2015	11	500	75	10	68	761
+3029	2015	11	700	76	13	91	761
+3030	2015	11	600	75	8	57	761
+3032	2015	11	800	73	2	21	761
+3035	2015	11	800	73	2	23	761
+3036	2015	11	2850	75	7	46	765
+3037	2015	11	0	73	1	14	765
+3039	2015	11	1800	75	10	64	765
+3040	2015	11	2500	75	10	65	765
+3041	2015	11	1500	74	6	39	765
+3042	2015	11	2000	73	2	19	765
+3044	2015	11	1850	74	5	35	765
+3045	2015	11	1900	75	7	49	765
+3046	2015	11	1200	73	3	27	765
+3048	2015	11	1500	75	10	67	765
+3050	2015	11	1800	75	8	54	765
+3052	2015	11	2000	74	5	36	765
+3054	2015	11	2000	74	6	43	765
+3057	2015	11	1900	75	7	51	765
+3059	2015	11	2000	74	4	31	765
+3060	2015	11	1350	74	4	32	765
+3061	2015	11	3850	76	12	86	765
+3062	2015	11	2000	73	2	20	765
+3063	2015	11	2000	74	5	37	765
+3064	2015	11	2000	74	4	33	765
+3065	2015	11	1520	75	10	68	765
+3066	2015	11	1800	76	13	91	765
+3067	2015	11	1200	74	6	44	765
+3069	2015	11	1900	75	8	56	765
+3071	2015	11	2000	74	5	38	765
+3072	2015	11	1300	74	6	45	765
+3073	2015	11	2000	73	2	22	765
+3074	2015	11	2000	73	2	23	765
+3075	2015	11	1500	75	10	64	799
+3080	2015	11	0	73	1	14	670
+3081	2015	11	700	76	11	70	670
+3084	2015	11	500	75	10	65	670
+3085	2015	11	480	74	6	39	670
+3086	2015	11	480	74	6	39	670
+3090	2015	11	650	73	2	19	670
+3091	2015	11	650	73	2	19	670
+3093	2015	11	550	75	9	59	670
+3096	2015	11	650	74	5	35	670
+3097	2015	11	650	74	5	35	670
+3099	2015	11	800	74	6	40	670
+3100	2015	11	800	74	6	40	670
+3101	2015	11	520	73	3	27	670
+3103	2015	11	480	74	6	41	670
+3104	2015	11	480	74	6	41	670
+3105	2015	11	500	75	10	67	670
+3106	2015	11	500	75	8	53	670
+3107	2015	11	500	76	13	89	670
+3108	2015	11	500	75	8	54	670
+3109	2015	11	700	74	5	36	670
+3110	2015	11	530	74	6	42	670
+3112	2015	11	490	74	6	43	670
+3114	2015	11	500	76	13	90	670
+3117	2015	11	700	74	4	31	670
+3119	2015	11	700	73	2	20	670
+3120	2015	11	700	73	2	20	670
+3122	2015	11	650	74	5	37	670
+3123	2015	11	650	74	5	37	670
+3124	2015	11	650	74	4	33	670
+3125	2015	11	500	75	10	68	670
+3126	2015	11	650	74	4	34	670
+3127	2015	11	650	74	4	34	670
+3128	2015	11	500	76	13	91	670
+3129	2015	11	480	74	6	44	670
+3130	2015	11	480	74	6	44	670
+3133	2015	11	520	73	2	21	670
+3134	2015	11	520	73	2	21	670
+3135	2015	11	650	74	5	38	670
+3137	2015	11	600	75	9	60	670
+3138	2015	11	530	74	6	45	670
+3139	2015	11	530	74	6	45	670
+3140	2015	11	500	75	9	61	670
+3141	2015	11	700	73	2	22	670
+3142	2015	11	520	73	2	23	670
+3146	2015	11	5000	74	5	38	785
+3147	2015	11	5000	74	5	38	785
+3149	2015	11	4350	75	7	46	638
+3150	2015	11	5430	73	1	14	638
+3151	2015	11	5600	76	11	70	638
+3152	2015	11	3500	75	10	64	638
+3153	2015	11	3000	75	10	64	638
+3154	2015	11	5430	73	3	24	638
+3155	2015	11	5500	76	12	79	638
+3157	2015	11	5430	73	3	25	638
+3158	2015	11	5430	73	3	25	638
+3159	2015	11	5500	76	12	81	638
+3160	2015	11	5500	75	7	47	638
+3162	2015	11	5000	75	9	59	638
+3163	2015	11	4350	76	12	83	638
+3164	2015	11	5430	73	3	26	638
+3165	2015	11	4350	75	7	48	638
+3166	2015	11	5500	76	11	71	638
+3167	2015	11	5400	75	7	49	638
+3169	2015	11	5500	76	11	72	638
+3170	2015	11	5430	73	1	16	638
+3171	2015	11	5430	74	6	40	638
+3172	2015	11	5600	76	11	73	638
+3173	2015	11	3000	75	10	66	638
+3174	2015	11	5500	76	11	74	638
+3175	2015	11	5500	74	6	41	638
+3176	2015	11	5600	76	11	75	638
+3177	2015	11	2500	75	10	67	638
+3178	2015	11	5500	76	11	76	638
+3179	2015	11	5400	75	8	53	638
+3180	2015	11	5400	75	8	54	638
+3181	2015	11	5400	75	8	54	638
+3182	2015	11	6500	76	11	77	638
+3183	2015	11	5600	76	11	77	638
+3184	2015	11	5300	76	12	84	638
+3185	2015	11	5500	74	6	42	638
+3186	2015	11	4350	75	7	50	638
+3187	2015	11	5430	73	1	17	638
+3188	2015	11	5400	75	7	51	638
+3189	2015	11	4350	76	12	85	638
+3190	2015	11	5000	76	11	78	638
+3191	2015	11	4350	76	12	86	638
+3192	2015	11	5430	73	3	29	638
+3193	2015	11	3000	75	10	69	638
+3194	2015	11	5500	75	8	55	638
+3195	2015	11	5400	75	8	56	638
+3196	2015	11	5300	75	8	57	638
+3197	2015	11	5600	76	12	87	638
+3198	2015	11	5430	75	8	58	638
+3199	2015	11	4350	76	12	88	638
+3200	2015	11	4350	75	7	52	638
+3201	2015	11	5400	75	9	61	638
+3204	2015	11	5330	73	2	18	639
+3205	2015	11	5330	73	2	18	639
+3206	2015	11	5330	73	1	14	639
+3207	2015	11	5330	73	1	14	639
+3208	2015	11	5300	76	11	70	639
+3209	2015	11	5083	75	10	64	639
+3210	2015	11	5083	75	10	64	639
+3211	2015	11	5330	73	3	24	639
+3212	2015	11	5330	73	3	24	639
+3213	2015	11	5083	75	10	65	639
+3214	2015	11	5083	75	10	65	639
+3215	2015	11	5300	76	12	79	639
+3216	2015	11	5100	74	6	39	639
+3217	2015	11	5100	74	6	39	639
+3220	2015	11	5330	73	3	25	639
+3221	2015	11	5330	73	3	25	639
+3222	2015	11	5330	73	1	15	639
+3223	2015	11	5330	73	1	15	639
+3224	2015	11	5500	73	2	19	639
+3225	2015	11	5600	76	12	81	639
+3226	2015	11	4375	76	12	82	639
+3227	2015	11	4375	76	12	82	639
+3228	2015	11	4800	75	9	59	639
+3229	2015	11	4370	76	12	83	639
+3230	2015	11	4370	76	12	83	639
+3231	2015	11	5330	73	3	26	639
+3232	2015	11	5330	73	3	26	639
+3233	2015	11	5500	74	5	35	639
+3234	2015	11	5500	74	5	35	639
+3235	2015	11	4370	75	7	48	639
+3236	2015	11	4370	75	7	48	639
+3237	2015	11	4700	75	7	49	639
+3238	2015	11	5330	73	1	16	639
+3239	2015	11	5330	73	1	16	639
+3240	2015	11	5833	74	6	40	639
+3241	2015	11	5833	74	6	40	639
+3242	2015	11	5080	73	3	27	639
+3243	2015	11	5080	73	3	27	639
+3244	2015	11	5083	75	10	66	639
+3245	2015	11	5500	74	6	41	639
+3246	2015	11	5080	74	6	41	639
+3247	2015	11	5083	75	10	67	639
+3248	2015	11	5083	75	10	67	639
+3249	2015	11	5500	76	11	76	639
+3250	2015	11	4850	75	8	53	639
+3251	2015	11	4850	75	8	53	639
+3252	2015	11	3500	76	13	89	639
+3253	2015	11	4850	75	8	54	639
+3254	2015	11	5300	76	11	77	639
+3255	2015	11	5200	74	5	36	639
+3256	2015	11	5200	74	5	36	639
+3257	2015	11	5300	76	12	84	639
+3258	2015	11	5500	74	6	42	639
+3259	2015	11	5300	74	6	42	639
+3260	2015	11	4370	75	7	50	639
+3261	2015	11	4370	75	7	50	639
+3262	2015	11	5200	74	6	43	639
+3263	2015	11	5200	74	6	43	639
+3264	2015	11	5330	73	1	17	639
+3265	2015	11	5330	73	1	17	639
+3266	2015	11	5330	73	3	28	639
+3267	2015	11	4370	76	12	85	639
+3268	2015	11	4370	76	12	85	639
+3269	2015	11	5100	74	4	31	639
+3270	2015	11	5100	74	4	31	639
+3271	2015	11	5000	74	4	32	639
+3272	2015	11	4800	76	11	78	639
+3273	2015	11	4800	76	11	78	639
+3274	2015	11	4375	76	12	86	639
+3275	2015	11	4375	76	12	86	639
+3276	2015	11	5000	73	2	20	639
+3277	2015	11	5000	73	2	20	639
+3278	2015	11	5330	73	3	29	639
+3279	2015	11	5330	73	3	29	639
+3280	2015	11	5000	74	5	37	639
+3281	2015	11	5000	74	5	37	639
+3282	2015	11	5200	74	4	33	639
+3283	2015	11	5200	74	4	33	639
+3284	2015	11	5083	75	10	68	639
+3285	2015	11	2000	75	10	68	639
+3286	2015	11	5000	74	4	34	639
+3287	2015	11	5000	74	4	34	639
+3288	2015	11	5083	76	13	91	639
+3289	2015	11	5080	74	6	44	639
+3290	2015	11	5080	74	6	44	639
+3291	2015	11	5083	75	10	69	639
+3292	2015	11	5500	75	8	55	639
+3293	2015	11	5500	75	8	55	639
+3294	2015	11	5800	75	8	57	639
+3295	2015	11	5800	75	8	57	639
+3296	2015	11	5330	73	3	30	639
+3297	2015	11	5100	73	2	21	639
+3298	2015	11	5100	73	2	21	639
+3299	2015	11	5400	76	12	87	639
+3300	2015	11	5000	74	5	38	639
+3301	2015	11	5330	75	8	58	639
+3302	2015	11	5800	75	9	60	639
+3303	2015	11	5800	75	9	60	639
+3304	2015	11	5000	74	6	45	639
+3305	2015	11	5000	74	6	45	639
+3306	2015	11	3375	76	12	88	639
+3307	2015	11	5300	75	9	61	639
+3308	2015	11	5000	73	2	22	639
+3309	2015	11	5083	73	2	23	639
+3310	2015	11	6885	75	7	46	635
+3314	2015	11	4200	75	10	64	635
+3315	2015	11	2800	75	10	65	635
+3316	2015	11	7000	74	6	39	635
+3320	2015	11	9000	73	2	19	635
+3321	2015	11	3200	76	12	82	635
+3323	2015	11	9000	74	5	35	635
+3325	2015	11	9083	74	6	40	635
+3326	2015	11	7300	73	3	27	635
+3327	2015	11	7300	73	3	27	635
+3329	2015	11	7000	74	6	41	635
+3331	2015	11	8500	75	8	53	635
+3332	2015	11	7000	75	8	53	635
+3333	2015	11	8500	75	8	54	635
+3334	2015	11	8500	75	8	54	635
+3335	2015	11	9000	74	5	36	635
+3336	2015	11	7200	74	6	42	635
+3337	2015	11	7200	74	6	42	635
+3339	2015	11	8000	74	6	43	635
+3343	2015	11	9000	73	2	20	635
+3346	2015	11	9000	74	4	33	635
+3348	2015	11	7300	74	6	44	635
+3349	2015	11	2500	75	10	69	635
+3351	2015	11	8000	75	8	56	635
+3352	2015	11	9083	75	8	57	635
+3355	2015	11	7300	73	2	21	635
+3356	2015	11	7900	74	5	38	635
+3358	2015	11	7300	74	6	45	635
+3359	2015	11	7000	73	2	23	635
+3360	2015	11	26000	73	2	18	803
+3364	2015	11	28000	74	6	39	803
+3365	2015	11	30000	73	2	19	803
+3366	2015	11	26000	73	3	26	803
+3367	2015	11	30000	74	5	35	803
+3368	2015	11	26000	73	1	16	803
+3369	2015	11	30000	74	6	40	803
+3370	2015	11	29000	73	3	27	803
+3372	2015	11	29000	74	6	41	803
+3373	2015	11	28000	74	5	36	803
+3374	2015	11	28000	74	6	43	803
+3376	2015	11	28000	74	4	31	803
+3378	2015	11	28000	73	2	20	803
+3380	2015	11	30000	74	5	37	803
+3381	2015	11	30000	74	4	33	803
+3382	2015	11	28000	74	4	34	803
+3384	2015	11	29000	74	6	44	803
+3385	2015	11	30000	75	8	57	803
+3387	2015	11	27900	73	2	21	803
+3388	2015	11	30000	74	5	38	803
+3390	2015	11	29000	74	6	45	803
+3391	2015	11	28000	73	2	22	803
+3392	2015	11	27000	73	2	23	803
+3393	2015	11	5000	75	9	61	838
+3397	2015	11	2000	75	10	64	622
+3399	2015	11	2000	75	10	65	622
+3400	2015	11	2600	76	12	79	622
+3401	2015	11	2100	74	6	39	622
+3404	2015	11	2500	73	2	19	622
+3405	2015	11	2500	73	2	19	622
+3408	2015	11	2500	74	5	35	622
+3409	2015	11	2600	74	5	35	622
+3411	2015	11	2450	74	6	40	622
+3412	2015	11	2015	75	10	66	622
+3413	2015	11	2100	74	6	41	622
+3414	2015	11	1850	75	10	67	622
+3415	2015	11	1950	76	13	89	622
+3416	2015	11	2500	74	5	36	622
+3417	2015	11	2500	74	5	36	622
+3418	2015	11	2100	74	6	42	622
+3419	2015	11	2100	74	6	43	622
+3420	2015	11	2000	76	13	90	622
+3422	2015	11	2500	74	4	31	622
+3423	2015	11	2500	74	4	31	622
+3424	2015	11	2500	73	2	20	622
+3426	2015	11	2500	74	5	37	622
+3427	2015	11	2500	74	5	37	622
+3428	2015	11	2500	74	4	33	622
+3429	2015	11	2500	74	4	33	622
+3430	2015	11	2000	75	10	68	622
+3431	2015	11	2000	76	13	91	622
+3432	2015	11	2100	74	6	44	622
+3433	2015	11	2000	75	10	69	622
+3436	2015	11	2100	73	3	30	622
+3437	2015	11	2100	73	2	21	622
+3438	2015	11	2500	74	5	38	622
+3439	2015	11	2500	75	9	60	622
+3440	2015	11	2100	74	6	45	622
+3441	2015	11	2400	75	9	61	622
+3443	2015	11	2100	73	2	23	622
+3448	2015	11	4500	75	10	65	795
+3449	2015	11	4600	76	12	79	795
+3451	2015	11	2250	73	2	19	795
+3452	2015	11	4000	76	12	81	795
+3453	2015	11	4000	75	7	47	795
+3457	2015	11	5700	75	7	49	795
+3458	2015	11	5700	75	7	49	795
+3459	2015	11	1200	74	6	40	795
+3460	2015	11	4500	75	10	66	795
+3462	2015	11	4000	76	11	75	795
+3463	2015	11	4500	75	10	67	795
+3464	2015	11	5200	75	8	54	795
+3465	2015	11	2300	74	5	36	795
+3469	2015	11	4800	75	7	51	795
+3471	2015	11	4800	76	11	78	795
+3473	2015	11	2300	73	2	20	795
+3475	2015	11	5700	75	8	55	795
+3476	2015	11	5700	75	8	55	795
+3477	2015	11	5700	75	8	56	795
+3478	2015	11	1200	75	8	57	795
+3479	2015	11	4000	76	12	87	795
+3480	2015	11	1200	75	9	60	795
+3482	2015	11	4700	75	9	61	795
+3487	2015	11	600	76	11	70	760
+3488	2015	11	600	75	10	64	760
+3490	2015	11	500	75	10	65	760
+3491	2015	11	500	76	12	79	760
+3492	2015	11	90	74	6	39	760
+3496	2015	11	800	73	2	19	760
+3497	2015	11	600	76	12	81	760
+3499	2015	11	550	75	9	59	760
+3502	2015	11	1000	74	5	35	760
+3503	2015	11	550	75	7	49	760
+3504	2015	11	750	74	6	40	760
+3505	2015	11	90	73	3	27	760
+3506	2015	11	600	76	11	73	760
+3507	2015	11	600	75	10	66	760
+3508	2015	11	80	74	6	41	760
+3509	2015	11	500	76	11	75	760
+3510	2015	11	600	75	10	67	760
+3511	2015	11	600	76	11	76	760
+3512	2015	11	550	75	8	53	760
+3513	2015	11	550	75	8	54	760
+3514	2015	11	800	76	11	77	760
+3515	2015	11	1200	74	5	36	760
+3516	2015	11	600	76	12	84	760
+3517	2015	11	80	74	6	42	760
+3519	2015	11	80	74	6	43	760
+3520	2015	11	550	75	7	51	760
+3523	2015	11	1000	74	4	31	760
+3524	2015	11	1000	74	4	32	760
+3525	2015	11	220	76	11	78	760
+3527	2015	11	1200	73	2	20	760
+3529	2015	11	1000	74	5	37	760
+3530	2015	11	1000	74	4	33	760
+3532	2015	11	1000	74	4	34	760
+3533	2015	11	600	76	13	91	760
+3534	2015	11	70	74	6	44	760
+3535	2015	11	550	75	8	55	760
+3536	2015	11	550	75	8	56	760
+3537	2015	11	600	75	8	57	760
+3539	2015	11	600	76	12	87	760
+3540	2015	11	1000	74	5	38	760
+3542	2015	11	680	75	9	60	760
+3543	2015	11	80	74	6	45	760
+3545	2015	11	550	75	9	61	760
+3546	2015	11	1200	73	2	22	760
+3547	2015	11	80	73	2	23	760
+\.
+
+
+--
+-- TOC entry 2501 (class 0 OID 0)
+-- Dependencies: 199
+-- Name: agricultura_producao_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('agricultura_producao_id_seq', 3547, true);
+
+
+--
+-- TOC entry 2477 (class 0 OID 32778)
+-- Dependencies: 202
+-- Data for Name: agricultura_produto; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY agricultura_produto (id, nome, codigo) FROM stdin;
+575	ABACATE	1332010
+576	ABACAXI	1193010
+577	ABIU	2208010
+578	ABÓBORA (JERIMUM, MORANGA)	1199010
+579	ABOBRINHA	1212010
+580	ABRICÓ	2208020
+581	AÇAFRĂO	1215010
+582	AÇAÍ (cultivo)	1332020
+583	AÇAÍ (extrativismo)	2208030
+584	ACELGA	1211010
+585	Acerola ou cereja-das-antilhas	1332030
+586	AGAVE (FIBRA)	1393020
+587	AGAVE (FOLHA)	1393030
+588	AGRIĂO	1211020
+589	AIPO OU SALSĂO	1211030
+590	ALCACHOFRA	1211040
+591	ALFACE	1211050
+592	ALGODĂO EM CAROÇO (ARBÓREO)	1393010
+593	ALGODĂO EM CAROÇO (HERBÁCEO)	1121010
+594	ALHO	1194010
+595	ALHO PORRÓ	1211060
+596	ALMEIRĂO OU CHICÓRIA AMARGA	1211070
+597	AMEIXA	1332040
+598	AMENDOIM EM CASCA	1160010
+599	ANDIROBA (SEMENTE)	2205010
+600	ANGICO (CASCA)	2207010
+601	ARARUTA	1213020
+602	ARROZ EM CASCA	1110020
+603	ASPARGO	1211080
+604	AVEIA EM GRĂO	1110030
+605	AZEITONA	1394010
+606	BABAÇU (AMĘNDOA)	2205020
+607	BABAÇU (CÔCO)	2205030
+608	BACABA (CAROÇO)	2209010
+609	BACURI	2208040
+610	BALATA (GOMA NĂO ELÁSTICA)	2204010
+611	BAMBU (TAQUARA)	2203010
+612	BANANA	1332080
+613	Batata-baroa ou mandioquinha-salsa  	1213040
+614	BATATA-DOCE	1213050
+615	BATATA-INGLESA	1194020
+616	BERINJELA	1212020
+617	BERTALHA	1211110
+618	BETERRABA	1213060
+619	BEZERRA	1511010
+620	BEZERRO	1511020
+621	BOIS (2 ANOS E MAIS) (gordo + magro)	1511030
+622	BORRACHA COAGULADA (PELA OU BOLA)(cultivo)	1392010
+623	BORRACHA COAGULADA (PELA OU BOLA)(extrativismo)	2204020
+624	BORRACHA LÍQUIDA (cultivo)	1392020
+625	BORRACHA LÍQUIDA (extrativismo)	2204030
+626	BRÓCOLIS	1211120
+627	BÚFALA EM LACTAÇĂO	1521010
+628	BÚFALOS E BÚFALAS 2 ANOS E MAIS	1521040
+629	BÚFALOS E BÚFALAS DE 1 A 2 ANOS	1521030
+630	BÚFALOS MENORES DE 1 ANO	1521020
+631	BURITI (CÔCO)	2209020
+632	BURITI (PALHA)	2203020
+633	BUTIÁ (CÔCO)	2209030
+634	BUTIÁ (FIBRA)	2203030
+635	CACAU (AMĘNDOA)	1350010
+636	CAFÉ EM CÔCO (usado no passado, năo é usado atualmente)	1340010
+637	CAFÉ EM GRĂO (Total arabica + Conilon)	1340020
+638	café arábica (em grăo)	1340021
+639	café canephora, conilon, robusta (em grăo)	1340022
+640	CAJÁ-MANGA	1332090
+641	CAJU (CASTANHA) (cultivo)	1333010
+642	CAJU (CASTANHA) (extrativismo)	2209040
+643	CAJU (FRUTO) (cultivo)	1332100
+644	CAJU (FRUTO) ( extrativismo)	2208070
+645	CAMBUCÁ	2208080
+646	CANA-DE-AÇÚCAR	1130010
+647	Cana (forrageira para corte)	1192050
+648	CAQUI	1332120
+649	CARÁ	1213070
+650	CARNAÚBA (CERA)	2202010
+651	CARNAÚBA (OLHO DE PALHA)	2202020
+652	CARNAÚBA (PALHA)	2203040
+653	CARNAÚBA (PÓ DE PALHA)	2202030
+654	CAROÁ (FIBRA)	2203050
+655	CARVĂO VEGETAL (extrativismo)	2201040
+656	CARVĂO VEGETAL ( floresta plantada)	2107040
+657	CASCAS TANÍFERAS	2207099
+658	CASTANHA-DO-PARÁ	2209050
+659	CAUCHO (GOMA ELÁSTICA)	2204040
+660	CEBOLA	1194030
+661	CEBOLINHA (FOLHA)	1215120
+662	CENOURA	1213080
+663	CENTEIO EM GRĂO	1110040
+664	CEVADA EM GRĂO	1110050
+665	CHÁ-DA-ÍNDIA	1399020
+666	CHICÓRIA	1211150
+667	Chicória (endívia ou escarola)	1211145
+668	CHUCHU	1212030
+669	CIPÓ-TIMBÓ OU TIMBÓ	2206020
+670	COCO-DA-BAÍA	1333030
+671	Codornas	1555020
+672	COENTRO (FOLHA)	1215130
+673	Cogumelos comestíveis  	1216030
+674	COLZA	1160020
+675	COPAIBA (ÓLEO)	2205040
+676	COQUIRAMA (GOMA NĂO ELÁSTICA)	2204050
+677	COUVE	1211160
+678	COUVE DE BRUXELAS	1211190
+679	Couve-flor 	1211200
+680	CUMARU (SEMENTE)	2205050
+681	CUPUAÇU (cultivo)	1332180
+682	CUPUAÇU (extrativismo)	2208120
+683	DENDĘ (CACHO DE CÔCO)	1394020
+684	Equinos	1523020
+685	ERVA-MATE (CANCHEADA) (cultivo)	1399030
+686	ERVA-MATE (CANCHEADA) (extrativismo)	2209070
+687	ERVA-MATE (FOLHA VERDE) (cultivo)	1399040
+688	ERVA-MATE (FOLHA VERDE) (extrativismo)	2209080
+689	ERVILHA (VAGEM)	1214010
+690	ERVILHA EM GRĂO	1191010
+691	Espinafres (comum, da Nova Zelândia, etc) 	1211230
+692	ESTERCO DE BOVINOS	1512010
+693	FAVA	1191020
+694	FEIJĂO COMUM DE COR EM GRĂO	1191030
+695	FEIJĂO COMUM PRETO EM GRĂO	1191040
+696	FEIJĂO EM GRĂO (QUALQUER OUTRO: ADZUKI, MUNGO, DE ESPANHA, DE LIMA)	1191060
+697	FEIJĂO FRADINHO, CAUPI, DE CORDA OU MACAÇAR EM GRĂO	1191050
+698	FEIJĂO VERDE (GRĂOS VERDES FRESCOS)	1199020
+699	FIGO	1332190
+700	Frangos	1551010
+701	Fruta-do-conde, graviola, araticum, cherimóia e outras anonáceas – anonas	1332215
+702	FRUTA-PĂO	2208130
+703	FUMO EM FOLHA	1140010
+704	Galináceos da espécie Gallus gallus, năo epecificados anteriormente	1551090
+705	Galinha d'angola (cocó, tô-fraco, guiné, pintada)	1555030
+706	Galinhas 	1551045
+707	Galos  	1551050
+708	Gengibre (rizoma)  	1215200
+709	GERGELIM	1160030
+710	GIRASSOL (SEMENTE)	1160040
+711	Girinos - criaçăo	3225030
+712	GOIABA	1332220
+713	GRĂO DE BICO	1214020
+714	Graviola	1332230
+715	GUANDO	1214030
+716	GUARANÁ	1332250
+717	IMBÚ OU UMBÚ	2208140
+718	INHAME	1213110
+719	IPECACUANHA OU POAIA	2206030
+720	JABORANDI (FOLHA)	2206040
+721	Jabuticaba	1332260
+722	Jaca	1332270
+723	Jacaré - criaçăo	3226010
+724	Jambo	1332280
+725	JATOBÁ OU JATAÍ	2206050
+726	JENIPAPO (cultivo)	1332300
+727	JENIPAPO (extrativismo)	2208160
+728	Jiló  	1212040
+729	JUTA (FIBRA)	1122020
+730	JUTA (HASTE)	1122030
+731	LARANJA	1310010
+732	LEITE DE VACA IN NATURA	1512020
+733	LENHA (extrativismo)	2201010
+734	LENHA (florestas plantadas)	2107010
+735	LENTILHA	1214040
+736	Lichia ou lechia	1332310
+737	LICURI (CERA)	2202040
+738	LICURI (COQUILHO)	2205060
+739	LICURI (FOLHA)	2203060
+740	LIMA	1331030
+741	LIMĂO	1331040
+742	LINHO (FIBRA)	1122040
+743	LINHO (HASTE)	1122050
+744	LINHO (SEMENTE)	1160050
+745	MAÇĂ	1332320
+746	MAÇARANDUBA (GOMA NĂO ELÁSTICA)	2204060
+747	MACAUBA (SEMENTE)	2209060
+748	MADEIRA EM TORAS (MADEIRA EM TORA PARA OUTRAS FINALIDADES)	2201020
+749	MADEIRA EM TORAS (MADEIRA EM TORA PARA OUTRAS FINALIDADES) (pinheiro brasileiro nativo)	2201021
+750	MADEIRA EM TORAS (MADEIRA EM TORA PARA OUTRAS FINALIDADES) (florestas plantadas)	2107020
+751	MADEIRA PARA PAPEL E CELULOSE	2201030
+752	MADEIRA PARA PAPEL E CELULOSE (florestas plantadas)	2107030
+753	MALVA (FIBRA) (cultivo)	1122060
+754	MALVA (FIBRA) (extrativismo)	2203070
+755	MALVA (HASTE) (cultivo)	1122070
+756	MALVA (HASTE) (extrativismo)	2203080
+757	MAMĂO	1332330
+758	MAMONA	1160060
+759	MANDIOCA (AIPIM, MACAXEIRA) ( para indústria)	1194040
+760	MANDIOCA (AIPIM, MACAXEIRA) ( para mesa)	91194040
+761	MANGA	1332340
+762	MANGABA (FRUTO)	2208170
+763	MANGABEIRA (GOMA ELÁSTICA)	2204070
+764	MANIÇOBA (GOMA ELÁSTICA)	2204080
+765	MARACUJÁ	1332360
+766	MARMELO	1332370
+767	Maxixe (fruto)  	1212050
+768	Mel	1591030
+769	MELANCIA	1193020
+770	MELĂO	1193030
+771	MILHO EM ESPIGA (VERDE)	1216040
+772	MILHO EM GRĂO (Total - Todas as safras)	1110070
+773	MILHO EM GRĂO (1Şsafra)	1110071
+774	MILHO EM GRĂO (2Ş e 3Ş safra)	1110072
+775	Milho (forrageira para corte)	1192130
+776	MORANGO	1212060
+777	MURICI	2208180
+778	MURUMURU (SEMENTE)	2205070
+779	NOVILHA PRECOCE	1511050
+780	NOVILHAS (de 1 a menos de 2 anos), EXCETO PRECOCE	1511040
+781	NOVILHONA (vaca estéril ou falhada)	1511080
+782	NOVILHOS (de 1 a menos de 2 anos), EXCETO PRECOCE	1511060
+783	NOVILHOS PRECOCES (até 24 meses)	1511070
+784	NOZ (EUROPÉIA, PECĂ)	1333040
+785	NOZ MACADÂMIA	1333050
+786	OITI	2208190
+787	OITICICA (SEMENTE)	2205080
+788	OURICURI (CÔCO)	2205090
+789	OUTRAS FIBRAS	2203199
+790	OUTROS PRODUTOS NĂO MADEIREIROS	2209099
+791	Ovos de codornas ( para incubaçăo e para outros fins)	1556010
+792	Ovos de galinha (exceto para incubaçăo)	1552010
+793	PAINAS	2203090
+794	PALMITO (extrativismo)	2209100
+795	PALMITO (cultivo)	1399060
+796	Pepino (fruto)  	1212070
+797	PEQUI (AMĘNDOA)	2205100
+798	PĘRA	1332400
+799	PĘSSEGO	1332410
+800	PIAÇAVA (COQUILHO)	2209090
+801	PIAÇAVA (FIBRA)	2203100
+802	Pimenta	1215270
+803	PIMENTA-DO-REINO	1391060
+804	Pimentăo  	1212080
+805	PINHĂO	2208210
+806	PITOMBA	2208220
+807	Pós larvas de camarăo - criaçăo	3227060
+808	PUPUNHA (CÔCO) (extrativismo)	2209110
+809	PUPUNHA (CÔCO) (cultivo)	1333060
+810	Quiabo  	1212090
+811	Rabanete  	1213140
+812	RAMI (FIBRA)	1122080
+813	RAMI (HASTE)	1122090
+814	Repolho 	1211260
+815	Rúcula ou pinchăo  	1211270
+816	SAGU (MEDULA) (extrativismo)	2209120
+817	SAGU (MEDULA) (cultivo)	1399070
+818	Salsa   	1215300
+819	SĘMEN DE BOVINOS	1512030
+820	SOJA EM GRĂO	1150010
+821	SORGO EM GRĂO	1110090
+822	SORGO VASSOURA	1122100
+823	SORVA (GOMA NĂO ELÁSTICA)	2204090
+824	Taioba (folha)  	1211290
+825	TANGERINA	1331070
+826	TOMATE ESTAQUEADO	1212100
+827	TOMATE ESTAQUEADO (rasteiro + estaqueado)	1000720
+828	TOMATE RASTEIRO	1199040
+829	TOMATE RASTEIRO (rasteiro + estaqueado)	1000720
+830	TOURO	1511090
+831	TRIGO EM GRĂO	1110100
+832	TRIGO PRETO (MOURISCO, SARRACENO) EM GRĂO	1110110
+833	TRITICALE EM GRĂO	1110120
+834	TUCUMĂ (CÔCO)	2205110
+835	TUCUMĂ (FIBRA)	2203110
+836	TUNGUE	1394040
+837	UCUUBA (AMĘNDOA)	2205120
+838	URUCUM (cultivo)	1391070
+839	URUCUM (extrativismo)	2209130
+840	UVA (PARA MESA)	1320010
+841	UVA ( Total - uva para mesa + uva para vinho)	1320710
+842	UVA (PARA VINHO)	1320020
+843	VACA	1511100
+844	VACA EM LACTAÇĂO	1511110
+845	VAGEM (FEIJĂO VAGEM)	1214060
+\.
+
+
+--
+-- TOC entry 2502 (class 0 OID 0)
+-- Dependencies: 201
+-- Name: agricultura_produto_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('agricultura_produto_id_seq', 876, true);
+
+
+--
+-- TOC entry 2454 (class 0 OID 24817)
+-- Dependencies: 179
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY auth_group (id, name) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2503 (class 0 OID 0)
+-- Dependencies: 178
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_group_id_seq', 1, false);
+
+
+--
+-- TOC entry 2456 (class 0 OID 24827)
+-- Dependencies: 181
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY auth_group_permissions (id, group_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2504 (class 0 OID 0)
+-- Dependencies: 180
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- TOC entry 2452 (class 0 OID 24809)
+-- Dependencies: 177
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
+1	Can add log entry	1	add_logentry
+2	Can change log entry	1	change_logentry
+3	Can delete log entry	1	delete_logentry
+4	Can add permission	2	add_permission
+5	Can change permission	2	change_permission
+6	Can delete permission	2	delete_permission
+7	Can add group	3	add_group
+8	Can change group	3	change_group
+9	Can delete group	3	delete_group
+10	Can add user	4	add_user
+11	Can change user	4	change_user
+12	Can delete user	4	delete_user
+13	Can add content type	5	add_contenttype
+14	Can change content type	5	change_contenttype
+15	Can delete content type	5	delete_contenttype
+16	Can add session	6	add_session
+17	Can change session	6	change_session
+18	Can delete session	6	delete_session
+19	Can add estado	7	add_estado
+20	Can change estado	7	change_estado
+21	Can delete estado	7	delete_estado
+22	Can add meso regiao	8	add_mesoregiao
+23	Can change meso regiao	8	change_mesoregiao
+24	Can delete meso regiao	8	delete_mesoregiao
+25	Can add micro regiao	9	add_microregiao
+26	Can change micro regiao	9	change_microregiao
+27	Can delete micro regiao	9	delete_microregiao
+28	Can add municipio	10	add_municipio
+29	Can change municipio	10	change_municipio
+30	Can delete municipio	10	delete_municipio
+31	Can add produto	11	add_produto
+32	Can change produto	11	change_produto
+33	Can delete produto	11	delete_produto
+34	Can add producao	12	add_producao
+35	Can change producao	12	change_producao
+36	Can delete producao	12	delete_producao
+\.
+
+
+--
+-- TOC entry 2505 (class 0 OID 0)
+-- Dependencies: 176
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_permission_id_seq', 36, true);
+
+
+--
+-- TOC entry 2458 (class 0 OID 24835)
+-- Dependencies: 183
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
+1	pbkdf2_sha256$24000$IVBsjijIGljL$hbdTGvJSWVgjIxSrwWM43YSAgwackj3toC6yfl7xBpg=	2016-01-04 17:52:59.128542-02	t	admin			admin@ifes.edu.br	t	t	2016-01-04 17:52:46.75138-02
+\.
+
+
+--
+-- TOC entry 2460 (class 0 OID 24845)
+-- Dependencies: 185
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY auth_user_groups (id, user_id, group_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2506 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_user_groups_id_seq', 1, false);
+
+
+--
+-- TOC entry 2507 (class 0 OID 0)
+-- Dependencies: 182
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_user_id_seq', 1, true);
+
+
+--
+-- TOC entry 2462 (class 0 OID 24853)
+-- Dependencies: 187
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2508 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- TOC entry 2466 (class 0 OID 24938)
+-- Dependencies: 191
+-- Data for Name: core_estado; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY core_estado (id, nome, codigo) FROM stdin;
+1	Rondônia	11
+2	Acre	12
+3	Amazonas	13
+4	Roraima	14
+5	Pará	15
+6	Amapá	16
+7	Tocantins	17
+8	Maranhão	21
+9	Piauí	22
+10	Ceará	23
+11	Rio Grande do Norte	24
+12	Paraíba	25
+13	Pernambuco	26
+14	Alagoas	27
+15	Sergipe	28
+16	Bahia	29
+17	Minas Gerais	31
+18	Espírito Santo	32
+19	Rio de Janeiro	33
+20	São Paulo	35
+21	Paraná	41
+22	Santa Catarina	42
+23	Rio Grande do Sul	43
+24	Mato Grosso do Sul	50
+25	Mato Grosso	51
+26	Goiás	52
+27	Distrito Federal	53
+\.
+
+
+--
+-- TOC entry 2509 (class 0 OID 0)
+-- Dependencies: 190
+-- Name: core_estado_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('core_estado_id_seq', 27, true);
+
+
+--
+-- TOC entry 2468 (class 0 OID 24946)
+-- Dependencies: 193
+-- Data for Name: core_mesoregiao; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY core_mesoregiao (id, nome, codigo, estado_id) FROM stdin;
+73	Noroeste Espírito-santense	1	18
+74	Litoral Norte Espírito-santense	2	18
+75	Central Espírito-santense	3	18
+76	Sul Espírito-santense	4	18
+\.
+
+
+--
+-- TOC entry 2510 (class 0 OID 0)
+-- Dependencies: 192
+-- Name: core_mesoregiao_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('core_mesoregiao_id_seq', 76, true);
+
+
+--
+-- TOC entry 2470 (class 0 OID 24954)
+-- Dependencies: 195
+-- Data for Name: core_microregiao; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY core_microregiao (id, nome, codigo, mesoregiao_id) FROM stdin;
+1	Barra de São Francisco	1	73
+2	Nova Venécia	2	73
+3	Colatina	3	73
+4	Montanha	4	74
+5	São Mateus	5	74
+6	Linhares	6	74
+7	Afonso Cláudio	7	75
+8	Santa Teresa	8	75
+9	Vitória	9	75
+10	Guarapari	10	75
+11	Alegre	11	76
+12	Cachoeiro de Itapemirim	12	76
+13	Itapemirim	13	76
+\.
+
+
+--
+-- TOC entry 2511 (class 0 OID 0)
+-- Dependencies: 194
+-- Name: core_microregiao_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('core_microregiao_id_seq', 13, true);
+
+
+--
+-- TOC entry 2472 (class 0 OID 24962)
+-- Dependencies: 197
+-- Data for Name: core_municipio; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY core_municipio (id, nome, codigo, codigo_completo, microregiao_id, estado_id) FROM stdin;
+14	Água Doce do Norte	169	3200169	1	18
+15	Barra de São Francisco	904	3200904	1	18
+16	Ecoporanga	2108	3202108	1	18
+17	Mantenópolis	3304	3203304	1	18
+18	Águia Branca	136	3200136	2	18
+19	Boa Esperança	1001	3201001	2	18
+20	Nova Venécia	3908	3203908	2	18
+21	São Gabriel da Palha	4708	3204708	2	18
+22	Vila Pavão	5150	3205150	2	18
+23	Vila Valério	5176	3205176	2	18
+24	Alto Rio Novo	359	3200359	3	18
+25	Baixo Guandu	805	3200805	3	18
+26	Colatina	1506	3201506	3	18
+27	Governador Lindenberg	2256	3202256	3	18
+28	Marilândia	3353	3203353	3	18
+29	Pancas	4005	3204005	3	18
+30	São Domingos do Norte	4658	3204658	3	18
+31	Montanha	3502	3203502	4	18
+32	Mucurici	3601	3203601	4	18
+33	Pinheiros	4104	3204104	4	18
+34	Ponto Belo	4252	3204252	4	18
+35	Conceição da Barra	1605	3201605	5	18
+36	Jaguaré	3056	3203056	5	18
+37	Pedro Canário	4054	3204054	5	18
+38	São Mateus	4906	3204906	5	18
+39	Aracruz	607	3200607	6	18
+40	Fundão	2207	3202207	6	18
+41	Ibiraçu	2504	3202504	6	18
+42	João Neiva	3130	3203130	6	18
+43	Linhares	3205	3203205	6	18
+44	Rio Bananal	4351	3204351	6	18
+45	Sooretama	5010	3205010	6	18
+46	Afonso Cláudio	102	3200102	7	18
+47	Brejetuba	1159	3201159	7	18
+48	Conceição do Castelo	1704	3201704	7	18
+49	Domingos Martins	1902	3201902	7	18
+50	Laranja da Terra	3163	3203163	7	18
+51	Marechal Floriano	3346	3203346	7	18
+52	Venda Nova do Imigrante	5069	3205069	7	18
+53	Itaguaçu	2702	3202702	8	18
+54	Itarana	2900	3202900	8	18
+55	Santa Leopoldina	4500	3204500	8	18
+56	Santa Maria de Jetibá	4559	3204559	8	18
+57	Santa Teresa	4609	3204609	8	18
+58	São Roque do Canaã	4955	3204955	8	18
+59	Cariacica	1308	3201308	9	18
+60	Serra	5002	3205002	9	18
+61	Viana	5101	3205101	9	18
+62	Vila Velha	5200	3205200	9	18
+63	Vitória	5309	3205309	9	18
+64	Alfredo Chaves	300	3200300	10	18
+65	Anchieta	409	3200409	10	18
+66	Guarapari	2405	3202405	10	18
+67	Iconha	2603	3202603	10	18
+68	Piúma	4203	3204203	10	18
+69	Rio Novo do Sul	4401	3204401	10	18
+70	Alegre	201	3200201	11	18
+71	Divino de São Lourenço	1803	3201803	11	18
+72	Dores do Rio Preto	2009	3202009	11	18
+73	Guaçuí	2306	3202306	11	18
+74	Ibatiba	2454	3202454	11	18
+75	Ibitirama	2553	3202553	11	18
+76	Irupi	2652	3202652	11	18
+77	Iúna	3007	3203007	11	18
+78	Muniz Freire	3700	3203700	11	18
+79	Apiacá	508	3200508	12	18
+80	Atilio Vivacqua	706	3200706	12	18
+81	Bom Jesus do Norte	1100	3201100	12	18
+82	Cachoeiro de Itapemirim	1209	3201209	12	18
+83	Castelo	1407	3201407	12	18
+84	Jerônimo Monteiro	3106	3203106	12	18
+85	Mimoso do Sul	3403	3203403	12	18
+86	Muqui	3809	3203809	12	18
+87	São José do Calçado	4807	3204807	12	18
+88	Vargem Alta	5036	3205036	12	18
+89	Itapemirim	2801	3202801	13	18
+90	Marataízes	3320	3203320	13	18
+91	Presidente Kennedy	4302	3204302	13	18
+\.
+
+
+--
+-- TOC entry 2512 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: core_municipio_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('core_municipio_id_seq', 91, true);
+
+
+--
+-- TOC entry 2464 (class 0 OID 24913)
+-- Dependencies: 189
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
+1	2016-01-04 19:18:44.556726-02	30	Metropolitana de São Paulo	3		8	1
+2	2016-01-04 19:18:44.602095-02	29	Litoral Sul Paulista	3		8	1
+3	2016-01-04 19:18:44.604201-02	28	Vale do Paraíba Paulista	3		8	1
+4	2016-01-04 19:18:44.606512-02	27	Zona da Mata	3		8	1
+5	2016-01-04 19:18:44.60883-02	26	Campo das Vertentes	3		8	1
+6	2016-01-04 19:18:44.611153-02	25	Sul/Sudoeste de Minas	3		8	1
+7	2016-01-04 19:18:44.613905-02	24	Oeste de Minas	3		8	1
+8	2016-01-04 19:18:44.61637-02	23	Vale do Rio Doce	3		8	1
+9	2016-01-04 19:18:44.618942-02	22	Sul Cearense	3		8	1
+10	2016-01-04 19:18:44.621032-02	21	Sudeste Paraense	3		8	1
+11	2016-01-04 19:18:44.622963-02	20	Sudoeste Paraense	3		8	1
+12	2016-01-04 19:18:44.624814-02	19	Sul Amazonense	3		8	1
+13	2016-01-04 19:18:44.626548-02	18	Centro Amazonense	3		8	1
+14	2016-01-04 19:18:44.628951-02	17	Leste Rondoniense	3		8	1
+15	2016-01-04 19:18:44.631508-02	16	Madeira-Guaporé	3		8	1
+16	2016-01-04 20:08:53.422572-02	72	Distrito Federal	3		8	1
+17	2016-01-04 20:08:53.46825-02	71	Noroeste Goiano	3		8	1
+18	2016-01-04 20:08:53.470635-02	70	Norte Mato-grossense	3		8	1
+19	2016-01-04 20:08:53.472828-02	69	Pantanais Sul Mato-grossense	3		8	1
+20	2016-01-04 20:08:53.475544-02	68	Noroeste Rio-grandense	3		8	1
+21	2016-01-04 20:08:53.477824-02	67	Oeste Catarinense	3		8	1
+22	2016-01-04 20:08:53.480603-02	66	Noroeste Paranaense	3		8	1
+23	2016-01-04 20:08:53.482719-02	65	São José do Rio Preto	3		8	1
+24	2016-01-04 20:08:53.484575-02	64	Noroeste Fluminense	3		8	1
+25	2016-01-04 20:08:53.486257-02	63	Noroeste Espírito-santense	3		8	1
+26	2016-01-04 20:08:53.487901-02	62	Noroeste de Minas	3		8	1
+27	2016-01-04 20:08:53.489704-02	61	Extremo Oeste Baiano	3		8	1
+28	2016-01-04 20:08:53.492324-02	60	Sertão Sergipano	3		8	1
+29	2016-01-04 20:08:53.495446-02	59	Sertão Alagoano	3		8	1
+30	2016-01-04 20:08:53.497298-02	58	Sertão Pernambucano	3		8	1
+31	2016-01-04 20:08:53.499069-02	57	Sertão Paraibano	3		8	1
+32	2016-01-04 20:08:53.502338-02	56	Oeste Potiguar	3		8	1
+33	2016-01-04 20:08:53.504211-02	55	Noroeste Cearense	3		8	1
+34	2016-01-04 20:08:53.505885-02	54	Norte Piauiense	3		8	1
+35	2016-01-04 20:08:53.507621-02	53	Norte Maranhense	3		8	1
+36	2016-01-04 20:08:53.511736-02	52	Ocidental do Tocantins	3		8	1
+37	2016-01-04 20:08:53.513857-02	51	Norte do Amapá	3		8	1
+38	2016-01-04 20:08:53.51557-02	50	Baixo Amazonas	3		8	1
+39	2016-01-04 20:08:53.517398-02	49	Norte de Roraima	3		8	1
+40	2016-01-04 20:08:53.519222-02	48	Norte Amazonense	3		8	1
+41	2016-01-04 20:08:53.52212-02	47	Vale do Juruá	3		8	1
+42	2016-01-04 20:08:53.523721-02	46	Madeira-Guaporé	3		8	1
+43	2016-01-04 20:08:53.526371-02	45	Metropolitana de São Paulo	3		8	1
+44	2016-01-04 20:08:53.529871-02	44	Litoral Sul Paulista	3		8	1
+45	2016-01-04 20:08:53.531723-02	43	Vale do Paraíba Paulista	3		8	1
+46	2016-01-04 20:08:53.53339-02	42	Zona da Mata	3		8	1
+47	2016-01-04 20:08:53.535044-02	41	Campo das Vertentes	3		8	1
+48	2016-01-04 20:08:53.536712-02	40	Sul/Sudoeste de Minas	3		8	1
+49	2016-01-04 20:08:53.538324-02	39	Oeste de Minas	3		8	1
+50	2016-01-04 20:08:53.540641-02	38	Vale do Rio Doce	3		8	1
+51	2016-01-04 20:08:53.544131-02	37	Sul Cearense	3		8	1
+52	2016-01-04 20:08:53.546664-02	36	Sudeste Paraense	3		8	1
+53	2016-01-04 20:08:53.548465-02	35	Sudoeste Paraense	3		8	1
+54	2016-01-04 20:08:53.550113-02	34	Sul Amazonense	3		8	1
+55	2016-01-04 20:08:53.552737-02	33	Centro Amazonense	3		8	1
+56	2016-01-04 20:08:53.554502-02	32	Leste Rondoniense	3		8	1
+57	2016-01-04 20:08:53.555998-02	31	Madeira-Guaporé	3		8	1
+58	2016-01-05 00:00:38.620264-02	7	Afonso Cláudio	3		10	1
+59	2016-01-05 00:00:38.693833-02	11	Alegre	3		10	1
+60	2016-01-05 00:00:38.696153-02	10	Alfredo Chaves	3		10	1
+61	2016-01-05 00:00:38.698165-02	3	Alto Rio Novo	3		10	1
+62	2016-01-05 00:00:38.700031-02	12	Apiacá	3		10	1
+63	2016-01-05 00:00:38.701929-02	6	Aracruz	3		10	1
+64	2016-01-05 00:00:38.703833-02	9	Cariacica	3		10	1
+65	2016-01-05 00:00:38.705775-02	5	Conceição da Barra	3		10	1
+66	2016-01-05 00:00:38.707614-02	8	Itaguaçu	3		10	1
+67	2016-01-05 00:00:38.709446-02	13	Itapemirim	3		10	1
+68	2016-01-05 00:00:38.711222-02	4	Montanha	3		10	1
+69	2016-01-05 00:00:38.713219-02	1	Água Doce do Norte	3		10	1
+70	2016-01-05 00:00:38.715046-02	2	Águia Branca	3		10	1
+71	2016-01-09 15:24:30.636882-02	273	ABACATE	3		11	1
+72	2016-01-09 15:24:30.800161-02	274	ABACAXI	3		11	1
+73	2016-01-09 15:24:30.802591-02	275	ABIU	3		11	1
+74	2016-01-09 15:24:30.805763-02	277	ABOBRINHA	3		11	1
+75	2016-01-09 15:24:30.807944-02	278	ABRIC�	3		11	1
+76	2016-01-09 15:24:30.839112-02	276	AB�BORA (JERIMUM, MORANGA)	3		11	1
+77	2016-01-09 15:24:30.84198-02	282	ACELGA	3		11	1
+78	2016-01-09 15:24:30.84407-02	284	AGAVE (FIBRA)	3		11	1
+79	2016-01-09 15:24:30.845937-02	285	AGAVE (FOLHA)	3		11	1
+80	2016-01-09 15:24:30.847737-02	286	AGRI�O	3		11	1
+81	2016-01-09 15:24:30.849467-02	287	AIPO OU SALS�O	3		11	1
+82	2016-01-09 15:24:30.851236-02	288	ALCACHOFRA	3		11	1
+83	2016-01-09 15:24:30.852897-02	289	ALFACE	3		11	1
+84	2016-01-09 15:24:30.855362-02	290	ALGOD�O EM CARO�O (ARB�REO)	3		11	1
+85	2016-01-09 15:24:30.857066-02	291	ALGOD�O EM CARO�O (HERB�CEO)	3		11	1
+86	2016-01-09 15:24:30.858895-02	292	ALHO	3		11	1
+87	2016-01-09 15:24:30.860552-02	293	ALHO PORR�	3		11	1
+88	2016-01-09 15:24:30.862295-02	294	ALMEIR�O OU CHIC�RIA AMARGA	3		11	1
+89	2016-01-09 15:24:30.86434-02	295	AMEIXA	3		11	1
+90	2016-01-09 15:24:30.866167-02	296	AMENDOIM EM CASCA	3		11	1
+91	2016-01-09 15:24:30.867926-02	297	ANDIROBA (SEMENTE)	3		11	1
+92	2016-01-09 15:24:30.869797-02	298	ANGICO (CASCA)	3		11	1
+93	2016-01-09 15:24:30.871659-02	299	ARARUTA	3		11	1
+94	2016-01-09 15:24:30.873346-02	300	ARROZ EM CASCA	3		11	1
+95	2016-01-09 15:24:30.87503-02	301	ASPARGO	3		11	1
+96	2016-01-09 15:24:30.876661-02	302	AVEIA EM GR�O	3		11	1
+97	2016-01-09 15:24:30.878292-02	303	AZEITONA	3		11	1
+98	2016-01-09 15:24:30.879951-02	283	Acerola ou cereja-das-antilhas	3		11	1
+99	2016-01-09 15:24:30.881607-02	279	A�AFR�O	3		11	1
+100	2016-01-09 15:24:30.88324-02	280	A�A� (cultivo)	3		11	1
+101	2016-01-09 15:24:30.885015-02	281	A�A� (extrativismo)	3		11	1
+102	2016-01-09 15:24:30.886706-02	304	BABA�U (AM�NDOA)	3		11	1
+103	2016-01-09 15:24:30.888791-02	305	BABA�U (C�CO)	3		11	1
+104	2016-01-09 15:24:30.892005-02	306	BACABA (CARO�O)	3		11	1
+105	2016-01-09 15:24:30.894167-02	307	BACURI	3		11	1
+106	2016-01-09 15:24:30.895949-02	308	BALATA (GOMA N�O EL�STICA)	3		11	1
+107	2016-01-09 15:24:30.897628-02	309	BAMBU (TAQUARA)	3		11	1
+108	2016-01-09 15:24:30.899259-02	310	BANANA	3		11	1
+109	2016-01-09 15:24:30.900913-02	312	BATATA-DOCE	3		11	1
+110	2016-01-09 15:24:30.903095-02	313	BATATA-INGLESA	3		11	1
+111	2016-01-09 15:24:30.905099-02	314	BERINJELA	3		11	1
+112	2016-01-09 15:24:30.906968-02	315	BERTALHA	3		11	1
+113	2016-01-09 15:24:30.908683-02	316	BETERRABA	3		11	1
+114	2016-01-09 15:24:30.910415-02	317	BEZERRA	3		11	1
+115	2016-01-09 15:24:30.912083-02	318	BEZERRO	3		11	1
+116	2016-01-09 15:24:30.913704-02	319	BOIS (2 ANOS E MAIS) (gordo + magro)	3		11	1
+117	2016-01-09 15:24:30.915323-02	320	BORRACHA COAGULADA (PELA OU BOLA)(cultivo)	3		11	1
+118	2016-01-09 15:24:30.916944-02	321	BORRACHA COAGULADA (PELA OU BOLA)(extrativismo)	3		11	1
+119	2016-01-09 15:24:30.918575-02	322	BORRACHA L�QUIDA (cultivo)	3		11	1
+120	2016-01-09 15:24:30.920445-02	323	BORRACHA L�QUIDA (extrativismo)	3		11	1
+121	2016-01-09 15:24:30.922434-02	324	BR�COLIS	3		11	1
+122	2016-01-09 15:24:30.924186-02	329	BURITI (C�CO)	3		11	1
+123	2016-01-09 15:24:30.925907-02	330	BURITI (PALHA)	3		11	1
+124	2016-01-09 15:24:30.927694-02	331	BUTI� (C�CO)	3		11	1
+125	2016-01-09 15:24:30.929364-02	332	BUTI� (FIBRA)	3		11	1
+126	2016-01-09 15:24:30.931218-02	311	Batata-baroa ou mandioquinha-salsa  	3		11	1
+127	2016-01-09 15:24:30.933026-02	325	B�FALA EM LACTA��O	3		11	1
+128	2016-01-09 15:24:30.93469-02	326	B�FALOS E B�FALAS 2 ANOS E MAIS	3		11	1
+129	2016-01-09 15:24:30.936336-02	327	B�FALOS E B�FALAS DE 1 A 2 ANOS	3		11	1
+130	2016-01-09 15:24:30.938094-02	328	B�FALOS MENORES DE 1 ANO	3		11	1
+131	2016-01-09 15:24:30.939758-02	333	CACAU (AM�NDOA)	3		11	1
+132	2016-01-09 15:24:30.94142-02	334	CAF� EM C�CO (usado no passado, n�o � usado atualmente)	3		11	1
+133	2016-01-09 15:24:30.943077-02	335	CAF� EM GR�O (Total arabica + Conilon)	3		11	1
+134	2016-01-09 15:24:30.9448-02	339	CAJU (CASTANHA) (cultivo)	3		11	1
+135	2016-01-09 15:24:30.94651-02	340	CAJU (CASTANHA) (extrativismo)	3		11	1
+136	2016-01-09 15:24:30.948615-02	342	CAJU (FRUTO) ( extrativismo)	3		11	1
+137	2016-01-09 15:24:30.950637-02	341	CAJU (FRUTO) (cultivo)	3		11	1
+138	2016-01-09 15:24:30.952944-02	338	CAJ�-MANGA	3		11	1
+139	2016-01-09 15:24:30.955171-02	343	CAMBUC�	3		11	1
+140	2016-01-09 15:24:30.956962-02	344	CANA-DE-A��CAR	3		11	1
+141	2016-01-09 15:24:30.958642-02	346	CAQUI	3		11	1
+142	2016-01-09 15:24:30.960294-02	348	CARNA�BA (CERA)	3		11	1
+143	2016-01-09 15:24:30.961918-02	349	CARNA�BA (OLHO DE PALHA)	3		11	1
+144	2016-01-09 15:24:30.963583-02	350	CARNA�BA (PALHA)	3		11	1
+145	2016-01-09 15:24:30.965217-02	351	CARNA�BA (P� DE PALHA)	3		11	1
+146	2016-01-09 15:24:30.966904-02	352	CARO� (FIBRA)	3		11	1
+147	2016-01-09 15:24:30.968584-02	354	CARV�O VEGETAL ( floresta plantada)	3		11	1
+148	2016-01-09 15:24:30.970593-02	353	CARV�O VEGETAL (extrativismo)	3		11	1
+149	2016-01-09 15:24:30.972548-02	347	CAR�	3		11	1
+150	2016-01-09 15:24:30.974254-02	355	CASCAS TAN�FERAS	3		11	1
+151	2016-01-09 15:24:30.976175-02	356	CASTANHA-DO-PAR�	3		11	1
+152	2016-01-09 15:24:30.977804-02	357	CAUCHO (GOMA EL�STICA)	3		11	1
+153	2016-01-09 15:24:30.979471-02	358	CEBOLA	3		11	1
+154	2016-01-09 15:24:30.981084-02	359	CEBOLINHA (FOLHA)	3		11	1
+155	2016-01-09 15:24:30.982723-02	360	CENOURA	3		11	1
+156	2016-01-09 15:24:30.984347-02	361	CENTEIO EM GR�O	3		11	1
+157	2016-01-09 15:24:30.9864-02	362	CEVADA EM GR�O	3		11	1
+158	2016-01-09 15:24:30.988194-02	364	CHIC�RIA	3		11	1
+159	2016-01-09 15:24:30.989855-02	366	CHUCHU	3		11	1
+160	2016-01-09 15:24:30.991494-02	363	CH�-DA-�NDIA	3		11	1
+161	2016-01-09 15:24:30.993127-02	367	CIP�-TIMB� OU TIMB�	3		11	1
+162	2016-01-09 15:24:30.994902-02	368	COCO-DA-BA�A	3		11	1
+163	2016-01-09 15:24:30.996833-02	370	COENTRO (FOLHA)	3		11	1
+164	2016-01-09 15:24:30.9985-02	372	COLZA	3		11	1
+165	2016-01-09 15:24:31.000395-02	373	COPAIBA (�LEO)	3		11	1
+166	2016-01-09 15:24:31.002179-02	374	COQUIRAMA (GOMA N�O EL�STICA)	3		11	1
+167	2016-01-09 15:24:31.004331-02	375	COUVE	3		11	1
+168	2016-01-09 15:24:31.006173-02	376	COUVE DE BRUXELAS	3		11	1
+169	2016-01-09 15:24:31.007859-02	378	CUMARU (SEMENTE)	3		11	1
+170	2016-01-09 15:24:31.009963-02	379	CUPUA�U (cultivo)	3		11	1
+171	2016-01-09 15:24:31.011801-02	380	CUPUA�U (extrativismo)	3		11	1
+172	2016-01-09 15:24:31.013461-02	345	Cana (forrageira para corte)	3		11	1
+173	2016-01-09 15:24:31.015085-02	365	Chic�ria (end�via ou escarola)	3		11	1
+174	2016-01-09 15:24:31.017206-02	369	Codornas	3		11	1
+175	2016-01-09 15:24:31.019017-02	371	Cogumelos comest�veis  	3		11	1
+176	2016-01-09 15:24:31.020799-02	377	Couve-flor 	3		11	1
+177	2016-01-09 15:24:31.022508-02	381	DEND� (CACHO DE C�CO)	3		11	1
+178	2016-01-09 15:24:31.02416-02	383	ERVA-MATE (CANCHEADA) (cultivo)	3		11	1
+179	2016-01-09 15:24:31.025774-02	384	ERVA-MATE (CANCHEADA) (extrativismo)	3		11	1
+180	2016-01-09 15:24:31.027806-02	385	ERVA-MATE (FOLHA VERDE) (cultivo)	3		11	1
+181	2016-01-09 15:24:31.030373-02	386	ERVA-MATE (FOLHA VERDE) (extrativismo)	3		11	1
+182	2016-01-09 15:24:31.032567-02	387	ERVILHA (VAGEM)	3		11	1
+183	2016-01-09 15:24:31.035031-02	388	ERVILHA EM GR�O	3		11	1
+184	2016-01-09 15:24:31.04025-02	390	ESTERCO DE BOVINOS	3		11	1
+185	2016-01-09 15:24:31.04291-02	382	Equinos	3		11	1
+186	2016-01-09 15:24:31.045417-02	389	Espinafres (comum, da Nova Zel�ndia, etc) 	3		11	1
+187	2016-01-09 15:24:31.047588-02	391	FAVA	3		11	1
+188	2016-01-09 15:24:31.049658-02	392	FEIJ�O COMUM DE COR EM GR�O	3		11	1
+189	2016-01-09 15:24:31.051405-02	393	FEIJ�O COMUM PRETO EM GR�O	3		11	1
+190	2016-01-09 15:24:31.053122-02	394	FEIJ�O EM GR�O (QUALQUER OUTRO: ADZUKI, MUNGO, DE ESPANHA, DE LIMA)	3		11	1
+191	2016-01-09 15:24:31.055237-02	395	FEIJ�O FRADINHO, CAUPI, DE CORDA OU MACA�AR EM GR�O	3		11	1
+192	2016-01-09 15:24:31.057066-02	396	FEIJ�O VERDE (GR�OS VERDES FRESCOS)	3		11	1
+193	2016-01-09 15:24:31.058855-02	397	FIGO	3		11	1
+194	2016-01-09 15:24:31.060806-02	400	FRUTA-P�O	3		11	1
+195	2016-01-09 15:24:31.062724-02	401	FUMO EM FOLHA	3		11	1
+196	2016-01-09 15:24:31.064454-02	398	Frangos	3		11	1
+291	2016-01-09 15:24:31.237298-02	498	PIA�AVA (COQUILHO)	3		11	1
+197	2016-01-09 15:24:31.066139-02	399	Fruta-do-conde, graviola, araticum, cherim�ia e outras anon�ceas � anonas	3		11	1
+198	2016-01-09 15:24:31.067898-02	407	GERGELIM	3		11	1
+199	2016-01-09 15:24:31.070048-02	408	GIRASSOL (SEMENTE)	3		11	1
+200	2016-01-09 15:24:31.072172-02	410	GOIABA	3		11	1
+201	2016-01-09 15:24:31.073964-02	411	GR�O DE BICO	3		11	1
+202	2016-01-09 15:24:31.075655-02	413	GUANDO	3		11	1
+203	2016-01-09 15:24:31.077921-02	414	GUARAN�	3		11	1
+204	2016-01-09 15:24:31.079813-02	403	Galinha d'angola (coc�, t�-fraco, guin�, pintada)	3		11	1
+205	2016-01-09 15:24:31.081734-02	404	Galinhas 	3		11	1
+206	2016-01-09 15:24:31.083499-02	402	Galin�ceos da esp�cie Gallus gallus, n�o epecificados anteriormente	3		11	1
+207	2016-01-09 15:24:31.085191-02	405	Galos  	3		11	1
+208	2016-01-09 15:24:31.087626-02	406	Gengibre (rizoma)  	3		11	1
+209	2016-01-09 15:24:31.089464-02	409	Girinos - cria��o	3		11	1
+210	2016-01-09 15:24:31.091177-02	412	Graviola	3		11	1
+211	2016-01-09 15:24:31.092864-02	415	IMB� OU UMB�	3		11	1
+212	2016-01-09 15:24:31.094944-02	416	INHAME	3		11	1
+213	2016-01-09 15:24:31.096756-02	417	IPECACUANHA OU POAIA	3		11	1
+214	2016-01-09 15:24:31.098629-02	418	JABORANDI (FOLHA)	3		11	1
+215	2016-01-09 15:24:31.100724-02	423	JATOB� OU JATA�	3		11	1
+216	2016-01-09 15:24:31.10294-02	424	JENIPAPO (cultivo)	3		11	1
+217	2016-01-09 15:24:31.105102-02	425	JENIPAPO (extrativismo)	3		11	1
+218	2016-01-09 15:24:31.106885-02	427	JUTA (FIBRA)	3		11	1
+219	2016-01-09 15:24:31.108916-02	428	JUTA (HASTE)	3		11	1
+220	2016-01-09 15:24:31.11082-02	419	Jabuticaba	3		11	1
+221	2016-01-09 15:24:31.112904-02	420	Jaca	3		11	1
+222	2016-01-09 15:24:31.114809-02	421	Jacar� - cria��o	3		11	1
+223	2016-01-09 15:24:31.116813-02	422	Jambo	3		11	1
+224	2016-01-09 15:24:31.11978-02	426	Jil�  	3		11	1
+225	2016-01-09 15:24:31.121775-02	429	LARANJA	3		11	1
+226	2016-01-09 15:24:31.123508-02	430	LEITE DE VACA IN NATURA	3		11	1
+227	2016-01-09 15:24:31.125163-02	431	LENHA (extrativismo)	3		11	1
+228	2016-01-09 15:24:31.12686-02	432	LENHA (florestas plantadas)	3		11	1
+229	2016-01-09 15:24:31.12864-02	433	LENTILHA	3		11	1
+230	2016-01-09 15:24:31.13034-02	435	LICURI (CERA)	3		11	1
+231	2016-01-09 15:24:31.132027-02	436	LICURI (COQUILHO)	3		11	1
+232	2016-01-09 15:24:31.133703-02	437	LICURI (FOLHA)	3		11	1
+233	2016-01-09 15:24:31.135382-02	438	LIMA	3		11	1
+234	2016-01-09 15:24:31.13745-02	439	LIM�O	3		11	1
+235	2016-01-09 15:24:31.139635-02	440	LINHO (FIBRA)	3		11	1
+236	2016-01-09 15:24:31.141432-02	441	LINHO (HASTE)	3		11	1
+237	2016-01-09 15:24:31.143118-02	442	LINHO (SEMENTE)	3		11	1
+238	2016-01-09 15:24:31.144951-02	434	Lichia ou lechia	3		11	1
+239	2016-01-09 15:24:31.146645-02	445	MACAUBA (SEMENTE)	3		11	1
+240	2016-01-09 15:24:31.148281-02	446	MADEIRA EM TORAS (MADEIRA EM TORA PARA OUTRAS FINALIDADES)	3		11	1
+241	2016-01-09 15:24:31.149972-02	448	MADEIRA EM TORAS (MADEIRA EM TORA PARA OUTRAS FINALIDADES) (florestas plantadas)	3		11	1
+242	2016-01-09 15:24:31.151618-02	447	MADEIRA EM TORAS (MADEIRA EM TORA PARA OUTRAS FINALIDADES) (pinheiro brasileiro nativo)	3		11	1
+243	2016-01-09 15:24:31.153436-02	449	MADEIRA PARA PAPEL E CELULOSE	3		11	1
+244	2016-01-09 15:24:31.155286-02	450	MADEIRA PARA PAPEL E CELULOSE (florestas plantadas)	3		11	1
+245	2016-01-09 15:24:31.156964-02	451	MALVA (FIBRA) (cultivo)	3		11	1
+246	2016-01-09 15:24:31.158617-02	452	MALVA (FIBRA) (extrativismo)	3		11	1
+247	2016-01-09 15:24:31.160492-02	453	MALVA (HASTE) (cultivo)	3		11	1
+248	2016-01-09 15:24:31.162474-02	454	MALVA (HASTE) (extrativismo)	3		11	1
+249	2016-01-09 15:24:31.164187-02	456	MAMONA	3		11	1
+250	2016-01-09 15:24:31.165856-02	455	MAM�O	3		11	1
+251	2016-01-09 15:24:31.1675-02	457	MANDIOCA (AIPIM, MACAXEIRA) ( para ind�stria)	3		11	1
+252	2016-01-09 15:24:31.169497-02	458	MANDIOCA (AIPIM, MACAXEIRA) ( para mesa)	3		11	1
+253	2016-01-09 15:24:31.171419-02	459	MANGA	3		11	1
+254	2016-01-09 15:24:31.17309-02	460	MANGABA (FRUTO)	3		11	1
+255	2016-01-09 15:24:31.174767-02	461	MANGABEIRA (GOMA EL�STICA)	3		11	1
+256	2016-01-09 15:24:31.176686-02	462	MANI�OBA (GOMA EL�STICA)	3		11	1
+257	2016-01-09 15:24:31.178362-02	463	MARACUJ�	3		11	1
+258	2016-01-09 15:24:31.180007-02	464	MARMELO	3		11	1
+259	2016-01-09 15:24:31.181638-02	444	MA�ARANDUBA (GOMA N�O EL�STICA)	3		11	1
+260	2016-01-09 15:24:31.183298-02	443	MA��	3		11	1
+261	2016-01-09 15:24:31.184928-02	467	MELANCIA	3		11	1
+262	2016-01-09 15:24:31.187-02	468	MEL�O	3		11	1
+263	2016-01-09 15:24:31.188837-02	469	MILHO EM ESPIGA (VERDE)	3		11	1
+264	2016-01-09 15:24:31.190536-02	471	MILHO EM GR�O (1�safra)	3		11	1
+265	2016-01-09 15:24:31.192179-02	472	MILHO EM GR�O (2� e 3� safra)	3		11	1
+266	2016-01-09 15:24:31.193842-02	470	MILHO EM GR�O (Total - Todas as safras)	3		11	1
+267	2016-01-09 15:24:31.195466-02	474	MORANGO	3		11	1
+268	2016-01-09 15:24:31.197074-02	475	MURICI	3		11	1
+269	2016-01-09 15:24:31.1989-02	476	MURUMURU (SEMENTE)	3		11	1
+270	2016-01-09 15:24:31.200895-02	465	Maxixe (fruto)  	3		11	1
+271	2016-01-09 15:24:31.202848-02	466	Mel	3		11	1
+272	2016-01-09 15:24:31.20456-02	473	Milho (forrageira para corte)	3		11	1
+273	2016-01-09 15:24:31.206195-02	477	NOVILHA PRECOCE	3		11	1
+274	2016-01-09 15:24:31.207829-02	478	NOVILHAS (de 1 a menos de 2 anos), EXCETO PRECOCE	3		11	1
+275	2016-01-09 15:24:31.209485-02	479	NOVILHONA (vaca est�ril ou falhada)	3		11	1
+276	2016-01-09 15:24:31.211034-02	480	NOVILHOS (de 1 a menos de 2 anos), EXCETO PRECOCE	3		11	1
+277	2016-01-09 15:24:31.212867-02	481	NOVILHOS PRECOCES (at� 24 meses)	3		11	1
+278	2016-01-09 15:24:31.214542-02	482	NOZ (EUROP�IA, PEC�)	3		11	1
+279	2016-01-09 15:24:31.216217-02	483	NOZ MACAD�MIA	3		11	1
+280	2016-01-09 15:24:31.217884-02	484	OITI	3		11	1
+281	2016-01-09 15:24:31.219697-02	485	OITICICA (SEMENTE)	3		11	1
+282	2016-01-09 15:24:31.221557-02	486	OURICURI (C�CO)	3		11	1
+283	2016-01-09 15:24:31.223259-02	487	OUTRAS FIBRAS	3		11	1
+284	2016-01-09 15:24:31.224916-02	488	OUTROS PRODUTOS N�O MADEIREIROS	3		11	1
+285	2016-01-09 15:24:31.226578-02	489	Ovos de codornas ( para incuba��o e para outros fins)	3		11	1
+286	2016-01-09 15:24:31.228262-02	490	Ovos de galinha (exceto para incuba��o)	3		11	1
+287	2016-01-09 15:24:31.229916-02	491	PAINAS	3		11	1
+288	2016-01-09 15:24:31.231902-02	493	PALMITO (cultivo)	3		11	1
+289	2016-01-09 15:24:31.233767-02	492	PALMITO (extrativismo)	3		11	1
+290	2016-01-09 15:24:31.235505-02	495	PEQUI (AM�NDOA)	3		11	1
+292	2016-01-09 15:24:31.238999-02	499	PIA�AVA (FIBRA)	3		11	1
+293	2016-01-09 15:24:31.240753-02	501	PIMENTA-DO-REINO	3		11	1
+294	2016-01-09 15:24:31.242428-02	503	PINH�O	3		11	1
+295	2016-01-09 15:24:31.244099-02	504	PITOMBA	3		11	1
+296	2016-01-09 15:24:31.245789-02	507	PUPUNHA (C�CO) (cultivo)	3		11	1
+297	2016-01-09 15:24:31.24743-02	506	PUPUNHA (C�CO) (extrativismo)	3		11	1
+298	2016-01-09 15:24:31.249057-02	494	Pepino (fruto)  	3		11	1
+299	2016-01-09 15:24:31.250668-02	500	Pimenta	3		11	1
+300	2016-01-09 15:24:31.253331-02	502	Piment�o  	3		11	1
+301	2016-01-09 15:24:31.255143-02	496	P�RA	3		11	1
+302	2016-01-09 15:24:31.256857-02	497	P�SSEGO	3		11	1
+303	2016-01-09 15:24:31.258526-02	505	P�s larvas de camar�o - cria��o	3		11	1
+304	2016-01-09 15:24:31.260186-02	508	Quiabo  	3		11	1
+305	2016-01-09 15:24:31.261859-02	510	RAMI (FIBRA)	3		11	1
+306	2016-01-09 15:24:31.263739-02	511	RAMI (HASTE)	3		11	1
+307	2016-01-09 15:24:31.265807-02	509	Rabanete  	3		11	1
+308	2016-01-09 15:24:31.267489-02	512	Repolho 	3		11	1
+309	2016-01-09 15:24:31.269275-02	513	R�cula ou pinch�o  	3		11	1
+310	2016-01-09 15:24:31.27098-02	515	SAGU (MEDULA) (cultivo)	3		11	1
+311	2016-01-09 15:24:31.272632-02	514	SAGU (MEDULA) (extrativismo)	3		11	1
+312	2016-01-09 15:24:31.274308-02	518	SOJA EM GR�O	3		11	1
+313	2016-01-09 15:24:31.275991-02	519	SORGO EM GR�O	3		11	1
+314	2016-01-09 15:24:31.277686-02	520	SORGO VASSOURA	3		11	1
+315	2016-01-09 15:24:31.279353-02	521	SORVA (GOMA N�O EL�STICA)	3		11	1
+316	2016-01-09 15:24:31.280994-02	516	Salsa   	3		11	1
+317	2016-01-09 15:24:31.282611-02	517	S�MEN DE BOVINOS	3		11	1
+318	2016-01-09 15:24:31.284269-02	523	TANGERINA	3		11	1
+319	2016-01-09 15:24:31.286036-02	524	TOMATE ESTAQUEADO	3		11	1
+320	2016-01-09 15:24:31.28801-02	525	TOMATE ESTAQUEADO (rasteiro + estaqueado)	3		11	1
+321	2016-01-09 15:24:31.289705-02	526	TOMATE RASTEIRO	3		11	1
+322	2016-01-09 15:24:31.29134-02	527	TOMATE RASTEIRO (rasteiro + estaqueado)	3		11	1
+323	2016-01-09 15:24:31.293133-02	528	TOURO	3		11	1
+324	2016-01-09 15:24:31.294799-02	529	TRIGO EM GR�O	3		11	1
+325	2016-01-09 15:24:31.296446-02	530	TRIGO PRETO (MOURISCO, SARRACENO) EM GR�O	3		11	1
+326	2016-01-09 15:24:31.298072-02	531	TRITICALE EM GR�O	3		11	1
+327	2016-01-09 15:24:31.299736-02	532	TUCUM� (C�CO)	3		11	1
+328	2016-01-09 15:24:31.3013-02	533	TUCUM� (FIBRA)	3		11	1
+329	2016-01-09 15:24:31.303345-02	534	TUNGUE	3		11	1
+330	2016-01-09 15:24:31.305094-02	522	Taioba (folha)  	3		11	1
+331	2016-01-09 15:24:31.306745-02	535	UCUUBA (AM�NDOA)	3		11	1
+332	2016-01-09 15:24:31.308396-02	536	URUCUM (cultivo)	3		11	1
+333	2016-01-09 15:24:31.310109-02	537	URUCUM (extrativismo)	3		11	1
+334	2016-01-09 15:24:31.311947-02	539	UVA ( Total - uva para mesa + uva para vinho)	3		11	1
+335	2016-01-09 15:24:31.313748-02	538	UVA (PARA MESA)	3		11	1
+336	2016-01-09 15:24:31.315408-02	540	UVA (PARA VINHO)	3		11	1
+337	2016-01-09 15:24:31.317086-02	541	VACA	3		11	1
+338	2016-01-09 15:24:31.318713-02	542	VACA EM LACTA��O	3		11	1
+339	2016-01-09 15:24:31.320324-02	543	VAGEM (FEIJ�O VAGEM)	3		11	1
+340	2016-01-09 15:24:31.321941-02	336	caf� ar�bica (em gr�o)	3		11	1
+341	2016-01-09 15:24:31.323909-02	337	caf� canephora, conilon, robusta (em gr�o)	3		11	1
+\.
+
+
+--
+-- TOC entry 2513 (class 0 OID 0)
+-- Dependencies: 188
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('django_admin_log_id_seq', 341, true);
+
+
+--
+-- TOC entry 2450 (class 0 OID 24799)
+-- Dependencies: 175
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY django_content_type (id, app_label, model) FROM stdin;
+1	admin	logentry
+2	auth	permission
+3	auth	group
+4	auth	user
+5	contenttypes	contenttype
+6	sessions	session
+7	core	estado
+8	core	mesoregiao
+9	core	microregiao
+10	core	municipio
+11	agricultura	produto
+12	agricultura	producao
+\.
+
+
+--
+-- TOC entry 2514 (class 0 OID 0)
+-- Dependencies: 174
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('django_content_type_id_seq', 12, true);
+
+
+--
+-- TOC entry 2448 (class 0 OID 24788)
+-- Dependencies: 173
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY django_migrations (id, app, name, applied) FROM stdin;
+1	contenttypes	0001_initial	2016-01-04 17:45:49.259066-02
+2	auth	0001_initial	2016-01-04 17:45:49.668172-02
+3	admin	0001_initial	2016-01-04 17:45:49.746159-02
+4	admin	0002_logentry_remove_auto_add	2016-01-04 17:45:49.76722-02
+5	contenttypes	0002_remove_content_type_name	2016-01-04 17:45:49.873579-02
+6	auth	0002_alter_permission_name_max_length	2016-01-04 17:45:49.924757-02
+7	auth	0003_alter_user_email_max_length	2016-01-04 17:45:49.961107-02
+8	auth	0004_alter_user_username_opts	2016-01-04 17:45:49.979559-02
+9	auth	0005_alter_user_last_login_null	2016-01-04 17:45:50.000055-02
+10	auth	0006_require_contenttypes_0002	2016-01-04 17:45:50.016135-02
+11	auth	0007_alter_validators_add_error_messages	2016-01-04 17:45:50.083308-02
+12	core	0001_initial	2016-01-04 17:45:50.134336-02
+13	sessions	0001_initial	2016-01-04 17:45:50.158957-02
+14	core	0002_mesoregiao_estado	2016-01-04 18:08:27.386705-02
+15	core	0003_auto_20160104_2257	2016-01-04 20:58:05.202252-02
+16	agricultura	0001_initial	2016-01-08 20:24:16.641799-02
+\.
+
+
+--
+-- TOC entry 2515 (class 0 OID 0)
+-- Dependencies: 172
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('django_migrations_id_seq', 16, true);
+
+
+--
+-- TOC entry 2473 (class 0 OID 24980)
+-- Dependencies: 198
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY django_session (session_key, session_data, expire_date) FROM stdin;
+3wwvnqdhd4ssmd2g519z3aoi0sw78rfw	NWQwNjE4YTIxNTYxNzBkNjhjYjQxZjhkNGIzOTIwYWRjNzc5ZTI4Mzp7Il9hdXRoX3VzZXJfaGFzaCI6ImRlMTBiNDllMDJiMTVmMzBlMTY3NmY0N2ZlMzk1OTg3NzIzYTBhYTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2016-01-18 17:52:59.141065-02
+\.
+
+
+--
+-- TOC entry 2318 (class 2606 OID 32775)
+-- Name: agricultura_producao_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY agricultura_producao
+    ADD CONSTRAINT agricultura_producao_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2320 (class 2606 OID 32783)
+-- Name: agricultura_produto_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY agricultura_produto
+    ADD CONSTRAINT agricultura_produto_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2267 (class 2606 OID 24824)
+-- Name: auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group
+    ADD CONSTRAINT auth_group_name_key UNIQUE (name);
+
+
+--
+-- TOC entry 2273 (class 2606 OID 24879)
+-- Name: auth_group_permissions_group_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_0cd325b0_uniq UNIQUE (group_id, permission_id);
+
+
+--
+-- TOC entry 2275 (class 2606 OID 24832)
+-- Name: auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2269 (class 2606 OID 24822)
+-- Name: auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_group
+    ADD CONSTRAINT auth_group_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2262 (class 2606 OID 24865)
+-- Name: auth_permission_content_type_id_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_01ab375a_uniq UNIQUE (content_type_id, codename);
+
+
+--
+-- TOC entry 2264 (class 2606 OID 24814)
+-- Name: auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permission_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2284 (class 2606 OID 24850)
+-- Name: auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2286 (class 2606 OID 24894)
+-- Name: auth_user_groups_user_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_94350c0c_uniq UNIQUE (user_id, group_id);
+
+
+--
+-- TOC entry 2277 (class 2606 OID 24840)
+-- Name: auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user
+    ADD CONSTRAINT auth_user_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2290 (class 2606 OID 24858)
+-- Name: auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2292 (class 2606 OID 24908)
+-- Name: auth_user_user_permissions_user_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_14a6b632_uniq UNIQUE (user_id, permission_id);
+
+
+--
+-- TOC entry 2280 (class 2606 OID 24842)
+-- Name: auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY auth_user
+    ADD CONSTRAINT auth_user_username_key UNIQUE (username);
+
+
+--
+-- TOC entry 2298 (class 2606 OID 24943)
+-- Name: core_estado_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY core_estado
+    ADD CONSTRAINT core_estado_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2301 (class 2606 OID 24951)
+-- Name: core_mesoregiao_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY core_mesoregiao
+    ADD CONSTRAINT core_mesoregiao_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2304 (class 2606 OID 24959)
+-- Name: core_microregiao_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY core_microregiao
+    ADD CONSTRAINT core_microregiao_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2308 (class 2606 OID 24967)
+-- Name: core_municipio_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY core_municipio
+    ADD CONSTRAINT core_municipio_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2296 (class 2606 OID 24922)
+-- Name: django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_log_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2257 (class 2606 OID 24806)
+-- Name: django_content_type_app_label_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY django_content_type
+    ADD CONSTRAINT django_content_type_app_label_76bd3d3b_uniq UNIQUE (app_label, model);
+
+
+--
+-- TOC entry 2259 (class 2606 OID 24804)
+-- Name: django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY django_content_type
+    ADD CONSTRAINT django_content_type_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2255 (class 2606 OID 24796)
+-- Name: django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY django_migrations
+    ADD CONSTRAINT django_migrations_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2311 (class 2606 OID 24987)
+-- Name: django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY django_session
+    ADD CONSTRAINT django_session_pkey PRIMARY KEY (session_key);
+
+
+--
+-- TOC entry 2313 (class 1259 OID 32800)
+-- Name: agricultura_producao_376ba068; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX agricultura_producao_376ba068 ON agricultura_producao USING btree (microregiao_id);
+
+
+--
+-- TOC entry 2314 (class 1259 OID 32801)
+-- Name: agricultura_producao_40924980; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX agricultura_producao_40924980 ON agricultura_producao USING btree (municipio_id);
+
+
+--
+-- TOC entry 2315 (class 1259 OID 32799)
+-- Name: agricultura_producao_55e329a2; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX agricultura_producao_55e329a2 ON agricultura_producao USING btree (mesoregiao_id);
+
+
+--
+-- TOC entry 2316 (class 1259 OID 32802)
+-- Name: agricultura_producao_b306f3fc; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX agricultura_producao_b306f3fc ON agricultura_producao USING btree (produto_id);
+
+
+--
+-- TOC entry 2265 (class 1259 OID 24867)
+-- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX auth_group_name_a6ea08ec_like ON auth_group USING btree (name varchar_pattern_ops);
+
+
+--
+-- TOC entry 2270 (class 1259 OID 24880)
+-- Name: auth_group_permissions_0e939a4f; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX auth_group_permissions_0e939a4f ON auth_group_permissions USING btree (group_id);
+
+
+--
+-- TOC entry 2271 (class 1259 OID 24881)
+-- Name: auth_group_permissions_8373b171; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX auth_group_permissions_8373b171 ON auth_group_permissions USING btree (permission_id);
+
+
+--
+-- TOC entry 2260 (class 1259 OID 24866)
+-- Name: auth_permission_417f1b1c; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX auth_permission_417f1b1c ON auth_permission USING btree (content_type_id);
+
+
+--
+-- TOC entry 2281 (class 1259 OID 24896)
+-- Name: auth_user_groups_0e939a4f; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX auth_user_groups_0e939a4f ON auth_user_groups USING btree (group_id);
+
+
+--
+-- TOC entry 2282 (class 1259 OID 24895)
+-- Name: auth_user_groups_e8701ad4; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX auth_user_groups_e8701ad4 ON auth_user_groups USING btree (user_id);
+
+
+--
+-- TOC entry 2287 (class 1259 OID 24910)
+-- Name: auth_user_user_permissions_8373b171; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX auth_user_user_permissions_8373b171 ON auth_user_user_permissions USING btree (permission_id);
+
+
+--
+-- TOC entry 2288 (class 1259 OID 24909)
+-- Name: auth_user_user_permissions_e8701ad4; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX auth_user_user_permissions_e8701ad4 ON auth_user_user_permissions USING btree (user_id);
+
+
+--
+-- TOC entry 2278 (class 1259 OID 24882)
+-- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX auth_user_username_6821ab7c_like ON auth_user USING btree (username varchar_pattern_ops);
+
+
+--
+-- TOC entry 2299 (class 1259 OID 24996)
+-- Name: core_mesoregiao_2c189993; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX core_mesoregiao_2c189993 ON core_mesoregiao USING btree (estado_id);
+
+
+--
+-- TOC entry 2302 (class 1259 OID 24973)
+-- Name: core_microregiao_55e329a2; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX core_microregiao_55e329a2 ON core_microregiao USING btree (mesoregiao_id);
+
+
+--
+-- TOC entry 2305 (class 1259 OID 25008)
+-- Name: core_municipio_2c189993; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX core_municipio_2c189993 ON core_municipio USING btree (estado_id);
+
+
+--
+-- TOC entry 2306 (class 1259 OID 24979)
+-- Name: core_municipio_376ba068; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX core_municipio_376ba068 ON core_municipio USING btree (microregiao_id);
+
+
+--
+-- TOC entry 2293 (class 1259 OID 24933)
+-- Name: django_admin_log_417f1b1c; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX django_admin_log_417f1b1c ON django_admin_log USING btree (content_type_id);
+
+
+--
+-- TOC entry 2294 (class 1259 OID 24934)
+-- Name: django_admin_log_e8701ad4; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX django_admin_log_e8701ad4 ON django_admin_log USING btree (user_id);
+
+
+--
+-- TOC entry 2309 (class 1259 OID 24988)
+-- Name: django_session_de54fa62; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX django_session_de54fa62 ON django_session USING btree (expire_date);
+
+
+--
+-- TOC entry 2312 (class 1259 OID 24989)
+-- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE INDEX django_session_session_key_c0390e0f_like ON django_session USING btree (session_key varchar_pattern_ops);
+
+
+--
+-- TOC entry 2335 (class 2606 OID 32789)
+-- Name: agricultura_prod_microregiao_id_08ccf3e3_fk_core_microregiao_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY agricultura_producao
+    ADD CONSTRAINT agricultura_prod_microregiao_id_08ccf3e3_fk_core_microregiao_id FOREIGN KEY (microregiao_id) REFERENCES core_microregiao(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2337 (class 2606 OID 32803)
+-- Name: agricultura_produ_produto_id_60948ef5_fk_agricultura_produto_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY agricultura_producao
+    ADD CONSTRAINT agricultura_produ_produto_id_60948ef5_fk_agricultura_produto_id FOREIGN KEY (produto_id) REFERENCES agricultura_produto(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2334 (class 2606 OID 32784)
+-- Name: agricultura_produc_mesoregiao_id_7055ed45_fk_core_mesoregiao_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY agricultura_producao
+    ADD CONSTRAINT agricultura_produc_mesoregiao_id_7055ed45_fk_core_mesoregiao_id FOREIGN KEY (mesoregiao_id) REFERENCES core_mesoregiao(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2336 (class 2606 OID 32794)
+-- Name: agricultura_producao_municipio_id_c466d0f0_fk_core_municipio_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY agricultura_producao
+    ADD CONSTRAINT agricultura_producao_municipio_id_c466d0f0_fk_core_municipio_id FOREIGN KEY (municipio_id) REFERENCES core_municipio(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2323 (class 2606 OID 24873)
+-- Name: auth_group_permiss_permission_id_84c5c92e_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permiss_permission_id_84c5c92e_fk_auth_permission_id FOREIGN KEY (permission_id) REFERENCES auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2322 (class 2606 OID 24868)
+-- Name: auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_b120cbf9_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2321 (class 2606 OID 24859)
+-- Name: auth_permiss_content_type_id_2f476e4b_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_permission
+    ADD CONSTRAINT auth_permiss_content_type_id_2f476e4b_fk_django_content_type_id FOREIGN KEY (content_type_id) REFERENCES django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2325 (class 2606 OID 24888)
+-- Name: auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_group_id_97559544_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2324 (class 2606 OID 24883)
+-- Name: auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_6a12ed8b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2327 (class 2606 OID 24902)
+-- Name: auth_user_user_per_permission_id_1fbb5f2c_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_per_permission_id_1fbb5f2c_fk_auth_permission_id FOREIGN KEY (permission_id) REFERENCES auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2326 (class 2606 OID 24897)
+-- Name: auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2330 (class 2606 OID 24997)
+-- Name: core_mesoregiao_estado_id_de43b177_fk_core_estado_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY core_mesoregiao
+    ADD CONSTRAINT core_mesoregiao_estado_id_de43b177_fk_core_estado_id FOREIGN KEY (estado_id) REFERENCES core_estado(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2331 (class 2606 OID 24968)
+-- Name: core_microregiao_mesoregiao_id_d1550f1e_fk_core_mesoregiao_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY core_microregiao
+    ADD CONSTRAINT core_microregiao_mesoregiao_id_d1550f1e_fk_core_mesoregiao_id FOREIGN KEY (mesoregiao_id) REFERENCES core_mesoregiao(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2333 (class 2606 OID 25009)
+-- Name: core_municipio_estado_id_8d07bbda_fk_core_estado_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY core_municipio
+    ADD CONSTRAINT core_municipio_estado_id_8d07bbda_fk_core_estado_id FOREIGN KEY (estado_id) REFERENCES core_estado(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2332 (class 2606 OID 24974)
+-- Name: core_municipio_microregiao_id_d4c9f769_fk_core_microregiao_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY core_municipio
+    ADD CONSTRAINT core_municipio_microregiao_id_d4c9f769_fk_core_microregiao_id FOREIGN KEY (microregiao_id) REFERENCES core_microregiao(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2328 (class 2606 OID 24923)
+-- Name: django_admin_content_type_id_c4bce8eb_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_content_type_id_c4bce8eb_fk_django_content_type_id FOREIGN KEY (content_type_id) REFERENCES django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2329 (class 2606 OID 24928)
+-- Name: django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY django_admin_log
+    ADD CONSTRAINT django_admin_log_user_id_c564eba6_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2484 (class 0 OID 0)
+-- Dependencies: 5
+-- Name: public; Type: ACL; Schema: -; Owner: paulo
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM paulo;
+GRANT ALL ON SCHEMA public TO paulo;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2016-01-10 00:30:18 BRST
+
+--
+-- PostgreSQL database dump complete
+--
+

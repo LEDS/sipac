@@ -5,11 +5,13 @@ from core.models import *
 class ProdutoAdmin(admin.ModelAdmin):
 
     list_display = ('nome', 'codigo')
+    list_filter = ['nome','codigo']
+    search_fields = ['nome']
 
 
 class ProducaoAdmin(admin.ModelAdmin):
 
-    list_display = ('ano', 'mes','preco','produto_nome_display',
+    list_display = ('preco','produto_nome_display',
                     'municipio_nome_display','microregiao_nome_display',
                     'mesorgiao_nome_display')
 
