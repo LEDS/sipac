@@ -11,11 +11,9 @@ class ProdutoAdmin(admin.ModelAdmin):
 
 class ProducaoAdmin(admin.ModelAdmin):
 
-    list_display = ('ano', 'mes','preco','produto_nome_display',
+    list_display = ('data_display','preco','produto_nome_display',
                     'municipio_nome_display','microregiao_nome_display',
                     'mesorgiao_nome_display')
-
-    list_filter = ['ano','mes']
 
     def produto_nome_display(self, obj):
 
@@ -23,7 +21,14 @@ class ProducaoAdmin(admin.ModelAdmin):
 
        return produto.nome
 
-    produto_nome_display.short_description = 'Produto'
+
+    def data_display(self, obj):
+
+       data = Data.objects.get(pk=obj.data_id)
+
+       return data
+
+    data_display.short_description = 'Data'
 
     def municipio_nome_display(self, obj):
 

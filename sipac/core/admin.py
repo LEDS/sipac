@@ -28,5 +28,3 @@ class MunicipioAdmin(admin.ModelAdmin):
     search_fields = ['nome']
 
 admin.site.register(Municipio,MunicipioAdmin)
-
-admin.site.register(Data)

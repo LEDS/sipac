@@ -44,16 +44,6 @@ class MicroRegiao(models.Model):
     class Meta:
         ordering = ['nome']
 
-
-class Data(models.Model):
-
-    ano = models.IntegerField()
-
-    mes = models.IntegerField()
-
-    class Meta:
-        ordering = ['ano']
-
 class Municipio (models.Model):
 
     nome = models.CharField(max_length=50)
