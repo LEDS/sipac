@@ -11,7 +11,7 @@ before_install:
   - unzip sonar-runner-dist-2.4.zip
 before_script:
   - psql -c 'create database incaper;' -U postgres
-  - psql -U postgres -d incaper -a -f dados_teste/sqls/backup-20160105.sql
+  - psql -U postgres -d incaper -a -f dados_teste/sqls/backup-20160105-2.sql
 
 branches:
   only:
