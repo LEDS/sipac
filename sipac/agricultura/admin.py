@@ -11,9 +11,8 @@ class ProdutoAdmin(admin.ModelAdmin):
 
 class ProducaoAdmin(admin.ModelAdmin):
 
-    list_display = ('data_display','preco','produto_nome_display',
-                    'municipio_nome_display','microregiao_nome_display',
-                    'mesorgiao_nome_display')
+    list_display = ('data_display','produto_nome_display',
+                    'municipio_nome_display')
 
     def produto_nome_display(self, obj):
 
@@ -37,24 +36,6 @@ class ProducaoAdmin(admin.ModelAdmin):
        return municipio.nome
 
     municipio_nome_display.short_description = 'Municipio'
-
-
-    def microregiao_nome_display(self, obj):
-
-       microregiao = MicroRegiao.objects.get(pk=obj.microregiao_id)
-
-       return microregiao.nome
-
-    microregiao_nome_display.short_description = 'Microregiao'
-
-    def mesorgiao_nome_display(self, obj):
-
-       mesoregiao = MesoRegiao.objects.get(pk=obj.mesoregiao_id)
-
-       return mesoregiao.nome
-
-    mesorgiao_nome_display.short_description = 'Mesoregiao'
-
 admin.site.register(Produto,ProdutoAdmin)
 admin.site.register(Producao,ProducaoAdmin)
 

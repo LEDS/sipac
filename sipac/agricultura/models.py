@@ -16,21 +16,19 @@ class Produto(models.Model):
 
 class Producao(models.Model):
 
-    code = uuid.uuid4()
-
+    code = uuid.uuid4() # Pra quê isso <--
     ano = models.IntegerField()
-
     mes = models.IntegerField()
-
-    preco = models.FloatField()
-
     produto = models.ForeignKey(Produto,on_delete=models.CASCADE)
-
     municipio = models.ForeignKey(Municipio,on_delete=models.CASCADE)
 
-    microregiao = models.ForeignKey(MicroRegiao,on_delete=models.CASCADE)
+    #~ data_atualizacao = models.DateTimeField()
+    area_plantada = models.DecimalField(max_digits = 10, decimal_places=2)
+    area_em_producao = models.DecimalField(max_digits = 10, decimal_places=2)
+    area_colhida = models.DecimalField(max_digits = 10, decimal_places=2)
+    area_em_formacao = models.DecimalField(max_digits = 10, decimal_places=2)
+    irrigado = models.BooleanField(default=False)
 
-    mesoregiao = models.ForeignKey(MesoRegiao,on_delete=models.CASCADE)
 
     def __str__(self):
         produto = Produto.objects.get(pk=self.produto.id)
