@@ -26,5 +26,4 @@ script:
 after_script:
  - ./sonar-runner-2.4/bin/sonar-runner
 notifications:
-  slack:
-    on_success: always
+  slack: leds:ecBlZedCK8tpP1X5uygKMS8q
