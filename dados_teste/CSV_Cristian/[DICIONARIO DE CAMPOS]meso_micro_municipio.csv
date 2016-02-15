@@ -1,0 +1,79 @@
+Cod_Estado,Municipio,NOMES_MUNICIPIOS,COD_MICRO,MICRORREGIOES,COD_MESO,MESORREGIOES
+1,102,Afonso Cláudio,7,Afonso Cláudio,3,Central
+1,136,Águia Branca,2,Nova Venécia,1,Noroeste
+1,169,Água Doce do Norte,1,Barra S. Francisco,1,Noroeste
+1,201,Alegre,11,Alegre,4,Sul
+1,300,Alfredo Chaves,10,Guarapari,3,Central
+1,359,Alto Rio Novo,3,Colatina,1,Noroeste
+1,409,Anchieta,10,Guarapari,3,Central
+1,508,Apiacá,12,Cachoeiro de Itapemirim,4,Sul
+1,607,Aracruz,6,Linhares,2,Litoral Norte
+1,706,Atilio Vivacqua,12,Cachoeiro de Itapemirim,4,Sul
+1,805,Baixo Guandu,3,Colatina,1,Noroeste
+1,904,Barra de São Francisco,1,Barra S. Francisco,1,Noroeste
+1,1001,Boa Esperança,2,Nova Venécia,1,Noroeste
+1,1100,Bom Jesus do Norte,12,Cachoeiro de Itapemirim,4,Sul
+1,1159,Brejetuba,7,Afonso Cláudio,3,Central
+1,1209,Cachoeiro de Itapemirim,12,Cachoeiro de Itapemirim,4,Sul
+1,1308,Cariacica,9,Vitória,3,Central
+1,1407,Castelo,12,Cachoeiro de Itapemirim,4,Sul
+1,1506,Colatina,3,Colatina,1,Noroeste
+1,1605,Conceição da Barra,5,São Mateus,2,Litoral Norte
+1,1704,Conceição do Castelo,7,Afonso Cláudio,3,Central
+1,1803,Divino de São Lourenço,11,Alegre,4,Sul
+1,1902,Domingos Martins,7,Afonso Cláudio,3,Central
+1,2009,Dores do Rio Preto,11,Alegre,4,Sul
+1,2108,Ecoporanga,1,Barra S. Francisco,1,Noroeste
+1,2207,Fundão,6,Linhares,2,Litoral Norte
+1,2256,Governador Lindenberg,3,Colatina,1,Noroeste
+1,2306,Guaçuí,11,Alegre,4,Sul
+1,2405,Guarapari,10,Guarapari,3,Central
+1,2454,Ibatiba,11,Alegre,4,Sul
+1,2504,Ibiraçu,6,Linhares,2,Litoral Norte
+1,2553,Ibitirama,11,Alegre,4,Sul
+1,2603,Iconha,10,Guarapari,3,Central
+1,2652,Irupi,11,Alegre,4,Sul
+1,2702,Itaguaçu,8,Santa Teresa,3,Central
+1,2801,Itapemirim,13,Itapemirim,4,Sul
+1,2900,Itarana,8,Santa Teresa,3,Central
+1,3007,Iúna,11,Alegre,4,Sul
+1,3056,Jaguaré,5,São Mateus,2,Litoral Norte
+1,3106,Jerônimo Monteiro,12,Cachoeiro de Itapemirim,4,Sul
+1,3130,João Neiva,6,Linhares,2,Litoral Norte
+1,3163,Laranja da Terra,7,Afonso Cláudio,3,Central
+1,3205,Linhares,6,Linhares,2,Litoral Norte
+1,3304,Mantenópolis,1,Barra S. Francisco,1,Noroeste
+1,3320,Marataízes,13,Itapemirim,4,Sul
+1,3346,Marechal Floriano,7,Afonso Cláudio,3,Central
+1,3353,Marilândia,3,Colatina,1,Noroeste
+1,3403,Mimoso do Sul,12,Cachoeiro de Itapemirim,4,Sul
+1,3502,Montanha,4,Montanha,2,Litoral Norte
+1,3601,Mucurici,4,Montanha,2,Litoral Norte
+1,3700,Muniz Freire,11,Alegre,4,Sul
+1,3809,Muqui,12,Cachoeiro de Itapemirim,4,Sul
+1,3908,Nova Venécia,2,Nova Venécia,1,Noroeste
+1,4005,Pancas,3,Colatina,1,Noroeste
+1,4054,Pedro Canário,5,São Mateus,2,Litoral Norte
+1,4104,Pinheiros,4,Montanha,2,Litoral Norte
+1,4203,Piúma,10,Guarapari,3,Central
+1,4252,Ponto Belo,4,Montanha,2,Litoral Norte
+1,4302,Presidente Kennedy,13,Itapemirim,4,Sul
+1,4351,Rio Bananal,6,Linhares,2,Litoral Norte
+1,4401,Rio Novo do Sul,10,Guarapari,3,Central
+1,4500,Santa Leopoldina,8,Santa Teresa,3,Central
+1,4559,Santa Maria de Jetibá,8,Santa Teresa,3,Central
+1,4609,Santa Teresa,8,Santa Teresa,3,Central
+1,4658,São Domingos do Norte,3,Colatina,1,Noroeste
+1,4708,São Gabriel da Palha,2,Nova Venécia,1,Noroeste
+1,4807,São José do Calçado,12,Cachoeiro de Itapemirim,4,Sul
+1,4906,São Mateus,5,São Mateus,2,Litoral Norte
+1,4955,São Roque do Canaã,8,Santa Teresa,3,Central
+1,5002,Serra,9,Vitória,3,Central
+1,5010,Sooretama,6,Linhares,2,Litoral Norte
+1,5036,Vargem Alta,12,Cachoeiro de Itapemirim,4,Sul
+1,5069,Venda Nova do Imigrante,7,Afonso Cláudio,3,Central
+1,5101,Viana,9,Vitória,3,Central
+1,5150,Vila Pavão,2,Nova Venécia,1,Noroeste
+1,5176,Vila Valério,2,Nova Venécia,1,Noroeste
+1,5200,Vila Velha,9,Vitória,3,Central
+1,5309,Vitória,9,Vitória,3,Central
