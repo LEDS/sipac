@@ -11,8 +11,7 @@ class ProdutoAdmin(admin.ModelAdmin):
 
 class ProducaoAdmin(admin.ModelAdmin):
 
-    list_display = ('data_display','produto_nome_display',
-                    'municipio_nome_display')
+    list_display = ('produto_nome_display','municipio_nome_display')
 
     def produto_nome_display(self, obj):
 
@@ -21,13 +20,13 @@ class ProducaoAdmin(admin.ModelAdmin):
        return produto.nome
 
 
-    def data_display(self, obj):
+    #def data_display(self, obj):
 
-       data = Data.objects.get(pk=obj.data_id)
+       #data = Data.objects.get(pk=obj.data_id)
 
-       return data
+       #return data
 
-    data_display.short_description = 'Data'
+    #data_display.short_description = 'Data'
 
     def municipio_nome_display(self, obj):
 
@@ -36,6 +35,9 @@ class ProducaoAdmin(admin.ModelAdmin):
        return municipio.nome
 
     municipio_nome_display.short_description = 'Municipio'
+#
 admin.site.register(Produto,ProdutoAdmin)
 admin.site.register(Producao,ProducaoAdmin)
+#admin.site.register(Familia)
+admin.site.register(Fonte)
 
