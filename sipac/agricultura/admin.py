@@ -11,7 +11,7 @@ class ProdutoAdmin(admin.ModelAdmin):
 
 class ProducaoAdmin(admin.ModelAdmin):
 
-    list_display = ('produto_nome_display','municipio_nome_display')
+    list_display = ('produto_nome_display','municipio_nome_display', 'area_plantada', 'area_em_producao')
 
     def produto_nome_display(self, obj):
 
