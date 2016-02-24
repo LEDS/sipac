@@ -26,11 +26,29 @@ class Familia(models.Model):
     #
 #
 
+class Grupo(models.Model):
+    nome_grupo = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.nome_grupo
+    #
+#
+
+class Subgrupo(models.Model):
+    nome_subgrupo = models.CharField(max_length=25)
+    grupo = models.ForeignKey(Grupo)
+
+
+    def __str__(self):
+        return self.nome_subgrupo
+    #
+#
+
 class Produto(models.Model):
 
     nome = models.CharField(max_length=100)
     codigo = models.CharField(max_length=20)
-    #familia = models.ForeignKey(Familia)
+    subgrupo = models.ForeignKey(Subgrupo)
 
     def __str__(self):
         return self.nome  + " - " + self.codigo
@@ -50,12 +68,11 @@ class Producao(models.Model):
     municipio = models.ForeignKey(Municipio,on_delete=models.CASCADE)
     fonte = models.ManyToManyField(Fonte)
 
-    #~ data_atualizacao = models.DateTimeField()
     area_plantada = models.IntegerField()
-    area_em_producao = models.IntegerField()
+    producao = models.IntegerField()
+    valido = models.BooleanField(default=True, blank=True)
     area_colhida = models.IntegerField()
     area_em_formacao = models.IntegerField()
-    #irrigado = models.BooleanField(default=False)
     irrigado = models.CharField(max_length = 2)
 
 
@@ -66,3 +83,5 @@ class Producao(models.Model):
     class Meta:
         ordering = ['ano']
 #
+
+
