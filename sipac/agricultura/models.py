@@ -28,13 +28,14 @@ class Familia(models.Model):
 
 class Grupo(models.Model):
     nome_grupo = models.CharField(max_length=25)
+    grupo = models.ForeignKey("self", blank=True, null=True, related_name="children")
 
     def __str__(self):
         return self.nome_grupo
     #
 #
 
-class Subgrupo(models.Model):
+"""class Subgrupo(models.Model):
     nome_subgrupo = models.CharField(max_length=25)
     grupo = models.ForeignKey(Grupo)
 
@@ -43,12 +44,13 @@ class Subgrupo(models.Model):
         return self.nome_subgrupo
     #
 #
+"""
 
 class Produto(models.Model):
 
     nome = models.CharField(max_length=100)
     codigo = models.CharField(max_length=20)
-    subgrupo = models.ForeignKey(Subgrupo)
+    grupo = models.ForeignKey(Grupo)
 
     def __str__(self):
         return self.nome  + " - " + self.codigo

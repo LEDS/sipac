@@ -4,15 +4,15 @@ from core.models import *
 
 class ProdutoAdmin(admin.ModelAdmin):
 
-    list_display = ('nome', 'codigo', 'produto_subgrupo_display')
+    list_display = ('nome', 'codigo', 'produto_grupo_display')
     list_filter = ['nome','codigo']
     search_fields = ['nome']
 
-    def produto_subgrupo_display(self, obj):
-      subgrupo = Subgrupo.objects.get(pk=obj.subgrupo_id)
-      return subgrupo.nome_subgrupo
+    def produto_grupo_display(self, obj):
+      grupo = Grupo.objects.get(pk=obj.grupo_id)
+      return grupo.nome_grupo
     #
-    produto_subgrupo_display.short_description = 'Subgrupo'
+    produto_grupo_display.short_description = 'Subgrupo'
 #
 
 class ProducaoAdmin(admin.ModelAdmin):
@@ -47,5 +47,4 @@ admin.site.register(Producao,ProducaoAdmin)
 #admin.site.register(Familia)
 admin.site.register(Fonte)
 admin.site.register(Grupo)
-admin.site.register(Subgrupo)
 
