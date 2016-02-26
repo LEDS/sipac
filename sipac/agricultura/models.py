@@ -70,12 +70,12 @@ class Producao(models.Model):
     municipio = models.ForeignKey(Municipio,on_delete=models.CASCADE)
     fonte = models.ManyToManyField(Fonte)
 
-    area_plantada = models.IntegerField()
-    producao = models.IntegerField()
+    area_plantada = models.IntegerField(null=True)
+    producao = models.IntegerField(null=True)
     valido = models.BooleanField(default=True, blank=True)
-    area_colhida = models.IntegerField()
-    area_em_formacao = models.IntegerField()
-    irrigado = models.CharField(max_length = 2)
+    area_colhida = models.IntegerField(null=True)
+    area_em_formacao = models.IntegerField(null=True)
+    irrigado = models.CharField(max_length = 2, null=True)
 
 
     def __str__(self):
