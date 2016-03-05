@@ -137,3 +137,39 @@ INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
 GROUP BY producao.mes, producao.ano,produto.nome
 ORDER BY produto.nome
 
+--PRODUTO/ TODO ESTADO ESTADO/ RENDIMENTO MEDIO
+SELECT
+producao.ano,
+producao.mes,
+produto.nome AS produto,
+SUM(producao.area_plantada) area_plantada,
+SUM(producao.area_colhida) area_colhida,
+SUM(producao.producao) producao,
+SUM(producao.area_em_formacao) area_em_formacao,
+(SUM(producao.producao) * 1000)/ (SUM(producao.area_colhida)) as rendimento_medio
+FROM core_municipio AS municipio 
+INNER JOIN agricultura_producao AS producao ON municipio.id = producao.municipio_id
+INNER JOIN agricultura_produto AS produto ON producao.produto_id = produto.id
+INNER JOIN core_estado AS estado ON estado.id = municipio.estado_id 
+WHERE producao.area_colhida != 0 and producao.ano = 2014
+GROUP BY produto.nome,producao.ano,producao.mes
+ORDER BY produto.nome
+
+
+--PRODUTO/ TODO ESTADO ESTADO/ RENDIMENTO MEDIO/ GRUPOS
+SELECT
+producao.ano,
+producao.mes,
+produto.nome AS produto,
+grupo.nome_grupo AS grupo,
+SUM(producao.area_plantada) area_plantada,
+SUM(producao.area_colhida) area_colhida,
+SUM(producao.producao) producao,
+SUM(producao.area_em_formacao) area_em_formacao,
+(SUM(producao.producao) * 1000)/ (SUM(producao.area_colhida)) as rendimento_medio
+FROM agricultura_producao AS producao 
+INNER JOIN agricultura_produto AS produto ON producao.produto_id = produto.id
+INNER JOIN agricultura_grupo AS grupo ON produto.grupo_id = grupo.id
+WHERE producao.area_colhida != 0 and producao.ano = 2014
+GROUP BY produto.nome,grupo.nome_grupo,producao.ano,producao.mes
+ORDER BY produto.nome
