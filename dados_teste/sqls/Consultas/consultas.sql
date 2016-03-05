@@ -1,5 +1,4 @@
 
-
 -- HISTORIAS 1,3,16,17,19/PRODUTO/MUNICIPIO
 SELECT
 producao.ano, 
