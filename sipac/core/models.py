@@ -60,4 +60,4 @@ class Municipio (models.Model):
         return self.nome
 
     class Meta:
-        ordering = ['nome'
+        ordering = ['nome']
