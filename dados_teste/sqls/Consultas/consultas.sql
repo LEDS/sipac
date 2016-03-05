@@ -148,3 +148,21 @@ INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
 GROUP BY producao.mes, producao.ano,produto.nome, municipio.nome 
 ORDER BY municipio.nome
 
+--Calculando o Percental de um produto sob a produção do estado no ano de 2015
+
+SELECT
+produto.nome AS produto, 
+SUM(producao.producao) AS producao, 
+(Select SUM(producaox.producao) from agricultura_producao as producaox where producaox.ano=2015) AS total,
+
+(SUM(producao.producao *100.0/ (Select SUM(producaox.producao) from agricultura_producao as producaox where producaox.ano=2015)
+)) AS percentual
+
+FROM core_municipio AS municipio 
+INNER JOIN agricultura_producao AS producao ON municipio.id = producao.municipio_id
+INNER JOIN agricultura_produto AS produto ON producao.produto_id = produto.id
+WHERE 
+producao.area_colhida != 0 AND
+producao.ano = 2015
+GROUP BY produto.nome
+
