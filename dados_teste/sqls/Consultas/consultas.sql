@@ -166,3 +166,17 @@ producao.area_colhida != 0 AND
 producao.ano = 2015
 GROUP BY produto.nome
 
+
+-- Variacão entre anos da producao de um produto por municipio
+SELECT 
+produto.nome,
+municipio.nome as municipio_nome,
+(SUM(CASE WHEN producao.ano =  2015 THEN producao.area_plantada ELSE 0 END) - 
+SUM(CASE WHEN producao.ano =  2014 THEN producao.area_plantada ELSE 0 END)) AS diferencao_ANO
+FROM       
+agricultura_produto AS produto
+INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
+INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
+WHERE producao.ano between 2014 AND 2015
+GROUP BY  municipio.nome, produto.nome
+ORDER BY municipio.nome
