@@ -17,8 +17,7 @@ SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_em_formacao ELSE 0 END)
 SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_em_formacao ELSE 0 END) "Área em Formação Irrigado",
 SUM(producao.area_em_formacao) "Área em Formação Total",
 (SUM(producao.area_em_formacao) + SUM(producao.producao)) AS "Área Total",
---O código logo abaixo, verifica se a área colhida (denominador) é zero. Se for zero, o numerador será 0 e o denominador será 1. Caso o contrário, será produção * 1000 e área colhida respecitivamente.
-(SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao ELSE 0 END)  * 1000)/ (SUM(CASE WHEN producao.area_colhida != 0 THEN producao.area_colhida ELSE 1 END)) AS "Rendimento Médio"
+SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao*1000/producao.area_colhida ELSE 0 END) AS "Rendimento Médio"
 FROM       
 agricultura_produto AS produto
 INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
@@ -47,8 +46,7 @@ SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_em_formacao ELSE 0 END)
 SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_em_formacao ELSE 0 END) "Área em Formação Irrigado",
 SUM(producao.area_em_formacao) "Área em formação",
 (SUM(producao.area_em_formacao) + SUM(producao.producao)) AS "Área Total",
---O código logo abaixo, verifica se a área colhida (denominador) é zero. Se for zero, o numerador será 0 e o denominador será 1. Caso o contrário, será produção * 1000 e área colhida respecitivamente.
-(SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao ELSE 0 END)  * 1000)/ (SUM(CASE WHEN producao.area_colhida != 0 THEN producao.area_colhida ELSE 1 END)) AS "Rendimento Médio"
+SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao*1000/producao.area_colhida ELSE 0 END) AS "Rendimento Médio"
 FROM
 agricultura_produto AS produto
 INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
@@ -76,8 +74,7 @@ SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_em_formacao ELSE 0 END)
 SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_em_formacao ELSE 0 END) "Área em Formação Irrigado",
 SUM(producao.area_em_formacao) "Área em formação",
 (SUM(producao.area_em_formacao) + SUM(producao.producao)) AS "Área Total",
---O código logo abaixo, verifica se a área colhida (denominador) é zero. Se for zero, o numerador será 0 e o denominador será 1. Caso o contrário, será produção * 1000 e área colhida respecitivamente.
-(SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao ELSE 0 END)  * 1000)/ (SUM(CASE WHEN producao.area_colhida != 0 THEN producao.area_colhida ELSE 1 END)) AS "Rendimento Médio"
+SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao*1000/producao.area_colhida ELSE 0 END) AS "Rendimento Médio"
 FROM
 agricultura_produto AS produto
 INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
@@ -106,8 +103,7 @@ SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_em_formacao ELSE 0 END)
 SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_em_formacao ELSE 0 END) "Área em Formação Irrigado",
 SUM(producao.area_em_formacao) "Área em formação",
 (SUM(producao.area_em_formacao) + SUM(producao.producao)) AS "Área Total",
---O código logo abaixo, verifica se a área colhida (denominador) é zero. Se for zero, o numerador será 0 e o denominador será 1. Caso o contrário, será produção * 1000 e área colhida respecitivamente.
-(SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao ELSE 0 END)  * 1000)/ (SUM(CASE WHEN producao.area_colhida != 0 THEN producao.area_colhida ELSE 1 END)) AS "Rendimento Médio"
+SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao*1000/producao.area_colhida ELSE 0 END) AS "Rendimento Médio"
 FROM
 agricultura_produto AS produto
 INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
@@ -139,8 +135,7 @@ SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_em_formacao ELSE 0 END)
 SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_em_formacao ELSE 0 END) "Área em Formação Irrigado",
 SUM(producao.area_em_formacao) "Área em formação",
 (SUM(producao.area_em_formacao) + SUM(producao.producao)) AS "Área Total",
---O código logo abaixo, verifica se a área colhida (denominador) é zero. Se for zero, o numerador será 0 e o denominador será 1. Caso o contrário, será produção * 1000 e área colhida respecitivamente.
-(SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao ELSE 0 END)  * 1000)/ (SUM(CASE WHEN producao.area_colhida != 0 THEN producao.area_colhida ELSE 1 END)) AS "Rendimento Médio"
+SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao*1000/producao.area_colhida ELSE 0 END) AS "Rendimento Médio"
 FROM
 agricultura_produto AS produto
 INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
@@ -169,8 +164,7 @@ SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_em_formacao ELSE 0 END)
 SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_em_formacao ELSE 0 END) "Área em Formação Irrigado",
 SUM(producao.area_em_formacao) "Área em formação",
 (SUM(producao.area_em_formacao) + SUM(producao.producao)) AS "Área Total",
---O código logo abaixo, verifica se a área colhida (denominador) é zero. Se for zero, o numerador será 0 e o denominador será 1. Caso o contrário, será produção * 1000 e área colhida respecitivamente.
-(SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao ELSE 0 END)  * 1000)/ (SUM(CASE WHEN producao.area_colhida != 0 THEN producao.area_colhida ELSE 1 END)) AS "Rendimento Médio"
+SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao*1000/producao.area_colhida ELSE 0 END) AS "Rendimento Médio"
 FROM
 agricultura_produto AS produto
 INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
@@ -199,8 +193,7 @@ SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_em_formacao ELSE 0 END)
 SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_em_formacao ELSE 0 END) "Área em Formação Irrigado",
 SUM(producao.area_em_formacao) "Área em formação",
 (SUM(producao.area_em_formacao) + SUM(producao.producao)) AS "Área Total",
---O código logo abaixo, verifica se a área colhida (denominador) é zero. Se for zero, o numerador será 0 e o denominador será 1. Caso o contrário, será produção * 1000 e área colhida respecitivamente.
-(SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao ELSE 0 END)  * 1000)/ (SUM(CASE WHEN producao.area_colhida != 0 THEN producao.area_colhida ELSE 1 END)) AS "Rendimento Médio"
+SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao*1000/producao.area_colhida ELSE 0 END) AS "Rendimento Médio"
 FROM
 agricultura_produto AS produto
 INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
@@ -230,8 +223,7 @@ SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_em_formacao ELSE 0 END)
 SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_em_formacao ELSE 0 END) "Área em Formação Irrigado",
 SUM(producao.area_em_formacao) "Área em formação",
 (SUM(producao.area_em_formacao) + SUM(producao.producao)) AS "Área Total",
---O código logo abaixo, verifica se a área colhida (denominador) é zero. Se for zero, o numerador será 0 e o denominador será 1. Caso o contrário, será produção * 1000 e área colhida respecitivamente.
-(SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao ELSE 0 END)  * 1000)/ (SUM(CASE WHEN producao.area_colhida != 0 THEN producao.area_colhida ELSE 1 END)) AS "Rendimento Médio"
+SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao*1000/producao.area_colhida ELSE 0 END) AS "Rendimento Médio"
 FROM
 agricultura_produto AS produto
 INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
