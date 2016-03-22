@@ -273,16 +273,365 @@ producao.ano = 2015
 GROUP BY produto.nome;
 
 
--- Variacão entre anos da producao de um produto por municipio
+-- FUNÇÕES PARA CALCULAR A VARIAÇÃO PERCENTUAL --
+
+-- Função valida um determinado valor passado como parâmetro a partir da comparação entre dois anos.
+CREATE OR REPLACE FUNCTION valida_valor(ANO_FIX INT, ANO INT, valor INT) RETURNS INTEGER AS $$
+BEGIN
+	RETURN CASE WHEN ANO_FIX = ANO THEN valor ELSE 0 END;
+END
+$$ LANGUAGE plpgsql;
+
+-- Função que valida o sistema de cultivo.
+CREATE OR REPLACE FUNCTION valida_sc(ANO_FIX INT, ANO INT, SC_FIX CHAR, SC character varying(2), valor INT) RETURNS INTEGER AS $$
+BEGIN
+	RETURN CASE WHEN ANO_FIX = ANO AND SC_FIX = SC THEN valor ELSE 0 END;
+END
+$$ LANGUAGE plpgsql;
+
+
+-- Calcula o rendimento médio caso a comparação entre dois anos seja verdadeira.
+CREATE OR REPLACE FUNCTION rendimento_medio(ANO_FIX INT, ANO INT, area_colhida INT, producao INT) RETURNS INTEGER AS $$
+BEGIN
+	RETURN CASE WHEN ANO_FIX = ANO AND area_colhida!= 0 THEN producao*1000/area_colhida ELSE 0 END;
+END
+$$ LANGUAGE plpgsql;
+
+-- Calcula o rendimento médio caso a comparação entre dois anos e dois sistemas de cultivo seja verdadeira.
+CREATE OR REPLACE FUNCTION rendimento_medio_sc(ANO_FIX INT, ANO INT, SC_FIX CHAR, SC character varying(2), area_colhida INT, producao INT) RETURNS INTEGER AS $$
+BEGIN
+	RETURN CASE WHEN ANO_FIX = ANO AND area_colhida!= 0 AND SC_FIX = SC THEN producao*1000/area_colhida ELSE 0 END;
+END
+$$ LANGUAGE plpgsql;
+
+-- Calcula a variação percentual entre dois valores.
+CREATE OR REPLACE FUNCTION variacao_p(VALOR_ANTIGO BIGINT, VALOR_RECENTE BIGINT) RETURNS FLOAT AS $$
+BEGIN
+	RETURN CASE WHEN CAST(VALOR_ANTIGO AS FLOAT) != 0 THEN ((CAST(VALOR_RECENTE AS FLOAT) - CAST(VALOR_ANTIGO AS FLOAT)) / CAST(VALOR_ANTIGO AS FLOAT)) * 100ELSE 0 END;
+END
+$$ LANGUAGE plpgsql;
+
+--DROP FUNCTION variacao_p(BIGINT, BIGINT);
+
+-- 
+
+
+-- HISTORIAS 8, 11, 13 / PRODUTOS
+-- PRODUTO/ESTADO
+-- Ambos irrigados e não Irrigados
 SELECT 
-produto.nome,
-municipio.nome as municipio_nome,
-(SUM(CASE WHEN producao.ano =  2015 THEN producao.area_plantada ELSE 0 END) - 
-SUM(CASE WHEN producao.ano =  2014 THEN producao.area_plantada ELSE 0 END)) AS diferencao_ANO
-FROM       
+produto.nome AS "Produto",
+estado.nome AS "Estado",
+SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS "Área colhida Anterior Não Irrigado",
+SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS "Área colhida Anterior Irrigado",
+SUM(valida_valor(2014, producao.ano, producao.area_colhida)) AS "Área colhida Anterior Total",
+SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)) AS "Produção Anterior Não Irrigado",
+SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)) AS "Produção Anterior Irrigado",
+SUM(valida_valor(2014, producao.ano, producao.producao)) AS "Produção Anterior Total",
+SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Não Irrigado",
+SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Irrigado",
+SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Total",
+
+
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS "Área colhida Atual Não Irrigado",
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS "Área colhida Atual Irrigado",
+SUM(valida_valor(2015, producao.ano, producao.area_colhida)) AS "Área colhida Atual Total",
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao)) AS "Produção Atual Não Irrigado",
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao)) AS "Produção Atual Irrigado",
+SUM(valida_valor(2015, producao.ano, producao.producao)) AS "Produção Atual Total",
+SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Não Irrigado",
+SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Irrigado",
+SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Total",
+
+
+-- Variação Não Irrigado
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)), 
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida))) AS "Variação da Área Colhida Não Irrigada",
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)), 
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao))) AS "Variação da Produção Não Irrigada",
+
+variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao))) AS "Variação do Rendimento Não Irrigado",
+
+-- Fim Variação Não Irrigado
+
+
+-- Variação Irrigado
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)), 
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida))) AS "Variação da Área Colhida Irrigada",
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)), 
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao))) AS "Variação da Produção Irrigada",
+
+variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao))) AS "Variação do Rendimento Irrigado",
+
+-- Fim Variação Irrigado
+
+
+
+-- Variação Total
+variacao_p(SUM(valida_valor(2014, producao.ano, producao.area_colhida)), 
+SUM(valida_valor(2015, producao.ano, producao.area_colhida))) AS "Variação da Área Colhida Total",
+
+variacao_p(SUM(valida_valor(2014, producao.ano, producao.producao)), 
+SUM(valida_valor(2015, producao.ano, producao.producao))) AS "Variação da Produção Total",
+
+variacao_p(SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao))) AS "Variação do Rendimento Total"
+
+-- Fim Variação Total
+
+
+FROM
 agricultura_produto AS produto
 INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
 INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
-WHERE producao.ano between 2014 AND 2015
-GROUP BY  municipio.nome, produto.nome
+INNER JOIN core_estado AS estado ON municipio.estado_id = estado.id
+GROUP BY estado.nome, produto.nome
+ORDER BY produto.nome;
+
+-- FIM   VARIAÇÃO PERCENTUAL PRODUTO/ESTADO --
+
+
+-- PRODUTO/MUNICIPIO
+-- Ambos irrigados e não Irrigados
+SELECT 
+produto.nome AS "Produto",
+municipio.nome AS "Município",
+SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS "Área colhida Anterior Não Irrigado",
+SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS "Área colhida Anterior Irrigado",
+SUM(valida_valor(2014, producao.ano, producao.area_colhida)) AS "Área colhida Anterior Total",
+SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)) AS "Produção Anterior Não Irrigado",
+SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)) AS "Produção Anterior Irrigado",
+SUM(valida_valor(2014, producao.ano, producao.producao)) AS "Produção Anterior Total",
+SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Não Irrigado",
+SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Irrigado",
+SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Total",
+
+
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS "Área colhida Atual Não Irrigado",
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS "Área colhida Atual Irrigado",
+SUM(valida_valor(2015, producao.ano, producao.area_colhida)) AS "Área colhida Atual Total",
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao)) AS "Produção Atual Não Irrigado",
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao)) AS "Produção Atual Irrigado",
+SUM(valida_valor(2015, producao.ano, producao.producao)) AS "Produção Atual Total",
+SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Não Irrigado",
+SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Irrigado",
+SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Total",
+
+
+-- Variação Não Irrigado
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)), 
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida))) AS "Variação da Área Colhida Não Irrigada",
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)), 
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao))) AS "Variação da Produção Não Irrigada",
+
+variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao))) AS "Variação do Rendimento Não Irrigado",
+
+-- Fim Variação Não Irrigado
+
+
+-- Variação Irrigado
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)), 
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida))) AS "Variação da Área Colhida Irrigada",
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)), 
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao))) AS "Variação da Produção Irrigada",
+
+variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao))) AS "Variação do Rendimento Irrigado",
+
+-- Fim Variação Irrigado
+
+
+
+-- Variação Total
+variacao_p(SUM(valida_valor(2014, producao.ano, producao.area_colhida)), 
+SUM(valida_valor(2015, producao.ano, producao.area_colhida))) AS "Variação da Área Colhida",
+
+variacao_p(SUM(valida_valor(2014, producao.ano, producao.producao)), 
+SUM(valida_valor(2015, producao.ano, producao.producao))) AS "Variação da Produção",
+
+variacao_p(SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao))) AS "Variação do Rendimento"
+
+-- Fim Variação Total
+
+
+FROM
+agricultura_produto AS produto
+INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
+INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
+GROUP BY municipio.nome, produto.nome
 ORDER BY municipio.nome;
+
+-- FIM   VARIAÇÃO PERCENTUAL PRODUTO/MUNICIPIO --
+
+-- PRODUTO/MICRORREGIÃO
+-- Ambos irrigados e não Irrigados
+SELECT 
+produto.nome AS "Produto",
+microrregiao.nome AS "Microrregião",
+SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS "Área colhida Anterior Não Irrigado",
+SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS "Área colhida Anterior Irrigado",
+SUM(valida_valor(2014, producao.ano, producao.area_colhida)) AS "Área colhida Anterior Total",
+SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)) AS "Produção Anterior Não Irrigado",
+SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)) AS "Produção Anterior Irrigado",
+SUM(valida_valor(2014, producao.ano, producao.producao)) AS "Produção Anterior Total",
+SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Não Irrigado",
+SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Irrigado",
+SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Total",
+
+
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS "Área colhida Atual Não Irrigado",
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS "Área colhida Atual Irrigado",
+SUM(valida_valor(2015, producao.ano, producao.area_colhida)) AS "Área colhida Atual Total",
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao)) AS "Produção Atual Não Irrigado",
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao)) AS "Produção Atual Irrigado",
+SUM(valida_valor(2015, producao.ano, producao.producao)) AS "Produção Atual Total",
+SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Não Irrigado",
+SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Irrigado",
+SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Total",
+
+
+-- Variação Não Irrigado
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)), 
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida))) AS "Variação da Área Colhida Não Irrigada",
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)), 
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao))) AS "Variação da Produção Não Irrigada",
+
+variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao))) AS "Variação do Rendimento Não Irrigado",
+
+-- Fim Variação Não Irrigado
+
+
+-- Variação Irrigado
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)), 
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida))) AS "Variação da Área Colhida Irrigada",
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)), 
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao))) AS "Variação da Produção Irrigada",
+
+variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao))) AS "Variação do Rendimento Irrigado",
+
+-- Fim Variação Irrigado
+
+
+
+-- Variação Total
+variacao_p(SUM(valida_valor(2014, producao.ano, producao.area_colhida)), 
+SUM(valida_valor(2015, producao.ano, producao.area_colhida))) AS "Variação da Área Colhida",
+
+variacao_p(SUM(valida_valor(2014, producao.ano, producao.producao)), 
+SUM(valida_valor(2015, producao.ano, producao.producao))) AS "Variação da Produção",
+
+variacao_p(SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao))) AS "Variação do Rendimento"
+
+-- Fim Variação Total
+
+
+FROM
+agricultura_produto AS produto
+INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
+INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
+INNER JOIN core_microregiao AS microrregiao ON microrregiao.id = municipio.microregiao_id
+GROUP BY microrregiao.nome, produto.nome
+ORDER BY microrregiao.nome;
+
+-- FIM   VARIAÇÃO PERCENTUAL PRODUTO/MICRORREGIÃO --
+
+
+
+-- PRODUTO/MESORREGIÃO
+-- Ambos irrigados e não Irrigados
+SELECT 
+produto.nome AS "Produto",
+mesorregiao.nome AS "Mesorregião",
+SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS "Área colhida Anterior Não Irrigado",
+SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS "Área colhida Anterior Irrigado",
+SUM(valida_valor(2014, producao.ano, producao.area_colhida)) AS "Área colhida Anterior Total",
+SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)) AS "Produção Anterior Não Irrigado",
+SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)) AS "Produção Anterior Irrigado",
+SUM(valida_valor(2014, producao.ano, producao.producao)) AS "Produção Anterior Total",
+SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Não Irrigado",
+SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Irrigado",
+SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)) AS "Rendimento Médio Anterior Total",
+
+
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS "Área colhida Atual Não Irrigado",
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS "Área colhida Atual Irrigado",
+SUM(valida_valor(2015, producao.ano, producao.area_colhida)) AS "Área colhida Atual Total",
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao)) AS "Produção Atual Não Irrigado",
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao)) AS "Produção Atual Irrigado",
+SUM(valida_valor(2015, producao.ano, producao.producao)) AS "Produção Atual Total",
+SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Não Irrigado",
+SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Irrigado",
+SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao)) AS "Rendimento Médio Atual Total",
+
+
+-- Variação Não Irrigado
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)), 
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida))) AS "Variação da Área Colhida Não Irrigada",
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)), 
+SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao))) AS "Variação da Produção Não Irrigada",
+
+variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao))) AS "Variação do Rendimento Não Irrigado",
+
+-- Fim Variação Não Irrigado
+
+
+-- Variação Irrigado
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)), 
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida))) AS "Variação da Área Colhida Irrigada",
+
+variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)), 
+SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao))) AS "Variação da Produção Irrigada",
+
+variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao))) AS "Variação do Rendimento Irrigado",
+
+-- Fim Variação Irrigado
+
+
+
+-- Variação Total
+variacao_p(SUM(valida_valor(2014, producao.ano, producao.area_colhida)), 
+SUM(valida_valor(2015, producao.ano, producao.area_colhida))) AS "Variação da Área Colhida",
+
+variacao_p(SUM(valida_valor(2014, producao.ano, producao.producao)), 
+SUM(valida_valor(2015, producao.ano, producao.producao))) AS "Variação da Produção",
+
+variacao_p(SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao))) AS "Variação do Rendimento"
+
+-- Fim Variação Total
+
+
+FROM
+agricultura_produto AS produto
+INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
+INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
+INNER JOIN core_microregiao AS microrregiao ON microrregiao.id = municipio.microregiao_id
+INNER JOIN core_mesoregiao AS mesorregiao ON mesorregiao.id = microrregiao.mesoregiao_id
+GROUP BY mesorregiao.nome, produto.nome
+ORDER BY mesorregiao.nome;
+
+-- FIM   VARIAÇÃO PERCENTUAL PRODUTO/MESORREGIÃO --
