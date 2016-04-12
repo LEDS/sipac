@@ -38,6 +38,7 @@ SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao*1000/producao.ar
 FROM
 agricultura_produto AS produto
 INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
+INNER JOIN agricultura_grupo AS grupo ON produto.grupo_id = grupo.id
 INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
 INNER JOIN core_estado AS estado ON municipio.estado_id = estado.id
 INNER JOIN core_microregiao AS microrregiao ON microrregiao.id = municipio.microregiao_id
