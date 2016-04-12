@@ -1,24 +1,29 @@
-﻿/*
+/*
 	Nesse SQL, são utilizados os seguintes parâmetros:
 		- Região: Especifica o tipo de região, ou seja, se é por Estado, Mesorregião, Microrregião ou Município. Em outras palavras, especifica a coluna do tipo região.
-		- choice_option: Especifica o atributo da coluna de acordo com a Região. (Ex.: Se Região for Mesorregião, a choice_option pode ser: Central, Litoral, Noroeste ou Sul.)
+		- regiao_escolhida: Especifica o atributo da coluna de acordo com a Região. (Ex.: Se Região for Mesorregião, a regiao_escolhida pode ser: Central, Litoral, Noroeste ou Sul.)
 */
 
--- HISTORIAS 1,3,16,17,19/PRODUTO/REGIÃO
+-- HISTORIAS 1, 2, 3, 4, 7, 15, 16, 17, 18, 19, 20 / PRODUTO OU GRUPO DE PRODUTO / REGIÃO
 
-SELECT 
+SELECT
 producao.ano AS ANO,
 producao.mes AS MES,
-produto.nome AS PRODUTO,
-CASE WHEN ${Regiao}='Estado' THEN estado.nome
-	WHEN ${Regiao}='Mesorregião' THEN mesorregiao.nome
-	WHEN ${Regiao}='Microrregião' THEN microrregiao.nome
-	WHEN ${Regiao}='Município' THEN municipio.nome
+
+CASE WHEN ${pg_param}='Grupo' THEN grupo.nome_grupo
+	WHEN ${pg_param}='Produto' THEN produto.nome
+END AS PG_NOME,
+
+CASE WHEN ${regiao}='Estado' THEN estado.nome
+	WHEN ${regiao}='Mesorregião' THEN mesorregiao.nome
+	WHEN ${regiao}='Microrregião' THEN microrregiao.nome
+	WHEN ${regiao}='Município' THEN municipio.nome
 END AS REGIAO_NOME,
-SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_plantada ELSE 0 END) AREA_PLANTADA_NAO_IRRIGADO,
-SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_plantada ELSE 0 END) AREA_PLANTADA_IRRIGADO,
+
+SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_plantada ELSE 0 END) AS AREA_PLANTADA_NAO_IRRIGADO,
+SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_plantada ELSE 0 END) AS AREA_PLANTADA_IRRIGADO,
 SUM(producao.area_plantada) AS AREA_PLANTADA_TOTAL,
-SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_colhida ELSE 0 END) AREA_COLHIDA_NAO_IRRIGADO,
+SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_colhida ELSE 0 END) AS AREA_COLHIDA_NAO_IRRIGADO,
 SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_colhida ELSE 0 END) AS AREA_COLHIDA_IRRIGADO,
 SUM(producao.area_colhida) AS AREA_COLHIDA_TOTAL,
 SUM(CASE WHEN producao.irrigado = 'N' THEN producao.producao ELSE 0 END) AS PRODUCAO_NAO_IRRIGADO,
@@ -38,45 +43,119 @@ INNER JOIN core_estado AS estado ON municipio.estado_id = estado.id
 INNER JOIN core_microregiao AS microrregiao ON microrregiao.id = municipio.microregiao_id
 INNER JOIN core_mesoregiao AS mesorregiao ON mesorregiao.id = microrregiao.mesoregiao_id
 
-WHERE 
-CASE WHEN ${Regiao}='Estado' THEN estado.nome
-	WHEN ${Regiao}='Mesorregião' THEN mesorregiao.nome
-	WHEN ${Regiao}='Microrregião' THEN microrregiao.nome
-	WHEN ${Regiao}='Município' THEN municipio.nome
-END IN (${choice_option})
+WHERE
+CASE WHEN ${regiao}='Estado' THEN estado.nome
+	WHEN ${regiao}='Mesorregião' THEN mesorregiao.nome
+	WHEN ${regiao}='Microrregião' THEN microrregiao.nome
+	WHEN ${regiao}='Município' THEN municipio.nome
+END IN (${regiao_escolhida})
 
-GROUP BY producao.mes, producao.ano, REGIAO_NOME, produto.nome
-ORDER BY produto.nome;
-
-
--- FIM   HISTORIAS 1,3,16,17,19 / PRODUTO / REGIÃO ---
+GROUP BY producao.mes, producao.ano, REGIAO_NOME, PG_NOME
+ORDER BY PG_NOME;
 
 
+-- FIM   HISTORIAS 1, 2, 3, 4, 7, 15, 16, 17, 18, 19, 20 / PRODUTO OU GRUPO DE PRODUTO / REGIÃO --
 
--- HISTORIAS 2,4,7,15,18,20 / POR REGIÃO / GRUPOS
-SELECT 
-producao.ano AS ANO,
-producao.mes AS MES,
-grupo.nome_grupo AS GRUPO,
-CASE WHEN ${Regiao}='Estado' THEN estado.nome
-	WHEN ${Regiao}='Mesorregião' THEN mesorregiao.nome
-	WHEN ${Regiao}='Microrregião' THEN microrregiao.nome
-	WHEN ${Regiao}='Município' THEN municipio.nome
+--Calculando o Percental de um produto sob a produção do estado no ano de 2015
+
+SELECT
+produto.nome AS produto,
+SUM(producao.producao) AS producao,
+(Select SUM(producaox.producao) from agricultura_producao as producaox where producaox.ano=2015) AS total,
+
+(SUM(producao.producao *100.0/ (Select SUM(producaox.producao) from agricultura_producao as producaox where producaox.ano=2015)
+)) AS percentual
+
+FROM core_municipio AS municipio
+INNER JOIN agricultura_producao AS producao ON municipio.id = producao.municipio_id
+INNER JOIN agricultura_produto AS produto ON producao.produto_id = produto.id
+WHERE
+producao.area_colhida != 0 AND
+producao.ano = 2015
+GROUP BY produto.nome;
+
+
+
+-- HISTORIAS 8, 10, 11, 12, 13, 14 / GRUPO DE PRODUTOS E PRODUTOS
+-- GRUPO DE PRODUTO OU GRUPO DE PRODUTOS/REGIÃO
+-- Ambos irrigados e não Irrigados
+
+
+SELECT DISTINCT
+
+CASE WHEN ${pg_param}='Grupo' THEN grupo.nome_grupo
+	WHEN ${pg_param}='Produto' THEN produto.nome
+END AS PG_NOME,
+
+CASE WHEN ${regiao}='Estado' THEN estado.nome
+	WHEN ${regiao}='Mesorregião' THEN mesorregiao.nome
+	WHEN ${regiao}='Microrregião' THEN microrregiao.nome
+	WHEN ${regiao}='Município' THEN municipio.nome
 END AS REGIAO_NOME,
-SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_plantada ELSE 0 END) AREA_PLANTADA_NAO_IRRIGADO,
-SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_plantada ELSE 0 END) AREA_PLANTADA_IRRIGADO,
-SUM(producao.area_plantada) AS AREA_PLANTADA_TOTAL,
-SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_colhida ELSE 0 END) AREA_COLHIDA_NAO_IRRIGADO,
-SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_colhida ELSE 0 END) AS AREA_COLHIDA_IRRIGADO,
-SUM(producao.area_colhida) AS AREA_COLHIDA_TOTAL,
-SUM(CASE WHEN producao.irrigado = 'N' THEN producao.producao ELSE 0 END) AS PRODUCAO_NAO_IRRIGADO,
-SUM(CASE WHEN producao.irrigado = 'S' THEN producao.producao ELSE 0 END) AS PRODUCAO_IRRIGADO,
-SUM(producao.producao) AS PRODUCAO_TOTAL,
-SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_em_formacao ELSE 0 END) AS AREA_FORMACAO_NAO_IRRIGADO,
-SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_em_formacao ELSE 0 END) AS AREA_FORMACAO_IRRIGADO,
-SUM(producao.area_em_formacao) AS AREA_FORMACAO,
-(SUM(producao.area_em_formacao) + SUM(producao.area_plantada)) AS AREA_TOTAL,
-SUM(CASE WHEN producao.area_colhida != 0 THEN producao.producao*1000/producao.area_colhida ELSE 0 END) AS RENDIMENTO_MEDIO
+
+SUM(valida_sc(${escolhaDoAno1}, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ANTERIOR_NAO_IRRIGADO,
+SUM(valida_sc(${escolhaDoAno1}, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ANTERIOR_IRRIGADO,
+SUM(valida_valor(${escolhaDoAno1}, producao.ano, producao.area_colhida)) AS AREA_COLHIDA_ANTERIOR_TOTAL,
+SUM(valida_sc(${escolhaDoAno1}, producao.ano, 'N', producao.irrigado, producao.producao)) AS PRODUCAO_ANTERIOR_NAO_IRRIGADO,
+SUM(valida_sc(${escolhaDoAno1}, producao.ano, 'S', producao.irrigado, producao.producao)) AS PRODUCAO_ANTERIOR_IRRIGADO,
+SUM(valida_valor(${escolhaDoAno1}, producao.ano, producao.producao)) AS PRODUCAO_ANTERIOR_TOTAL,
+SUM(rendimento_medio_sc(${escolhaDoAno1}, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ANTERIOR_NAO_IRRIGADO,
+SUM(rendimento_medio_sc(${escolhaDoAno1}, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ANTERIOR_IRRIGADO,
+SUM(rendimento_medio(${escolhaDoAno1}, producao.ano, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ANTERIOR_TOTAL,
+
+
+SUM(valida_sc(${escolhaDoAno2}, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ATUAL_NAO_IRRIGADO,
+SUM(valida_sc(${escolhaDoAno2}, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ATUAL_IRRIGADO,
+SUM(valida_valor(${escolhaDoAno2}, producao.ano, producao.area_colhida)) AS AREA_COLHIDA_ATUAL_TOTAL,
+SUM(valida_sc(${escolhaDoAno2}, producao.ano, 'N', producao.irrigado, producao.producao)) AS PRODUCAO_ATUAL_NAO_IRRIGADO,
+SUM(valida_sc(${escolhaDoAno2}, producao.ano, 'S', producao.irrigado, producao.producao)) AS PRODUCAO_ATUAL_IRRIGADO,
+SUM(valida_valor(${escolhaDoAno2}, producao.ano, producao.producao)) AS PRODUCAO_ATUAL_TOTAL,
+SUM(rendimento_medio_sc(${escolhaDoAno2}, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ATUAL_NAO_IRRIGADO,
+SUM(rendimento_medio_sc(${escolhaDoAno2}, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ATUAL_IRRIGADO,
+SUM(rendimento_medio(${escolhaDoAno2}, producao.ano, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ATUAL_TOTAL,
+
+
+-- Variação Não Irrigado
+
+variacao_p(SUM(valida_sc(${escolhaDoAno1}, producao.ano, 'N', producao.irrigado, producao.area_colhida)),
+SUM(valida_sc(${escolhaDoAno2}, producao.ano, 'N', producao.irrigado, producao.area_colhida))) AS VARIACAO_AREA_COLHIDA_NAO_IRRIGADO,
+
+variacao_p(SUM(valida_sc(${escolhaDoAno1}, producao.ano, 'N', producao.irrigado, producao.producao)),
+SUM(valida_sc(${escolhaDoAno2}, producao.ano, 'N', producao.irrigado, producao.producao))) AS VARIACAO_PRODUCAO_NAO_IRRIGADO,
+
+variacao_p(SUM(rendimento_medio_sc(${escolhaDoAno1}, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio_sc(${escolhaDoAno2}, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao))) AS VARIACAO_RENDIMENTO_NAO_IRRIGADO,
+
+-- Fim Variação Não Irrigado
+
+
+-- Variação Irrigado
+
+variacao_p(SUM(valida_sc(${escolhaDoAno1}, producao.ano, 'S', producao.irrigado, producao.area_colhida)),
+SUM(valida_sc(${escolhaDoAno2}, producao.ano, 'S', producao.irrigado, producao.area_colhida))) AS VARIACAO_AREA_COLHIDA_IRRIGADO,
+
+variacao_p(SUM(valida_sc(${escolhaDoAno1}, producao.ano, 'S', producao.irrigado, producao.producao)),
+SUM(valida_sc(${escolhaDoAno2}, producao.ano, 'S', producao.irrigado, producao.producao))) AS VARIACAO_PRODUCAO_IRRIGADO,
+
+variacao_p(SUM(rendimento_medio_sc(${escolhaDoAno1}, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio_sc(${escolhaDoAno2}, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao))) AS VARIACAO_RENDIMENTO_MEDIO_IRRIGADO,
+
+-- Fim Variação Irrigado
+
+
+
+-- Variação Total
+variacao_p(SUM(valida_valor(${escolhaDoAno1}, producao.ano, producao.area_colhida)),
+SUM(valida_valor(${escolhaDoAno2}, producao.ano, producao.area_colhida))) AS VARIACAO_AREA_COLHIDA,
+
+variacao_p(SUM(valida_valor(${escolhaDoAno1}, producao.ano, producao.producao)),
+SUM(valida_valor(${escolhaDoAno2}, producao.ano, producao.producao))) AS VARIACAO_PRODUCAO,
+
+variacao_p(SUM(rendimento_medio(${escolhaDoAno1}, producao.ano, producao.area_colhida, producao.producao)),
+SUM(rendimento_medio(${escolhaDoAno2}, producao.ano, producao.area_colhida, producao.producao))) AS VARIACAO_RENDIMENTO
+
+-- Fim Variação Total
+
 
 FROM
 agricultura_produto AS produto
@@ -87,58 +166,21 @@ INNER JOIN core_estado AS estado ON municipio.estado_id = estado.id
 INNER JOIN core_microregiao AS microrregiao ON microrregiao.id = municipio.microregiao_id
 INNER JOIN core_mesoregiao AS mesorregiao ON mesorregiao.id = microrregiao.mesoregiao_id
 
-WHERE 
-CASE WHEN ${Regiao}='Estado' THEN estado.nome
-	WHEN ${Regiao}='Mesorregião' THEN mesorregiao.nome
-	WHEN ${Regiao}='Microrregião' THEN microrregiao.nome
-	WHEN ${Regiao}='Município' THEN municipio.nome
-END IN (${choice_option})
+WHERE
+CASE WHEN ${regiao}='Estado' THEN estado.nome
+	WHEN ${regiao}='Mesorregião' THEN mesorregiao.nome
+	WHEN ${regiao}='Microrregião' THEN microrregiao.nome
+	WHEN ${regiao}='Município' THEN municipio.nome
+END IN (${regiao_escolhida})
 
-GROUP BY producao.mes, producao.ano, REGIAO_NOME, grupo.nome_grupo
-ORDER BY grupo.nome_grupo;
+GROUP BY REGIAO_NOME, PG_NOME
+ORDER BY PG_NOME;
 
-
-
--- FIM   HISTORIAS 2,4,7,15,18,20 / POR REGIÃO / GRUPOS ---
+-- Fim     HISTORIAS 8, 10, 11, 12, 13, 14 / GRUPO DE PRODUTOS E PRODUTOS
 
 
 
--- POR MUNICIPIO/ IRRIGADO/ NAO IRRIGADO (RELATORIO - DRIVE)
-SELECT 
-producao.ano AS ANO,
-producao.mes AS MES,
-produto.nome AS PRODUTO,
-municipio.nome AS MUNICIPIO,
-SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_plantada ELSE 0 END) AS AREA_PLANTADA_NAO_IRRIGADO,
-SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_plantada ELSE 0 END) AS AREA_PLANTADA_IRRIGADO,
-SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_colhida ELSE 0 END) AS AREA_COLHIDA_NAO_IRRIGADO,
-SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_colhida ELSE 0 END) AS AREA_COLHIDA_IRRIGADO,
-SUM(CASE WHEN producao.irrigado = 'N' THEN producao.producao ELSE 0 END) AS PRODUCAO_NAO_IRRIGADO,
-SUM(CASE WHEN producao.irrigado = 'S' THEN producao.producao ELSE 0 END) AS PRODUCAO_IRRIGADO
-FROM       
-agricultura_produto AS produto
-INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
-INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
-GROUP BY producao.mes, producao.ano,produto.nome, municipio.nome 
-ORDER BY municipio.nome;
 
---Calculando o Percental de um produto sob a produção do estado no ano de 2015
-
-SELECT
-produto.nome AS produto, 
-SUM(producao.producao) AS producao, 
-(Select SUM(producaox.producao) from agricultura_producao as producaox where producaox.ano=2015) AS total,
-
-(SUM(producao.producao *100.0/ (Select SUM(producaox.producao) from agricultura_producao as producaox where producaox.ano=2015)
-)) AS percentual
-
-FROM core_municipio AS municipio 
-INNER JOIN agricultura_producao AS producao ON municipio.id = producao.municipio_id
-INNER JOIN agricultura_produto AS produto ON producao.produto_id = produto.id
-WHERE 
-producao.area_colhida != 0 AND
-producao.ano = 2015
-GROUP BY produto.nome;
 
 
 -- FUNÇÕES PARA CALCULAR A VARIAÇÃO PERCENTUAL --
@@ -180,202 +222,3 @@ END
 $$ LANGUAGE plpgsql;
 
 --DROP FUNCTION variacao_p(BIGINT, BIGINT);
-
--- 
-
-
-
--- HISTORIAS 10, 12, 14 / GRUPO DE PRODUTOS
--- GRUPO DE PRODUTO/REGIÃO
--- Ambos irrigados e não Irrigados
-
-
-SELECT
-grupo.nome_grupo AS GRUPO,
-CASE WHEN ${Regiao}='Estado' THEN estado.nome
-	WHEN ${Regiao}='Mesorregião' THEN mesorregiao.nome
-	WHEN ${Regiao}='Microrregião' THEN microrregiao.nome
-	WHEN ${Regiao}='Município' THEN municipio.nome
-END AS REGIAO_NOME,
-SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ANTERIOR_NAO_IRRIGADO,
-SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ANTERIOR_IRRIGADO,
-SUM(valida_valor(2014, producao.ano, producao.area_colhida)) AS AREA_COLHIDA_ANTERIOR_TOTAL,
-SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)) AS PRODUCAO_ANTERIOR_NAO_IRRIGADO,
-SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)) AS PRODUCAO_ANTERIOR_IRRIGADO,
-SUM(valida_valor(2014, producao.ano, producao.producao)) AS PRODUCAO_ANTERIOR_TOTAL,
-SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ANTERIOR_NAO_IRRIGADO,
-SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ANTERIOR_IRRIGADO,
-SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ANTERIOR_TOTAL,
-
-
-SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ATUAL_NAO_IRRIGADO,
-SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ATUAL_IRRIGADO,
-SUM(valida_valor(2015, producao.ano, producao.area_colhida)) AS AREA_COLHIDA_ATUAL_TOTAL,
-SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao)) AS PRODUCAO_ATUAL_NAO_IRRIGADO,
-SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao)) AS PRODUCAO_ATUAL_IRRIGADO,
-SUM(valida_valor(2015, producao.ano, producao.producao)) AS PRODUCAO_ATUAL_TOTAL,
-SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ATUAL_NAO_IRRIGADO,
-SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ATUAL_IRRIGADO,
-SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ATUAL_TOTAL,
-
-
--- Variação Não Irrigado
-
-variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)),
-SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida))) AS VARIACAO_AREA_COLHIDA_NAO_IRRIGADO,
-
-variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)),
-SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao))) AS VARIACAO_PRODUCAO_NAO_IRRIGADO,
-
-variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)),
-SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao))) AS VARIACAO_RENDIMENTO_NAO_IRRIGADO,
-
--- Fim Variação Não Irrigado
-
-
--- Variação Irrigado
-
-variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)),
-SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida))) AS VARIACAO_AREA_COLHIDA_IRRIGADO,
-
-variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)),
-SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao))) AS VARIACAO_PRODUCAO_IRRIGADO,
-
-variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)),
-SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao))) AS VARIACAO_RENDIMENTO_MEDIO_IRRIGADO,
-
--- Fim Variação Irrigado
-
-
-
--- Variação Total
-variacao_p(SUM(valida_valor(2014, producao.ano, producao.area_colhida)),
-SUM(valida_valor(2015, producao.ano, producao.area_colhida))) AS VARIACAO_AREA_COLHIDA,
-
-variacao_p(SUM(valida_valor(2014, producao.ano, producao.producao)),
-SUM(valida_valor(2015, producao.ano, producao.producao))) AS VARIACAO_PRODUCAO,
-
-variacao_p(SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)),
-SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao))) AS VARIACAO_RENDIMENTO
-
--- Fim Variação Total
-
-
-FROM
-agricultura_produto AS produto
-INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
-INNER JOIN agricultura_grupo AS grupo ON produto.grupo_id = grupo.id
-INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
-INNER JOIN core_estado AS estado ON municipio.estado_id = estado.id
-INNER JOIN core_microregiao AS microrregiao ON microrregiao.id = municipio.microregiao_id
-INNER JOIN core_mesoregiao AS mesorregiao ON mesorregiao.id = microrregiao.mesoregiao_id
-
-WHERE 
-CASE WHEN ${Regiao}='Estado' THEN estado.nome
-	WHEN ${Regiao}='Mesorregião' THEN mesorregiao.nome
-	WHEN ${Regiao}='Microrregião' THEN microrregiao.nome
-	WHEN ${Regiao}='Município' THEN municipio.nome
-END IN (${choice_option})
-
-GROUP BY REGIAO_NOME, grupo.nome_grupo
-ORDER BY grupo.nome_grupo;
-
--- FIM   VARIAÇÃO PERCENTUAL GRUPO DE PRODUTO/REGIÃO ---
-
-
-
--- HISTORIAS 8, 11, 13 / PRODUTOS
--- PRODUTO/REGIÃO
--- Ambos irrigados e não Irrigados
-
-SELECT
-produto.nome AS PRODUTO,
-CASE WHEN ${Regiao}='Estado' THEN estado.nome
-	WHEN ${Regiao}='Mesorregião' THEN mesorregiao.nome
-	WHEN ${Regiao}='Microrregião' THEN microrregiao.nome
-	WHEN ${Regiao}='Município' THEN municipio.nome
-END AS REGIAO_NOME,
-SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ANTERIOR_NAO_IRRIGADO,
-SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ANTERIOR_IRRIGADO,
-SUM(valida_valor(2014, producao.ano, producao.area_colhida)) AS AREA_COLHIDA_ANTERIOR_TOTAL,
-SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)) AS PRODUCAO_ANTERIOR_NAO_IRRIGADO,
-SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)) AS PRODUCAO_ANTERIOR_IRRIGADO,
-SUM(valida_valor(2014, producao.ano, producao.producao)) AS PRODUCAO_ANTERIOR_TOTAL,
-SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ANTERIOR_NAO_IRRIGADO,
-SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ANTERIOR_IRRIGADO,
-SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ANTERIOR_TOTAL,
-
-
-SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ATUAL_NAO_IRRIGADO,
-SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida)) AS AREA_COLHIDA_ATUAL_IRRIGADO,
-SUM(valida_valor(2015, producao.ano, producao.area_colhida)) AS AREA_COLHIDA_ATUAL_TOTAL,
-SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao)) AS PRODUCAO_ATUAL_NAO_IRRIGADO,
-SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao)) AS PRODUCAO_ATUAL_IRRIGADO,
-SUM(valida_valor(2015, producao.ano, producao.producao)) AS PRODUCAO_ATUAL_TOTAL,
-SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ATUAL_NAO_IRRIGADO,
-SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ATUAL_IRRIGADO,
-SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao)) AS RENDIMENTO_MEDIO_ATUAL_TOTAL,
-
-
--- Variação Não Irrigado
-
-variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida)),
-SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida))) AS VARIACAO_AREA_COLHIDA_NAO_IRRIGADO,
-
-variacao_p(SUM(valida_sc(2014, producao.ano, 'N', producao.irrigado, producao.producao)),
-SUM(valida_sc(2015, producao.ano, 'N', producao.irrigado, producao.producao))) AS VARIACAO_PRODUCAO_NAO_IRRIGADO,
-
-variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao)),
-SUM(rendimento_medio_sc(2015, producao.ano, 'N', producao.irrigado, producao.area_colhida, producao.producao))) AS VARIACAO_RENDIMENTO_NAO_IRRIGADO,
-
--- Fim Variação Não Irrigado
-
-
--- Variação Irrigado
-
-variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida)),
-SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida))) AS VARIACAO_AREA_COLHIDA_IRRIGADO,
-
-variacao_p(SUM(valida_sc(2014, producao.ano, 'S', producao.irrigado, producao.producao)),
-SUM(valida_sc(2015, producao.ano, 'S', producao.irrigado, producao.producao))) AS VARIACAO_PRODUCAO_IRRIGADO,
-
-variacao_p(SUM(rendimento_medio_sc(2014, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao)),
-SUM(rendimento_medio_sc(2015, producao.ano, 'S', producao.irrigado, producao.area_colhida, producao.producao))) AS VARIACAO_RENDIMENTO_MEDIO_IRRIGADO,
-
--- Fim Variação Irrigado
-
-
-
--- Variação Total
-variacao_p(SUM(valida_valor(2014, producao.ano, producao.area_colhida)),
-SUM(valida_valor(2015, producao.ano, producao.area_colhida))) AS VARIACAO_AREA_COLHIDA,
-
-variacao_p(SUM(valida_valor(2014, producao.ano, producao.producao)),
-SUM(valida_valor(2015, producao.ano, producao.producao))) AS VARIACAO_PRODUCAO,
-
-variacao_p(SUM(rendimento_medio(2014, producao.ano, producao.area_colhida, producao.producao)),
-SUM(rendimento_medio(2015, producao.ano, producao.area_colhida, producao.producao))) AS VARIACAO_RENDIMENTO
-
--- Fim Variação Total
-
-
-FROM
-agricultura_produto AS produto
-INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
-INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
-INNER JOIN core_estado AS estado ON municipio.estado_id = estado.id
-INNER JOIN core_microregiao AS microrregiao ON microrregiao.id = municipio.microregiao_id
-INNER JOIN core_mesoregiao AS mesorregiao ON mesorregiao.id = microrregiao.mesoregiao_id
-
-WHERE 
-CASE WHEN ${Regiao}='Estado' THEN estado.nome
-	WHEN ${Regiao}='Mesorregião' THEN mesorregiao.nome
-	WHEN ${Regiao}='Microrregião' THEN microrregiao.nome
-	WHEN ${Regiao}='Município' THEN municipio.nome
-END IN (${choice_option})
-
-GROUP BY REGIAO_NOME, produto.nome
-ORDER BY produto.nome;
-
--- FIM   VARIAÇÃO PERCENTUAL PRODUTO/REGIÃO ---
-
