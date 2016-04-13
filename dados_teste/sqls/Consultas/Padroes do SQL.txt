@@ -1,0 +1,7 @@
+
+Nomes de colunas:
+
+
+Parâmetros:
+    - Devem ser escritos todos em letra minúscula e separados por underscore;
+    - Devem ser escritos em português.
