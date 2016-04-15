@@ -1,7 +1,13 @@
 
 Nomes de colunas:
+    - Devem ser escritos todos em caixa alta e separados por underscore;
+    - Antes do nome da coluna, deve ser escrito AS.
+
+
+Palavras reservadas do SQL:
+    - Devem ser escritas em caixa alta.
 
 
 Parâmetros:
-    - Devem ser escritos todos em letra minúscula e separados por underscore;
+    - Devem ser escritos todos em caixa baixa e separados por underscore;
     - Devem ser escritos em português.
