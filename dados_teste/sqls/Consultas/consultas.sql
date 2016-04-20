@@ -109,12 +109,12 @@ SUM(valida_valor(${escolha_do_ano_1}, producao.ano, producao.producao)) AS PRODU
 
 
 -- Realiza o cálculo do rendimento médio para não irrigado, irrigado e o total (irrigado + não irrigado) respectivamente, para um determinado ano.
-rendimento_medio_sc(
+rendimento_medio(
 	SUM(CASE WHEN ${escolha_do_ano_1} = producao.ano AND 'N' = producao.irrigado THEN producao.area_colhida ELSE 0 END),
 	SUM(CASE WHEN ${escolha_do_ano_1} = producao.ano AND 'N' = producao.irrigado THEN producao.producao ELSE 0 END)
 ) AS RENDIMENTO_MEDIO_ANTERIOR_NAO_IRRIGADO,
 
-rendimento_medio_sc(
+rendimento_medio(
 	SUM(CASE WHEN ${escolha_do_ano_1} = producao.ano AND 'S' = producao.irrigado THEN producao.area_colhida ELSE 0 END),
 	SUM(CASE WHEN ${escolha_do_ano_1} = producao.ano AND 'S' = producao.irrigado THEN producao.producao ELSE 0 END)
 ) AS RENDIMENTO_MEDIO_ANTERIOR_IRRIGADO,
@@ -141,12 +141,12 @@ SUM(valida_valor(${escolha_do_ano_2}, producao.ano, producao.producao)) AS PRODU
 
 -- Realiza o cálculo do rendimento médio para não irrigado, irrigado e o total (irrigado + não irrigado) respectivamente, para um determinado ano.
 -- Realiza o cálculo do rendimento médio para não irrigado, irrigado e o total (irrigado + não irrigado) respectivamente, para um determinado ano.
-rendimento_medio_sc(
+rendimento_medio(
 	SUM(CASE WHEN ${escolha_do_ano_2} = producao.ano AND 'N' = producao.irrigado THEN producao.area_colhida ELSE 0 END),
 	SUM(CASE WHEN ${escolha_do_ano_2} = producao.ano AND 'N' = producao.irrigado THEN producao.producao ELSE 0 END)
 ) AS RENDIMENTO_MEDIO_ATUAL_NAO_IRRIGADO,
 
-rendimento_medio_sc(
+rendimento_medio(
 	SUM(CASE WHEN ${escolha_do_ano_2} = producao.ano AND 'S' = producao.irrigado THEN producao.area_colhida ELSE 0 END),
 	SUM(CASE WHEN ${escolha_do_ano_2} = producao.ano AND 'S' = producao.irrigado THEN producao.producao ELSE 0 END)
 ) AS RENDIMENTO_MEDIO_ATUAL_IRRIGADO,
@@ -167,11 +167,11 @@ SUM(valida_sc(${escolha_do_ano_2}, producao.ano, 'N', producao.irrigado, produca
 
 -- Calcula a variação do rendimento médio entre dois anos, para produtos não irrigado.
 variacao_p(
-	rendimento_medio_sc(
+	rendimento_medio(
 		SUM(CASE WHEN ${escolha_do_ano_1} = producao.ano AND 'N' = producao.irrigado THEN producao.area_colhida ELSE 0 END),
 		SUM(CASE WHEN ${escolha_do_ano_1} = producao.ano AND 'N' = producao.irrigado THEN producao.producao ELSE 0 END)
 	),
-	rendimento_medio_sc(
+	rendimento_medio(
 		SUM(CASE WHEN ${escolha_do_ano_2} = producao.ano AND 'N' = producao.irrigado THEN producao.area_colhida ELSE 0 END),
 		SUM(CASE WHEN ${escolha_do_ano_2} = producao.ano AND 'N' = producao.irrigado THEN producao.producao ELSE 0 END)
 	)
@@ -189,11 +189,11 @@ SUM(valida_sc(${escolha_do_ano_2}, producao.ano, 'S', producao.irrigado, produca
 
 -- Calcula a variação do rendimento médio entre dois anos, para produtos irrigado.
 variacao_p(
-	rendimento_medio_sc(
+	rendimento_medio(
 		SUM(CASE WHEN ${escolha_do_ano_1} = producao.ano AND 'S' = producao.irrigado THEN producao.area_colhida ELSE 0 END),
 		SUM(CASE WHEN ${escolha_do_ano_1} = producao.ano AND 'S' = producao.irrigado THEN producao.producao ELSE 0 END)
 	),
-	rendimento_medio_sc(
+	rendimento_medio(
 		SUM(CASE WHEN ${escolha_do_ano_2} = producao.ano AND 'S' = producao.irrigado THEN producao.area_colhida ELSE 0 END),
 		SUM(CASE WHEN ${escolha_do_ano_2} = producao.ano AND 'S' = producao.irrigado THEN producao.producao ELSE 0 END)
 	)
@@ -212,11 +212,11 @@ SUM(valida_valor(${escolha_do_ano_2}, producao.ano, producao.producao))) AS VARI
 
 -- Calcula a variação total (para irrigados + irrigados) do rendimento médio entre dois anos.
 variacao_p(
-	rendimento_medio_sc(
+	rendimento_medio(
 		SUM(CASE WHEN ${escolha_do_ano_1} = producao.ano THEN producao.area_colhida ELSE 0 END),
 		SUM(CASE WHEN ${escolha_do_ano_1} = producao.ano THEN producao.producao ELSE 0 END)
 	),
-	rendimento_medio_sc(
+	rendimento_medio(
 		SUM(CASE WHEN ${escolha_do_ano_2} = producao.ano THEN producao.area_colhida ELSE 0 END),
 		SUM(CASE WHEN ${escolha_do_ano_2} = producao.ano THEN producao.producao ELSE 0 END)
 	)
