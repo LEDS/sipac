@@ -1,0 +1,11 @@
+id,nome_grupo,grupo_id
+5,Agricultura,
+6,Silvicultura,
+7,Produção Animal,
+8,Fruticultura,5
+9,Olericultura,5
+10,Alimento Básico,5
+11,Cafeicultura,5
+12,Cana-de-açucar,5
+13,Outros produtos agrícolas,5
+14,Especiaria,5

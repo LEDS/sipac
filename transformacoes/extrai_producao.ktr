@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;</directory>
+    <directory>&#x2f;</directory>
     <parameters>
     </parameters>
     <log>
@@ -17,7 +17,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -34,6 +34,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -62,12 +67,36 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2016&#47;02&#47;02 16:48:45.363</created_date>
+  <created_date>2016&#x2f;02&#x2f;02 16&#x3a;48&#x3a;45.363</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2016&#47;02&#47;02 16:48:45.363</modified_date>
+  <modified_date>2016&#x2f;02&#x2f;02 16&#x3a;48&#x3a;45.363</modified_date>
   </info>
   <notepads>
   </notepads>
+  <connection>
+    <name>BDIncaper</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>BDIncaper</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4aa1da379d0c3fd89</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
   <connection>
     <name>Incaper</name>
     <server>localhost</server>
@@ -85,8 +114,10 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -115,12 +146,24 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Tabela Municipio</from><to>Juntar Municipio</to><enabled>Y</enabled> </hop>  <hop> <from>Ordenar por Produto</from><to>Unir Produtos</to><enabled>Y</enabled> </hop>  <hop> <from>Unir Produtos</from><to>Sort rows</to><enabled>Y</enabled> </hop>  <hop> <from>Tabela Produto</from><to>Unir Produtos</to><enabled>Y</enabled> </hop>  <hop> <from>Sort rows</from><to>Juntar Municipio</to><enabled>Y</enabled> </hop>  <hop> <from>Juntar Municipio</from><to>Tabela Produção</to><enabled>Y</enabled> </hop>  <hop> <from>Apagar produção mes</from><to>Ordenar por Produto</to><enabled>Y</enabled> </hop>  <hop> <from>Buscar arquivos na pasta</from><to>Ler arquivos</to><enabled>Y</enabled> </hop>  <hop> <from>Ler arquivos</from><to>Validar campos do arquivo</to><enabled>Y</enabled> </hop>  <hop> <from>Validar campos do arquivo</from><to>Apagar produção mes</to><enabled>Y</enabled> </hop>  <hop> <from>Tabela Produção</from><to>Atualizar dados anteriores</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Tabela Municipio</from><to>Merge Municipio</to><enabled>Y</enabled> </hop>
+  <hop> <from>Ordenar por Produto</from><to>Merge Produtos</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge Produtos</from><to>Ordena Municipio</to><enabled>Y</enabled> </hop>
+  <hop> <from>Tabela Produto</from><to>Merge Produtos</to><enabled>Y</enabled> </hop>
+  <hop> <from>Ordena Municipio</from><to>Merge Municipio</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge Municipio</from><to>Tabela Produ&#xe7;&#xe3;o</to><enabled>Y</enabled> </hop>
+  <hop> <from>Apagar produ&#xe7;&#xe3;o mes</from><to>Ordenar por Produto</to><enabled>Y</enabled> </hop>
+  <hop> <from>Buscar arquivos na pasta</from><to>Ler arquivos</to><enabled>Y</enabled> </hop>
+  <hop> <from>Ler arquivos</from><to>Validar campos do arquivo</to><enabled>Y</enabled> </hop>
+  <hop> <from>Validar campos do arquivo</from><to>Apagar produ&#xe7;&#xe3;o mes</to><enabled>Y</enabled> </hop>
+  <hop> <from>Tabela Produ&#xe7;&#xe3;o</from><to>Atualizar dados anteriores</to><enabled>N</enabled> </hop>
+  </order>
   <step>
-    <name>Apagar produção mes</name>
+    <name>Apagar produ&#xe7;&#xe3;o mes</name>
     <type>Delete</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -134,20 +177,20 @@
       <key>
         <name>ANO</name>
         <field>ano</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <key>
         <name>MES</name>
         <field>mes</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>256</xloc>
-      <yloc>352</yloc>
+      <xloc>322</xloc>
+      <yloc>351</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -157,6 +200,7 @@
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -166,11 +210,11 @@
     <execute_each_row>N</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>Y</replace_variables>
-    <sql>Update agricultura_producao
-set valido = false
-where ano = ANO and mes &lt; MES</sql>
+    <quoteString>N</quoteString>
+    <sql>Update agricultura_producao&#xa;set valido &#x3d; false&#xa;where ano &#x3d; ANO and mes &#x3c; MES</sql>
+    <set_params>N</set_params>
     <insert_field/>
-    <update_field>ANO; MES</update_field>
+    <update_field>ANO&#x3b; MES</update_field>
     <delete_field/>
     <read_field/>
     <arguments>
@@ -201,8 +245,8 @@ where ano = ANO and mes &lt; MES</sql>
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>832</xloc>
-      <yloc>304</yloc>
+      <xloc>898</xloc>
+      <yloc>303</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -212,6 +256,7 @@ where ano = ANO and mes &lt; MES</sql>
     <type>GetFileNames</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -231,32 +276,33 @@ where ano = ANO and mes &lt; MES</sql>
     <dynamic_include_subfolders>N</dynamic_include_subfolders>
     <limit>0</limit>
     <file>
-      <name>&#47;home&#47;cristian&#47;Documentos&#47;LEDS&#47;Projetos&#47;Incaper&#47;env&#47;sipac-backend&#47;dados_teste&#47;csv&#47;lspa</name>
-      <filemask>.*\.csv</filemask>
+      <name>&#x2f;home&#x2f;cristian&#x2f;Documentos&#x2f;LEDS&#x2f;Projetos&#x2f;Incaper&#x2f;sipac-backend&#x2f;dados_teste&#x2f;csv&#x2f;lspa</name>
+      <filemask>.&#x2a;&#x5c;.csv</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
     </file>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>64</xloc>
-      <yloc>64</yloc>
+      <xloc>130</xloc>
+      <yloc>63</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Juntar Municipio</name>
+    <name>Merge Municipio</name>
     <type>MergeJoin</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
 <join_type>INNER</join_type>
-<step1>Sort rows</step1>
+<step1>Ordena Municipio</step1>
 <step2>Tabela Municipio</step2>
     <keys_1>
       <key>COD_MUNICIPIO</key>
@@ -266,8 +312,8 @@ where ano = ANO and mes &lt; MES</sql>
     </keys_2>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>704</xloc>
-      <yloc>176</yloc>
+      <xloc>770</xloc>
+      <yloc>175</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -277,17 +323,18 @@ where ano = ANO and mes &lt; MES</sql>
     <type>CsvInput</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <filename>&#47;Users&#47;paulo&#47;Documents&#47;projects&#47;python&#47;sipac-backend&#47;dados_teste&#47;csv&#47;Producao&#47;ES_Municipios_LSPA-Espelho_Dezembro-2015.csv</filename>
+    <filename>&#x2f;Users&#x2f;paulo&#x2f;Documents&#x2f;projects&#x2f;python&#x2f;sipac-backend&#x2f;dados_teste&#x2f;csv&#x2f;Producao&#x2f;ES_Municipios_LSPA-Espelho_Dezembro-2015.csv</filename>
     <filename_field>filename</filename_field>
     <rownum_field/>
     <include_filename>N</include_filename>
     <separator>,</separator>
-    <enclosure>&quot;</enclosure>
+    <enclosure>&#x22;</enclosure>
     <header>Y</header>
     <buffer_size>50000</buffer_size>
     <lazy_conversion>Y</lazy_conversion>
@@ -299,8 +346,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>ANO</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -310,8 +357,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>MES</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -321,8 +368,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>COD_UF</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -332,8 +379,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>COD_MESO</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -343,8 +390,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>COD_MICRO</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -354,8 +401,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>COD_MUNICIPIO</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -365,8 +412,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>COD_PRODUTO</name>
         <type>String</type>
-        <format>#.#</format>
-        <currency>R$</currency>
+        <format>&#x23;.&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -376,8 +423,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>SAFRA</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -388,7 +435,7 @@ where ano = ANO and mes &lt; MES</sql>
         <name>IRRIGADO</name>
         <type>String</type>
         <format/>
-        <currency>R$</currency>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>1</length>
@@ -398,8 +445,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>COD_FONTE</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -409,8 +456,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>COD_FASE</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -420,8 +467,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>COD_OCORRENCIA</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -431,8 +478,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>EM_FORMACAO</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -442,8 +489,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>PLANTADA</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -453,8 +500,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>COLHIDA</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -464,8 +511,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>PERC_COLHIDO_MES</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -475,8 +522,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>PRODUCAO</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -486,8 +533,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>RENDIMENTO</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -497,8 +544,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>PRECO</name>
         <type>Number</type>
-        <format>#.#</format>
-        <currency>R$</currency>
+        <format>&#x23;.&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -509,7 +556,7 @@ where ano = ANO and mes &lt; MES</sql>
         <name>OBSERVACAO</name>
         <type>String</type>
         <format/>
-        <currency>R$</currency>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>232</length>
@@ -519,8 +566,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>DT_ATUALIZACAO</name>
         <type>Date</type>
-        <format>MM&#47;dd&#47;yyyy</format>
-        <currency>R$</currency>
+        <format>MM&#x2f;dd&#x2f;yyyy</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>-1</length>
@@ -531,7 +578,7 @@ where ano = ANO and mes &lt; MES</sql>
         <name>SGL_SIGLA</name>
         <type>String</type>
         <format/>
-        <currency>R$</currency>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>12</length>
@@ -541,8 +588,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>COLHIDO_ACUMULADO</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>R$</currency>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
         <length>15</length>
@@ -552,8 +599,8 @@ where ano = ANO and mes &lt; MES</sql>
       <field>
         <name>PRECO_MEDIO_ANUAL</name>
         <type>Number</type>
-        <format>#.#</format>
-        <currency>R$</currency>
+        <format>&#x23;.&#x23;</format>
+        <currency>R&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -563,8 +610,8 @@ where ano = ANO and mes &lt; MES</sql>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>64</xloc>
-      <yloc>192</yloc>
+      <xloc>130</xloc>
+      <yloc>191</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -574,12 +621,13 @@ where ano = ANO and mes &lt; MES</sql>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-      <directory>%%java.io.tmpdir%%</directory>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
       <prefix>out</prefix>
       <sort_size>1000000</sort_size>
       <free_memory/>
@@ -591,27 +639,29 @@ where ano = ANO and mes &lt; MES</sql>
         <name>COD_PRODUTO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
       </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>256</xloc>
-      <yloc>176</yloc>
+      <xloc>322</xloc>
+      <yloc>175</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Sort rows</name>
+    <name>Ordena Municipio</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-      <directory>%%java.io.tmpdir%%</directory>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
       <prefix>out</prefix>
       <sort_size>1000000</sort_size>
       <free_memory/>
@@ -623,12 +673,13 @@ where ano = ANO and mes &lt; MES</sql>
         <name>COD_MUNICIPIO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
       </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>544</xloc>
-      <yloc>176</yloc>
+      <xloc>610</xloc>
+      <yloc>175</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -638,19 +689,14 @@ where ano = ANO and mes &lt; MES</sql>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
     <connection>Incaper</connection>
-    <sql>SELECT
-  id as id_municipio
-, codigo as codigo_municipio_tabela
-
-FROM core_municipio
-ORDER BY codigo_municipio_tabela
-</sql>
+    <sql>SELECT&#xa;  id as id_municipio&#xa;, codigo as codigo_municipio_tabela&#xa;&#xa;FROM core_municipio&#xa;ORDER BY codigo_municipio_tabela&#xa;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -658,8 +704,8 @@ ORDER BY codigo_municipio_tabela
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>704</xloc>
-      <yloc>48</yloc>
+      <xloc>770</xloc>
+      <yloc>47</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -669,19 +715,14 @@ ORDER BY codigo_municipio_tabela
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
     <connection>Incaper</connection>
-    <sql>SELECT
-  nome as nome_produto
-, id as id_produto
-, codigo as codigo_produto
-FROM agricultura_produto
-order by codigo_produto
-</sql>
+    <sql>SELECT&#xa;  nome as nome_produto&#xa;, id as id_produto&#xa;, codigo as codigo_produto&#xa;FROM agricultura_produto&#xa;order by codigo_produto&#xa;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -689,17 +730,18 @@ order by codigo_produto
     <lazy_conversion_active>Y</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>432</xloc>
-      <yloc>304</yloc>
+      <xloc>498</xloc>
+      <yloc>303</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Tabela Produção</name>
+    <name>Tabela Produ&#xe7;&#xe3;o</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -762,17 +804,18 @@ order by codigo_produto
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>832</xloc>
-      <yloc>176</yloc>
+      <xloc>898</xloc>
+      <yloc>175</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Unir Produtos</name>
+    <name>Merge Produtos</name>
     <type>MergeJoin</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -789,8 +832,8 @@ order by codigo_produto
     </keys_2>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>432</xloc>
-      <yloc>176</yloc>
+      <xloc>498</xloc>
+      <yloc>175</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -800,6 +843,7 @@ order by codigo_produto
     <type>Validator</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -807,7 +851,7 @@ order by codigo_produto
            </partitioning>
 <validate_all>N</validate_all>
 <concat_errors>N</concat_errors>
-<concat_separator>|</concat_separator>
+<concat_separator>&#x7c;</concat_separator>
        <validator_field><name>ANO</name>
 <validation_name>validarAno</validation_name>
 <max_length/>
@@ -861,7 +905,7 @@ order by codigo_produto
 <sourcing_field/>
 <allowed_value></allowed_value></validator_field>
        <validator_field><name>PRODUCAO</name>
-<validation_name>validarProdução</validation_name>
+<validation_name>validarProdu&#xe7;&#xe3;o</validation_name>
 <max_length/>
 <min_length/>
 <null_allowed>Y</null_allowed>
@@ -887,7 +931,7 @@ order by codigo_produto
 <sourcing_field/>
 <allowed_value></allowed_value></validator_field>
        <validator_field><name>EM_FORMACAO</name>
-<validation_name>validarAreaEmFormação</validation_name>
+<validation_name>validarAreaEmForma&#xe7;&#xe3;o</validation_name>
 <max_length/>
 <min_length/>
 <null_allowed>Y</null_allowed>
@@ -940,8 +984,8 @@ order by codigo_produto
 <allowed_value></allowed_value></validator_field>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>64</xloc>
-      <yloc>352</yloc>
+      <xloc>130</xloc>
+      <yloc>351</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -975,4 +1019,5 @@ order by codigo_produto
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>
