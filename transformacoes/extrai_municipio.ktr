@@ -69,8 +69,6 @@
   <created_date>2016&#x2f;02&#x2f;02 16&#x3a;38&#x3a;39.117</created_date>
   <modified_user>-</modified_user>
   <modified_date>2016&#x2f;02&#x2f;02 16&#x3a;38&#x3a;39.117</modified_date>
-    <key_for_session_key/>
-    <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
@@ -147,6 +145,30 @@
     </attributes>
   </connection>
   <connection>
+    <name>BDIncaper</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>BDIncaper</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4aa1da379d0c3fd89</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
     <name>Data Warehouse</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
@@ -176,6 +198,30 @@
     <type>POSTGRESQL</type>
     <access>Native</access>
     <database>filmes</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4aa1da379d0c3fd89</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Incaper</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>Incaper</database>
     <port>5432</port>
     <username>postgres</username>
     <password>Encrypted 2be98afc86aa7f2e4aa1da379d0c3fd89</password>
@@ -264,7 +310,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>Sipac</connection>
+    <connection>Incaper</connection>
     <sql>Select id as id_estado, codigo as codigo_estado from core_estado where codigo &#x3d; 32</sql>
     <limit>0</limit>
     <lookup/>
@@ -344,7 +390,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <filename>&#x2f;home&#x2f;cristian&#x2f;Documentos&#x2f;LEDS&#x2f;Projetos&#x2f;Incaper&#x2f;Pentaho&#x2f;Pentaho 5.4&#x2f;Dados&#x2f;Cod_Municipio.csv</filename>
+    <filename>&#x2f;home&#x2f;cristian&#x2f;Documentos&#x2f;LEDS&#x2f;Projetos&#x2f;Incaper&#x2f;sipac-backend&#x2f;dados_teste&#x2f;csv&#x2f;Cod_Municipio.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -533,7 +579,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>Sipac</connection>
+    <connection>Incaper</connection>
     <sql>SELECT id as micro_id, codigo as codigo_micro FROM core_microregiao order by codigo_micro</sql>
     <limit>0</limit>
     <lookup/>
@@ -559,7 +605,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>Sipac</connection>
+    <connection>Incaper</connection>
     <schema/>
     <table>core_municipio</table>
     <commit>1000</commit>
