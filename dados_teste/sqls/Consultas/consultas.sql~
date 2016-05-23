@@ -33,7 +33,6 @@ SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_em_formacao ELSE 0 END)
 SUM(producao.area_em_formacao) AS AREA_FORMACAO,
 (SUM(producao.area_em_formacao) + SUM(producao.area_plantada)) AS AREA_TOTAL,
 CASE WHEN SUM(producao.area_colhida) != 0 THEN SUM(producao.producao)*1000/SUM(producao.area_colhida) ELSE 0 END AS RENDIMENTO_MEDIO
-SUM(producao.area_plantada) - SUM(producao.area_colhida) AS AREA_PERDIDA
 
 FROM
 agricultura_produto AS produto
