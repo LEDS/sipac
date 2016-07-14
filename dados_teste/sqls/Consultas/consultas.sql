@@ -264,69 +264,54 @@ ORDER BY PG_NOME;
 
 
 SELECT
-producao.ano AS ANO,
-
-grupo.nome_grupo AS GRUPO,
+initcap(produto.nome) AS PRODUTO, -- Nome do produto
+grupo.nome_grupo,
+SUM(producao.area_colhida) AS AREA_COLHIDA, -- Soma da produção de um produto em todos municípios
+(SELECT SUM(producaox.area_colhida) FROM agricultura_producao AS producaox where producaox.ano IN (${ano_escolhido})) AS TOTAL, -- Soma total da produção
+SUM(CASE WHEN producao.irrigado = 'N' THEN producao.area_colhida ELSE 0 END) AS AREA_COLHIDA_NAO_IRRIGADO,
+SUM(CASE WHEN producao.irrigado = 'S' THEN producao.area_colhida ELSE 0 END) AS AREA_COLHIDA_IRRIGADO,
 
 CASE WHEN ${regiao}='Estado' THEN estado.nome
 	WHEN ${regiao}='Mesorregião' THEN mesorregiao.nome
 	WHEN ${regiao}='Microrregião' THEN microrregiao.nome
 	WHEN ${regiao}='Município' THEN municipio.nome
-END AS NOME_REGIAO,
+END AS REGIAO_NOME,
 
-produto.nome AS PRODUTO,
+-- PERCENTUAL IRRIGADO
+CASE WHEN (SELECT SUM(producaox.area_colhida) FROM agricultura_producao AS producaox where producaox.ano IN (${ano_escolhido})) != 0 THEN
+SUM(CASE WHEN producao.irrigado = 'S' THEN (producao.area_colhida *100.0) ELSE 0 END / (SELECT SUM(producaox.area_colhida) FROM agricultura_producao as producaox where producaox.ano IN (${ano_escolhido}))) ELSE 0
+END AS PERCENTUAL_IRRIGADO,
 
-SUM(producao.area_colhida) AS AREA_COLHIDA,
+-- PERCENTUAL NÃO IRRIGADO
+CASE WHEN (SELECT SUM(producaox.area_colhida) FROM agricultura_producao as producaox where producaox.ano IN (${ano_escolhido})) != 0 THEN
+SUM(CASE WHEN producao.irrigado = 'N' THEN (producao.area_colhida *100.0) ELSE 0 END / (SELECT SUM(producaox.area_colhida) FROM agricultura_producao as producaox where producaox.ano IN (${ano_escolhido}))) ELSE 0
+END AS PERCENTUAL_NAO_IRRIGADO,
 
-CASE WHEN ${regiao}='Estado'
-		THEN total_area_colhida (${regiao}, ${regiao_escolhida}, ${sistema_cultivo}, ${ano_escolhido})
-	WHEN ${regiao}='Mesorregião'
-		THEN total_area_colhida (${regiao}, ${regiao_escolhida}, ${sistema_cultivo}, ${ano_escolhido})
-	WHEN ${regiao}='Microrregião'
-		THEN total_area_colhida (${regiao}, ${regiao_escolhida}, ${sistema_cultivo}, ${ano_escolhido})
-	WHEN ${regiao}='Município'
-		THEN total_area_colhida (${regiao}, ${regiao_escolhida}, ${sistema_cultivo}, ${ano_escolhido})
-END AS AREA_COLHIDA_TOTAL,
+CASE WHEN (SELECT SUM(producaox.area_colhida) FROM agricultura_producao as producaox where producaox.ano IN (${ano_escolhido})) != 0 THEN
+SUM((producao.area_colhida *100.0) / (SELECT SUM(producaox.area_colhida) FROM agricultura_producao as producaox where producaox.ano IN (${ano_escolhido}))) ELSE 0 END AS PERCENTUAL_TOTAL
 
+FROM
+agricultura_produto AS produto
+INNER JOIN agricultura_producao AS producao ON produto.id = producao.produto_id
+INNER JOIN agricultura_grupo AS grupo ON produto.grupo_id = grupo.id
+INNER JOIN core_municipio as municipio on municipio.id = producao.municipio_id
+INNER JOIN core_estado AS estado ON municipio.estado_id = estado.id
+INNER JOIN core_microregiao AS microrregiao ON microrregiao.id = municipio.microregiao_id
+INNER JOIN core_mesoregiao AS mesorregiao ON mesorregiao.id = microrregiao.mesoregiao_id
 
-
-CASE WHEN ${regiao}='Estado'
-		THEN participacao_percentual_area_colhida(SUM(producao.area_colhida), total_area_colhida (${regiao}, ${regiao_escolhida}, ${sistema_cultivo}, ${ano_escolhido}))
-	WHEN ${regiao}='Mesorregião'
-		THEN participacao_percentual_area_colhida(SUM(producao.area_colhida), total_area_colhida (${regiao}, ${regiao_escolhida}, ${sistema_cultivo}, ${ano_escolhido}))
-	WHEN ${regiao}='Microrregião'
-		THEN participacao_percentual_area_colhida(SUM(producao.area_colhida), total_area_colhida (${regiao}, ${regiao_escolhida}, ${sistema_cultivo}, ${ano_escolhido}))
-	WHEN ${regiao}='Município'
-		THEN participacao_percentual_area_colhida(SUM(producao.area_colhida), total_area_colhida (${regiao}, ${regiao_escolhida}, ${sistema_cultivo}, ${ano_escolhido}))
-END AS PARTICIPACAO_PERCENTUAL_AREA_COLHIDA
-
-
-FROM agricultura_producao AS producao
-INNER JOIN agricultura_produto AS produto
-ON producao.produto_id = produto.id
-INNER JOIN agricultura_grupo AS grupo
-ON produto.grupo_id = grupo.id
-INNER JOIN core_municipio as municipio
-on municipio.id = producao.municipio_id
-INNER JOIN core_estado AS estado
-ON municipio.estado_id = estado.id
-INNER JOIN core_microregiao AS microrregiao
-ON microrregiao.id = municipio.microregiao_id
-INNER JOIN core_mesoregiao AS mesorregiao
-ON mesorregiao.id = microrregiao.mesoregiao_id
-
-WHERE
+WHERE producao.ano IN (${ano_escolhido})
+AND
 (CASE WHEN ${regiao}='Estado' THEN estado.nome
 	WHEN ${regiao}='Mesorregião' THEN mesorregiao.nome
 	WHEN ${regiao}='Microrregião' THEN microrregiao.nome
 	WHEN ${regiao}='Município' THEN municipio.nome
 END IN (${regiao_escolhida})
 OR '1 - Todos' IN (${regiao_escolhida}))
-AND producao.ano IN ( ${ano_escolhido})
-AND (producao.irrigado = ${sistema_cultivo} OR ${sistema_cultivo} = 'T')
+AND (produto.nome IN (${escolha_produto}) OR '1 - Todos' IN (${escolha_produto}))
 
-GROUP BY producao.ano, NOME_REGIAO, grupo.nome_grupo, produto.nome
-ORDER BY grupo.nome_grupo, produto.nome
+GROUP BY REGIAO_NOME, grupo.nome_grupo, produto.nome
+ORDER BY REGIAO_NOME, grupo.nome_grupo, produto.nome;
+
 
 
 
