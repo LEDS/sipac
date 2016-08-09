@@ -1,6 +1,6 @@
 from django.db import models
 
-# Modelos que são comuns para todos os modulos
+# Modelos que sao comuns para todos os modulos
 
 class Estado(models.Model):
 
