@@ -36,3 +36,12 @@ services:
         environment:
             - DATABASE_HOST=db
             - DATABASE_PORT=5432
+    pentaho-biserver:
+        image: leandrocp/pentaho-server
+        ports:
+            - "8080"
+        links:
+            - db:postgres
+        environment:
+            - DB_USER=postgres
+            - DB_PASS=admin123
