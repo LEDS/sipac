@@ -288,14 +288,39 @@
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
+  <connection>
+    <name>Trabalho_2_BD</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>Trabalho_2_BD</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4aa1da379d0c3fd89</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
   <order>
   <hop> <from>L&#xea; Mesorregi&#xe3;o</from><to>Fitra apenas ES</to><enabled>Y</enabled> </hop>
   <hop> <from>Fitra apenas ES</from><to>Ordena Meso</to><enabled>Y</enabled> </hop>
-  <hop> <from>Ordena Meso</from><to>Filtra Meso</to><enabled>Y</enabled> </hop>
   <hop> <from>Filtra Meso</from><to>Merge Join</to><enabled>Y</enabled> </hop>
   <hop> <from>seleciona_ES</from><to>Merge Join</to><enabled>Y</enabled> </hop>
   <hop> <from>Merge Join</from><to>SelecionaCamposDeSaida</to><enabled>Y</enabled> </hop>
   <hop> <from>SelecionaCamposDeSaida</from><to>TabelaMeso</to><enabled>Y</enabled> </hop>
+  <hop> <from>Ordena Meso</from><to>Delete</to><enabled>Y</enabled> </hop>
+  <hop> <from>Delete</from><to>Filtra Meso</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Filtra Meso</name>
@@ -345,8 +370,8 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>114</xloc>
-      <yloc>185</yloc>
+      <xloc>120</xloc>
+      <yloc>292</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -478,8 +503,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>112</xloc>
-      <yloc>53</yloc>
+      <xloc>118</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -540,8 +565,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>316</xloc>
-      <yloc>181</yloc>
+      <xloc>322</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -574,32 +599,6 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>641</xloc>
       <yloc>59</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>seleciona_ES</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>Incaper</connection>
-    <sql>SELECT id as estado_id, codigo as codigo_estado FROM core_estado where codigo &#x3d; 32 order by codigo_estado</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>495</xloc>
-      <yloc>191</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -638,6 +637,63 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>786</xloc>
       <yloc>59</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>seleciona_ES</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Incaper</connection>
+    <sql>SELECT id as estado_id, codigo as codigo_estado FROM core_estado where codigo &#x3d; 32 order by codigo_estado</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>495</xloc>
+      <yloc>191</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Delete</name>
+    <type>Delete</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Incaper</connection>
+    <commit>100</commit>
+    <lookup>
+      <schema/>
+      <table>core_mesoregiao</table>
+      <key>
+        <name>Mesorregi&#xe3;o Geogr&#xe1;fica</name>
+        <field>codigo</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>315</xloc>
+      <yloc>163</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

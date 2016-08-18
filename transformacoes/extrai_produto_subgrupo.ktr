@@ -114,20 +114,113 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Trabalho_2_BD</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>Trabalho_2_BD</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4aa1da379d0c3fd89</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <order>
-  <hop> <from>Ler dados do produto</from><to>Ordena Subgrupo</to><enabled>Y</enabled> </hop>
-  <hop> <from>Ordena Subgrupo</from><to>Merge Join</to><enabled>Y</enabled> </hop>
-  <hop> <from>Tabela Grupo</from><to>Sort rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort rows</from><to>Merge Join</to><enabled>Y</enabled> </hop>
-  <hop> <from>Merge Join</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Delete</from><to>InitCap</to><enabled>Y</enabled> </hop>
+  <hop> <from>InitCap</from><to>Merge Join 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Ler dados do produto 2</from><to>Ordena Subgrupo 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge Join 2</from><to>Table output 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Ordena Subgrupo 2</from><to>Delete</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 2</from><to>Merge Join 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Tabela Grupo 2</from><to>Sort rows 2</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>Ler dados do produto</name>
+    <name>Delete</name>
+    <type>Delete</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Incaper</connection>
+    <commit>100</commit>
+    <lookup>
+      <schema/>
+      <table>agricultura_produto</table>
+      <key>
+        <name>COD_PROD</name>
+        <field>codigo</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>236</xloc>
+      <yloc>363</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>InitCap</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>NOME</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>yes</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>446</xloc>
+      <yloc>364</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Ler dados do produto 2</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -198,14 +291,14 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>176</xloc>
-      <yloc>89</yloc>
+      <xloc>235</xloc>
+      <yloc>99</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Merge Join</name>
+    <name>Merge Join 2</name>
     <type>MergeJoin</type>
     <description/>
     <distribute>Y</distribute>
@@ -216,7 +309,7 @@
            <schema_name/>
            </partitioning>
 <join_type>INNER</join_type>
-<step1>Ordena Subgrupo</step1>
+<step1>InitCap</step1>
 <step2>Sort rows</step2>
     <keys_1>
       <key>SUBGRUPO_ID</key>
@@ -226,14 +319,14 @@
     </keys_2>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>383</xloc>
-      <yloc>233</yloc>
+      <xloc>449</xloc>
+      <yloc>244</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Ordena Subgrupo</name>
+    <name>Ordena Subgrupo 2</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -260,14 +353,14 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>178</xloc>
-      <yloc>231</yloc>
+      <xloc>238</xloc>
+      <yloc>245</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Sort rows</name>
+    <name>Sort rows 2</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -294,14 +387,14 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>383</xloc>
-      <yloc>107</yloc>
+      <xloc>449</xloc>
+      <yloc>118</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Tabela Grupo</name>
+    <name>Tabela Grupo 2</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -320,14 +413,14 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>547</xloc>
-      <yloc>24</yloc>
+      <xloc>651</xloc>
+      <yloc>111</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Table output</name>
+    <name>Table output 2</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -370,8 +463,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>585</xloc>
-      <yloc>225</yloc>
+      <xloc>655</xloc>
+      <yloc>249</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

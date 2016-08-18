@@ -288,6 +288,30 @@
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
+  <connection>
+    <name>Trabalho_2_BD</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>Trabalho_2_BD</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4aa1da379d0c3fd89</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
   <order>
   <hop> <from>Estado</from><to>Merge Estado</to><enabled>Y</enabled> </hop>
   <hop> <from>Filtrando apenas ES</from><to>Ordenado por Municipio</to><enabled>Y</enabled> </hop>
@@ -296,8 +320,9 @@
   <hop> <from>Merge Estado</from><to>Municipio</to><enabled>Y</enabled> </hop>
   <hop> <from>MergeMicro</from><to>Merge Estado</to><enabled>Y</enabled> </hop>
   <hop> <from>Micro</from><to>MergeMicro</to><enabled>Y</enabled> </hop>
-  <hop> <from>Ordenado por Municipio</from><to>FiltrandoMunicipio</to><enabled>Y</enabled> </hop>
   <hop> <from>Sort micro</from><to>MergeMicro</to><enabled>Y</enabled> </hop>
+  <hop> <from>Ordenado por Municipio</from><to>Delete</to><enabled>Y</enabled> </hop>
+  <hop> <from>Delete</from><to>FiltrandoMunicipio</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Estado</name>
@@ -348,8 +373,8 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>131</xloc>
-      <yloc>295</yloc>
+      <xloc>104</xloc>
+      <yloc>420</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -506,8 +531,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>131</xloc>
-      <yloc>167</yloc>
+      <xloc>104</xloc>
+      <yloc>292</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -680,8 +705,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>291</xloc>
-      <yloc>295</yloc>
+      <xloc>264</xloc>
+      <yloc>420</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -716,6 +741,37 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>403</xloc>
       <yloc>167</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Delete</name>
+    <type>Delete</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Incaper</connection>
+    <commit>100</commit>
+    <lookup>
+      <schema/>
+      <table>core_municipio</table>
+      <key>
+        <name>Munic&#xed;pio</name>
+        <field>codigo</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>275</xloc>
+      <yloc>277</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
