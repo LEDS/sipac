@@ -53,7 +53,7 @@
     <unique_connections>N</unique_connections>
     <feedback_shown>Y</feedback_shown>
     <feedback_size>50000</feedback_size>
-    <using_thread_priorities>Y</using_thread_priorities>
+    <using_thread_priorities>N</using_thread_priorities>
     <shared_objects_file/>
     <capture_step_performance>N</capture_step_performance>
     <step_performance_capturing_delay>1000</step_performance_capturing_delay>
@@ -145,6 +145,30 @@
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
+  <connection>
+    <name>Trabalho_2_BD</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>Trabalho_2_BD</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4aa1da379d0c3fd89</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
   <order>
   <hop> <from>Tabela Municipio</from><to>Merge Municipio</to><enabled>Y</enabled> </hop>
   <hop> <from>Ordenar por Produto</from><to>Merge Produtos</to><enabled>Y</enabled> </hop>
@@ -156,13 +180,14 @@
   <hop> <from>Buscar arquivos na pasta</from><to>Ler arquivos</to><enabled>Y</enabled> </hop>
   <hop> <from>Ler arquivos</from><to>Validar campos do arquivo</to><enabled>Y</enabled> </hop>
   <hop> <from>Validar campos do arquivo</from><to>Apagar produ&#xe7;&#xe3;o mes</to><enabled>Y</enabled> </hop>
-  <hop> <from>Tabela Produ&#xe7;&#xe3;o</from><to>Atualizar dados anteriores</to><enabled>N</enabled> </hop>
+  <hop> <from>Merge Municipio</from><to>Execute SQL script</to><enabled>N</enabled> </hop>
+  <hop> <from>Tabela Produ&#xe7;&#xe3;o</from><to>Execute SQL script</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Apagar produ&#xe7;&#xe3;o mes</name>
     <type>Delete</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
          <partitioning>
@@ -196,62 +221,6 @@
     </step>
 
   <step>
-    <name>Atualizar dados anteriores</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>Incaper</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>Y</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>Update agricultura_producao&#xa;set valido &#x3d; false&#xa;where ano &#x3d; ANO and mes &#x3c; MES</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field>ANO&#x3b; MES</update_field>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-       <argument><name>ANO</name></argument>
-       <argument><name>MES</name></argument>
-       <argument><name>COD_UF</name></argument>
-       <argument><name>COD_MESO</name></argument>
-       <argument><name>COD_MICRO</name></argument>
-       <argument><name>COD_MUNICIPIO</name></argument>
-       <argument><name>COD_PRODUTO</name></argument>
-       <argument><name>SAFRA</name></argument>
-       <argument><name>IRRIGADO</name></argument>
-       <argument><name>COD_FONTE</name></argument>
-       <argument><name>COD_FASE</name></argument>
-       <argument><name>COD_OCORRENCIA</name></argument>
-       <argument><name>EM_FORMACAO</name></argument>
-       <argument><name>PLANTADA</name></argument>
-       <argument><name>COLHIDA</name></argument>
-       <argument><name>PERC_COLHIDO_MES</name></argument>
-       <argument><name>PRODUCAO</name></argument>
-       <argument><name>RENDIMENTO</name></argument>
-       <argument><name>PRECO</name></argument>
-       <argument><name>OBSERVACAO</name></argument>
-       <argument><name>DT_ATUALIZACAO</name></argument>
-       <argument><name>SGL_SIGLA</name></argument>
-       <argument><name>COLHIDO_ACUMULADO</name></argument>
-       <argument><name>PRECO_MEDIO_ANUAL</name></argument>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>898</xloc>
-      <yloc>303</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>Buscar arquivos na pasta</name>
     <type>GetFileNames</type>
     <description/>
@@ -276,7 +245,7 @@
     <dynamic_include_subfolders>N</dynamic_include_subfolders>
     <limit>0</limit>
     <file>
-      <name>&#x2f;home&#x2f;cristian&#x2f;Documentos&#x2f;LEDS&#x2f;Projetos&#x2f;Incaper&#x2f;sipac-backend&#x2f;dados_teste&#x2f;csv&#x2f;lspa</name>
+      <name>&#x2f;home&#x2f;cristian&#x2f;Documentos&#x2f;LEDS&#x2f;Projetos&#x2f;Incaper&#x2f;Testes Produ&#xe7;&#xe3;o&#x2f;files&#x2f;csv&#x2f;lspa</name>
       <filemask>.&#x2a;&#x5c;.csv</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -291,29 +260,35 @@
     </step>
 
   <step>
-    <name>Merge Municipio</name>
-    <type>MergeJoin</type>
+    <name>Execute SQL script</name>
+    <type>ExecSQL</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-<join_type>INNER</join_type>
-<step1>Ordena Municipio</step1>
-<step2>Tabela Municipio</step2>
-    <keys_1>
-      <key>COD_MUNICIPIO</key>
-    </keys_1>
-    <keys_2>
-      <key>codigo_municipio_tabela</key>
-    </keys_2>
+    <connection>Incaper</connection>
+    <execute_each_row>Y</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>Y</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>update agricultura_producao&#xa;set valido &#x3d; false&#xa;where ano &#x3d; &#x3f; and mes &#x3c; &#x3f; and valido is not false</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field>ANO&#x3b;MES</update_field>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+       <argument><name>ANO</name></argument>
+       <argument><name>MES</name></argument>
+    </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>770</xloc>
-      <yloc>175</yloc>
+      <xloc>835</xloc>
+      <yloc>327</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -322,7 +297,7 @@
     <name>Ler arquivos</name>
     <type>CsvInput</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
          <partitioning>
@@ -617,8 +592,8 @@
     </step>
 
   <step>
-    <name>Ordenar por Produto</name>
-    <type>SortRows</type>
+    <name>Merge Municipio</name>
+    <type>MergeJoin</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -627,24 +602,46 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>COD_PRODUTO</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-    </fields>
+<join_type>INNER</join_type>
+<step1>Ordena Municipio</step1>
+<step2>Tabela Municipio</step2>
+    <keys_1>
+      <key>COD_MUNICIPIO</key>
+    </keys_1>
+    <keys_2>
+      <key>codigo_municipio_tabela</key>
+    </keys_2>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>322</xloc>
+      <xloc>770</xloc>
+      <yloc>175</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Merge Produtos</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<join_type>INNER</join_type>
+<step1>Ordenar por Produto</step1>
+<step2>Tabela Produto</step2>
+    <keys_1>
+      <key>COD_PRODUTO</key>
+    </keys_1>
+    <keys_2>
+      <key>codigo_produto</key>
+    </keys_2>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>498</xloc>
       <yloc>175</yloc>
       <draw>Y</draw>
       </GUI>
@@ -654,7 +651,7 @@
     <name>Ordena Municipio</name>
     <type>SortRows</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
          <partitioning>
@@ -679,6 +676,40 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>610</xloc>
+      <yloc>175</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Ordenar por Produto</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>COD_PRODUTO</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>322</xloc>
       <yloc>175</yloc>
       <draw>Y</draw>
       </GUI>
@@ -801,38 +832,14 @@
           <column_name>produto_id</column_name>
           <stream_name>id_produto</stream_name>
         </field>
+        <field>
+          <column_name>preco</column_name>
+          <stream_name>PRECO</stream_name>
+        </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>898</xloc>
-      <yloc>175</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Merge Produtos</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<join_type>INNER</join_type>
-<step1>Ordenar por Produto</step1>
-<step2>Tabela Produto</step2>
-    <keys_1>
-      <key>COD_PRODUTO</key>
-    </keys_1>
-    <keys_2>
-      <key>codigo_produto</key>
-    </keys_2>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>498</xloc>
       <yloc>175</yloc>
       <draw>Y</draw>
       </GUI>

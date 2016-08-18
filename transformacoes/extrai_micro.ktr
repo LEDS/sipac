@@ -288,14 +288,39 @@
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
+  <connection>
+    <name>Trabalho_2_BD</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>Trabalho_2_BD</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4aa1da379d0c3fd89</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
   <order>
   <hop> <from>CSV file input</from><to>Filter rows</to><enabled>Y</enabled> </hop>
   <hop> <from>Filter rows</from><to>Ordena Microrregi&#xe3;o</to><enabled>Y</enabled> </hop>
-  <hop> <from>Ordena Microrregi&#xe3;o</from><to>Filtra Micro</to><enabled>Y</enabled> </hop>
   <hop> <from>Table Meso</from><to>Merge Join</to><enabled>Y</enabled> </hop>
   <hop> <from>Filtra Micro</from><to>Ordena por Meso</to><enabled>Y</enabled> </hop>
   <hop> <from>Ordena por Meso</from><to>Merge Join</to><enabled>Y</enabled> </hop>
   <hop> <from>Merge Join</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Ordena Microrregi&#xe3;o</from><to>Delete</to><enabled>Y</enabled> </hop>
+  <hop> <from>Delete</from><to>Filtra Micro</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>CSV file input</name>
@@ -424,8 +449,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>93</xloc>
-      <yloc>30</yloc>
+      <xloc>119</xloc>
+      <yloc>170</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -453,8 +478,8 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>99</xloc>
-      <yloc>177</yloc>
+      <xloc>125</xloc>
+      <yloc>317</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -478,8 +503,8 @@
         <case_insensitive>N</case_insensitive>
         </field>      </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>306</xloc>
-      <yloc>36</yloc>
+      <xloc>354</xloc>
+      <yloc>84</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -506,8 +531,8 @@
     </keys_2>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>558</xloc>
-      <yloc>35</yloc>
+      <xloc>606</xloc>
+      <yloc>83</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -540,8 +565,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>311</xloc>
-      <yloc>176</yloc>
+      <xloc>337</xloc>
+      <yloc>316</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -574,8 +599,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>417</xloc>
-      <yloc>35</yloc>
+      <xloc>465</xloc>
+      <yloc>83</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -600,8 +625,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>558</xloc>
-      <yloc>174</yloc>
+      <xloc>606</xloc>
+      <yloc>222</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -650,8 +675,39 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>755</xloc>
-      <yloc>37</yloc>
+      <xloc>803</xloc>
+      <yloc>85</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Delete</name>
+    <type>Delete</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Incaper</connection>
+    <commit>100</commit>
+    <lookup>
+      <schema/>
+      <table>core_microregiao</table>
+      <key>
+        <name>Microrregi&#xe3;o Geogr&#xe1;fica</name>
+        <field>codigo</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>346</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
