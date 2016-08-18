@@ -36,3 +36,32 @@ services:
         environment:
             - DATABASE_HOST=db
             - DATABASE_PORT=5432
+    pentaho-biserver:
+        image: leandrocp/pentaho-server
+        ports:
+            - "8080"
+        links:
+            - db:postgres
+        environment:
+            - DB_USER=postgres
+            - DB_PASS=admin123
+    pentaho-pdi:
+        container_name: pdi
+        build: dockerfiles/pentaho-pdi
+        ports:
+            - "8080"
+        links:
+            - db
+            - pentaho-biserver
+        volumes:
+            - /tmp/.X11-unix:/tmp/.X11-unix:rw
+            - /tmp/.docker.xauth:/tmp/.docker.xauth:rw
+            - ./transformacoes.sh:/opt/pentaho/data-integration/transformacoes.sh
+            - ./dados_teste:/opt/pentaho/data-integration/dados_teste
+            - ./dados_teste:/home/cristian/Documentos/LEDS/Projetos/Incaper/sipac-backend/dados_teste
+            - ./transformacoes:/opt/pentaho/data-integration/samples/transformations/Sipac
+            - ./jobs:/opt/pentaho/data-integration/samples/jobs/Sipac
+        environment:
+            - XAUTH=/tmp/.docker.xauth
+            - XAUTHORITY=/tmp/.docker.xauth
+            - DISPLAY
