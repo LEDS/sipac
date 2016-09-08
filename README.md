@@ -1,4 +1,4 @@
-# Sipac-Backend
+# Sipac
 
 O  Projeto __SIPAC__ (Sistema de informações da produção agropecuária capixaba) irá possibilitar o melhor desempenho do planejamento e organização, pesquisa e extensão das atividades agropecuárias capixaba, bem como reduzirá o tempo que os pesquisadores e planejadores gastam com a busca e sistematização dos dados estatísticos.
 
