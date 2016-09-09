@@ -61,4 +61,4 @@ services:
         environment:
             - XAUTH=/tmp/.docker.xauth
             - XAUTHORITY=/tmp/.docker.xauth
-            - DISPLAY
+            - DISPLAY=$DISPLAY
