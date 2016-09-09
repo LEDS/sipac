@@ -46,7 +46,7 @@ services:
         container_name: pdi
         build: dockerfiles/pentaho-pdi
         ports:
-            - "8080"
+            - "8181"
         links:
             - db
             - pentaho-biserver
