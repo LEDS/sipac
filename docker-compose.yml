@@ -37,7 +37,7 @@ services:
             - DATABASE_HOST=db
             - DATABASE_PORT=5432
     pentaho-biserver:
-        image: leandrocp/pentaho-server
+        image: wmarinho/pentaho-biserver:6.1
         ports:
             - "8080"
         links:
