@@ -8,34 +8,7 @@ services:
             - POSTGRES_PASSWORD=admin123
             - POSTGRES_USER=postgres
             - POSTGRES_DB=Incaper
-    migrations:
-        build: dockerfiles/migrations
-        links:
-            - db
-            - web
-        depends_on:
-            - web
-        environment:
-            - DATABASE_NAME=Incaper
-            - DATABASE_USER=postgres
-            - DATABASE_PASSWORD=admin123
-            - DATABASE_PORT=5432
-            - DATABASE_ENCODING=utf8
-            - DATABASE_DRIVER=postgresql
-            - MIGRATIONS_PATH=/home/flyway/sql
-    web:
-        build: .
         volumes:
-            - .:/code
-        ports:
-            - "8000"
-        depends_on:
-            - db
-        links:
-            - db
-        environment:
-            - DATABASE_HOST=db
-            - DATABASE_PORT=5432
     pentaho-biserver:
         image: wmarinho/pentaho-biserver:6.1
         ports:
