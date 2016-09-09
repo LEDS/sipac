@@ -1,2 +1,2 @@
 #/bin/bash
-docker exec -it pdi_1 $@
+docker exec -it pdi $@
