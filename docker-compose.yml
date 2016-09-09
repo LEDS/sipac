@@ -56,6 +56,7 @@ services:
             - ./transformacoes.sh:/opt/pentaho/data-integration/transformacoes.sh
             - ./dados_teste:/opt/pentaho/data-integration/dados_teste
             - ./dados_teste:/home/cristian/Documentos/LEDS/Projetos/Incaper/sipac-backend/dados_teste
+            - ./dados_teste:/home/cristian/Documentos/LEDS/Projetos/Incaper/Testes Produção/files
             - ./transformacoes:/opt/pentaho/data-integration/samples/transformations/Sipac
             - ./jobs:/opt/pentaho/data-integration/samples/jobs/Sipac
         environment:
