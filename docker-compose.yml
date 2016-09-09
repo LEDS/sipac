@@ -41,10 +41,7 @@ services:
         ports:
             - "8080"
         links:
-            - db:postgres
-        environment:
-            - DB_USER=postgres
-            - DB_PASS=admin123
+            - db
     pentaho-pdi:
         container_name: pdi
         build: dockerfiles/pentaho-pdi
