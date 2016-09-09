@@ -59,6 +59,7 @@ services:
             - ./dados_teste:/home/cristian/Documentos/LEDS/Projetos/Incaper/Testes Produção/files
             - ./transformacoes:/opt/pentaho/data-integration/samples/transformations/Sipac
             - ./jobs:/opt/pentaho/data-integration/samples/jobs/Sipac
+            - $HOME/.kettle:/home/pentaho/.kettle
         environment:
             - XAUTH=/tmp/.docker.xauth
             - XAUTHORITY=/tmp/.docker.xauth
