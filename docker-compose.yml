@@ -9,6 +9,7 @@ services:
             - POSTGRES_USER=postgres
             - POSTGRES_DB=Incaper
         volumes:
+            - ./dados_teste/sqls/Backup/Incaper.sql:/docker-entrypoint-initdb.d/populate_incaper_database.sql
     pentaho-biserver:
         image: wmarinho/pentaho-biserver:6.1
         ports:
