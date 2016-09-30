@@ -1,77 +1,81 @@
 COD_PROD,NOME,SUBGRUPO,SUBGRUPO_ID
-0133.2010,ABACATE,Fruticultura,8
-0119.3010,ABACAXI,Fruticultura,8
-0119.9010,ABÓBORA (JERIMUM MORANGA,Olericultura,9
-0121.2010,ABOBRINHA,Olericultura,9
-0133.2020,AÇAÍ (cultivo),Fruticultura,8
-0121.1010,ACELGA,Olericultura,9
-0133.2030,Acerola ou cereja-das-antilhas,Fruticultura,8
-0121.1020,AGRIÃO,Olericultura,9
-0121.1030,AIPO OU SALSÃO,Olericultura,9
-0121.1040,ALCACHOFRA,Olericultura,9
-0121.1050,ALFACE,Olericultura,9
-0119.4010,ALHO,Olericultura,9
-0121.1070,ALMEIRÃO OU CHICÓRIA AMARGA,Olericultura,9
-0111.0020,ARROZ EM CASCA,Alimento básico,10
-0133.2080,BANANA,Fruticultura,8
-0121.3040,Batata-baroa ou mandioquinha-salsa  ,Olericultura,9
-0121.3050,BATATA-DOCE,Olericultura,9
-0119.4020,BATATA-INGLESA,Olericultura,9
-0121.2020,BERINJELA,Olericultura,9
-0121.3060,BETERRABA,Olericultura,9
-0121.1120,BRÓCOLIS,Olericultura,9
-0135.0010,CACAU (AMÊNDOA),Fruticultura,8
-0134.0020,CAFÉ EM GRÃO (Total arabica + Conilon),Cafeicultura,11
-0134.0021,café arábica (em grão),Cafeicultura,11
-0134.0022,café canephora,Cafeicultura,11
-0113.0010,CANA-DE-AÇÚCAR,Cana-de-açúcar ,12
-0119.2050,Cana (forrageira para corte),Outros produtos agrícolas,13
-0133.2120,CAQUI,Fruticultura,8
-0121.3070,CARÁ,Olericultura,9
-0119.4030,CEBOLA,Olericultura,9
-0121.5120,CEBOLINHA (FOLHA),Olericultura,9
-0121.3080,CENOURA,Olericultura,9
-0121.1150,CHICÓRIA,Olericultura,9
-0121.2030,CHUCHU,Olericultura,9
-0133.3030,COCO-DA-BAÍA,Fruticultura,8
-0121.5130,COENTRO (FOLHA),Olericultura,9
-0121.6030,Cogumelos comestíveis  ,Olericultura,9
-0121.1160,COUVE,Olericultura,9
+0133.2010,Abacate,Fruticultura,8
+0119.3010,Abacaxi,Fruticultura,8
+0119.9010,Abóbora (moranga),Olericultura,9
+0121.2010,Abobrinha,Olericultura,9
+0133.2020,Açaí (cultivo),Fruticultura,8
+0121.1010,Acelga,Olericultura,9
+0133.2030,Acerola,Fruticultura,8
+0121.1020,Agrião,Olericultura,9
+0121.1030,Aipo ou salsão,Olericultura,9
+0121.1040,Alcachofra,Olericultura,9
+0121.1050,Alface,Olericultura,9
+0119.4010,Alho,Olericultura,9
+0121.1070,Almeirão ou chicória,Olericultura,9
+0111.0020,Arroz (em casca),Alimento básico,10
+0139.4010,Azeitona,Olericultura,9
+0133.2080,Banana,Fruticultura,8
+0121.3040,Batata-baroa,Olericultura,9
+0121.3050,Batata-doce,Olericultura,9
+0119.4020,Batata-inglesa,Olericultura,9
+0121.2020,Berinjela,Olericultura,9
+0121.3060,Beterraba,Olericultura,9
+0139.2010,Borracha,Outros produtos agrícolas,13
+0121.1120,Brócolis,Olericultura,9
+0135.0010,Cacau (amêndoa),Fruticultura,8
+0134.0020,Café total (em grão),Cafeicultura,11
+0134.0021,Café arábica (em grão),Cafeicultura,11
+0134.0022,Café conilon (em grão),Cafeicultura,11
+0113.0010,Cana-de-açúcar,Cana-de-açúcar ,12
+0119.2050,Cana (forragem),Outros produtos agrícolas,13
+0133.2120,Caqui,Fruticultura,8
+0121.3070,Cará,Olericultura,9
+0119.4030,Cebola,Olericultura,9
+0121.5120,Cebolinha (folha),Olericultura,9
+0121.3080,Cenoura,Olericultura,9
+0121.1150,Chicória,Olericultura,9
+0121.2030,Chuchu,Olericultura,9
+0133.3030,Coco-da-baía,Fruticultura,8
+0121.5130,Coentro,Olericultura,9
+0121.6030,Cogumelos,Olericultura,9
+0121.1160,Couve,Olericultura,9
 0121.1200,Couve-flor ,Olericultura,9
-0121.1230,Espinafres (comum da Nova Zelândia),Olericultura,9
-0119.1030,FEIJÃO COMUM DE COR EM GRÃO,Alimento básico,10
-0119.1040,FEIJÃO COMUM PRETO EM GRÃO,Alimento básico,10
-0119.1060,FEIJÃO EM GRÃO (QUALQUER OUTRO: ADZUKI MUNGO DE LIMA),Alimento básico,10
-0119.1050,FEIJÃO FRADINHO CAUPI,Alimento básico,10
-0121.5200,Gengibre (rizoma)  ,Olericultura,9
-0116.0030,GERGELIM,Olericultura,9
-0133.2220,GOIABA,Fruticultura,8
+0220.8120,Cupuaçu (extrativismo),Fruticultura,8
+0133.2180,Cupuaçu (cultivo),Fruticultura,8
+0121.1230,Espinafre,Olericultura,9
+0119.1030,Feijão de cor (em grão),Alimento básico,10
+0119.1040,Feijão preto (em grão),Alimento básico,10
+0119.1060,Feijão (outros em grão),Alimento básico,10
+0119.1050,Feijão fradinho (em grão),Alimento básico,10
+0121.5200,Gengibre ,Olericultura,9
+0116.0030,Gergelim,Olericultura,9
+0133.2220,Goiaba,Fruticultura,8
 0133.2230,Graviola,Fruticultura,8
-0121.3110,INHAME,Olericultura,9
+0121.3110,Inhame,Olericultura,9
 0121.2040,Jiló  ,Olericultura,9
-0131.0010,LARANJA,Fruticultura,8
-0133.2310,Lichia ou lechia,Fruticultura,8
-0133.1040,LIMÃO,Fruticultura,8
-0133.2330,MAMÃO,Fruticultura,8
-0119.4040,MANDIOCA (AIPIM MACAXEIRA) ( para indústria),Alimento básico,10
-9119.4040,MANDIOCA (AIPIM MACAXEIRA) ( para mesa,Alimento básico,10
-0133.2340,MANGA,Fruticultura,8
-0133.2360,MARACUJÁ,Fruticultura,8
-0121.2050,Maxixe (fruto)  ,Olericultura,9
-0119.3020,MELANCIA,Fruticultura,8
-0119.3030,MELÃO,Fruticultura,8
-0121.6040,MILHO EM ESPIGA (VERDE),Olericultura,9
-0111.0070,MILHO EM GRÃO (Total - Todas as safras),Alimento básico,10
-0111.0071,MILHO EM GRÃO (1ªsafra),Alimento básico,10
-0111.0072,MILHO EM GRÃO (2ª e 3ª safra),Alimento básico,10
-0119.2130,Milho (forrageira para corte),Outros produtos agrícolas,13
-0121.2060,MORANGO,Fruticultura,8
-0133.3050,NOZ MACADÂMIA,Fruticultura,8
-0139.9060,PALMITO (cultivo),Outros produtos agrícolas,13
-0121.2070,Pepino (fruto)  ,Olericultura,9
-0133.2410,PÊSSEGO,Fruticultura,8
+0131.0010,Laranja,Fruticultura,8
+0133.2310,Lichia,Fruticultura,8
+0133.1040,Limão,Fruticultura,8
+0133.2330,Mamão,Fruticultura,8
+0119.4040,Mandioca (para indústria),Alimento básico,10
+9119.4040,Mandioca (para mesa),Alimento básico,10
+0133.2340,Manga,Fruticultura,8
+0133.2360,Maracujá,Fruticultura,8
+0121.2050,Maxixe,Olericultura,9
+0119.3020,Melancia,Fruticultura,8
+0119.3030,Melão,Fruticultura,8
+0121.6040,Milho-verde em espiga,Olericultura,9
+0111.0070,Milho total (em grão),Alimento básico,10
+0111.0071,Milho 1ªsafra (em grão),Alimento básico,10
+0111.0072,Milho 2ª e 3ª safra (em grão),Alimento básico,10
+0119.2130,Milho (forragem),Outros produtos agrícolas,13
+0121.2060,Morango,Fruticultura,8
+0133.3050,Noz macadâmia,Fruticultura,8
+0139.9060,Palmito (cultivo),Outros produtos agrícolas,13
+0121.2070,Pepino,Olericultura,9
+0133.2410,Pêssego,Fruticultura,8
 0121.5270,Pimenta,Olericultura,9
-0139.1060,PIMENTA-DO-REINO,Especiaria,14
+0139.1060,Pimenta-do-reino,Especiaria,14
 0121.2080,Pimentão  ,Olericultura,9
 0121.2090,Quiabo  ,Olericultura,9
 0121.3140,Rabanete  ,Olericultura,9
@@ -79,11 +83,36 @@ COD_PROD,NOME,SUBGRUPO,SUBGRUPO_ID
 0121.1270,Rúcula ou pinchão  ,Olericultura,9
 0121.5300,Salsa   ,Olericultura,9
 0121.1290,Taioba (folha)  ,Olericultura,9
-0133.1070,TANGERINA,Fruticultura,8
-0121.2100,TOMATE ESTAQUEADO,Olericultura,9
-0139.1070,URUCUM (cultivo),Outros produtos agrícolas,13
-0132.0010,UVA (PARA MESA),Fruticultura,8
-0132.0710,UVA ( Total - uva para mesa + uva para vinho),Fruticultura,8
-0132.0020,UVA (PARA VINHO),Fruticultura,8
-0121.4060,VAGEM (FEIJÃO VAGEM),Olericultura,9
-0139.2010,BORRACHA,Outros produtos agrícolas,13
+0133.1070,Tangerina,Fruticultura,8
+0121.2100,Tomate,Olericultura,9
+0139.1070,Urucum (cultivo),Outros produtos agrícolas,13
+0132.0010,Uva (para mesa),Fruticultura,8
+0132.0710,Uva ( total),Fruticultura,8
+0132.0020,Uva (para vinho),Fruticultura,8
+0121.4060,Vagem (feijão),Olericultura,9
+0121.1060,Alho-poró,Olericultura,9
+0116.0010,Amendoin (em casca),Olericultura,9
+0121.1080,Aspargo,Olericultura,9
+0121.1110,Bertalha,Olericultura,9
+0121.1190,Couve-de-bruxelas,Olericultura,9
+0121.4010,Ervilha (vargem),Olericultura,9
+0119.1010,Ervilha (em grãos),Olericultura,9
+0121.4040,Lentilha,Olericultura,9
+0133.2040,Ameixa,Fruticultura,8
+0133.2090,Cajá-manga,Fruticultura,8
+0133.3010,Castanha-de-caju,Fruticultura,8
+0133.2100,Caju ,Fruticultura,8
+0133.2190,Figo,Fruticultura,8
+0133.2320,Maçã,Fruticultura,8
+0133.2400,Pêra,Fruticultura,8
+0115.0010,Soja (em grãos),Alimento básico,10
+0116.0030,Gergelim (em grãos),Olericultura,9
+0121.4020,Grão-de-bico,Olericultura,9
+0133.2050,Amora,Fruticultura,8
+0133.2055,Atemóia ,Fruticultura,8
+0133.2130,Carambola ,Fruticultura,8
+0133.2215,Fruta-do-conde,Fruticultura,8
+0133.2260,Jabuticaba,Fruticultura,8
+0133.2270,Jaca,Fruticultura,8
+0133.2280,Jambo,Fruticultura,8
+0133.2390,Nêspera,Fruticultura,8
