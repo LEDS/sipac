@@ -9,7 +9,8 @@ services:
             - POSTGRES_USER=postgres
             - POSTGRES_DB=Incaper
         volumes:
-            - ./dados_teste/sqls/Backup/Incaper.sql:/docker-entrypoint-initdb.d/populate_incaper_database.sql
+            - ./dados_teste/sqls/ModeloFisico/Modelo_Fisico_Sipac.sql:/docker-entrypoint-initdb.d/V1_1__Modelo_Fisico_Sipac.sql
+            - ./dados_teste/sqls/Consultas/funcoes.sql:/docker-entrypoint-initdb.d/V1_2__funcoes.sql
     pentaho-biserver:
         image: wmarinho/pentaho-biserver:6.1
         ports:
@@ -31,6 +32,7 @@ services:
             - ./dados_teste:/opt/pentaho/data-integration/dados_teste
             - ./dados_teste:/home/cristian/Documentos/LEDS/Projetos/Incaper/sipac-backend/dados_teste
             - ./dados_teste:/home/cristian/Documentos/LEDS/Projetos/Incaper/Testes Produção/files
+            - ./dados_teste/csv/Produtos.csv:/home/cristian/Documentos/LEDS/Projetos/Incaper/Pentaho/Pentaho 5.4/Dados/[DICIONARIO DE CAMPOS] Produtos.csv
             - ./transformacoes:/opt/pentaho/data-integration/samples/transformations/Sipac
             - ./jobs:/opt/pentaho/data-integration/samples/jobs/Sipac
             - $HOME/.kettle:/home/pentaho/.kettle
