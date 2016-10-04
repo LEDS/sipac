@@ -77,7 +77,7 @@
   </notepads>
   <connection>
     <name>Incaper</name>
-    <server>localhost</server>
+    <server>db</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
     <database>Incaper</database>

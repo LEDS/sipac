@@ -1,7 +1,7 @@
 id,nome_grupo,grupo_id
-5,Agricultura,
-6,Silvicultura,
-7,Produção Animal,
+5,Agricultura,5
+6,Silvicultura,5
+7,Produção Animal,5
 8,Fruticultura,5
 9,Olericultura,5
 10,Alimento Básico,5
