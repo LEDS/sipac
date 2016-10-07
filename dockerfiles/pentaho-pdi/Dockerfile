@@ -12,7 +12,7 @@ ENV PENTAHO_JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-amd64
 ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-amd64
 
 RUN apt-get update -y \
-    && apt-get -y install wget unzip libswt-gtk-3-java libwebkitgtk-1.0-0 libswt-gtk-3-java xz-utils \
+    && apt-get -y install wget unzip libswt-gtk-3-jni libswt-gtk-3-java libwebkitgtk-1.0-0 libswt-gtk-3-java xz-utils fastjar make dpkg-dev gtk2.0 mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev libgtk-3-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # nao ta extraindo, com problema no formato do xf ou o xz-utils nao instalado
