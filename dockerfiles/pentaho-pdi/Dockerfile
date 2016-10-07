@@ -15,12 +15,10 @@ RUN apt-get update -y \
     && apt-get -y install wget unzip libswt-gtk-3-jni libswt-gtk-3-java libwebkitgtk-1.0-0 libswt-gtk-3-java xz-utils fastjar make dpkg-dev gtk2.0 mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev libgtk-3-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# nao ta extraindo, com problema no formato do xf ou o xz-utils nao instalado
 RUN cd /tmp \
-    && wget http://http.debian.net/debian/pool/main/s/swt4-gtk/swt4-gtk_4.6.0-2.debian.tar.xz \
-    && tar xf swt4-gtk_4.6.0-2.debian.tar.xz -C /tmp \
-    && make -C debian \
-    && make -C debian install \
+    && wget http://alcateia.ufscar.br/debian/pool/main/s/swt4-gtk/swt4-gtk_4.6.0.orig.tar.xz \
+    && tar xf swt4-gtk_4.6.0.orig.tar.xz \
+    && ./build.sh \
     && rm -rf /tmp/*
 
 RUN groupadd -r pentaho && useradd -r -g pentaho pentaho \
