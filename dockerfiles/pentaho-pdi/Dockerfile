@@ -30,9 +30,6 @@ RUN /usr/bin/wget --progress=dot:giga http://downloads.sourceforge.net/project/p
     /usr/bin/unzip -q /tmp/pdi-ce-${PENTAHO_TAG}.zip -d  $PENTAHO_HOME; \
      rm /tmp/pdi-ce-${PENTAHO_TAG}.zip
 
-# /usr/lib/jni/libswt-gtk-3836.so
-# install libswt-gtk-4-java
-# libswt-gtk-4-java no in apt => compile
 ENV LIBPATH $LIBPATH:/usr/lib/jni
 
 COPY scripts/ /opt/pentaho/data-integration/
