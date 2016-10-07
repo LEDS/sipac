@@ -21,7 +21,7 @@ RUN cd /tmp \
     && ./build.sh \
     && rm -rf /tmp/*
 
-RUN groupadd -r pentaho && useradd -r -g pentaho pentaho \
+RUN groupadd pentaho && useradd -m -g pentaho pentaho \
     && mkdir $PENTAHO_HOME && chown -R pentaho:pentaho $PENTAHO_HOME
 USER pentaho 
 
