@@ -1,0 +1,1507 @@
+ANO,MES,COD_UF,COD_MESO,COD_MICRO,COD_MUNICIPIO,COD_PRODUTO,SAFRA,IRRIGADO,COD_FONTE,COD_FASE,COD_OCORRENCIA,EM_FORMACAO,PLANTADA,COLHIDA,PERC_COLHIDO_MES,PRODUCAO,RENDIMENTO,PRECO,OBSERVACAO,DT_ATUALIZACAO,SGL_SIGLA,COLHIDO_ACUMULADO,PRECO_MEDIO_ANUAL
+2012,12,32,1,1,169,0111.0020,1,S,1,6,9,,25,25,,75,3000,,,03/12/2012,DANIELSSILVA,100,840
+2012,12,32,1,1,169,0111.0070,1,N,1,6,9,,50,50,,90,1800,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,1,169,0113.0010,0,N,1,6,9,0,20,20,,800,40000,,Rendimento levemente abaixo do esperado tendo em vista a falta de técnicas adequadas empregadas no cultivo.,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,1,169,0119.1040,1,N,1,6,9,,45,45,,36,800,,,03/12/2012,DANIELSSILVA,100,1400
+2012,12,32,1,1,169,0119.1040,2,N,1,6,9,,45,45,,36,800,,,03/12/2012,DANIELSSILVA,100,2800
+2012,12,32,1,1,169,0119.2050,0,N,1,6,9,0,70,70,,2800,40000,,,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,1,169,0119.3020,0,S,1,6,9,,5,5,,125,25000,,,03/12/2012,DANIELSSILVA,100,400
+2012,12,32,1,1,169,0119.4040,0,N,1,6,9,0,30,30,,510,17000,,,03/12/2012,DANIELSSILVA,100,290
+2012,12,32,1,1,169,0119.9010,0,N,9,6,9,,5,5,,75,15000,,,03/12/2012,DANIELSSILVA,100,460
+2012,12,32,1,1,169,0121.3110,0,S,1,6,9,,5,5,,75,15000,,,03/12/2012,DANIELSSILVA,100,1190
+2012,12,32,1,1,169,0131.0010,0,N,9,6,9,0,15,15,,135,9000,,,03/12/2012,DANIELSSILVA,100,770
+2012,12,32,1,1,169,0133.2340,0,N,9,6,9,20,40,40,,400,10000,,,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,1,169,0133.3030,0,N,9,6,9,0,10,10,,50,5000,,Falta de Técnicas adequadas para aumentar a produtividade.,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,1,169,0134.0021,0,N,1,6,9,50,850,850,,612,720,,Falta de técnicas adequadas reduzem o rendimento.,03/12/2012,DANIELSSILVA,100,5300
+2012,12,32,1,1,169,0134.0022,0,N,1,6,9,0,1800,1800,,2160,1200,,,03/12/2012,DANIELSSILVA,100,4018.6
+2012,12,32,1,1,169,0134.0022,0,S,1,6,9,400,300,300,,810,2700,,Rendimento médio aumentado tendo em vista os tratos culturais.,03/12/2012,DANIELSSILVA,100,4018.6
+2012,12,32,1,1,169,0135.0010,0,N,1,6,9,0,3,3,0,2,667,4500.00,Trata-se de pequenos produtores tecnificados,06/12/2012,NEIDIMAR,100,450
+2012,12,32,1,1,904,0111.0020,1,N,1,6,9,,400,400,,800,2000,,,03/12/2012,DANIELSSILVA,100,830
+2012,12,32,1,1,904,0111.0070,1,N,1,6,9,,400,400,,920,2300,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,1,904,0119.1040,1,N,1,6,9,,140,140,,84,600,,,03/12/2012,DANIELSSILVA,100,2135
+2012,12,32,1,1,904,0119.1040,2,N,9,6,9,,50,50,,30,600,,,03/12/2012,DANIELSSILVA,100,2400
+2012,12,32,1,1,904,0119.2050,0,N,1,6,9,10,47,47,,940,20000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,1,904,0119.3020,0,N,1,6,9,,3,3,,9,3000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,400
+2012,12,32,1,1,904,0119.4040,0,N,1,6,9,10,60,60,,900,15000,,Há um aumento esperado na produção de mandioca.,03/12/2012,DANIELSSILVA,100,290
+2012,12,32,1,1,904,0133.2080,0,N,9,6,9,0,11,11,,23,2091,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,1,904,0133.2080,0,S,9,6,9,16,95,95,,450,4737,,"Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores, apesar de ser irrigada.",03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,1,904,0133.2340,0,N,9,6,9,5,54,54,,1512,28000,,Tratam-se de produtores tecnificados.,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,1,904,0133.3030,0,N,9,6,9,0,250,250,,2250,9000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,1,904,0134.0022,0,N,1,6,9,0,2400,2400,,2952,1230,,,03/12/2012,DANIELSSILVA,100,4211.5
+2012,12,32,1,1,904,0134.0022,0,S,1,6,9,1000,3600,3600,,7560,2100,,"Rendimento superior a média, tendo em vista as altas técnicas utilizadas no cultivo do produto.",03/12/2012,DANIELSSILVA,100,4211.5
+2012,12,32,1,1,904,0135.0010,0,N,9,6,9,2,2,2,,1,500,,,03/12/2012,DANIELSSILVA,100,4500
+2012,12,32,1,1,904,0139.2010,0,N,9,6,9,4,2,2,,5,2500,,Rendimento levemente superior tendo em vista as boas condições para o desenvolvimento da cultura.,03/12/2012,DANIELSSILVA,100,2900
+2012,12,32,1,1,2108,0111.0020,1,N,1,6,9,,50,50,,150,3000,,,03/12/2012,DANIELSSILVA,100,840
+2012,12,32,1,1,2108,0111.0070,1,N,1,6,9,,18,18,,32,1778,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,1,2108,0113.0010,0,N,1,6,9,0,100,100,,6000,60000,,,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,1,2108,0119.1040,1,N,1,6,9,,15,15,,9,600,,,03/12/2012,DANIELSSILVA,100,1250
+2012,12,32,1,1,2108,0119.1040,2,N,1,6,9,,15,15,,9,600,,,03/12/2012,DANIELSSILVA,100,2350
+2012,12,32,1,1,2108,0119.2050,0,N,1,6,9,0,350,350,,21000,60000,,,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,1,2108,0119.4040,0,N,1,6,9,0,90,90,,1350,15000,,,03/12/2012,DANIELSSILVA,100,290
+2012,12,32,1,1,2108,0119.9010,0,N,9,6,9,,5,5,,50,10000,,,03/12/2012,DANIELSSILVA,100,640
+2012,12,32,1,1,2108,0121.2100,0,S,1,6,9,,2,2,,100,50000,,,03/12/2012,DANIELSSILVA,100,1270
+2012,12,32,1,1,2108,0121.3050,0,N,9,6,9,,2,2,,20,10000,,Está em implantação no município. Poucas Técnicas aplicadas.,03/12/2012,DANIELSSILVA,100,850
+2012,12,32,1,1,2108,0121.3110,0,N,9,6,9,,1,1,,18,18000,,,03/12/2012,DANIELSSILVA,100,1190
+2012,12,32,1,1,2108,0131.0010,0,N,9,6,9,0,5,5,,40,8000,,,03/12/2012,DANIELSSILVA,100,770
+2012,12,32,1,1,2108,0132.0020,0,N,9,6,9,0,8,8,,80,10000,,Baixo Rendimento Médio devido a falta de técnicas adequadas empregadas e o clima da região.,03/12/2012,DANIELSSILVA,100,4000
+2012,12,32,1,1,2108,0133.1040,0,N,9,6,9,0,5,5,,80,16000,,,03/12/2012,DANIELSSILVA,100,200
+2012,12,32,1,1,2108,0133.2080,0,N,9,6,9,0,50,50,,650,13000,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,1,2108,0133.2220,0,N,9,6,9,0,4,4,,60,15000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,1560
+2012,12,32,1,1,2108,0133.2340,0,N,9,6,9,0,5,5,,50,10000,,,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,1,2108,0133.3030,0,N,9,6,9,0,5,5,,48,9600,,,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,1,2108,0134.0021,0,N,1,6,9,0,50,50,,36,720,,Produtividade Baixa tendo em vista a falta de tratos culturais.,03/12/2012,DANIELSSILVA,100,5225
+2012,12,32,1,1,2108,0134.0022,0,N,1,6,9,0,600,600,,468,780,,"Houve uma redução significativa tendo em vista a falta de tratos culturais, principalmente a irrigação.",03/12/2012,DANIELSSILVA,100,3999.9
+2012,12,32,1,1,2108,0134.0022,0,S,1,6,9,0,600,600,,1440,2400,,Houve um aumento tendo em vista os tratos culturais empregados.,03/12/2012,DANIELSSILVA,100,3999.9
+2012,12,32,1,1,2108,0139.2010,0,N,9,6,9,0,10,10,,20,2000,,,03/12/2012,DANIELSSILVA,100,2900
+2012,12,32,1,1,3304,0111.0020,1,N,9,6,9,,100,100,,300,3000,,,03/12/2012,DANIELSSILVA,100,800
+2012,12,32,1,1,3304,0111.0070,1,N,1,6,9,,60,60,,78,1300,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,1,3304,0119.1040,1,N,1,6,9,,40,40,,24,600,,,03/12/2012,DANIELSSILVA,100,2135
+2012,12,32,1,1,3304,0119.1040,2,N,9,6,9,,12,12,,7,583,,,03/12/2012,DANIELSSILVA,100,2400
+2012,12,32,1,1,3304,0119.3010,0,N,9,12,9,4,0,0,,0,0,,Em desenvolvimento,10/12/2012,ALUIZIOLOPES,0,0
+2012,12,32,1,1,3304,0121.2100,0,S,9,6,9,,15,15,,600,40000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,1260
+2012,12,32,1,1,3304,0131.0010,0,N,9,6,9,0,25,25,,150,6000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,770
+2012,12,32,1,1,3304,0132.0020,0,S,9,12,9,6,0,0,,0,0,,Está em Desenvolvimento. Ainda não começou a produzir,03/12/2012,DANIELSSILVA,0,0
+2012,12,32,1,1,3304,0133.2080,0,N,9,6,9,15,35,35,,147,4200,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,1,3304,0133.2340,0,N,9,6,9,20,180,180,,1260,7000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,1,3304,0133.3030,0,N,9,6,9,0,12,12,,144,12000,,,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,1,3304,0134.0021,0,N,1,6,9,200,4000,4000,,4500,1125,,Aumento da produção tendo em vista os tratos culturais e um bom período de chuva na floração.,03/12/2012,DANIELSSILVA,100,5210
+2012,12,32,1,1,3304,0134.0022,0,N,1,6,9,0,240,240,,486,2025,,"Tratos Culturais, Chuvas na Floração.",03/12/2012,DANIELSSILVA,100,3916.6
+2012,12,32,1,1,3304,0134.0022,0,S,1,6,9,30,60,60,,160,2667,,"Tratos Culturais, Chuvas na Floração.",03/12/2012,DANIELSSILVA,100,3916.6
+2012,12,32,1,2,136,0111.0020,1,N,1,6,9,,20,20,,50,2500,,Houve Redução tendo em vista o alto custo de produção e o preço de mercado.,03/12/2012,DANIELSSILVA,100,800
+2012,12,32,1,2,136,0111.0070,1,N,1,6,9,,400,400,,680,1700,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,2,136,0119.1040,1,S,1,6,9,,50,50,,30,600,,,03/12/2012,DANIELSSILVA,100,2135
+2012,12,32,1,2,136,0119.1040,2,S,9,6,9,,30,30,,18,600,,,03/12/2012,DANIELSSILVA,100,2500
+2012,12,32,1,2,136,0119.2050,0,N,1,6,9,0,20,20,,1200,60000,,,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,2,136,0119.4040,0,N,1,6,9,0,30,30,,510,17000,,,03/12/2012,DANIELSSILVA,100,290
+2012,12,32,1,2,136,0133.1040,0,N,9,6,9,0,3,3,,51,17000,,,03/12/2012,DANIELSSILVA,100,2000
+2012,12,32,1,2,136,0133.2080,0,S,9,6,9,0,70,70,,2100,30000,,"Rendimento superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis, além de ser irrigada.",03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,2,136,0133.2340,0,N,9,6,9,10,15,15,,300,20000,,,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,2,136,0133.3030,0,N,9,6,9,20,180,180,,2160,12000,,,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,2,136,0134.0022,0,N,1,6,9,0,1500,1500,,1680,1120,,"Houve uma redução significativa tendo em vista a falta de tratos culturais, principalmente a irrigação.",03/12/2012,DANIELSSILVA,100,4166.5
+2012,12,32,1,2,136,0134.0022,0,S,1,6,9,2500,6000,6000,,11520,1920,,O Rendimento médio esperado para 2012 foi aumentado tendo em vista as boas condições climáticas.,03/12/2012,DANIELSSILVA,100,4166.5
+2012,12,32,1,2,136,0135.0010,0,N,9,6,9,0,7,7,,3,429,,,03/12/2012,DANIELSSILVA,100,4500
+2012,12,32,1,2,136,0135.0010,0,S,9,6,9,64,29,29,,26,897,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,4500
+2012,12,32,1,2,136,0139.2010,0,N,9,6,9,5,9,9,,72,8000,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,2900
+2012,12,32,1,2,1001,0111.0070,1,S,9,6,9,,200,200,,1000,5000,,"Milho 1ª safra - RM/HA acima da média, devido aos fatores climáticos favoráveis desde o plantio a colheita do produto, adubações e tratos culturais adequados.",05/12/2012,GVIGNATTI,100,615
+2012,12,32,1,2,1001,0111.0070,2,S,9,6,9,,8,8,,30,3750,,,05/12/2012,GVIGNATTI,100,660
+2012,12,32,1,2,1001,0113.0010,0,N,5,6,9,0,2107,2107,,92708,44000,,,04/12/2012,GVIGNATTI,100,43.68
+2012,12,32,1,2,1001,0119.1040,1,S,9,6,9,,65,65,,75,1154,,"Feijão 1ª safra - RM/HA abaixo da média, devido as oscilações de temperaturas na região e plantios intercalados com café.",05/12/2012,GVIGNATTI,100,2890
+2012,12,32,1,2,1001,0119.3010,0,S,9,6,9,5,8,8,,360,45000,,"Abacaxi - RM/HA acima da média, vez que os plantios foram realizados com menor espaçamento, inclusive em fileiras duplas. Sgundo o téc. foi realizado um novo levantamento sobre a cultura no Município e constatou-se novas áreas em formação e produção.",05/12/2012,GVIGNATTI,100,1255
+2012,12,32,1,2,1001,0119.3020,0,S,9,6,9,,10,10,,280,28000,,,05/12/2012,GVIGNATTI,100,850
+2012,12,32,1,2,1001,0119.4040,0,N,9,6,9,0,15,15,,375,25000,,"Mandioca - RM/HA acima da média, devido aos bons tratos culturais e manivas altamente produtivas.",04/12/2012,GVIGNATTI,100,204.25
+2012,12,32,1,2,1001,0119.9010,0,S,9,6,9,,70,70,,840,12000,,"Abóbora - O produtor realizou o plantio em áreas de pivô central, na expectativa de alcançar um bom preço do produto no mercado.",05/12/2012,GVIGNATTI,100,1016
+2012,12,32,1,2,1001,0121.2100,0,S,9,6,9,,16,16,,1280,80000,,,05/12/2012,GVIGNATTI,100,1900
+2012,12,32,1,2,1001,0121.3110,0,S,9,6,9,,4,4,,80,20000,,,05/12/2012,GVIGNATTI,100,786.5
+2012,12,32,1,2,1001,0131.0010,0,N,9,6,9,0,2,2,,8,4000,,"Laranja - Area abaixo da média, devido a falta de tratos culturais adequados.",04/12/2012,GVIGNATTI,100,870
+2012,12,32,1,2,1001,0131.0010,0,S,9,6,9,0,2,2,,24,12000,,,04/12/2012,GVIGNATTI,100,870
+2012,12,32,1,2,1001,0132.0020,0,S,9,6,9,2,3,3,,45,15000,,"Uva - Incremento de área, devido o bom preço do produto no mercado.",04/12/2012,GVIGNATTI,100,5295
+2012,12,32,1,2,1001,0133.2080,0,S,9,6,9,5,48,48,,1200,25000,,"Banana - RM/HA, acima da média, vez que as mudas são altamente produtivas. Variedades: Da Terra= 40 ha com RM/HA = 25.000kg e Prata= 8 ha com RM/HA = 25.000 kg. Ambas há um equilíbrio no peso. A PRATA pesa menos, mas produz mais cachos por área.",04/12/2012,GVIGNATTI,100,925
+2012,12,32,1,2,1001,0133.2220,0,N,9,6,9,0,2,2,,90,45000,,"GOIABA - RM/HA acima da média, vez que o produtor investe pesado na cultura, por ser proprietário de uma industria de polpa.",04/12/2012,GVIGNATTI,100,931.5
+2012,12,32,1,2,1001,0133.2330,0,S,9,6,9,0,100,100,,12000,120000,,"Mamão - Queda de área, devido o preço baixo do produto no mercado. A Variedade cultivada é FORMOSA RM/HA = 120.000kg (informação confirmada com o técnico).",04/12/2012,GVIGNATTI,100,847.5
+2012,12,32,1,2,1001,0133.2340,0,S,9,6,9,0,16,16,,192,12000,,,04/12/2012,GVIGNATTI,100,700
+2012,12,32,1,2,1001,0133.2360,0,S,9,6,9,0,15,15,,525,35000,,"Maracujá - Queda de área, devido o fim do ciclo produtivo das lavoura velhas e ataque de doenças como a verrugose, virose e mancha bacteriana.",04/12/2012,GVIGNATTI,100,1298.5
+2012,12,32,1,2,1001,0133.3030,0,N,9,6,9,0,64,64,,672,10500,,"Coco - Queda de área, devido o preço baixo do produto no mercado.",04/12/2012,GVIGNATTI,100,412
+2012,12,32,1,2,1001,0133.3030,0,S,9,6,9,0,28,28,,504,18000,,,04/12/2012,GVIGNATTI,100,418
+2012,12,32,1,2,1001,0134.0022,0,N,2,0,0,0,0,0,,0,0,,Café - Toda a área passou a ser irrigada.,04/12/2012,GVIGNATTI,0,0
+2012,12,32,1,2,1001,0134.0022,0,S,9,6,9,810,8190,8190,,19353,2363,,"Café - Aumento no RM/HA, devido ao bons tratos culturais, mudas altamente produtivas, irrigações, adubações e contratação de assistência técnica.",04/12/2012,GVIGNATTI,100,3838.1
+2012,12,32,1,2,1001,0135.0010,0,N,9,4,9,4,0,0,,0,0,,Cacau - A área encontra-se em formação,04/12/2012,GVIGNATTI,0,0
+2012,12,32,1,2,1001,0139.1060,0,S,9,6,9,50,65,65,,195,3000,,"Pimenta-do-Reino - Aumento de área, devido o bom preço do produto nom mercado.",01/12/2012,SISTEMA,100,11185.5
+2012,12,32,1,2,1001,0139.2010,0,N,9,6,9,190,160,160,,192,1200,,,04/12/2012,GVIGNATTI,100,2999
+2012,12,32,1,2,1001,0139.2010,0,S,9,6,9,190,160,160,,256,1600,,,04/12/2012,GVIGNATTI,100,2994
+2012,12,32,1,2,1001,0139.9060,0,N,9,6,9,0,2,2,,2,1000,,"Palmito - O plantio de toda a área existente no Município foi realizado em uma área úmida. Portanto, não tem área irrigada.",04/12/2012,GVIGNATTI,100,3930
+2012,12,32,1,2,3908,0111.0020,1,N,9,6,9,,60,60,,180,3000,,ARROZ - O plantio foi realizado em várzea úmida. Motivo pelo qual o RM/HA foi de 3000kg.,05/12/2012,GVIGNATTI,100,1000
+2012,12,32,1,2,3908,0111.0020,1,S,2,6,9,,60,60,,180,3000,,,05/12/2012,GVIGNATTI,100,1000
+2012,12,32,1,2,3908,0111.0070,1,N,9,6,9,,100,100,,250,2500,,"Milho - O RM/HA foi satisfatório mesmo não irrigado, devido as condições climáticas favoráveis no período de maturação.",05/12/2012,GVIGNATTI,100,555
+2012,12,32,1,2,3908,0111.0070,1,S,9,6,9,,400,400,,1280,3200,,,05/12/2012,GVIGNATTI,100,555
+2012,12,32,1,2,3908,0113.0010,0,N,5,6,9,0,680,680,,34680,51000,,,04/12/2012,GVIGNATTI,100,43.45
+2012,12,32,1,2,3908,0113.0010,0,S,5,6,9,0,102,102,,8670,85000,,,04/12/2012,GVIGNATTI,100,43.45
+2012,12,32,1,2,3908,0119.1040,1,S,9,6,9,,150,150,,225,1500,,"Feijão 1ª safra - RM/HA acima da média, devido aos bons tratos culturais, sementes certificadas, adubadas e plantios isolados.",05/12/2012,GVIGNATTI,100,2790
+2012,12,32,1,2,3908,0119.1040,2,N,9,0,0,,0,0,,0,0,,Feijão 2ª safra Não irrigado - Não houve o plantio em consequência da estiagem prolongada.,05/12/2012,GVIGNATTI,0,0
+2012,12,32,1,2,3908,0119.1040,2,S,9,6,9,,80,80,,88,1100,,"Feijão 2ª safra irrigado - Houve o plantio realizado por pequenos produtores, principalmente dos assentamentos para fins de subsistência",05/12/2012,GVIGNATTI,100,2250
+2012,12,32,1,2,3908,0119.3010,0,N,9,6,9,3,3,3,,75,25000,,,04/12/2012,GVIGNATTI,100,1243
+2012,12,32,1,2,3908,0119.3010,0,S,9,6,9,3,3,3,,105,35000,,"Abacaxi - RM/HA acima da média, por se tratar de uma muda de clone que ocupa menor espaço entre plantas. Com isso, planta-se maior quantidade de plantas por área.",04/12/2012,GVIGNATTI,100,1197
+2012,12,32,1,2,3908,0119.4040,0,N,9,6,9,0,380,380,,5700,15000,,,04/12/2012,GVIGNATTI,100,176
+2012,12,32,1,2,3908,0121.3110,0,N,9,6,9,,1,1,,25,25000,,,05/12/2012,GVIGNATTI,100,750.5
+2012,12,32,1,2,3908,0131.0010,0,N,9,6,9,0,51,51,,194,3804,,"Laranja - A área informada não é irrigada e o RM/HA está abaixo da média, vez que os plantios são dispersos, ou seja, não há uma concentração de área. Não existe acompanhamento técnico e muito menos controle de pragas e doenças.",01/12/2012,SISTEMA,100,785
+2012,12,32,1,2,3908,0133.1040,0,N,9,6,9,0,15,15,,240,16000,,,04/12/2012,GVIGNATTI,100,1107.5
+2012,12,32,1,2,3908,0133.2080,0,N,9,6,9,0,24,24,,240,10000,,"Banana - Variedades culivadas: PRATA = 17HA; DA TERRA = 6 HA e NANICA = 1 HA. Portanto, a média das três variedades fica em torno de 10.000kg.",04/12/2012,GVIGNATTI,100,656
+2012,12,32,1,2,3908,0133.2080,0,S,9,6,9,0,56,56,,1008,18000,,"Banana - RM/HA acima da média, devidos os altos investimentos realizados pelos produtores. Variedades cultivadas: PRATA = 40HA; DA TERRA = 14HA e NANICA = 2HA. O RM/HA médio das três variedades fica em torno de 18.000kg.",04/12/2012,GVIGNATTI,100,656
+2012,12,32,1,2,3908,0133.2220,0,S,9,6,9,0,13,13,,143,11000,,"Goiaba - RM/HA abaixo da média, devido a falta de tratos culturais em função do preço baixo do produto no mercado.",04/12/2012,GVIGNATTI,100,902.5
+2012,12,32,1,2,3908,0133.2330,0,S,9,6,9,0,40,40,,2880,72000,,"Mamão - Após uma avaliação sobre a cultura no municipio, constatou-se queda RM/HA Variedades cultivadas: FORMOSA = 24 HA com RM/HA = 80.000kg e HAVAÍ = 16 HA com RM/HA = 60.000kg. Média = 72.000kg/ha/ano.",04/12/2012,GVIGNATTI,100,831.5
+2012,12,32,1,2,3908,0133.2340,0,N,9,6,9,0,5,5,,75,15000,,,04/12/2012,GVIGNATTI,100,700
+2012,12,32,1,2,3908,0133.2360,0,S,9,6,9,0,10,10,,180,18000,,"Maracujá - Aumento no RM/HA, devido aos melhores tratos culturais adequados realizados pelos produtores.",04/12/2012,GVIGNATTI,100,1170
+2012,12,32,1,2,3908,0133.3030,0,N,9,6,9,0,50,50,,500,10000,,,04/12/2012,GVIGNATTI,100,447
+2012,12,32,1,2,3908,0133.3030,0,S,9,6,9,0,50,50,,1000,20000,,,04/12/2012,GVIGNATTI,100,447
+2012,12,32,1,2,3908,0134.0022,0,N,9,6,9,176,3344,3344,,3168,947,,"CAFE CONILON - O INFORMENTE FEZ NOVA AVALIAÇÃO DA CULTURA, AJUSTOU A ÁREA EM PRODUÇÃO E RM/HA.",04/12/2012,GVIGNATTI,100,3677.5
+2012,12,32,1,2,3908,0134.0022,0,S,9,6,9,704,13376,13376,,28089,2100,,CAFE CONILON - O INFORMENTE FEZ NOVA AVALIAÇÃO DA CULTURA E AJUSTOU A PRODUÇÃO E RENDIMENTO.,04/12/2012,GVIGNATTI,100,3677.5
+2012,12,32,1,2,3908,0135.0010,0,N,9,6,9,0,40,40,,10,250,,"Cacau - RM/HA abaixo da média, vez que parte das áreas não estão recebendo tratos culturais adequados, por se tratar de plantios em idade comprometida.",04/12/2012,GVIGNATTI,100,4360
+2012,12,32,1,2,3908,0139.1060,0,S,9,6,9,0,110,110,,330,3000,,,04/12/2012,GVIGNATTI,100,10538
+2012,12,32,1,2,3908,0139.2010,0,N,9,6,9,0,104,104,,94,904,,"Borracha - Aumento no RM/HA, devido aos melhores tratos culturais em função do bom preço do produto no mercado.",04/12/2012,GVIGNATTI,100,3063.5
+2012,12,32,1,2,3908,0139.9060,0,N,9,6,9,0,60,60,,40,667,,,04/12/2012,GVIGNATTI,100,3931.5
+2012,12,32,1,2,4708,0111.0020,1,N,9,6,9,,5,5,,10,2000,,"De acordo com o INCAPER alguns produtores abandonaram as lavouras de arroz para plantio de outras culturas, por isso esta queda considerável na área.",07/12/2012,VINICIOSSILVA,100,868
+2012,12,32,1,2,4708,0111.0070,1,S,9,6,9,,100,100,,180,1800,,"Como o milho no municipio é plantado em sua maioria junto com a renovação do café e esta, por sua vez foi menor neste ano, a área de milho reduziu bastante, de acordo com o INCAPER. Também devido a isso, toda área plantada é irrigada.",07/12/2012,VINICIOSSILVA,100,532.5
+2012,12,32,1,2,4708,0113.0010,0,N,9,6,9,0,35,35,,1750,50000,,"Reavaliação da área de cana, por parte do INCAPER, com separação da quantidade de cana forrageira.",07/12/2012,VINICIOSSILVA,100,41.15
+2012,12,32,1,2,4708,0119.1040,1,N,9,6,9,,40,40,,28,700,,,07/12/2012,VINICIOSSILVA,100,2130
+2012,12,32,1,2,4708,0119.1040,2,S,9,6,9,,15,15,,14,933,,"De acordo com o INCAPER a previsão realizada no final do ano passado não se confirmou, logo a área plantada diminuiu, principalmente pela dificuldade no manuseio da lavoura.",07/12/2012,VINICIOSSILVA,100,2325
+2012,12,32,1,2,4708,0119.2050,0,N,9,6,9,0,15,15,,750,50000,,"Reavaliação da área de cana, por parte do INCAPER, com separação da quantidade de cana forrageira.",07/12/2012,VINICIOSSILVA,100,41.15
+2012,12,32,1,2,4708,0119.3010,0,N,9,6,9,0,10,10,,150,15000,,,07/12/2012,VINICIOSSILVA,100,1260
+2012,12,32,1,2,4708,0119.3020,0,S,9,6,9,,5,5,,100,20000,,,07/12/2012,VINICIOSSILVA,100,600
+2012,12,32,1,2,4708,0119.4040,0,N,9,6,9,0,35,35,,595,17000,,,07/12/2012,VINICIOSSILVA,100,193.45
+2012,12,32,1,2,4708,0131.0010,0,N,9,6,9,0,25,25,,300,12000,,,07/12/2012,VINICIOSSILVA,100,859
+2012,12,32,1,2,4708,0133.1040,0,N,9,6,9,0,15,15,,240,16000,,,07/12/2012,VINICIOSSILVA,100,1099
+2012,12,32,1,2,4708,0133.2080,0,N,9,6,9,0,30,30,,240,8000,,,07/12/2012,VINICIOSSILVA,100,605
+2012,12,32,1,2,4708,0133.2340,0,S,9,6,9,55,20,20,,340,17000,,,07/12/2012,VINICIOSSILVA,100,492.5
+2012,12,32,1,2,4708,0133.2360,0,S,9,6,9,0,5,5,,100,20000,,"De acordo com o INCAPER, devido ao baixo preço do produto no mercado e ao alto custo para manter a lavoura, grande parte da área de maracujá no municipio foi erradicada para plantio de café conilon.",07/12/2012,VINICIOSSILVA,100,1351.5
+2012,12,32,1,2,4708,0133.3030,0,N,9,6,9,0,200,200,,2100,10500,,Reavaliação da área do coco em funçãoi de levantamento realizado a nivel de produtores por parte de uma comissão da cultura formada na região norte/noroeste do estado.,07/12/2012,VINICIOSSILVA,100,521.5
+2012,12,32,1,2,4708,0133.3030,0,S,9,6,9,25,425,425,,4463,10501,,Reavaliação da área do coco em funçãoi de levantamento realizado a nivel de produtores por parte de uma comissão da cultura formada na região norte/noroeste do estado.,07/12/2012,VINICIOSSILVA,100,521.5
+2012,12,32,1,2,4708,0134.0022,0,N,9,6,9,0,1350,1350,,2025,1500,,,07/12/2012,VINICIOSSILVA,100,3855
+2012,12,32,1,2,4708,0134.0022,0,S,9,6,9,2000,10150,10150,,18270,1800,,,07/12/2012,VINICIOSSILVA,100,3855
+2012,12,32,1,2,4708,0135.0010,0,N,9,6,9,0,32,32,,14,438,,"Segundo o incaper, apenas a área em formação é irrigada.",07/12/2012,VINICIOSSILVA,100,4571
+2012,12,32,1,2,4708,0135.0010,0,S,9,4,9,8,0,0,,0,0,,"Segundo o incaper, apenas a área em formação é irrigada.",07/12/2012,VINICIOSSILVA,0,0
+2012,12,32,1,2,4708,0139.2010,0,N,9,6,9,90,270,270,,567,2100,,,07/12/2012,VINICIOSSILVA,100,2020
+2012,12,32,1,2,5150,0111.0020,1,N,9,6,9,,5,5,,15,3000,,Arroz - Plantio em várzea úmida.,05/12/2012,GVIGNATTI,100,500
+2012,12,32,1,2,5150,0111.0070,1,S,9,6,9,,350,350,,560,1600,,,05/12/2012,GVIGNATTI,100,616
+2012,12,32,1,2,5150,0119.1040,1,S,9,6,9,,15,15,,18,1200,,"Feijão 1ª safra - RM/HA abaixo da média, por se tratar de um plantio realizado nas entrelinhas do café. Isto é, não tendo um tratamento específico como se fosse pantado sozinho.",05/12/2012,GVIGNATTI,100,2833
+2012,12,32,1,2,5150,0119.3010,0,N,9,6,9,0,1,1,,25,25000,,,05/12/2012,GVIGNATTI,100,1475
+2012,12,32,1,2,5150,0119.3020,0,S,9,6,9,,2,2,,40,20000,,Melancia - Plantio de 2 ha da cultura nas entrelinhas da cultura de café.,05/12/2012,GVIGNATTI,100,1000
+2012,12,32,1,2,5150,0119.4040,0,N,9,6,9,0,40,40,,480,12000,,,05/12/2012,GVIGNATTI,100,171.2
+2012,12,32,1,2,5150,0132.0020,0,S,9,6,9,0,2,2,,30,15000,,,05/12/2012,GVIGNATTI,100,4150
+2012,12,32,1,2,5150,0133.2080,0,N,9,6,9,0,28,28,,336,12000,,"Banana - Variedades: DA TERRA = 22 ha e PRATA = 6 HA. Segundo o téc. ambas as variedades possuem o mesmo RM/HA, vez que a DA TERRA pesa mais, porém planta-se menos mudas por área. A PRATA pesa menos, porem produz mais cachos por área.",05/12/2012,GVIGNATTI,100,815.2
+2012,12,32,1,2,5150,0133.2080,0,S,9,6,9,0,10,10,,200,20000,,"Banana - RM/HA acima da média, por se tratar de uma área irrigada, com os devidos tratos culturais e acompanhada pelo téc do INCAPER. A variedade é DA TERRA",05/12/2012,GVIGNATTI,100,815.2
+2012,12,32,1,2,5150,0133.2360,0,S,9,0,0,0,0,0,,0,0,,"Maracujá - Toda a área chegou ao fim do ciclo produtivo, por serem lavouras velhas.",01/12/2012,SISTEMA,0,0
+2012,12,32,1,2,5150,0133.3030,0,N,9,6,9,0,30,30,,300,10000,,,05/12/2012,GVIGNATTI,100,460
+2012,12,32,1,2,5150,0133.3030,0,S,9,6,9,0,30,30,,600,20000,,Coco - A área irrigada corresponde a 50% do plantio no município.,05/12/2012,GVIGNATTI,100,460
+2012,12,32,1,2,5150,0134.0022,0,S,9,6,9,350,9070,9070,,21224,2340,,CAFE CONILON - O INFORMENTE FEZ NOVA AVALIAÇÃO DA CULTURA E AJUSTOU A ÁREA EM PRODUÇÃO E RENDIMENTO.,05/12/2012,GVIGNATTI,100,3883
+2012,12,32,1,2,5150,0139.2010,0,S,9,4,9,10,0,0,,0,0,,Borracha - A área encontra-se em formação.,05/12/2012,GVIGNATTI,0,0
+2012,12,32,1,2,5176,0111.0070,1,S,9,6,9,,150,150,,270,1800,,,07/12/2012,VINICIOSSILVA,100,525.5
+2012,12,32,1,2,5176,0119.1040,1,S,9,6,9,,50,50,,30,600,,,07/12/2012,VINICIOSSILVA,100,2130
+2012,12,32,1,2,5176,0119.1040,2,S,9,6,9,,35,35,,21,600,,A área plantada foi maior do que a previsão realizada no final do ano.,07/12/2012,VINICIOSSILVA,100,2395
+2012,12,32,1,2,5176,0119.3010,0,N,9,6,9,0,5,5,,75,15000,,,07/12/2012,VINICIOSSILVA,100,1249
+2012,12,32,1,2,5176,0119.4040,0,N,9,6,9,0,20,20,,360,18000,,,07/12/2012,VINICIOSSILVA,100,206.6
+2012,12,32,1,2,5176,0131.0010,0,N,9,6,9,1,4,4,,48,12000,,"A área em formação já está em produção e houve o plantio de mais 1 ha, que ainda está em formação.",07/12/2012,VINICIOSSILVA,100,842
+2012,12,32,1,2,5176,0133.2080,0,S,9,6,9,0,40,40,,360,9000,,"De acordo com o INCAPER, como são poucos produtores de banana no municipio, toda área da cultura é irrigada.",07/12/2012,VINICIOSSILVA,100,590
+2012,12,32,1,2,5176,0133.2330,0,S,9,6,9,0,25,25,,1500,60000,,,07/12/2012,VINICIOSSILVA,100,977.5
+2012,12,32,1,2,5176,0133.2340,0,N,9,6,9,0,4,4,,54,13500,,,07/12/2012,VINICIOSSILVA,100,482.5
+2012,12,32,1,2,5176,0133.2360,0,S,9,6,9,0,5,5,,100,20000,,,07/12/2012,VINICIOSSILVA,100,1301
+2012,12,32,1,2,5176,0133.3030,0,N,9,6,9,0,260,260,,2470,9500,,Reavaliação da área do coco em função de levantamento realizado a nivel de produtores por parte de uma comissão da cultura formada na região norte/noroeste do estado.,07/12/2012,VINICIOSSILVA,100,487.5
+2012,12,32,1,2,5176,0133.3030,0,S,9,6,9,100,440,440,,4752,10800,,Reavaliação da área do coco em função de levantamento realizado a nivel de produtores por parte de uma comissão da cultura formada na região norte/noroeste do estado.,07/12/2012,VINICIOSSILVA,100,1143.5
+2012,12,32,1,2,5176,0134.0022,0,N,9,6,9,0,2000,2000,,3600,1800,,,07/12/2012,VINICIOSSILVA,100,3810
+2012,12,32,1,2,5176,0134.0022,0,S,9,6,9,3500,19500,19500,,40950,2100,,"Rendimento maior em função de melhores técnicas de plantio, com irrigação e devido a própria caracterisica do municipio.",07/12/2012,VINICIOSSILVA,100,3810
+2012,12,32,1,2,5176,0135.0010,0,S,9,6,9,30,18,18,,5,278,,Aumento de 30 ha na área de cacau devido a distribuição de mudas para os produtores.,07/12/2012,VINICIOSSILVA,100,4626
+2012,12,32,1,2,5176,0139.1060,0,S,9,6,9,16,36,36,,98,2722,,"De acordo com o INCAPER, toda a pimenta do municipio é irrigada.",07/12/2012,VINICIOSSILVA,100,10460
+2012,12,32,1,2,5176,0139.2010,0,N,9,6,9,25,10,10,,21,2100,,"Aumento de 25 ha na área total de borracha, devido a distribuição de mudas para os produtores.",07/12/2012,VINICIOSSILVA,100,2030
+2012,12,32,1,3,359,0111.0020,1,S,1,6,9,,15,15,,45,3000,,,03/12/2012,DANIELSSILVA,100,840
+2012,12,32,1,3,359,0111.0070,1,N,1,6,9,,10,10,,13,1300,,"Houve uma redução significativa tendo em vista a falta de tratos culturais, principalmente a irrigação.",03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,359,0111.0070,1,S,1,6,9,,5,5,,8,1600,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,359,0113.0010,0,N,1,6,9,0,30,30,,1800,60000,,,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,3,359,0119.1040,1,N,1,6,9,,7,7,,4,571,,,03/12/2012,DANIELSSILVA,100,2135
+2012,12,32,1,3,359,0119.1040,1,S,1,6,9,,3,3,,2,667,,,03/12/2012,DANIELSSILVA,100,2135
+2012,12,32,1,3,359,0119.1040,2,N,9,6,9,,11,11,,6,545,,,03/12/2012,DANIELSSILVA,100,2650
+2012,12,32,1,3,359,0119.1040,2,S,9,6,9,,5,5,,4,800,,,03/12/2012,DANIELSSILVA,100,2650
+2012,12,32,1,3,359,0119.2050,0,N,1,6,9,0,20,20,,1200,60000,,,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,3,359,0133.2080,0,N,9,6,9,0,12,12,,114,9500,,,03/12/2012,DANIELSSILVA,100,480
+2012,12,32,1,3,359,0133.2080,0,S,9,6,9,0,3,3,,45,15000,,,03/12/2012,DANIELSSILVA,100,480
+2012,12,32,1,3,359,0133.2340,0,N,9,6,9,30,3,3,,21,7000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,3,359,0133.3030,0,N,9,6,9,0,5,5,,40,8000,,Rendimento superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,3,359,0134.0021,0,N,1,6,9,200,2800,2800,,2086,745,,,03/12/2012,DANIELSSILVA,100,5225
+2012,12,32,1,3,359,0134.0022,0,N,1,6,9,0,480,480,,576,1200,,,03/12/2012,DANIELSSILVA,100,4338.1
+2012,12,32,1,3,359,0134.0022,0,S,1,6,9,30,120,120,,324,2700,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,4338.1
+2012,12,32,1,3,359,0139.2010,0,N,9,12,9,8,0,0,,0,0,,"Está em Desenvolvimento no município, ainda não entrou em produção.",03/12/2012,DANIELSSILVA,0,0
+2012,12,32,1,3,805,0111.0020,1,S,1,6,9,,30,30,,105,3500,,"FALTA DE ESTÍMULOS DO PRODUTOR EM CULTIVAR O ARROZ, DEVIDO A DIVERSOS FATORES, DENTRE ELES O PREÇO E A DIFICULDADE.",03/12/2012,DANIELSSILVA,100,850
+2012,12,32,1,3,805,0111.0070,1,N,1,6,9,,500,500,,1200,2400,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,805,0119.1040,1,N,1,6,9,,50,50,,35,700,,,03/12/2012,DANIELSSILVA,100,2135
+2012,12,32,1,3,805,0119.1040,2,N,9,6,9,,150,150,,135,900,,,03/12/2012,DANIELSSILVA,100,2450
+2012,12,32,1,3,805,0119.2050,0,N,1,6,9,0,60,60,,3600,60000,,,03/12/2012,DANIELSSILVA,100,54
+2012,12,32,1,3,805,0119.4040,0,N,1,6,9,0,55,55,,1870,34000,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,290
+2012,12,32,1,3,805,0121.2090,0,N,9,6,9,,35,35,,525,15000,,,03/12/2012,DANIELSSILVA,100,1600
+2012,12,32,1,3,805,0121.2100,0,N,9,6,9,,10,10,,800,80000,,,03/12/2012,DANIELSSILVA,100,1190
+2012,12,32,1,3,805,0121.3110,0,S,9,6,9,,30,30,,750,25000,,,03/12/2012,DANIELSSILVA,100,998
+2012,12,32,1,3,805,0131.0010,0,N,9,6,9,5,10,10,,37,3700,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,770
+2012,12,32,1,3,805,0133.2080,0,S,9,6,9,0,40,40,,400,10000,,,03/12/2012,DANIELSSILVA,100,50
+2012,12,32,1,3,805,0133.2220,0,N,9,6,9,0,2,2,,50,25000,,,03/12/2012,DANIELSSILVA,100,1560
+2012,12,32,1,3,805,0133.2340,0,N,9,6,9,50,30,30,,300,10000,,,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,3,805,0133.3030,0,S,9,6,9,0,90,90,,1215,13500,,,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,3,805,0134.0021,0,N,1,6,9,0,3395,3395,,4074,1200,,"TRATOS CULTURAIS, NOVAS TÉCNICAS, NOVAS PRÁTICAS, MANEJO DE LAVOURA - PROGRAMA RENOVAR ARÁBICA.",03/12/2012,DANIELSSILVA,100,5222
+2012,12,32,1,3,805,0134.0021,0,S,1,6,9,0,105,105,,158,1505,,"TRATOS CULTURAIS, NOVAS TÉCNICAS, NOVAS PRÁTICAS, MANEJO DE LAVOURA - PROGRAMA RENOVAR ARÁBICA.",03/12/2012,DANIELSSILVA,100,5222
+2012,12,32,1,3,805,0134.0022,0,N,1,6,9,0,600,600,,720,1200,,,03/12/2012,DANIELSSILVA,100,4103.2
+2012,12,32,1,3,805,0134.0022,0,S,1,6,9,20,2400,2400,,6480,2700,,Rendimento superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,4103.2
+2012,12,32,1,3,805,0135.0010,0,S,9,6,9,13,19,19,,10,526,,,03/12/2012,DANIELSSILVA,100,4500
+2012,12,32,1,3,1506,0111.0020,1,S,9,6,9,,30,30,,75,2500,,,03/12/2012,DANIELSSILVA,100,800
+2012,12,32,1,3,1506,0111.0070,1,N,1,6,9,,950,950,,1900,2000,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,1506,0113.0010,0,N,1,6,9,0,120,120,,3000,25000,,Rendimento Médio Abaixo do esperado tendo em visto a falta de técnicas adequadas utilizadas no cultivo do produto.,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,3,1506,0119.1040,1,N,1,6,9,,150,150,,90,600,,,03/12/2012,DANIELSSILVA,100,2135
+2012,12,32,1,3,1506,0119.1040,2,N,9,6,9,,70,70,,54,771,,,03/12/2012,DANIELSSILVA,100,2350
+2012,12,32,1,3,1506,0119.3010,0,N,9,6,9,0,5,5,,75,15000,,,03/12/2012,DANIELSSILVA,100,1176
+2012,12,32,1,3,1506,0119.3020,0,N,1,6,9,,30,30,,45,1500,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,455
+2012,12,32,1,3,1506,0119.4040,0,N,1,6,9,0,150,150,,2700,18000,,,03/12/2012,DANIELSSILVA,100,194
+2012,12,32,1,3,1506,0131.0010,0,N,9,6,9,0,30,30,,540,18000,,Técnicas empregadas.,03/12/2012,DANIELSSILVA,100,770
+2012,12,32,1,3,1506,0133.1040,0,N,9,6,9,0,15,15,,240,16000,,,03/12/2012,DANIELSSILVA,100,2000
+2012,12,32,1,3,1506,0133.2080,0,N,9,6,9,70,150,150,,2250,15000,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,1506,0133.2220,0,N,9,6,9,0,20,20,,500,25000,,,03/12/2012,DANIELSSILVA,100,1560
+2012,12,32,1,3,1506,0133.2340,0,N,9,6,9,50,100,100,,2641,26410,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,3,1506,0133.2360,0,S,9,6,9,0,6,6,,90,15000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,1400
+2012,12,32,1,3,1506,0133.3030,0,N,9,6,9,0,400,400,,4080,10200,,,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,3,1506,0134.0021,0,N,1,6,9,0,1000,1000,,720,720,,"Cultura sem técnicas adequadas de cultivo, o que explica o baixo rendimento.",03/12/2012,DANIELSSILVA,100,5200
+2012,12,32,1,3,1506,0134.0022,0,N,1,6,9,0,2400,2400,,3000,1250,,,03/12/2012,DANIELSSILVA,100,4049.9
+2012,12,32,1,3,1506,0134.0022,0,S,1,6,9,300,6250,6250,,13000,2080,,"Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis, além de ser irrigado é claro.",03/12/2012,DANIELSSILVA,100,4039.9
+2012,12,32,1,3,1506,0135.0010,0,N,9,6,9,50,340,340,,238,700,,Tratam-se de produtores tecnificados.,03/12/2012,DANIELSSILVA,100,4500
+2012,12,32,1,3,1506,0139.1060,0,N,9,6,9,0,2,2,,4,2000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,11330
+2012,12,32,1,3,2256,0111.0070,1,S,9,6,9,,70,70,,168,2400,,,07/12/2012,VINICIOSSILVA,100,530
+2012,12,32,1,3,2256,0119.1040,1,S,9,6,9,,10,10,,9,900,,,07/12/2012,VINICIOSSILVA,100,2130
+2012,12,32,1,3,2256,0119.1040,2,S,9,6,9,,30,30,,27,900,,,07/12/2012,VINICIOSSILVA,100,2512
+2012,12,32,1,3,2256,0119.2050,0,N,9,6,9,0,12,12,,600,50000,,,07/12/2012,VINICIOSSILVA,100,41.1
+2012,12,32,1,3,2256,0119.4040,0,N,9,6,9,0,5,5,,80,16000,,,07/12/2012,VINICIOSSILVA,100,163.5
+2012,12,32,1,3,2256,0131.0010,0,N,9,6,9,0,10,10,,80,8000,,,07/12/2012,VINICIOSSILVA,100,849
+2012,12,32,1,3,2256,0133.2080,0,S,9,6,9,15,85,85,,850,10000,,,07/12/2012,VINICIOSSILVA,100,607.5
+2012,12,32,1,3,2256,0133.2340,0,S,9,6,9,60,30,30,,450,15000,,,07/12/2012,VINICIOSSILVA,100,500
+2012,12,32,1,3,2256,0133.2360,0,S,9,4,9,2,0,0,,0,0,,Área toda em formação,07/12/2012,VINICIOSSILVA,0,0
+2012,12,32,1,3,2256,0133.3030,0,S,9,6,9,10,420,420,,5250,12500,,,07/12/2012,VINICIOSSILVA,100,481.5
+2012,12,32,1,3,2256,0134.0022,0,N,9,6,9,0,500,500,,780,1560,,,07/12/2012,VINICIOSSILVA,100,3825
+2012,12,32,1,3,2256,0134.0022,0,S,9,6,9,1500,10000,10000,,21000,2100,,Devido a característica do município e devido a área irrigada o rendimento do café é maior.,07/12/2012,VINICIOSSILVA,100,3825
+2012,12,32,1,3,2256,0135.0010,0,N,9,6,9,0,28,28,,8,286,,,07/12/2012,VINICIOSSILVA,100,4640
+2012,12,32,1,3,2256,0135.0010,0,S,9,6,9,70,42,42,,13,310,,,07/12/2012,VINICIOSSILVA,100,4599.5
+2012,12,32,1,3,3353,0111.0070,1,N,1,6,9,,100,100,,110,1100,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,3353,0113.0010,0,N,1,6,9,0,30,30,,900,30000,,Rendimento abaixo do esperado tendo em vista a falta de técnicas adequadas e cultivo sem preparação.,03/12/2012,DANIELSSILVA,100,38
+2012,12,32,1,3,3353,0119.1040,1,S,9,6,9,,30,30,,24,800,,,03/12/2012,DANIELSSILVA,100,2000
+2012,12,32,1,3,3353,0119.1040,2,S,9,6,9,,20,20,,16,800,,,03/12/2012,DANIELSSILVA,100,2450
+2012,12,32,1,3,3353,0119.3020,0,S,9,6,9,,40,40,,1200,30000,,Rendimento superior tendo em vista as técnicas utilizadas na cultura e condições de solo favoráveis.,03/12/2012,DANIELSSILVA,100,505
+2012,12,32,1,3,3353,0119.4040,0,N,1,6,9,0,30,30,,450,15000,,,03/12/2012,DANIELSSILVA,100,290
+2012,12,32,1,3,3353,0133.2080,0,N,9,6,9,15,36,36,,360,10000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,3353,0133.2080,0,S,9,6,9,35,84,84,,1680,20000,,Rendimento Médio superior a média tendo em vista a alta tecnologia utilizada na cultura deste produto.,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,3353,0133.2340,0,N,9,6,9,15,40,40,,400,10000,,,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,3,3353,0133.3030,0,N,9,6,9,0,150,150,,600,4000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,3,3353,0134.0022,0,S,9,6,9,1200,7900,7900,,18270,2313,,Rendimento Médio Esperado aumentado devido ao bom período de chuvas.,03/12/2012,DANIELSSILVA,100,3961.6
+2012,12,32,1,3,3353,0135.0010,0,N,9,6,9,0,60,60,,47,783,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,4620
+2012,12,32,1,3,3353,0135.0010,0,S,9,6,9,30,66,66,,80,1212,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,4580
+2012,12,32,1,3,4005,0111.0020,1,S,1,6,9,,30,30,,75,2500,,,03/12/2012,DANIELSSILVA,100,860
+2012,12,32,1,3,4005,0111.0070,1,N,1,6,9,,200,200,,360,1800,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,4005,0119.1040,1,N,1,6,9,,100,100,,60,600,,,03/12/2012,DANIELSSILVA,100,2135
+2012,12,32,1,3,4005,0119.1040,2,N,1,6,9,,30,30,,18,600,,,03/12/2012,DANIELSSILVA,100,2400
+2012,12,32,1,3,4005,0119.3020,0,N,9,6,9,,1,1,,30,30000,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,1085
+2012,12,32,1,3,4005,0119.4040,0,N,9,6,9,0,30,30,,480,16000,,,03/12/2012,DANIELSSILVA,100,290
+2012,12,32,1,3,4005,0119.9010,0,N,9,6,9,,3,3,,20,6667,,,03/12/2012,DANIELSSILVA,100,640
+2012,12,32,1,3,4005,0121.3110,0,N,9,6,9,,2,2,,20,10000,,,03/12/2012,DANIELSSILVA,100,1190
+2012,12,32,1,3,4005,0133.2080,0,N,9,6,9,0,70,70,,1050,15000,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,4005,0133.2340,0,N,9,6,9,70,40,40,,80,2000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,3,4005,0133.3030,0,N,9,6,9,0,60,60,,720,12000,,,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,3,4005,0134.0021,0,N,1,6,9,0,200,200,,180,900,,,03/12/2012,DANIELSSILVA,100,5165
+2012,12,32,1,3,4005,0134.0022,0,N,1,6,9,1000,6500,6500,,6300,969,,,03/12/2012,DANIELSSILVA,100,4211.5
+2012,12,32,1,3,4005,0134.0022,0,S,1,6,9,1000,1750,1750,,4800,2743,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,4211.5
+2012,12,32,1,3,4005,0135.0010,0,N,9,6,9,20,50,50,,16,320,,,03/12/2012,DANIELSSILVA,100,4500
+2012,12,32,1,3,4658,0111.0020,1,N,1,6,9,,5,5,,20,4000,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,840
+2012,12,32,1,3,4658,0111.0070,1,S,9,6,4,,147,147,,324,2204,,Excesso de Chuvas Acompanhados de Granizo.,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,4658,0111.0070,2,S,9,6,9,,30,30,,66,2200,,Rendimento abaixo do esperado tendo em vista a falta de técnicas adequadas na cultura.,03/12/2012,DANIELSSILVA,100,585
+2012,12,32,1,3,4658,0113.0010,0,N,1,6,9,0,5,5,,150,30000,,Rendimento abaixo do esperando tendo em vista a falta de técnicas empregadas na cultura,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,3,4658,0119.1040,1,N,1,6,4,,97,97,,77,794,,EXCESSO DE CHUVAS ACOMPANHADO DE GRANIZO.,03/12/2012,DANIELSSILVA,100,2135
+2012,12,32,1,3,4658,0119.1040,2,N,9,6,9,,30,30,,24,800,,,03/12/2012,DANIELSSILVA,100,2000
+2012,12,32,1,3,4658,0119.2050,0,N,1,6,9,0,25,25,,750,30000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,56
+2012,12,32,1,3,4658,0119.3010,0,S,9,6,9,0,2,2,,90,45000,,Rendimento superior tendo em vista a produção tecnificada.,03/12/2012,DANIELSSILVA,100,1290
+2012,12,32,1,3,4658,0119.3020,0,N,9,6,9,,5,5,,125,25000,,,03/12/2012,DANIELSSILVA,100,400
+2012,12,32,1,3,4658,0119.4040,0,N,1,6,9,0,15,15,,240,16000,,,03/12/2012,DANIELSSILVA,100,290
+2012,12,32,1,3,4658,0131.0010,0,N,9,6,9,38,20,20,,400,20000,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,770
+2012,12,32,1,3,4658,0133.2080,0,N,9,6,9,5,21,21,,168,8000,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,1,3,4658,0133.2340,0,N,9,6,9,90,10,10,,25,2500,,Rendimento inferior tendo em vista a falta de técnicas adequadas utilizadas na cultura do produto.,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,1,3,4658,0133.2360,0,N,9,6,9,0,8,8,,160,20000,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,1400
+2012,12,32,1,3,4658,0133.3030,0,N,9,6,9,50,250,250,,2250,9000,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,1,3,4658,0134.0022,0,N,1,6,9,0,108,108,,116,1074,,,03/12/2012,DANIELSSILVA,100,3833.3
+2012,12,32,1,3,4658,0134.0022,0,S,1,6,9,450,4800,4800,,8181,1704,,,03/12/2012,DANIELSSILVA,100,3833.3
+2012,12,32,1,3,4658,0135.0010,0,N,9,6,9,50,15,15,,18,1200,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,4500
+2012,12,32,1,3,4658,0139.2010,0,N,9,6,9,31,9,9,,12,1333,,,03/12/2012,DANIELSSILVA,100,2900
+2012,12,32,2,4,3502,0111.0070,1,N,9,6,9,,6,6,,11,1833,,,05/12/2012,GVIGNATTI,100,648
+2012,12,32,2,4,3502,0111.0070,1,S,9,6,9,,54,54,,162,3000,,,05/12/2012,GVIGNATTI,100,652
+2012,12,32,2,4,3502,0113.0010,0,N,5,6,9,0,10317,10317,,629337,61000,,,05/12/2012,GVIGNATTI,100,43.4
+2012,12,32,2,4,3502,0119.1040,1,N,9,6,9,,25,25,,15,600,,,05/12/2012,GVIGNATTI,100,2700
+2012,12,32,2,4,3502,0119.1040,1,S,9,6,9,,25,25,,38,1520,,"Feijão irrigado - RM/HA acima da média, por se tratar de plantios isolados bem cuidados com acompanhamento técnico.",05/12/2012,GVIGNATTI,100,2700
+2012,12,32,2,4,3502,0119.3010,0,N,9,6,9,0,6,6,,210,35000,,"Abacaxi - RM/HA acima do esperado, vez que o plantio está sendo realizado em fileira dupla com mudas clonais, ou seja, mais planta por área. Plantio densado.",05/12/2012,GVIGNATTI,100,1117.5
+2012,12,32,2,4,3502,0119.4040,0,N,9,6,9,0,380,380,,7600,20000,,,05/12/2012,GVIGNATTI,100,176.05
+2012,12,32,2,4,3502,0119.9010,0,S,9,6,9,,30,30,,240,8000,,,05/12/2012,GVIGNATTI,100,250
+2012,12,32,2,4,3502,0121.2100,0,S,9,4,9,,1,1,,80,80000,,,05/12/2012,GVIGNATTI,0,1600
+2012,12,32,2,4,3502,0133.2080,0,S,9,6,9,0,10,10,,240,24000,,"Banana - RM/HA acima da média, devido aos bons tratos culturais aplicados, irrigações, podas programadas e mudas altamente produtivas. A Variedade cultivada é a PRATA(japira)= 5ha e PRATA (vitória) = 5 ha. RM/HA = 24.000 kg",05/12/2012,GVIGNATTI,100,705.8
+2012,12,32,2,4,3502,0133.2220,0,S,9,6,9,0,8,8,,64,8000,,"Goiaba - RM/HA abaixo da média, devido a falta adequada de tratos culturais, em função do preço baixo do produto no mercado.",04/12/2012,GVIGNATTI,100,953.1
+2012,12,32,2,4,3502,0133.2330,0,S,9,6,9,0,600,600,,51000,85000,,"Mamão - Após uma revisão na área do município, constatou-se uma redução no RM/HA, em função da estiagem prolongada e lavouras em fim de ciclo produtivo. Variedades cultivadas: FORMOSA = 420 HA = 100.000kg e HAVAÍ = 180 ha =50.000kg.",05/12/2012,GVIGNATTI,100,870
+2012,12,32,2,4,3502,0133.2360,0,S,9,6,9,0,10,10,,400,40000,,,05/12/2012,GVIGNATTI,100,1205.9
+2012,12,32,2,4,3502,0133.3030,0,N,9,0,7,0,0,0,,0,0,,"Coco não irrigado - Toda a área foi erradicada, devido o preço baixo do produto no mercado.",05/12/2012,GVIGNATTI,0,0
+2012,12,32,2,4,3502,0133.3030,0,S,9,6,9,0,30,30,,600,20000,,"Coco - Segundo o téc. do INCAPER, do total de 52ha da área total 15ha não irrigados e 7ha irrigados foram erradicados devido o preço baixo do produto no mercado.",05/12/2012,GVIGNATTI,100,480.5
+2012,12,32,2,4,3502,0134.0022,0,N,9,6,9,580,1084,1084,,976,900,,,05/12/2012,GVIGNATTI,100,3870
+2012,12,32,2,4,3502,0134.0022,0,S,9,6,9,580,4336,4336,,7805,1800,,,05/12/2012,GVIGNATTI,100,3870
+2012,12,32,2,4,3502,0139.1060,0,N,9,6,9,0,6,6,,12,2000,,"Pimenta do Reino - RM/HA abaixo do esperado, devido a falta de tratos culturais, principalmente por não se tratar de lavouras irrigadas.",05/12/2012,GVIGNATTI,100,10238
+2012,12,32,2,4,3502,0139.2010,0,N,9,6,9,35,5,5,,5,1000,,"Borracha - Segundo o téc. do INCAPER, foram plantados mais 4 ha da cultura no Município. Passando a área em formação de 31ha para 35ha, em função do bom preço do produto no mercado.",05/12/2012,GVIGNATTI,100,2984.5
+2012,12,32,2,4,3502,0139.2010,0,S,9,6,9,14,2,2,,3,1500,,,05/12/2012,GVIGNATTI,100,2984.5
+2012,12,32,2,4,3601,0113.0010,0,N,5,6,9,0,2603,2603,,156180,60000,,,04/12/2012,GVIGNATTI,100,42.46
+2012,12,32,2,4,3601,0119.3010,0,S,9,6,9,0,1,1,,20,20000,,,04/12/2012,GVIGNATTI,100,1092.5
+2012,12,32,2,4,3601,0119.4040,0,N,9,6,9,0,35,35,,630,18000,,,04/12/2012,GVIGNATTI,100,184.75
+2012,12,32,2,4,3601,0133.2080,0,S,9,6,9,0,4,4,,72,18000,,"Banana - RM/HA acima da média, devido aos bons tratos culturais como irrigações, adubações, limpeza programadas e acompanhamento técnico. Variedades cultivadas DA TERRA= 0,6 ha e PRATA = 3,4 ha. Média de RM/HA = 18000 kg.",04/12/2012,GVIGNATTI,100,787.5
+2012,12,32,2,4,3601,0133.2220,0,S,9,6,9,0,12,12,,132,11000,,"Goiaba - O RM/HA está abaixo da média, por se tratar de lavouras não bem cuidadas em função do preço baixo do produto no mercado.",04/12/2012,GVIGNATTI,100,843
+2012,12,32,2,4,3601,0133.2330,0,S,9,6,9,0,8,8,,640,80000,,Mamão - Conforme avaliação do téc. continua o mesmo RM/HA.,04/12/2012,GVIGNATTI,100,649
+2012,12,32,2,4,3601,0134.0022,0,S,9,6,9,0,38,38,,72,1895,,"CAFÉ CONILON - Redução de área em produção, conforme ajuste feito pelo informante. Com as novas tecnologias aplicadas nas culturas, espera-se melhores rendimentos",04/12/2012,GVIGNATTI,100,3861.5
+2012,12,32,2,4,4104,0111.0070,1,S,9,6,9,,150,150,,450,3000,,"Milho 1ª safra - A área estimada em milho em grãos passou de 20ha para 150 ha, vez que vários produtores que iriam colher para comercializarem em espigas deixaram para colher em grãos.",05/12/2012,GVIGNATTI,100,594
+2012,12,32,2,4,4104,0113.0010,0,N,5,6,9,0,8747,8747,,594796,68000,,,05/12/2012,GVIGNATTI,100,40.3
+2012,12,32,2,4,4104,0119.1040,1,S,9,6,9,,20,20,,36,1800,,"Feijão 1ª safra - RM/HA acima da média, devido aos bons tratos culturais, sementes selecionadas, adubadas e plantios solteiros.",05/12/2012,GVIGNATTI,100,2800
+2012,12,32,2,4,4104,0119.1040,2,N,9,0,0,,0,0,,0,0,,Feijão (2ª safra) - Não houve plantio em virtude dos longos dias de estiagem na região.,05/12/2012,GVIGNATTI,0,0
+2012,12,32,2,4,4104,0119.1040,2,S,9,6,9,,300,300,,630,2100,,"Feijão 2ª safra - Incremento de área, devido a falta do produto no mercado, proporcionando altas no preço. Aumento no RM/HA, em função dos bons tratos culturais e irrigações.",05/12/2012,GVIGNATTI,100,3000
+2012,12,32,2,4,4104,0119.1040,3,S,9,6,9,,150,150,,315,2100,,Feijão 3ª safra (irrigado) - Plantio de 150ha feito por um unico produtor.,05/12/2012,GVIGNATTI,100,2900
+2012,12,32,2,4,4104,0119.3010,0,S,9,6,9,5,7,7,,245,35000,,"Abacaxi - RM/HA acima da média, vez que as mudas são de clone e o plantio é feito em algumas áreas em fila dupla ou seja, maior número de plantas por área. Portanto, maior rendimento.",05/12/2012,GVIGNATTI,100,1256.4
+2012,12,32,2,4,4104,0119.3020,0,S,9,6,9,,50,50,,1250,25000,,,05/12/2012,GVIGNATTI,100,450
+2012,12,32,2,4,4104,0119.4040,0,N,9,6,9,0,1215,1215,,20655,17000,,"Mandioca - Havia previsão de alguns produtores deixarem parte da área para 2013. No entanto, toda a área será colhida até o final de dezembro em função dos altos preços do produto no mercado",05/12/2012,GVIGNATTI,100,211.75
+2012,12,32,2,4,4104,0119.4040,0,S,9,6,9,0,135,135,,5400,40000,,Mandioca - RM/HA bem acima da média. Informação confirmada pelo produtor de Pinheiros ao téc. do INCAPER no momento da reunião. A área irrigada corresponde a 10% do total plantado no Município que é de 1350 ha,05/12/2012,GVIGNATTI,100,171.75
+2012,12,32,2,4,4104,0119.9010,0,S,9,6,9,,90,90,,720,8000,,,05/12/2012,GVIGNATTI,100,470
+2012,12,32,2,4,4104,0133.2080,0,S,9,6,9,0,6,6,,90,15000,,"BANANA - Variedades cultivadas: PRATA = 2,2 HA; DA TERRA = 1,8 e MAÇÃ TROPICAL = 2HA. O RM/HA em média das três variedades é de 15000kg",05/12/2012,GVIGNATTI,100,715
+2012,12,32,2,4,4104,0133.2220,0,S,9,6,9,0,1,1,,38,38000,,,05/12/2012,GVIGNATTI,100,837
+2012,12,32,2,4,4104,0133.2330,0,S,9,6,9,0,1750,1750,,161000,92000,,"MAMÃO - Após uma avaliação nas variedades constataram uma redução no RM/HA, por estarem estimando acima da média do Município. FORMOSA = 1400 HA com RM/HA = 100.000kg e HAVAÍ = 350 HA com RM/HA = 60.000kg. A média ficou com 92.000kg",05/12/2012,GVIGNATTI,100,875
+2012,12,32,2,4,4104,0133.2360,0,S,9,6,9,0,120,120,,3510,29250,,,05/12/2012,GVIGNATTI,100,1446
+2012,12,32,2,4,4104,0133.3030,0,S,9,6,9,0,160,160,,3825,23906,,,05/12/2012,GVIGNATTI,100,562.5
+2012,12,32,2,4,4104,0134.0022,0,N,9,6,9,1000,525,525,,473,901,,,05/12/2012,GVIGNATTI,100,3689.1
+2012,12,32,2,4,4104,0134.0022,0,S,9,6,9,1000,9975,9975,,25137,2520,,CAFE CONILON - O INFORMENTE FEZ NOVA AVALIAÇÃO DA CULTURA E AJUSTOU O RENDIMENTO.,05/12/2012,GVIGNATTI,100,3689.1
+2012,12,32,2,4,4104,0139.1060,0,S,9,6,9,15,5,5,,22,4400,,"Pimenta-do-Reino - Incremento de área, em função dos altos preços do produto no mercado.",05/12/2012,GVIGNATTI,100,10745
+2012,12,32,2,4,4104,0139.2010,0,N,9,6,9,1180,270,270,,324,1200,,"Borracha (não irrigada) - Incremento de área, devido o bom preço do produto no mercado, aproveitamento de áreas de encostas e cultura de ciclo grande.",05/12/2012,GVIGNATTI,100,3112
+2012,12,32,2,4,4104,0139.2010,0,S,9,6,9,120,30,30,,45,1500,,,05/12/2012,GVIGNATTI,100,3112
+2012,12,32,2,4,4252,0119.3010,0,N,9,6,9,0,1,1,,30,30000,,"Abacaxi - Segundo o téc do INCAPER, o plantio foi realizado em fileiras duplas, istoé, diminui o espaçamento para aumentar a quantidade de plantas por área. Portanto, aumenta-se o RM/HA. Acompanhamento realizado pelo INCAPER.",01/12/2012,SISTEMA,100,1110
+2012,12,32,2,4,4252,0119.3010,0,S,9,6,9,0,2,2,,60,30000,,"Abacaxi - O RM/HA está acima da média, vez que os produtores receberam orientação do Téc. do INCAPER, para realizarem o plantio com menor espaçamento. Isto é, em fileiras duplas. Portanto aumentou o número de plantas por área.",05/12/2012,GVIGNATTI,100,1110
+2012,12,32,2,4,4252,0119.4040,0,N,9,6,9,0,280,280,,4480,16000,,"Mandioca - Havia previsão de colher parte da área em 2013. No entanto, toda a área será colhida até o final de dezembro de 2012.",05/12/2012,GVIGNATTI,100,223.5
+2012,12,32,2,4,4252,0133.2080,0,N,9,6,9,0,1,1,,12,12000,,"Banana - A Variedade cultivada é a PRATA. RM/HA baixo, vez que as áreas não são irrigadas com deficiencia em tratos culturais.",05/12/2012,GVIGNATTI,100,686.7
+2012,12,32,2,4,4252,0133.2080,0,S,9,6,9,0,2,2,,36,18000,,"Banana - O RM/HA está acima da média, devido os bons tratos culturais aplicados na cultura pelos produtore incentivados pelo téc do INCAPER. A variedade cultivada é a PRATA = 18000kg/ha",05/12/2012,GVIGNATTI,100,686.7
+2012,12,32,2,4,4252,0133.2220,0,N,9,6,9,0,1,1,,25,25000,,,05/12/2012,GVIGNATTI,100,815
+2012,12,32,2,4,4252,0133.2220,0,S,9,6,9,0,1,1,,25,25000,,,05/12/2012,GVIGNATTI,100,815
+2012,12,32,2,4,4252,0133.3030,0,N,9,6,9,0,2,2,,20,10000,,,05/12/2012,GVIGNATTI,100,457.5
+2012,12,32,2,4,4252,0133.3030,0,S,9,6,9,0,2,2,,40,20000,,,05/12/2012,GVIGNATTI,100,457.5
+2012,12,32,2,4,4252,0134.0022,0,N,9,6,9,0,80,80,,64,800,,,05/12/2012,GVIGNATTI,100,3855
+2012,12,32,2,4,4252,0134.0022,0,S,9,6,9,0,320,320,,576,1800,,"Cafe - Houve aumento no RM/HA, devido o aumento na áreas irrigadas, passando para 80% da área total e mais investimentos realizados pelos produtores em função do bom preço do produto no mercado.",05/12/2012,GVIGNATTI,100,3855
+2012,12,32,2,5,1605,0111.0070,1,N,9,6,9,,4,4,,4,1000,,"Milho 1ª safra(não irrigado) - RM/HA abaixo do esperado, em função da estiagem prolongada no período do embonecamento, reduzindo a produção.",05/12/2012,GVIGNATTI,100,580
+2012,12,32,2,5,1605,0111.0070,1,S,9,6,9,,16,16,,40,2500,,,05/12/2012,GVIGNATTI,100,580
+2012,12,32,2,5,1605,0113.0010,0,N,5,6,9,0,8559,8559,,556335,65000,,"REDUÇÃO DE ÁREA EM PRODUÇÃO, CONFORME LEVANTAMENTO REALIZADO JUNTOS AS EMPRESAS DISA E ALCON QUE EXPLORAM A CULTURA NO MUNICÍPIO.",04/12/2012,GVIGNATTI,100,40.15
+2012,12,32,2,5,1605,0119.1040,1,N,9,6,9,,4,4,,3,750,,,05/12/2012,GVIGNATTI,100,2900
+2012,12,32,2,5,1605,0119.1040,1,S,9,6,9,,16,16,,24,1500,,"Feijão irrigado - RM/HA acima da média, devido aos bons tratos culturais, adubações, sementes selecionadas e acompanhamento técnico.",05/12/2012,GVIGNATTI,100,2900
+2012,12,32,2,5,1605,0119.1040,2,S,9,6,9,,20,20,,24,1200,,"Feijão (2ª safra) - O RM/HA está acima da média, por se tratar de áreas irrigadas, sementes selecionadas e adubadas.",05/12/2012,GVIGNATTI,100,3300
+2012,12,32,2,5,1605,0119.1040,3,S,9,4,9,,6,6,,8,1333,,"Feijão irrigado (3ª safra) - RM/HA acima da média, vez que a lavoura é irrigada e tendo todos os tratos culturais.",05/12/2012,GVIGNATTI,0,2915.25
+2012,12,32,2,5,1605,0119.3010,0,N,9,6,9,0,14,14,,336,24000,,,05/12/2012,GVIGNATTI,100,1301
+2012,12,32,2,5,1605,0119.3010,0,S,9,6,9,0,3,3,,87,29000,,"Abacaxi - RM/HA acima da média, devido aos bons tratos culturais, mudas selecionadas e espaçamento densado, ou seja, mais plantas por área plantada.",05/12/2012,GVIGNATTI,100,1301
+2012,12,32,2,5,1605,0119.3020,0,N,9,6,9,,8,8,,120,15000,,,05/12/2012,GVIGNATTI,100,450
+2012,12,32,2,5,1605,0119.3020,0,S,9,6,9,,12,12,,300,25000,,,05/12/2012,GVIGNATTI,100,450
+2012,12,32,2,5,1605,0119.4040,0,N,9,6,9,0,450,450,,6750,15000,,"Mandioca - Aumento de área em relação ao ano anterior, devido a melhora no preço do produto no mercado.",04/12/2012,GVIGNATTI,100,206.05
+2012,12,32,2,5,1605,0119.9010,0,N,9,6,9,,8,8,,64,8000,,,05/12/2012,GVIGNATTI,100,470
+2012,12,32,2,5,1605,0119.9010,0,S,9,6,9,,27,27,,270,10000,,"Abóbora (irrigada) - Ajuste de área realizada pelo Téc. do INCAPER, após avalição da cultura no Município.",05/12/2012,GVIGNATTI,100,470
+2012,12,32,2,5,1605,0131.0010,0,N,9,0,0,0,0,0,,0,0,,"Laranja - Toda a área foi erradicada desde 2011, devido o fim do ciclo produtivo e na mesma área foi plantado cana.",04/12/2012,GVIGNATTI,0,0
+2012,12,32,2,5,1605,0133.1040,0,N,9,6,9,0,15,15,,240,16000,,,04/12/2012,GVIGNATTI,100,995
+2012,12,32,2,5,1605,0133.1070,0,N,9,0,0,0,0,0,,0,0,,"Tangerina - Toda a área foi erradicada em 2011, devido o fim do ciclo produtivo.",04/12/2012,GVIGNATTI,0,0
+2012,12,32,2,5,1605,0133.2080,0,N,9,6,9,4,8,8,,96,12000,,Banana = Variedade PRATA (japira) = 8ha e DA TERRA = 4ha. Total = 12 ha,04/12/2012,GVIGNATTI,100,849.6
+2012,12,32,2,5,1605,0133.2220,0,N,9,0,0,0,0,0,,0,0,,"Goiaba - Toda a área foi erradicada desde o final de 2011, em consequencia dos baixos preços do produto no mercado.",04/12/2012,GVIGNATTI,0,0
+2012,12,32,2,5,1605,0133.2330,0,N,9,6,9,0,24,24,,780,32500,,"Mamão - RM/HA abaixo da média, por não se tratar de áreas irrigadas. Até porque, atravessamos períodos longos de estiagens no decorrer do ano. Mamão formosa = 12 ha com RM/HA = 40.000kg e Havaí =12 HA comRM/HA= 25000kg",04/12/2012,GVIGNATTI,100,819
+2012,12,32,2,5,1605,0133.2360,0,N,9,6,9,0,12,12,,240,20000,,,04/12/2012,GVIGNATTI,100,1126
+2012,12,32,2,5,1605,0133.2360,0,S,9,6,9,0,48,48,,1440,30000,,,04/12/2012,GVIGNATTI,100,1126
+2012,12,32,2,5,1605,0133.3030,0,N,9,6,9,0,240,240,,2880,12000,,,04/12/2012,GVIGNATTI,100,491.5
+2012,12,32,2,5,1605,0133.3030,0,S,9,6,9,200,160,160,,2880,18000,,"Coco(irrigado) - Aumento de área pelos produtores, devido ao incentivo para o plantio e garantia de comercialização pelas Empresas PSICO e o GRUPO D MARTINS.",04/12/2012,GVIGNATTI,100,491.5
+2012,12,32,2,5,1605,0134.0022,0,N,9,6,9,0,108,108,,130,1204,,"Café Conilon(não irrigado) - Aumento no RM/HA, devido aos melhores tratos culturais, adubações e condições climáticas favoráveis no período da floração.",04/12/2012,GVIGNATTI,100,3783.6
+2012,12,32,2,5,1605,0134.0022,0,S,9,6,9,0,252,252,,605,2401,,"Café Conilon - Aumento no rendimento/ha, devido maiores investimentos em irrigações, tratos culturais, adubações, Renovação de áreas com mudas produtivas e mehor acompanhamento técnico. Houve também, ajuste na área em produção.",04/12/2012,GVIGNATTI,100,3783.6
+2012,12,32,2,5,1605,0135.0010,0,S,9,6,9,0,63,63,,20,317,,,04/12/2012,GVIGNATTI,100,4580
+2012,12,32,2,5,1605,0139.1060,0,N,9,6,9,0,20,20,,40,2000,,"Pimenta-do Reino - RM/HA abaixo da média, devido a falta de tratos culturais adequados e período de estiagens prolongados no decorrer do ano.",04/12/2012,GVIGNATTI,100,10112
+2012,12,32,2,5,1605,0139.1060,0,S,9,6,9,20,20,20,,60,3000,,"Pimenta-do-Reino(irrigado) - Aumento de área, devido o bom preço do produto no mercado.",04/12/2012,GVIGNATTI,100,10562
+2012,12,32,2,5,1605,0139.2010,0,N,9,6,9,7,72,72,,72,1000,,"Borracha (não irrigada) - Incremento de área, após uma avaliação feita pelo técnico do INCAPER.",04/12/2012,GVIGNATTI,100,2980
+2012,12,32,2,5,1605,0139.2010,0,S,9,6,9,3,18,18,,27,1500,,"Borracha (irrigada) - Incremento de área, após avaliação feita pelo Téc. do INCAPER.",04/12/2012,GVIGNATTI,100,2462.5
+2012,12,32,2,5,1605,0139.9060,0,N,9,6,9,0,52,52,,42,808,,,04/12/2012,GVIGNATTI,100,4100
+2012,12,32,2,5,1605,0139.9060,0,S,9,6,9,0,208,208,,260,1250,,,04/12/2012,GVIGNATTI,100,4100
+2012,12,32,2,5,3056,0111.0070,1,S,9,6,9,,80,80,,240,3000,,,05/12/2012,GVIGNATTI,100,604
+2012,12,32,2,5,3056,0113.0010,0,N,2,0,0,0,0,0,,0,0,,Cana-de-Açucar - Toda a área foi erradicada e substituída por pastagens.,05/12/2012,GVIGNATTI,0,0
+2012,12,32,2,5,3056,0119.1040,1,S,9,6,9,,50,50,,60,1200,,"Feijão 1ª safra - Aumento no RM/ha, devido aos bons tratos culturais, irrigações e adubações.",05/12/2012,GVIGNATTI,100,2850
+2012,12,32,2,5,3056,0119.1040,2,N,9,0,0,,0,0,,0,0,,"Feijão 2ª safra(não irrigado) - Não houve plantio, em função da estiagem prolongada na região.",05/12/2012,GVIGNATTI,0,0
+2012,12,32,2,5,3056,0119.1040,2,S,9,6,9,,30,30,,36,1200,,"Feijão 2ª safra - Aumento no RM/HA, por serem áreas irrigadas e com bons tratos culturais.",05/12/2012,GVIGNATTI,100,2330
+2012,12,32,2,5,3056,0119.3010,0,N,9,6,9,24,6,6,,150,25000,,"Abacaxi - Após levantamento sobre a cultura no município constatou-se novos plantios, vez que os produtores vem investindo com perspectivas de bom preço do produto no mercado.",05/12/2012,GVIGNATTI,100,1203
+2012,12,32,2,5,3056,0119.3010,0,S,9,6,9,8,2,2,,64,32000,,"Abacaxi Irrigado -Segundo o téc. foi realizado um levantamento sobre a cultura no municipio e constatou-se um plantio de mais 8 ha da cultura .RM/HA acima da média, por se tratar de mudas altamente produtivas.",05/12/2012,GVIGNATTI,100,1203
+2012,12,32,2,5,3056,0119.3020,0,S,9,6,9,,10,10,,300,30000,,"Melancia - Aumento acima da média, por ser toda irrigada, adubada de acordo com as recomendações técnicas.",05/12/2012,GVIGNATTI,100,400
+2012,12,32,2,5,3056,0119.4040,0,N,9,6,9,120,120,120,,1440,12000,,,05/12/2012,GVIGNATTI,100,180.5
+2012,12,32,2,5,3056,0119.9010,0,S,9,6,9,,45,45,,450,10000,,"Houve uma reavaliação da área de abobora no Municipio pela incaper, pois descobriram mais 30 hectare em plena produção e com execelente preço.",05/12/2012,GVIGNATTI,100,200
+2012,12,32,2,5,3056,0131.0010,0,N,9,6,9,2,8,8,,80,10000,,,05/12/2012,GVIGNATTI,100,790
+2012,12,32,2,5,3056,0131.0010,0,S,9,6,9,3,8,8,,136,17000,,,05/12/2012,GVIGNATTI,100,788
+2012,12,32,2,5,3056,0133.2080,0,S,9,6,9,0,25,25,,375,15000,,BANANA - A variedade DA TERRA = 23 HA e a variedade NANICA = 2 HA. Segundo o téc. o RM/HA gira em torno de 15.000kg.,05/12/2012,GVIGNATTI,100,721.7
+2012,12,32,2,5,3056,0133.2330,0,S,9,6,9,0,300,300,,18600,62000,,Mamão - A variedade HAVAÍ ocupa 270 ha com RM/HA 60.000kg e FORMOSA 30 ha com RM/HA = 80.000kg. MÉDIA DE PRODUÇÃO/HA = 62 TON.,05/12/2012,GVIGNATTI,100,905.5
+2012,12,32,2,5,3056,0133.2360,0,N,9,6,9,0,50,50,,1250,25000,,,05/12/2012,GVIGNATTI,100,1007.4
+2012,12,32,2,5,3056,0133.2360,0,S,9,6,9,300,350,350,,12250,35000,,"Maracuja (irrigado) - Aumento de área, devido o incentivo dado pela cooperativa local na compra de toda a produção.",04/12/2012,GVIGNATTI,100,1007.4
+2012,12,32,2,5,3056,0133.3030,0,N,9,6,9,20,36,36,,360,10000,,,01/12/2012,SISTEMA,100,449
+2012,12,32,2,5,3056,0133.3030,0,S,9,6,9,178,326,326,,5868,18000,,,05/12/2012,GVIGNATTI,100,449
+2012,12,32,2,5,3056,0134.0022,0,S,9,6,9,2000,19000,19000,,44650,2350,,"Café Conilon - Aumento no RM/HA, vez que as mudas são de clones altamente produtivos, uso constante de irrigações, adubaçoes e tratos culturais e também, acompanhamento técnico na maiorias das lavouras cafeeiras do Município.",05/12/2012,GVIGNATTI,100,3720
+2012,12,32,2,5,3056,0135.0010,0,S,9,6,9,0,38,38,,10,263,,,05/12/2012,GVIGNATTI,100,4144
+2012,12,32,2,5,3056,0139.1060,0,S,9,6,9,130,270,270,,810,3000,,"Pimenta-do-Reino - Aumento de área, devido o bom preço do produto no mercado e com isso, os produtores vem investindo em irrigações e melhores tratos culturais.",05/12/2012,GVIGNATTI,100,10375
+2012,12,32,2,5,3056,0139.2010,0,N,9,6,9,15,225,225,,270,1200,,,05/12/2012,GVIGNATTI,100,3160.1
+2012,12,32,2,5,3056,0139.2010,0,S,9,6,9,2,28,28,,45,1607,,,05/12/2012,GVIGNATTI,100,3160.1
+2012,12,32,2,5,3056,0139.9060,0,S,9,6,9,0,15,15,,9,600,,"Palmito - RM/HA abaixo da média, por se tratar de lavouras não irrigadas e pouca assistência técnica aplicada pelos produtores.",04/12/2012,GVIGNATTI,100,4160
+2012,12,32,2,5,4054,0111.0070,1,N,9,6,9,,10,10,,10,1000,,"Milho 1ª safra - RM/HA abaixo do esperado, devido a falta de chuvas nos meses de setembro e outubro de 2011, comprometendo a produtividade das lavouras.",05/12/2012,GVIGNATTI,100,545
+2012,12,32,2,5,4054,0111.0070,1,S,9,6,9,,90,90,,252,2800,,,05/12/2012,GVIGNATTI,100,590
+2012,12,32,2,5,4054,0111.0070,2,S,9,6,9,,35,35,,91,2600,,Milho(2ª safra) - Plantios de subsistência realizados pelos pequenos produtores do município.,05/12/2012,GVIGNATTI,100,660
+2012,12,32,2,5,4054,0113.0010,0,N,5,6,9,0,10098,10098,,585684,58000,,"AUMENTO DE ÁREA, CONFORME LEVANTAMENTO FEITO JUNTO AS EMPRESAS DISA, ALCON E ALCANA, QUE EXPLORAM A CULTURA NO MUNICÍPIO.",05/12/2012,GVIGNATTI,100,39.35
+2012,12,32,2,5,4054,0119.1040,1,N,9,6,9,,8,8,,6,750,,,05/12/2012,GVIGNATTI,100,2800
+2012,12,32,2,5,4054,0119.1040,1,S,9,6,9,,72,72,,108,1500,,"Feijão (irrigado) - RM/HA acima da média, devido os altos investimentos realizados pelos produtores como irrigações, adubações etc.",05/12/2012,GVIGNATTI,100,2800
+2012,12,32,2,5,4054,0119.1040,2,N,9,0,0,,0,0,,0,0,,Feijão (2ª safra) - Não houve plantio em consequência da estiagem prolongada na região.,05/12/2012,GVIGNATTI,0,0
+2012,12,32,2,5,4054,0119.1040,2,S,9,6,9,,10,10,,10,1000,,"Feijão(2ª safra) - Queda de área em relação a safra anterior, devido aos longos períodos de estiagem na região.",05/12/2012,GVIGNATTI,100,2300
+2012,12,32,2,5,4054,0119.3010,0,N,9,6,9,1,1,1,,25,25000,,"Abacaxi - O INCAPER fez a distribuição de mudas para ser plantado 4 ha da cultura, porém só foi plantado 1 ha devido a estiagem prolongada que vem assolando a região.",05/12/2012,GVIGNATTI,100,1240
+2012,12,32,2,5,4054,0119.3010,0,S,9,6,9,4,5,5,,140,28000,,"Abacaxi - RM/HA acima da média, devido os altos investimentos pelos produtores e mudas selecionadas.",05/12/2012,GVIGNATTI,100,1231.2
+2012,12,32,2,5,4054,0119.3020,0,S,9,6,9,,50,50,,1750,35000,,"Melancia - RM/HA acima da média, devido os bons investimentos realizados pelos produtores, sementes de boa qualidade e uso de irrigações.",05/12/2012,GVIGNATTI,100,620
+2012,12,32,2,5,4054,0119.4040,0,N,9,6,9,0,300,300,,3600,12000,,,05/12/2012,GVIGNATTI,100,188.25
+2012,12,32,2,5,4054,0119.9010,0,S,9,6,9,,125,125,,1500,12000,,,05/12/2012,GVIGNATTI,100,539
+2012,12,32,2,5,4054,0133.2080,0,S,9,6,9,10,5,5,,100,20000,,Banana - Após levantamento sobre a cultura no município constatou-se um novo plantio em formação de 10ha da cultura.,05/12/2012,GVIGNATTI,100,787
+2012,12,32,2,5,4054,0133.2220,0,N,9,6,9,0,90,90,,1800,20000,,,05/12/2012,GVIGNATTI,100,933.6
+2012,12,32,2,5,4054,0133.2330,0,S,9,6,9,200,300,300,,23400,78000,,"Mamão (irrigado) - Incremento de área, com o objetivo de alcancarem um bom preço do produto no mercado. Mamão Formosa = 300 ha com RM/ha = 90.000kg Mamão Havaí = 200 ha com RM/HA = 60.000kg. Portanto a média ficou em 78.000kg/ha",05/12/2012,GVIGNATTI,100,746
+2012,12,32,2,5,4054,0133.2360,0,S,9,6,9,0,20,20,,400,20000,,,05/12/2012,GVIGNATTI,100,1166.6
+2012,12,32,2,5,4054,0133.3030,0,N,9,6,9,0,20,20,,160,8000,,"Coco da baia - RMHA abaixo da média, devido ao longo período de estiagem.",05/12/2012,GVIGNATTI,100,482.5
+2012,12,32,2,5,4054,0133.3030,0,S,9,6,9,0,80,80,,1280,16000,,"Coco (irrigado) - Ajuste na área irrigada, vez que o RM/HA vem crescendo em função dos melhores tratos culturais aplicados pelos produtores.",05/12/2012,GVIGNATTI,100,482.5
+2012,12,32,2,5,4054,0134.0022,0,N,9,6,9,0,25,25,,20,800,,,01/12/2012,SISTEMA,100,3795
+2012,12,32,2,5,4054,0134.0022,0,S,9,6,9,60,145,145,,227,1566,,"CAFE CONILON - O informante ira fazer uma nova avaliação sobre a cultura, principalmente o RM/HA. Portanto, teremos uma nova avaliação na próxima reunião.",05/12/2012,GVIGNATTI,100,3795
+2012,12,32,2,5,4054,0139.1060,0,S,9,6,9,0,35,35,,88,2514,,,05/12/2012,GVIGNATTI,100,10324
+2012,12,32,2,5,4054,0139.2010,0,N,9,6,9,16,120,120,,102,850,,,05/12/2012,GVIGNATTI,100,3053
+2012,12,32,2,5,4054,0139.2010,0,S,9,6,9,4,30,30,,36,1200,,"Borracha(irrigada) - Ajuste no RM/HA, vez que a cultura encontra-se em franca produção.",05/12/2012,GVIGNATTI,100,3055
+2012,12,32,2,5,4906,0111.0070,1,N,9,6,9,,66,66,,66,1000,,"Milho 1ª safra (Não irrigado) - RM/HA dentro do esperado, por se tratar de áreas não irrigadas, chuvas irregulares e sementes não selecionadas",05/12/2012,GVIGNATTI,100,580
+2012,12,32,2,5,4906,0111.0070,1,S,9,6,9,,154,154,,462,3000,,"Milho 1ª safra (irrigado) - RM/HA dentro do esperado, vez que a maior parte do plantio são áreas isoladas, sementes certificadas e com bons tratos culturais.",01/12/2012,SISTEMA,100,712
+2012,12,32,2,5,4906,0111.0070,2,S,9,6,9,,50,50,,90,1800,,"MILHO (2ª SAFRA) - As áreas são de pequenos produtores que plantam para a própria subsistência, motivo pelo qual o RM/HA encontra-se abaixo da média.",05/12/2012,GVIGNATTI,100,600
+2012,12,32,2,5,4906,0113.0010,0,N,5,6,9,0,5219,5219,,360111,69000,,,05/12/2012,GVIGNATTI,100,43.24
+2012,12,32,2,5,4906,0119.1040,1,S,9,6,9,,120,120,,180,1500,,"Feijão 1ª safra - RM/HA acima da média, devido aos bons tratos culturais, plantios isolados, controle de pragas e doenças, sementes selecionadas.",05/12/2012,GVIGNATTI,100,2950
+2012,12,32,2,5,4906,0119.1040,2,N,9,0,0,,0,0,,0,0,,"Feijão 2ª safra - Não houve plantio, em consequencia da estiagem prolongada.",05/12/2012,GVIGNATTI,0,0
+2012,12,32,2,5,4906,0119.1040,2,S,9,6,9,,50,50,,55,1100,,"FEIJÃO 2ª SAFRA - Queda de área em relação ao ano anterior, devido a estiagem prolongada nos ultimos meses.",05/12/2012,GVIGNATTI,100,2500
+2012,12,32,2,5,4906,0119.3010,0,S,9,6,9,5,5,5,,125,25000,,,05/12/2012,GVIGNATTI,100,1150
+2012,12,32,2,5,4906,0119.4040,0,N,9,6,9,0,550,550,,6930,12600,,,05/12/2012,GVIGNATTI,100,167.25
+2012,12,32,2,5,4906,0119.9010,0,S,9,6,9,,20,20,,100,5000,,,05/12/2012,GVIGNATTI,100,557.5
+2012,12,32,2,5,4906,0132.0020,0,S,9,6,9,0,7,7,,210,30000,,"Uva - Após levantamento realizado pelos téc. do INCAPER, constataram um novo plantio em produção de 4ha da cultura. Segundo o téc. o incremento é um incentivo realizado pelo Frei Onório, Sec. de Agricultura e Meio Ambiente.",05/12/2012,GVIGNATTI,100,4600
+2012,12,32,2,5,4906,0133.1040,0,S,9,6,9,0,45,45,,900,20000,,,05/12/2012,GVIGNATTI,100,871.4
+2012,12,32,2,5,4906,0133.2080,0,N,9,6,9,8,32,32,,576,18000,,"Banana(não irrigada) - RM/HA acima da média, vez que os plantios são realizados proximos as áreas umidas. As variedades DA TERRA = 20 HA e PRATA ANÃ 20 HA. O RM/HA são iguais, vez que há um equilibrio de peso entre as duas variedades.",05/12/2012,GVIGNATTI,100,700
+2012,12,32,2,5,4906,0133.2080,0,S,9,6,9,48,152,152,,4560,30000,,"Banana (irrigada) - RM/HA acima da média, devido aos altos investimentos realizados pelos produtores. A variedade DA TERRA = 100 ha e PRATA ANÃ = 100HA. Segundo o téc. o RM/HA é igual entre as duas variedades.",05/12/2012,GVIGNATTI,100,700
+2012,12,32,2,5,4906,0133.2220,0,S,9,0,0,0,0,0,,0,0,,"Goiaba - Toda a área foi erradicada, devido o fim do ciclo produtivo, incentivado pelo preço baixo do produto no mercado.",05/12/2012,GVIGNATTI,0,0
+2012,12,32,2,5,4906,0133.2330,0,S,9,6,9,0,1000,1000,,72000,72000,,"Mamão - Segundo o téc. do incaper, foram levantados as variedades e RM/HA da cultura no município e constataram um RM/HA = 72000kg. FORMOSA = 300HA com RM/HA = 100.00Okg e HAVAÍ = 700 ha com RM/HA = 60.000kg.",05/12/2012,GVIGNATTI,100,819
+2012,12,32,2,5,4906,0133.2340,0,N,9,6,9,0,5,5,,75,15000,,,05/12/2012,GVIGNATTI,100,700
+2012,12,32,2,5,4906,0133.2360,0,S,9,6,9,200,100,100,,2000,20000,,,05/12/2012,GVIGNATTI,100,1077.3
+2012,12,32,2,5,4906,0133.3030,0,S,9,6,9,0,2350,2350,,76000,32340,,"COCO - RM/HA acima da média, devido aos altos investimentos, até porque a maior área do município é da Empreso PEPSICO que faz o evasamento do produto",05/12/2012,GVIGNATTI,100,463
+2012,12,32,2,5,4906,0133.3050,0,N,5,6,9,0,660,660,,1650,2500,,Macadamia - Informação obtida pelo produtor,05/12/2012,GVIGNATTI,100,4000
+2012,12,32,2,5,4906,0133.3050,0,S,5,6,9,0,60,60,,210,3500,,Macadamia - Informação obtida pelo produtor,05/12/2012,GVIGNATTI,100,4000
+2012,12,32,2,5,4906,0134.0022,0,N,9,6,9,250,2510,2510,,1506,600,,"Café Conilon - RM/HA abaixo da média, por se tratar de plantios não irrigados e as constates faltas de chuvas no decorrer do ano reduzem a produção.",05/12/2012,GVIGNATTI,100,3684.5
+2012,12,32,2,5,4906,0134.0022,0,S,9,6,9,3250,10040,10040,,21686,2160,,,05/12/2012,GVIGNATTI,100,3684.5
+2012,12,32,2,5,4906,0135.0010,0,N,9,6,9,0,850,850,,198,233,,"Cacau - RM/HA abaixo da média, devido a falta de tratos culturais adequados de algumas áreas e outras áreas com pés em idade produtiva avançada.",05/12/2012,GVIGNATTI,100,4172.5
+2012,12,32,2,5,4906,0139.1060,0,S,9,6,9,300,1600,1600,,4480,2800,,,05/12/2012,GVIGNATTI,100,10217
+2012,12,32,2,5,4906,0139.1070,0,S,9,6,9,0,20,20,,20,1000,,"Urucum - Segundo o téc. após uma avaliação sobre a cultura no município, constatou-se um plantio de 20 ha da cultura. Incremento de área, devido a uma melhora no preço do produto no mercado.",05/12/2012,GVIGNATTI,100,3800
+2012,12,32,2,5,4906,0139.2010,0,N,9,6,9,300,1500,1500,,1800,1200,,,05/12/2012,GVIGNATTI,100,3142.5
+2012,12,32,2,5,4906,0139.9060,0,N,9,0,0,0,0,0,,0,0,,Palmito - Toda a área foi erradicada.,05/12/2012,GVIGNATTI,0,0
+2012,12,32,2,6,607,0111.0070,1,S,9,6,9,,50,50,,150,3000,,"De acordo com o INCAPER, todo o milho do munnicipio é irrigado, pois planta-se o mesmo, principalmete, junto com a renovação das lavouras de café",07/12/2012,VINICIOSSILVA,100,521.5
+2012,12,32,2,6,607,0113.0010,0,N,9,6,9,0,2000,2000,,130000,65000,,,07/12/2012,VINICIOSSILVA,100,41.1
+2012,12,32,2,6,607,0119.1040,1,N,9,6,9,,30,30,,21,700,,,07/12/2012,VINICIOSSILVA,100,2800
+2012,12,32,2,6,607,0119.1040,1,S,9,6,9,,70,70,,63,900,,"De acordo com o INCAPER, todo o feijão do municipio é irrigado, pois planta-se o memso juntamente com a renovação das lavouras de café",07/12/2012,VINICIOSSILVA,100,2130
+2012,12,32,2,6,607,0119.1040,2,S,9,6,9,,50,50,,90,1800,,"De acordo com o INCAPER a previsão realizada no final do ano passado não se confirmou, logo a área plantada diminuiu, principalmente pela dificuldade no manuseio da lavoura.",07/12/2012,VINICIOSSILVA,100,2395
+2012,12,32,2,6,607,0119.2050,0,N,9,6,9,0,50,50,,3250,65000,,,07/12/2012,VINICIOSSILVA,100,41.1
+2012,12,32,2,6,607,0119.4040,0,N,9,6,9,0,300,300,,4500,15000,,,07/12/2012,VINICIOSSILVA,100,182.9
+2012,12,32,2,6,607,0131.0010,0,N,9,6,9,0,50,50,,600,12000,,,07/12/2012,VINICIOSSILVA,100,826
+2012,12,32,2,6,607,0133.2080,0,N,9,6,9,0,100,100,,1000,10000,,,07/12/2012,VINICIOSSILVA,100,637.5
+2012,12,32,2,6,607,0133.2080,0,S,9,6,9,20,100,100,,1000,10000,,Plantio de 20 ha em virtude de ampliação da área da lavoura.,07/12/2012,VINICIOSSILVA,100,637.5
+2012,12,32,2,6,607,0133.2330,0,S,9,6,9,0,260,260,,13000,50000,,,07/12/2012,VINICIOSSILVA,100,775
+2012,12,32,2,6,607,0133.2340,0,S,9,6,9,0,5,5,,75,15000,,,07/12/2012,VINICIOSSILVA,100,532.5
+2012,12,32,2,6,607,0133.2360,0,S,9,6,9,0,20,20,,460,23000,,"De acordo com o INCAPER, devido ao baixo preço do produto no mercado e ao alto custo para manter a lavoura, grande parte da área de maracujá no municipio foi erradicada para plantio de café conilon.",07/12/2012,VINICIOSSILVA,100,1368
+2012,12,32,2,6,607,0133.3030,0,N,9,6,9,0,38,38,,361,9500,,,07/12/2012,VINICIOSSILVA,100,481.5
+2012,12,32,2,6,607,0133.3030,0,S,9,6,9,32,88,88,,968,11000,,,07/12/2012,VINICIOSSILVA,100,481.5
+2012,12,32,2,6,607,0134.0022,0,N,9,6,9,0,200,200,,360,1800,,Rendimento menor é devido a área não irrigada.,07/12/2012,VINICIOSSILVA,100,3842
+2012,12,32,2,6,607,0134.0022,0,S,9,6,9,500,3800,3800,,9120,2400,,"Rendimento maior em função de melhores técnicas de plantio, com irrigação e devido a própria caracterisica do municipio.",07/12/2012,VINICIOSSILVA,100,3842
+2012,12,32,2,6,607,0135.0010,0,S,9,6,9,33,52,52,,21,404,,"De acordo com o INCAPER toda a área de cacau é irrigada, pois geralmente é plantada com outra cultura.",07/12/2012,VINICIOSSILVA,100,4621
+2012,12,32,2,6,607,0139.1060,0,S,9,6,9,0,30,30,,90,3000,,,07/12/2012,VINICIOSSILVA,100,10427
+2012,12,32,2,6,607,0139.2010,0,N,9,6,9,217,500,500,,500,1000,,,07/12/2012,VINICIOSSILVA,100,1880
+2012,12,32,2,6,2207,0111.0070,1,N,1,4,9,,10,10,,20,2000,,,05/12/2012,NEIDIMAR,100,785.5
+2012,12,32,2,6,2207,0113.0010,0,N,1,0,7,0,0,0,,0,0,,O municipio erradicou a cultura .. REAVALIAÇÃO do técnico.,01/12/2012,SISTEMA,0,0
+2012,12,32,2,6,2207,0119.1040,1,N,2,4,9,,5,5,,6,1200,,PRODUÇÃO CONFIRMADA PELO TECNICO INCAPER,01/12/2012,SISTEMA,100,3600
+2012,12,32,2,6,2207,0119.1040,2,N,9,6,9,,7,7,,8,1143,,"A CONFIRMAR RENDIMENTO COM O TECNICO DA INCAPER. A PREVISÃO ERA DE PLANTAR 10 HC, POR FALTA DE MÃO DE OBRA FOI PLANTADO SOMENTE 7 HC.",05/12/2012,NEIDIMAR,100,2233.33
+2012,12,32,2,6,2207,0119.2050,0,N,9,6,9,0,10,10,,500,50000,,,05/12/2012,NEIDIMAR,100,44
+2012,12,32,2,6,2207,0119.4040,0,N,9,6,9,0,100,100,,1200,12000,,"Esta sendo reavaliado pelos técnicos, a previsão é mais de mais queda nas areas de plantio.",05/12/2012,NEIDIMAR,100,210
+2012,12,32,2,6,2207,0131.0010,0,N,9,6,9,5,30,30,,330,11000,,,05/12/2012,NEIDIMAR,100,908
+2012,12,32,2,6,2207,0133.1040,0,S,9,6,9,2,3,3,,63,21000,,,05/12/2012,NEIDIMAR,100,925.5
+2012,12,32,2,6,2207,0133.1070,0,S,9,6,9,2,20,20,,340,17000,,ravaliação dos técnicos .Toda culltura do municipio esta sendo reavaliada.,05/12/2012,NEIDIMAR,100,948
+2012,12,32,2,6,2207,0133.2080,0,N,9,6,9,35,85,85,,850,10000,,NO MUNICIPIO A PREDOMINÂNCIA É A BANANA PRATA EM 90% NANICA 5% - TERRA 3% - MAÇÃ - 2% .,05/12/2012,NEIDIMAR,100,850
+2012,12,32,2,6,2207,0133.3030,0,N,9,6,9,8,10,10,0,120,12000,450.00,.,06/12/2012,NEIDIMAR,100,4.5
+2012,12,32,2,6,2207,0133.3030,0,S,1,4,9,12,30,30,100,700,23333,450.00,,05/12/2012,NEIDIMAR,100,450
+2012,12,32,2,6,2207,0134.0021,0,N,9,6,9,0,10,10,,9,900,,"Substítuição do Arábica por Conilon, de forma gradativa e reavaliação feita pelo técnico.",05/12/2012,NEIDIMAR,100,4405
+2012,12,32,2,6,2207,0134.0022,0,N,9,6,9,300,480,480,,864,1800,,Reavaliação Tecnica,05/12/2012,NEIDIMAR,100,4696.5
+2012,12,32,2,6,2207,0134.0022,0,S,9,6,9,300,1920,1920,,4032,2100,,Lavouras irrigadas com tecnicas adequada a produção,05/12/2012,NEIDIMAR,100,4695
+2012,12,32,2,6,2207,0135.0010,0,N,9,6,9,5,29,29,,10,345,,,05/12/2012,NEIDIMAR,100,4960
+2012,12,32,2,6,2207,0139.1060,0,S,1,6,9,0,2,2,,4,2000,,reavaliação feito pelos técnicos .,05/12/2012,NEIDIMAR,100,12000
+2012,12,32,2,6,2207,0139.2010,0,N,9,6,9,13,63,63,,88,1397,,,01/12/2012,SISTEMA,100,2560
+2012,12,32,2,6,2207,0139.9060,0,S,9,6,9,0,8,8,,20,2500,,CORTE EM FUNÇÃO DA ÉPOCA FESTIVAS.,05/12/2012,NEIDIMAR,100,2100
+2012,12,32,2,6,2504,0111.0070,1,N,9,6,9,,80,80,,240,3000,,,07/12/2012,VINICIOSSILVA,100,520
+2012,12,32,2,6,2504,0113.0010,0,N,9,6,9,0,255,255,,15300,60000,,,07/12/2012,VINICIOSSILVA,100,40.45
+2012,12,32,2,6,2504,0119.1040,1,N,9,6,9,,18,18,,13,722,,Não foi plantada toda área prevista,07/12/2012,VINICIOSSILVA,100,2130
+2012,12,32,2,6,2504,0119.1040,1,S,9,6,9,,15,15,,14,933,,Não foi plantada toda área prevista,07/12/2012,VINICIOSSILVA,100,2130
+2012,12,32,2,6,2504,0119.1040,2,S,9,6,9,,36,36,,32,889,,"De acordo com o INCAPER a previsão realizada no final do ano passado não se confirmou, logo a área plantada diminuiu, principalmente pela dificuldade no manuseio da lavoura.",07/12/2012,VINICIOSSILVA,100,2395
+2012,12,32,2,6,2504,0119.2050,0,N,9,6,9,0,45,45,,2700,60000,,,07/12/2012,VINICIOSSILVA,100,40.45
+2012,12,32,2,6,2504,0119.4040,0,N,9,6,9,0,90,90,,1800,20000,,,07/12/2012,VINICIOSSILVA,100,184.3
+2012,12,32,2,6,2504,0131.0010,0,N,9,6,9,0,47,47,,611,13000,,,07/12/2012,VINICIOSSILVA,100,797
+2012,12,32,2,6,2504,0133.1070,0,N,9,6,9,0,22,22,,286,13000,,Queda de 3 ha para plantio de café conilon.,07/12/2012,VINICIOSSILVA,100,462.5
+2012,12,32,2,6,2504,0133.2080,0,N,9,6,9,0,230,230,,2070,9000,,"Reavaliação da área irrigada e não irrigada, de acordo com dados do INCAPER.",07/12/2012,VINICIOSSILVA,100,665
+2012,12,32,2,6,2504,0133.2080,0,S,9,6,9,2,15,15,,225,15000,,"Reavaliação da área irrigada e não irrigada, de acordo com dados do INCAPER.",07/12/2012,VINICIOSSILVA,100,655
+2012,12,32,2,6,2504,0133.3030,0,N,9,6,9,0,25,25,,300,12000,,,07/12/2012,VINICIOSSILVA,100,481.5
+2012,12,32,2,6,2504,0133.3030,0,S,9,6,9,0,38,38,,684,18000,,Reavaliação do rendimento médio do coco por parte do técnico do INCAPER devido a área ser irrigada.,07/12/2012,VINICIOSSILVA,100,481.5
+2012,12,32,2,6,2504,0134.0021,0,N,9,6,9,0,290,290,,276,952,,Queda na quantidade em função de cortes para o plantio de café conilon.,07/12/2012,VINICIOSSILVA,100,4772.5
+2012,12,32,2,6,2504,0134.0022,0,N,9,6,9,0,700,700,,1092,1560,,,07/12/2012,VINICIOSSILVA,100,3846.5
+2012,12,32,2,6,2504,0134.0022,0,S,9,6,9,300,1000,1000,,2400,2400,,"Rendimento maior em função de melhores técnicas de plantio, com irrigação e devido a própria caracterisica do municipio.",07/12/2012,VINICIOSSILVA,100,3846.5
+2012,12,32,2,6,2504,0135.0010,0,N,9,6,9,0,18,18,,7,389,,"Reavaliação da área irrigada e não irrigada, de acordo com dados do INCAPER.",07/12/2012,VINICIOSSILVA,100,4671
+2012,12,32,2,6,2504,0135.0010,0,S,9,6,9,3,18,18,,7,389,,"Reavaliação da área irrigada e não irrigada, de acordo com dados do INCAPER.",07/12/2012,VINICIOSSILVA,100,4671
+2012,12,32,2,6,2504,0139.1060,0,N,9,6,9,0,2,2,,5,2500,,,07/12/2012,VINICIOSSILVA,100,9980
+2012,12,32,2,6,2504,0139.2010,0,S,9,6,9,20,73,73,,131,1795,,"Houve distribuição de mudas no municipio, por isso o aumento de 15ha na área em formação.",07/12/2012,VINICIOSSILVA,100,1850
+2012,12,32,2,6,2504,0139.9060,0,N,9,6,9,16,3,3,,2,667,,,07/12/2012,VINICIOSSILVA,100,4600
+2012,12,32,2,6,3130,0111.0070,1,S,9,6,9,,80,80,,200,2500,,,07/12/2012,VINICIOSSILVA,100,524
+2012,12,32,2,6,3130,0113.0010,0,N,9,6,9,0,100,100,,7000,70000,,,07/12/2012,VINICIOSSILVA,100,40.45
+2012,12,32,2,6,3130,0119.1040,1,S,9,6,9,,15,15,,15,1000,,,07/12/2012,VINICIOSSILVA,100,2130
+2012,12,32,2,6,3130,0119.1040,2,S,9,6,9,,15,15,,14,933,,,07/12/2012,VINICIOSSILVA,100,2460.5
+2012,12,32,2,6,3130,0119.2050,0,N,9,6,9,0,125,125,,7500,60000,,,07/12/2012,VINICIOSSILVA,100,40.45
+2012,12,32,2,6,3130,0119.4040,0,N,9,6,9,0,30,30,,540,18000,,,07/12/2012,VINICIOSSILVA,100,181.7
+2012,12,32,2,6,3130,0131.0010,0,N,9,6,9,0,5,5,,60,12000,,,07/12/2012,VINICIOSSILVA,100,818
+2012,12,32,2,6,3130,0133.2080,0,N,9,6,9,0,105,105,,683,6505,,,07/12/2012,VINICIOSSILVA,100,605.5
+2012,12,32,2,6,3130,0133.2080,0,S,9,6,9,0,25,25,,275,11000,,,07/12/2012,VINICIOSSILVA,100,605.5
+2012,12,32,2,6,3130,0133.3030,0,N,9,6,9,0,20,20,,320,16000,,,07/12/2012,VINICIOSSILVA,100,475
+2012,12,32,2,6,3130,0134.0021,0,N,9,6,9,50,200,200,,192,960,,,07/12/2012,VINICIOSSILVA,100,4902.5
+2012,12,32,2,6,3130,0134.0022,0,N,9,6,9,0,500,500,,900,1800,,Reavalição da área em produção pelo tecnico da incaper local.,07/12/2012,VINICIOSSILVA,100,3802
+2012,12,32,2,6,3130,0134.0022,0,S,9,6,9,800,3600,3600,,9720,2700,,"Rendimento maior em função de melhores técnicas de plantio, com irrigação e devido a própria caracterisica do municipio.",07/12/2012,VINICIOSSILVA,100,3802
+2012,12,32,2,6,3130,0135.0010,0,N,9,6,9,0,150,150,,60,400,,"Reavaliação da área de cacau, por parte do técnico do INCAPER.",07/12/2012,VINICIOSSILVA,100,4703.5
+2012,12,32,2,6,3130,0135.0010,0,S,9,4,9,25,0,0,,0,0,,Área irrigada toda em formação.,07/12/2012,VINICIOSSILVA,0,0
+2012,12,32,2,6,3130,0139.2010,0,N,9,6,9,2,2,2,,2,1000,,,07/12/2012,VINICIOSSILVA,100,1765
+2012,12,32,2,6,3130,0139.9060,0,N,9,6,9,0,6,6,,5,833,,.,07/12/2012,VINICIOSSILVA,100,4600
+2012,12,32,2,6,3205,0111.0070,1,N,9,6,9,,800,800,,2400,3000,,Queda na área devido a dificuldade em encontrar sementes no mercado.,07/12/2012,VINICIOSSILVA,100,515
+2012,12,32,2,6,3205,0113.0010,0,N,9,6,9,0,9200,9200,0,715000,77717,45.00,ÁREA REAVALIADA EM FUNÇÃO DE DADOS FORNECIDOS POR EMPRESA DE ÁLCOOL DO MUNICIPIO.,07/12/2012,VINICIOSSILVA,100,101.3
+2012,12,32,2,6,3205,0119.1040,1,S,9,6,9,,50,50,,30,600,,,07/12/2012,VINICIOSSILVA,100,2130
+2012,12,32,2,6,3205,0119.1040,2,S,9,6,9,,300,300,,270,900,,,07/12/2012,VINICIOSSILVA,100,2325
+2012,12,32,2,6,3205,0119.2050,0,N,9,6,9,0,300,300,0,12000,40000,45.00,,07/12/2012,VINICIOSSILVA,100,101.3
+2012,12,32,2,6,3205,0119.3010,0,N,9,6,9,0,10,10,,150,15000,,,07/12/2012,VINICIOSSILVA,100,1152.5
+2012,12,32,2,6,3205,0119.4040,0,N,9,6,9,0,1000,1000,,18000,18000,,,07/12/2012,VINICIOSSILVA,100,174.9
+2012,12,32,2,6,3205,0131.0010,0,N,9,6,9,0,150,150,,1800,12000,,,07/12/2012,VINICIOSSILVA,100,842.5
+2012,12,32,2,6,3205,0133.1040,0,N,9,6,9,0,150,150,,4200,28000,,,07/12/2012,VINICIOSSILVA,100,874
+2012,12,32,2,6,3205,0133.1070,0,N,9,6,9,0,30,30,,540,18000,,,07/12/2012,VINICIOSSILVA,100,467.5
+2012,12,32,2,6,3205,0133.2080,0,N,9,6,9,0,500,500,,5000,10000,,,07/12/2012,VINICIOSSILVA,100,640
+2012,12,32,2,6,3205,0133.2080,0,S,9,6,9,300,500,500,,6500,13000,,,07/12/2012,VINICIOSSILVA,100,640
+2012,12,32,2,6,3205,0133.2220,0,N,9,6,9,0,25,25,,400,16000,,,07/12/2012,VINICIOSSILVA,100,1170
+2012,12,32,2,6,3205,0133.2330,0,S,9,6,9,300,1500,1500,,75000,50000,,Queda devido ao baixo preço do produto.,07/12/2012,VINICIOSSILVA,100,830
+2012,12,32,2,6,3205,0133.2340,0,N,9,6,9,0,9,9,,144,16000,,,07/12/2012,VINICIOSSILVA,100,500
+2012,12,32,2,6,3205,0133.2360,0,N,9,6,9,0,150,150,,3000,20000,,,07/12/2012,VINICIOSSILVA,100,1352
+2012,12,32,2,6,3205,0133.3030,0,N,9,6,9,50,2770,2770,,27700,10000,,,07/12/2012,VINICIOSSILVA,100,494.5
+2012,12,32,2,6,3205,0134.0021,0,N,9,6,9,0,15,15,,12,800,,,07/12/2012,VINICIOSSILVA,100,4952.5
+2012,12,32,2,6,3205,0134.0022,0,N,9,6,9,0,300,300,,450,1500,,,07/12/2012,VINICIOSSILVA,100,3850
+2012,12,32,2,6,3205,0134.0022,0,S,9,6,9,1500,13500,13500,,32400,2400,,"Rendimento maior em função de melhores técnicas de plantio, com irrigação e devido a própria caracterisica do municipio.",07/12/2012,VINICIOSSILVA,100,3850
+2012,12,32,2,6,3205,0135.0010,0,N,9,6,9,677,19680,19680,,7282,370,,,07/12/2012,VINICIOSSILVA,100,4759
+2012,12,32,2,6,3205,0139.1060,0,N,9,6,9,0,100,100,,240,2400,,,07/12/2012,VINICIOSSILVA,100,10250
+2012,12,32,2,6,3205,0139.2010,0,N,9,6,9,150,350,350,,525,1500,,,07/12/2012,VINICIOSSILVA,100,2102.5
+2012,12,32,2,6,3205,0139.9060,0,N,9,6,9,0,84,84,,74,881,,,07/12/2012,VINICIOSSILVA,100,4600
+2012,12,32,2,6,4351,0111.0070,1,N,9,6,9,,350,350,,840,2400,,,07/12/2012,VINICIOSSILVA,100,514
+2012,12,32,2,6,4351,0113.0010,0,N,9,6,9,0,50,50,,2250,45000,,,07/12/2012,VINICIOSSILVA,100,40
+2012,12,32,2,6,4351,0119.1040,1,S,9,6,9,,280,280,,280,1000,,"De acordo com o INCAPER, todo o feijão do municipio é irrigado, pois planta-se o mesmo juntamente com a renovação das lavouras de café.",07/12/2012,VINICIOSSILVA,100,2130
+2012,12,32,2,6,4351,0119.1040,2,S,9,6,9,,100,100,,110,1100,,,07/12/2012,VINICIOSSILVA,100,2395
+2012,12,32,2,6,4351,0119.2050,0,N,9,6,9,0,5,5,,200,40000,,,07/12/2012,VINICIOSSILVA,100,40
+2012,12,32,2,6,4351,0133.2080,0,N,9,6,9,0,60,60,,408,6800,,,07/12/2012,VINICIOSSILVA,100,664
+2012,12,32,2,6,4351,0133.2360,0,N,9,6,9,0,60,60,,1200,20000,,,07/12/2012,VINICIOSSILVA,100,1412
+2012,12,32,2,6,4351,0133.3030,0,N,9,6,9,0,100,100,,1200,12000,,,07/12/2012,VINICIOSSILVA,100,480
+2012,12,32,2,6,4351,0133.3030,0,S,9,6,9,0,50,50,20,750,15000,500.00,Reavaliação do rendimento médio do coco por parte do técnico do INCAPER devido a área ser irrigada.,07/12/2012,VINICIOSSILVA,100,491
+2012,12,32,2,6,4351,0134.0022,0,N,9,6,9,0,2300,2300,,3956,1720,,,07/12/2012,VINICIOSSILVA,100,3795
+2012,12,32,2,6,4351,0134.0022,0,S,9,6,9,1500,12000,12000,,28800,2400,,"Rendimento maior em função de melhores técnicas de plantio, com irrigação e devido a própria caracterisica do municipio.",07/12/2012,VINICIOSSILVA,100,3795
+2012,12,32,2,6,4351,0135.0010,0,N,9,6,9,100,148,148,,67,453,,,07/12/2012,VINICIOSSILVA,100,4647.5
+2012,12,32,2,6,4351,0139.1060,0,N,9,6,9,0,26,26,,65,2500,,,07/12/2012,VINICIOSSILVA,100,10692
+2012,12,32,2,6,4351,0139.2010,0,N,9,6,9,38,15,15,,18,1200,,,07/12/2012,VINICIOSSILVA,100,2178
+2012,12,32,2,6,4351,9119.4040,0,N,9,6,9,0,60,60,,1080,18000,,,07/12/2012,VINICIOSSILVA,100,195
+2012,12,32,2,6,5010,0111.0070,1,N,9,6,9,,200,200,,500,2500,,,07/12/2012,VINICIOSSILVA,100,520.5
+2012,12,32,2,6,5010,0113.0010,0,N,9,6,9,0,20,20,,1300,65000,,,07/12/2012,VINICIOSSILVA,100,40.15
+2012,12,32,2,6,5010,0119.1040,1,S,9,6,9,,80,80,,48,600,,,07/12/2012,VINICIOSSILVA,100,2130
+2012,12,32,2,6,5010,0119.1040,2,S,9,6,9,,250,250,,210,840,,,07/12/2012,VINICIOSSILVA,100,2395
+2012,12,32,2,6,5010,0119.2050,0,N,9,6,9,0,10,10,,650,65000,,,07/12/2012,VINICIOSSILVA,100,40.15
+2012,12,32,2,6,5010,0119.3010,0,S,9,6,9,0,12,12,,180,15000,,Toda área já está em produção.,07/12/2012,VINICIOSSILVA,100,1188
+2012,12,32,2,6,5010,0119.4040,0,N,9,6,9,0,150,150,,2700,18000,,,07/12/2012,VINICIOSSILVA,100,214.6
+2012,12,32,2,6,5010,0131.0010,0,N,9,6,9,0,50,50,,850,17000,,,07/12/2012,VINICIOSSILVA,100,818
+2012,12,32,2,6,5010,0133.1040,0,N,9,6,9,0,20,20,,500,25000,,,07/12/2012,VINICIOSSILVA,100,1197
+2012,12,32,2,6,5010,0133.2080,0,N,9,6,9,0,10,10,,110,11000,,,07/12/2012,VINICIOSSILVA,100,565
+2012,12,32,2,6,5010,0133.2080,0,S,9,4,9,10,40,40,,480,12000,,Algumas áreas entraram em produção e foram plantadas mais 4 ha.,07/12/2012,VINICIOSSILVA,100,538
+2012,12,32,2,6,5010,0133.2330,0,S,9,6,9,200,800,800,,35000,43750,,"De acordo com o técnico do INCAPER a cultura de mamão está recuperando-se no mercado. No municipio houve plantio de mais 200 ha, que está todo em formação e os 100 ha que estavam em formação, já estão produzindo.",07/12/2012,VINICIOSSILVA,100,945
+2012,12,32,2,6,5010,0133.2360,0,S,9,6,9,200,200,200,,4000,20000,,"De acordo com o técnico do INCAPER, no municipio houve plantio de mais 200 ha, que são de novos produtores que entraram no mercado.",07/12/2012,VINICIOSSILVA,100,1397
+2012,12,32,2,6,5010,0133.3030,0,N,9,6,9,0,30,30,,285,9500,,,07/12/2012,VINICIOSSILVA,100,505.5
+2012,12,32,2,6,5010,0133.3030,0,S,9,6,9,50,110,110,,1100,10000,,,07/12/2012,VINICIOSSILVA,100,505.5
+2012,12,32,2,6,5010,0134.0022,0,N,9,6,9,0,2000,2000,,1800,900,,,07/12/2012,VINICIOSSILVA,100,3830
+2012,12,32,2,6,5010,0134.0022,0,S,9,6,9,2000,15000,15000,,31500,2100,,"Área de café reavaliada pelo INCAPER. Rendimento maior em função de melhores técnicas de plantio, com irrigação e devido a própria caracterisica do municipio.",07/12/2012,VINICIOSSILVA,100,3830
+2012,12,32,2,6,5010,0135.0010,0,N,9,6,9,10,78,78,,31,397,,,07/12/2012,VINICIOSSILVA,100,4687.5
+2012,12,32,2,6,5010,0139.1060,0,N,9,6,9,0,50,50,,125,2500,,,07/12/2012,VINICIOSSILVA,100,10625.5
+2012,12,32,2,6,5010,0139.2010,0,N,9,6,9,310,560,560,,672,1200,,"Aumento na área devido a incentivo no plantio, através de distribuição de mudas.",07/12/2012,VINICIOSSILVA,100,2000
+2012,12,32,3,7,102,0111.0020,1,N,1,6,9,,10,10,,25,2500,,,10/12/2012,PAULOROBERTOMOURA,100,700
+2012,12,32,3,7,102,0111.0070,1,N,1,6,9,,1625,1625,,2600,1600,,,01/12/2012,SISTEMA,100,556.5
+2012,12,32,3,7,102,0113.0010,0,N,1,6,9,0,120,120,,5160,43000,,,10/12/2012,PAULOROBERTOMOURA,100,45.4
+2012,12,32,3,7,102,0119.1040,1,N,1,6,9,,250,250,,150,600,,,01/12/2012,SISTEMA,100,1350
+2012,12,32,3,7,102,0119.1040,2,N,1,6,9,,150,150,,90,600,,,01/12/2012,SISTEMA,100,2106
+2012,12,32,3,7,102,0119.1040,2,S,1,6,9,,50,50,,33,660,,,01/12/2012,SISTEMA,100,2200
+2012,12,32,3,7,102,0119.2050,0,N,1,6,9,0,30,30,0,1050,35000,45.00,..,10/12/2012,PAULOROBERTOMOURA,100,47
+2012,12,32,3,7,102,0119.4010,0,N,1,6,9,,5,5,,40,8000,,,01/12/2012,SISTEMA,100,2196
+2012,12,32,3,7,102,0119.4020,1,N,1,6,9,,8,8,,96,12000,,,10/12/2012,PAULOROBERTOMOURA,100,750
+2012,12,32,3,7,102,0119.4020,2,N,1,6,9,,3,3,,36,12000,,,10/12/2012,PAULOROBERTOMOURA,100,792.5
+2012,12,32,3,7,102,0119.4040,0,N,1,6,9,0,30,30,,450,15000,,,10/12/2012,PAULOROBERTOMOURA,100,268.65
+2012,12,32,3,7,102,0119.9010,0,N,1,6,9,,3,3,,50,16667,,,10/12/2012,PAULOROBERTOMOURA,100,810
+2012,12,32,3,7,102,0121.1260,0,N,1,6,9,,12,12,,540,45000,,,10/12/2012,PAULOROBERTOMOURA,100,275
+2012,12,32,3,7,102,0121.2060,0,S,1,6,9,,20,20,,500,25000,,,10/12/2012,PAULOROBERTOMOURA,100,1450.5
+2012,12,32,3,7,102,0121.2090,0,N,1,6,9,,3,3,,30,10000,,,10/12/2012,PAULOROBERTOMOURA,100,450
+2012,12,32,3,7,102,0121.2100,0,N,1,6,9,,75,75,,4050,54000,,,10/12/2012,PAULOROBERTOMOURA,100,983.25
+2012,12,32,3,7,102,0121.2100,0,S,1,6,9,,75,75,,4500,60000,,,10/12/2012,PAULOROBERTOMOURA,100,992.6
+2012,12,32,3,7,102,0121.3040,0,N,1,6,9,,8,8,,75,9375,,,10/12/2012,PAULOROBERTOMOURA,100,1300
+2012,12,32,3,7,102,0121.3040,0,S,1,0,9,,0,0,,0,0,,,01/12/2012,SISTEMA,0,0
+2012,12,32,3,7,102,0121.3110,0,N,1,4,9,,105,105,,1000,9524,,,10/12/2012,PAULOROBERTOMOURA,100,742.56
+2012,12,32,3,7,102,0121.3110,0,S,1,6,9,,45,45,,3000,66667,,,10/12/2012,PAULOROBERTOMOURA,100,702.7
+2012,12,32,3,7,102,0131.0010,0,N,1,6,9,0,6,6,,70,11667,,,10/12/2012,PAULOROBERTOMOURA,100,450
+2012,12,32,3,7,102,0132.0020,0,S,1,6,9,0,3,3,,40,13333,,,10/12/2012,PAULOROBERTOMOURA,100,1650
+2012,12,32,3,7,102,0133.1040,0,N,1,6,9,0,3,3,,41,13667,,,10/12/2012,PAULOROBERTOMOURA,100,1354.8
+2012,12,32,3,7,102,0133.1070,0,N,1,6,9,1,6,6,,154,25667,,,10/12/2012,PAULOROBERTOMOURA,100,488
+2012,12,32,3,7,102,0133.2010,0,N,1,6,9,0,12,12,,144,12000,,,10/12/2012,PAULOROBERTOMOURA,100,580
+2012,12,32,3,7,102,0133.2010,0,S,1,4,8,0,0,0,,0,0,,"Não existe irrigação nos plantios existente, todos recebem poucos tratos culturais e suas existências seguem naturalmente.",01/12/2012,SISTEMA,0,0
+2012,12,32,3,7,102,0133.2080,0,N,1,6,9,0,80,80,,1040,13000,,"ESPÉCIES E ÁREAS: PRATA 10%, TERRA 20% E NANICA 70%",10/12/2012,PAULOROBERTOMOURA,100,297.4
+2012,12,32,3,7,102,0133.2220,0,N,1,6,9,0,4,4,,61,15250,,,10/12/2012,PAULOROBERTOMOURA,100,640.3
+2012,12,32,3,7,102,0133.2220,0,S,1,6,9,2,6,6,,91,15167,,,10/12/2012,PAULOROBERTOMOURA,100,644.3
+2012,12,32,3,7,102,0133.2330,0,S,1,6,9,0,6,6,,150,25000,,.,10/12/2012,PAULOROBERTOMOURA,100,847.7
+2012,12,32,3,7,102,0133.2340,0,N,1,6,9,0,15,15,,195,13000,,,10/12/2012,PAULOROBERTOMOURA,100,220
+2012,12,32,3,7,102,0133.2360,0,N,1,6,8,0,8,8,,80,10000,,Rendimento abaixo da média por motivo de poucos tratos culturais dispensados a grande parte das lavouras.,10/12/2012,PAULOROBERTOMOURA,100,880
+2012,12,32,3,7,102,0133.3030,0,N,1,6,9,0,3,3,,30,10000,,,10/12/2012,PAULOROBERTOMOURA,100,472
+2012,12,32,3,7,102,0134.0021,0,N,1,6,9,560,10240,10240,,9600,938,,,10/12/2012,PAULOROBERTOMOURA,100,4481.55
+2012,12,32,3,7,102,0134.0022,0,N,1,6,9,368,2080,2080,,2620,1260,,,10/12/2012,PAULOROBERTOMOURA,100,3613.15
+2012,12,32,3,7,102,0134.0022,0,S,1,6,9,368,520,520,,675,1298,,,10/12/2012,PAULOROBERTOMOURA,100,3683.65
+2012,12,32,3,7,102,0135.0010,0,N,1,6,9,0,2,2,,1,500,,,10/12/2012,PAULOROBERTOMOURA,100,4597
+2012,12,32,3,7,102,0139.9060,0,N,1,6,9,0,5,5,,5,1000,,,10/12/2012,PAULOROBERTOMOURA,100,900
+2012,12,32,3,7,1159,0111.0020,1,N,9,6,8,,1,1,,6,6000,,"Diferença a menor na área prevista devido alto custo de produção e maior atenção com o cultivo de café, cultura de subsistencia.",05/12/2012,MARCIAV,100,800
+2012,12,32,3,7,1159,0111.0070,1,N,9,6,9,,200,200,,400,2000,,,05/12/2012,MARCIAV,100,424.8
+2012,12,32,3,7,1159,0113.0010,0,N,1,0,8,0,0,0,,0,0,,"Dado retirado do levantamento, a cana existente é forrageira.",05/12/2012,MARCIAV,0,0
+2012,12,32,3,7,1159,0119.1040,1,N,9,6,9,,60,60,,42,700,,,05/12/2012,MARCIAV,100,2500
+2012,12,32,3,7,1159,0119.1040,2,N,9,6,9,,250,250,,150,600,,,05/12/2012,MARCIAV,100,1824
+2012,12,32,3,7,1159,0119.2050,0,N,9,6,9,0,10,10,,300,30000,,Acerto na área cana de açucar para forrageira,05/12/2012,MARCIAV,100,60
+2012,12,32,3,7,1159,0121.2060,0,S,9,6,9,,1,1,,50,50000,,,05/12/2012,MARCIAV,100,5500
+2012,12,32,3,7,1159,0121.2100,0,N,9,0,8,,0,0,,0,0,,Dado retirado e passado para irrigado.,05/12/2012,MARCIAV,0,0
+2012,12,32,3,7,1159,0121.2100,0,S,9,6,9,,15,15,,1200,80000,,,05/12/2012,MARCIAV,100,1800
+2012,12,32,3,7,1159,0121.3040,0,N,9,6,9,,5,5,,40,8000,,,05/12/2012,MARCIAV,100,3000
+2012,12,32,3,7,1159,0121.3110,0,N,9,6,9,,5,5,,100,20000,,,05/12/2012,MARCIAV,100,560
+2012,12,32,3,7,1159,0131.0010,0,N,9,0,7,0,0,0,,0,0,,"Área erradicada, mudança para pastagens para gado leiteiro.",05/12/2012,MARCIAV,0,0
+2012,12,32,3,7,1159,0133.2080,0,N,9,6,9,0,30,30,,360,12000,,,05/12/2012,MARCIAV,100,1474
+2012,12,32,3,7,1159,0134.0021,0,N,9,6,8,1600,14400,14400,,19000,1319,,Menor RM/ha obtido devido as condições climáticas desfavoráveis bem como a bianualidade da cultura.,05/12/2012,MARCIAV,100,6457.33
+2012,12,32,3,7,1159,0139.9060,0,N,9,6,9,0,10,10,,30,3000,,confirmamos o rendimento médio,05/12/2012,MARCIAV,100,2950
+2012,12,32,3,7,1704,0111.0020,1,N,1,6,8,,5,5,,12,2400,,"Área de plantio reduzida por desestímulo dos produtores, motivados por falta de varzeas e custos de produção acima dos valores encontrados no comércio.",01/12/2012,SISTEMA,100,720
+2012,12,32,3,7,1704,0111.0070,1,N,1,6,9,,500,500,,800,1600,,,01/12/2012,SISTEMA,100,425
+2012,12,32,3,7,1704,0119.1040,1,N,1,6,9,,240,240,,144,600,,,01/12/2012,SISTEMA,100,1500
+2012,12,32,3,7,1704,0119.1040,2,N,1,6,9,,320,320,,192,600,,,01/12/2012,SISTEMA,100,2100
+2012,12,32,3,7,1704,0119.1040,2,S,1,6,9,,80,80,,53,663,,,01/12/2012,SISTEMA,100,2140
+2012,12,32,3,7,1704,0121.2100,0,N,1,6,9,,5,5,,300,60000,,,10/12/2012,PAULOROBERTOMOURA,100,1028.8
+2012,12,32,3,7,1704,0121.3040,0,N,1,6,9,,5,5,0,60,12000,1000.00,,06/12/2012,NEIDIMAR,100,1220
+2012,12,32,3,7,1704,0121.3110,0,N,1,6,9,,20,20,,400,20000,,,10/12/2012,PAULOROBERTOMOURA,100,695.6
+2012,12,32,3,7,1704,0131.0010,0,N,1,6,9,0,2,2,,24,12000,,,01/12/2012,SISTEMA,100,589
+2012,12,32,3,7,1704,0133.1040,0,N,1,6,9,2,3,3,,45,15000,,,10/12/2012,PAULOROBERTOMOURA,100,1259.2
+2012,12,32,3,7,1704,0133.1070,0,N,1,6,9,11,45,45,,810,18000,,,01/12/2012,SISTEMA,100,431.5
+2012,12,32,3,7,1704,0133.1070,0,S,1,6,9,1,5,5,,100,20000,,,10/12/2012,PAULOROBERTOMOURA,100,405
+2012,12,32,3,7,1704,0133.2080,0,N,1,6,9,0,150,150,,1440,9600,,"ESPÉCIES E ÁREAS: NANICA 80%, TERRA 15% E PRATA 5%",10/12/2012,PAULOROBERTOMOURA,100,292.4
+2012,12,32,3,7,1704,0134.0021,0,N,1,6,9,98,2782,2782,,2707,973,,,10/12/2012,PAULOROBERTOMOURA,100,4459.8
+2012,12,32,3,7,1704,0134.0022,0,N,1,6,9,108,972,972,,991,1020,,,10/12/2012,PAULOROBERTOMOURA,100,4494.5
+2012,12,32,3,7,1704,0134.0022,0,S,1,6,9,12,108,108,,110,1019,,,10/12/2012,PAULOROBERTOMOURA,100,1097.7
+2012,12,32,3,7,1704,0139.9060,0,N,1,6,9,0,8,8,0,8,1000,4300.00,,10/12/2012,PAULOROBERTOMOURA,100,1452.5
+2012,12,32,3,7,1902,0111.0070,1,N,9,7,9,,680,680,,2360,3471,,dados ajustados devido a separação de area irrigada.,06/12/2012,ALUIZIOLOPES,100,550
+2012,12,32,3,7,1902,0111.0070,1,S,9,7,9,,80,80,,440,5500,,reavaliação devido a irrigação,06/12/2012,ALUIZIOLOPES,100,550
+2012,12,32,3,7,1902,0113.0010,0,N,9,5,9,0,75,75,10,3225,43000,44.00,,05/12/2012,ALUIZIOLOPES,100,260.85
+2012,12,32,3,7,1902,0119.1040,1,N,9,7,9,,984,984,,863,877,,,05/12/2012,ALUIZIOLOPES,100,2166
+2012,12,32,3,7,1902,0119.1040,2,N,9,6,9,,700,700,100,689,984,1000.00,,06/12/2012,ALUIZIOLOPES,100,1000
+2012,12,32,3,7,1902,0119.1040,2,S,9,6,9,,300,300,100,360,1200,1000.00,reavaliação devido a irrigação.,06/12/2012,ALUIZIOLOPES,100,1000
+2012,12,32,3,7,1902,0119.4010,0,N,9,6,9,,2,2,,11,5500,,,06/12/2012,ALUIZIOLOPES,100,2840
+2012,12,32,3,7,1902,0119.4010,0,S,9,6,9,,12,12,,120,10000,,cultura irrigada.,06/12/2012,ALUIZIOLOPES,100,2840
+2012,12,32,3,7,1902,0119.4020,1,S,9,6,9,,65,65,,1485,22846,,cultura toda irrigada.,05/12/2012,ALUIZIOLOPES,100,1282
+2012,12,32,3,7,1902,0119.4020,2,S,9,6,9,,170,170,20,3360,19765,1340.00,,06/12/2012,ALUIZIOLOPES,100,1340
+2012,12,32,3,7,1902,0119.4030,0,N,9,6,9,,2,2,10,60,30000,700.00,,06/12/2012,ALUIZIOLOPES,100,1020
+2012,12,32,3,7,1902,0119.9010,0,N,9,6,9,,20,20,10,300,15000,700.00,,06/12/2012,ALUIZIOLOPES,100,600
+2012,12,32,3,7,1902,0119.9010,0,S,9,6,9,,65,65,10,825,12692,700.00,,06/12/2012,ALUIZIOLOPES,100,700
+2012,12,32,3,7,1902,0121.1260,0,S,9,6,9,,70,70,10,3300,47143,350.00,,06/12/2012,ALUIZIOLOPES,100,342.5
+2012,12,32,3,7,1902,0121.2060,0,S,9,6,9,,70,70,10,2350,33571,4000.00,,06/12/2012,ALUIZIOLOPES,100,4000
+2012,12,32,3,7,1902,0121.2090,0,S,9,6,9,,6,6,,72,12000,,,06/12/2012,ALUIZIOLOPES,100,1300
+2012,12,32,3,7,1902,0121.2100,0,S,9,6,9,,105,105,10,7650,72857,1500.00,,06/12/2012,ALUIZIOLOPES,100,1320
+2012,12,32,3,7,1902,0121.3040,0,S,9,6,9,,80,80,100,1320,16500,1000.00,,06/12/2012,ALUIZIOLOPES,100,1000
+2012,12,32,3,7,1902,0121.3050,0,N,9,6,9,,15,15,20,225,15000,700.00,,06/12/2012,ALUIZIOLOPES,100,700
+2012,12,32,3,7,1902,0121.3060,0,S,9,6,9,,26,26,10,456,17538,830.00,,06/12/2012,ALUIZIOLOPES,100,830
+2012,12,32,3,7,1902,0121.3080,0,S,9,6,9,,10,10,10,200,20000,780.00,,06/12/2012,ALUIZIOLOPES,100,780
+2012,12,32,3,7,1902,0121.3110,0,S,9,6,9,,270,270,10,6880,25481,1000.00,,06/12/2012,ALUIZIOLOPES,100,820
+2012,12,32,3,7,1902,0121.5200,0,N,9,6,9,,10,10,10,360,36000,1000.00,,06/12/2012,ALUIZIOLOPES,100,1000
+2012,12,32,3,7,1902,0121.5200,0,S,9,6,9,,18,18,10,705,39167,1000.00,,06/12/2012,ALUIZIOLOPES,100,1000
+2012,12,32,3,7,1902,0131.0010,0,N,9,6,9,23,80,80,10,1480,18500,770.00,reavaliação do tecnico Incaper.,06/12/2012,ALUIZIOLOPES,100,721
+2012,12,32,3,7,1902,0131.0010,0,S,9,6,9,0,1,1,,20,20000,,lovoura irrigada.,06/12/2012,ALUIZIOLOPES,100,770
+2012,12,32,3,7,1902,0132.0010,0,S,9,6,9,0,1,1,,20,20000,,,05/12/2012,ALUIZIOLOPES,100,4000
+2012,12,32,3,7,1902,0132.0020,0,S,9,6,9,1,2,2,,32,16000,,,06/12/2012,ALUIZIOLOPES,100,4000
+2012,12,32,3,7,1902,0133.1040,0,N,9,6,9,9,7,7,10,101,14429,1500.00,,06/12/2012,ALUIZIOLOPES,100,1200
+2012,12,32,3,7,1902,0133.1070,0,N,9,6,9,65,260,260,,5660,21769,,,06/12/2012,ALUIZIOLOPES,100,510
+2012,12,32,3,7,1902,0133.1070,0,S,9,6,9,0,15,15,,435,29000,,,06/12/2012,ALUIZIOLOPES,100,300
+2012,12,32,3,7,1902,0133.2010,0,N,9,6,9,3,2,2,90,40,20000,1200.00,reavaliação rend. médio,06/12/2012,ALUIZIOLOPES,100,1210
+2012,12,32,3,7,1902,0133.2080,0,N,9,6,9,195,847,847,10,12256,14470,550.00,,06/12/2012,ALUIZIOLOPES,100,550
+2012,12,32,3,7,1902,0133.2080,0,S,9,6,9,0,16,16,10,119,7438,550.00,cultura irrigada.,06/12/2012,ALUIZIOLOPES,100,550
+2012,12,32,3,7,1902,0133.2220,0,N,9,7,9,0,1,1,,15,15000,,cultura desmembrada entre irrigada e não irrigada.,06/12/2012,ALUIZIOLOPES,100,1200
+2012,12,32,3,7,1902,0133.2220,0,S,9,6,9,0,3,3,10,54,18000,1300.00,,06/12/2012,ALUIZIOLOPES,100,1300
+2012,12,32,3,7,1902,0133.2360,0,N,9,6,9,0,13,13,10,334,25692,1500.00,,06/12/2012,ALUIZIOLOPES,100,1453.5
+2012,12,32,3,7,1902,0134.0021,0,N,9,6,9,871,6303,6303,10,7690,1220,5000.00,chuva abundante com varias florações durante o ano.,06/12/2012,ALUIZIOLOPES,100,4924.9
+2012,12,32,3,7,1902,0134.0021,0,S,9,6,9,0,2,2,,2,1000,,,06/12/2012,ALUIZIOLOPES,100,5000
+2012,12,32,3,7,1902,0134.0022,0,N,9,6,9,0,5,5,,9,1800,,,06/12/2012,ALUIZIOLOPES,100,4300
+2012,12,32,3,7,1902,0139.9060,0,N,9,6,9,7,16,16,10,48,3000,5000.00,reavaliação rendimento médio.,06/12/2012,ALUIZIOLOPES,100,4430
+2012,12,32,3,7,1902,0139.9060,0,S,9,6,9,0,6,6,10,14,2333,5000.00,cultura irrigada e variedade.,06/12/2012,ALUIZIOLOPES,100,5000
+2012,12,32,3,7,1902,9119.4040,0,N,9,6,9,0,221,221,10,5806,26271,290.00,cultura reavaliada pelos técnicos (para mesa).,06/12/2012,ALUIZIOLOPES,100,290
+2012,12,32,3,7,3163,0111.0020,1,N,1,7,8,,15,15,,60,4000,,"Rendimento médio inferior por se tratar de plantios para alimentação familiar sem emprego de quaisquer técnicas, sementes qualificadas e ou insumos básicos, além de se tratar de plantios sequeiros sem irrigações.",01/12/2012,SISTEMA,100,715
+2012,12,32,3,7,3163,0111.0070,1,N,1,7,9,,650,650,,1354,2083,,,01/12/2012,SISTEMA,100,465
+2012,12,32,3,7,3163,0113.0010,0,N,1,6,8,0,15,15,,600,40000,,Confirmado o Rm/ha por se tratar de plantios sem aplicações de quaiquer técnicas que possam melhorar a produtividade.,10/12/2012,PAULOROBERTOMOURA,100,47.5
+2012,12,32,3,7,3163,0119.1040,1,N,1,7,9,,10,10,,6,600,,,01/12/2012,SISTEMA,100,1600
+2012,12,32,3,7,3163,0119.1040,2,N,1,6,9,,65,65,,40,615,,,01/12/2012,SISTEMA,100,2230
+2012,12,32,3,7,3163,0119.1040,2,S,1,5,9,,7,7,,5,714,,,01/12/2012,SISTEMA,100,2100
+2012,12,32,3,7,3163,0119.4040,0,N,1,6,9,0,60,60,,900,15000,,,10/12/2012,PAULOROBERTOMOURA,100,240
+2012,12,32,3,7,3163,0119.9010,0,N,1,4,9,,2,2,,20,10000,,,10/12/2012,PAULOROBERTOMOURA,100,752.5
+2012,12,32,3,7,3163,0121.2090,0,N,1,6,9,,90,90,,990,11000,,,10/12/2012,PAULOROBERTOMOURA,100,1157.5
+2012,12,32,3,7,3163,0121.2090,0,S,1,6,9,,60,60,,720,12000,,,10/12/2012,PAULOROBERTOMOURA,100,1157.5
+2012,12,32,3,7,3163,0121.2100,0,N,1,4,9,,110,110,,6600,60000,,,10/12/2012,PAULOROBERTOMOURA,100,1400
+2012,12,32,3,7,3163,0121.2100,0,S,1,6,9,,100,100,,6200,62000,,,10/12/2012,PAULOROBERTOMOURA,100,1400
+2012,12,32,3,7,3163,0121.3110,0,N,1,6,9,,100,100,,1200,12000,,,10/12/2012,PAULOROBERTOMOURA,100,582.5
+2012,12,32,3,7,3163,0121.3110,0,S,1,6,9,,50,50,,650,13000,,,10/12/2012,PAULOROBERTOMOURA,100,215.5
+2012,12,32,3,7,3163,0131.0010,0,N,1,6,9,0,7,7,,56,8000,,,01/12/2012,SISTEMA,100,680
+2012,12,32,3,7,3163,0131.0010,0,S,1,6,9,0,3,3,,24,8000,,,01/12/2012,SISTEMA,100,680
+2012,12,32,3,7,3163,0133.1040,0,N,1,6,9,0,3,3,,45,15000,,,10/12/2012,PAULOROBERTOMOURA,100,1244
+2012,12,32,3,7,3163,0133.1040,0,S,1,6,9,0,2,2,,34,17000,,,10/12/2012,PAULOROBERTOMOURA,100,1244
+2012,12,32,3,7,3163,0133.2080,0,N,1,6,9,20,50,50,,500,10000,,"ESPÉCIES E ÁREAS: NANICA 80%, TERRA 15 E PRATA 10%",10/12/2012,PAULOROBERTOMOURA,100,300.8
+2012,12,32,3,7,3163,0133.2080,0,S,1,6,9,20,110,110,,1320,12000,,ESPÉCIES E ÁREAS: NANICA 90% E TERRA 10%,10/12/2012,PAULOROBERTOMOURA,100,300
+2012,12,32,3,7,3163,0133.2340,0,N,1,6,8,15,100,100,100,1200,12000,230.00,Área nova vinda por correção de dados dos levantamentos anteriores.,10/12/2012,PAULOROBERTOMOURA,100,230
+2012,12,32,3,7,3163,0133.2340,0,S,1,0,8,0,0,0,,0,0,,"Exclusão dos dados por informações erroneas dos levantamentos anteriores, pois em toda área plantada existente não há irrigação.",10/12/2012,PAULOROBERTOMOURA,100,235
+2012,12,32,3,7,3163,0133.2360,0,S,1,6,9,0,15,15,,259,17267,,,10/12/2012,PAULOROBERTOMOURA,100,720
+2012,12,32,3,7,3163,0133.3030,0,N,1,6,9,5,10,10,,95,9500,,,10/12/2012,PAULOROBERTOMOURA,100,449.35
+2012,12,32,3,7,3163,0133.3030,0,S,1,0,9,0,0,0,,0,0,,..,01/12/2012,SISTEMA,0,0
+2012,12,32,3,7,3163,0134.0021,0,N,1,5,9,25,255,255,,245,961,,,10/12/2012,PAULOROBERTOMOURA,100,4725
+2012,12,32,3,7,3163,0134.0022,0,N,1,6,9,84,1198,1198,,1222,1020,,,10/12/2012,PAULOROBERTOMOURA,100,4240
+2012,12,32,3,7,3163,0134.0022,0,S,1,6,9,84,1798,1798,,2265,1260,,,10/12/2012,PAULOROBERTOMOURA,100,4240
+2012,12,32,3,7,3163,0135.0010,0,N,1,6,9,4,7,7,,4,571,,,10/12/2012,PAULOROBERTOMOURA,100,4252.5
+2012,12,32,3,7,3163,0139.9060,0,N,1,6,9,0,5,5,,4,800,,,10/12/2012,PAULOROBERTOMOURA,100,939
+2012,12,32,3,7,3346,0111.0070,1,N,9,7,9,,150,150,,450,3000,,,05/12/2012,ALUIZIOLOPES,100,500
+2012,12,32,3,7,3346,0113.0010,0,N,9,4,9,0,5,5,10,220,44000,44.00,,05/12/2012,ALUIZIOLOPES,100,43.1
+2012,12,32,3,7,3346,0119.1040,1,N,9,6,9,,90,90,,81,900,,,04/12/2012,ALUIZIOLOPES,100,2000
+2012,12,32,3,7,3346,0119.1040,2,N,9,6,9,,70,70,,63,900,,,04/12/2012,ALUIZIOLOPES,100,2000
+2012,12,32,3,7,3346,0121.1260,0,S,9,6,9,,15,15,15,900,60000,480.00,,06/12/2012,ALUIZIOLOPES,100,391
+2012,12,32,3,7,3346,0121.2100,0,S,9,5,9,,50,50,10,3500,70000,2000.00,DADOS DO RENDIMENTOS REAVALIADO PELA TECNICO. ÁREA IRRGADA.,05/12/2012,ALUIZIOLOPES,100,1735
+2012,12,32,3,7,3346,0121.3040,0,S,9,4,9,,8,8,10,104,13000,1400.00,,05/12/2012,ALUIZIOLOPES,100,1400
+2012,12,32,3,7,3346,0121.3110,0,S,9,5,9,,80,80,10,2800,35000,900.00,,05/12/2012,ALUIZIOLOPES,100,725
+2012,12,32,3,7,3346,0121.5200,0,N,9,4,9,,10,10,20,270,27000,1000.00,,04/12/2012,ALUIZIOLOPES,100,1000
+2012,12,32,3,7,3346,0131.0010,0,N,9,5,9,0,10,10,,90,9000,,,04/12/2012,ALUIZIOLOPES,100,753
+2012,12,32,3,7,3346,0132.0010,0,S,9,5,8,0,2,2,10,40,20000,4500.00,"dados incluidos pelo técnico do Incaper, transferida área da industria.",04/12/2012,ALUIZIOLOPES,100,4500
+2012,12,32,3,7,3346,0132.0020,0,S,9,6,8,0,2,2,,40,20000,,dados reavaliados pelo técnico do Incaper.,04/12/2012,ALUIZIOLOPES,100,3500
+2012,12,32,3,7,3346,0133.1040,0,N,9,5,9,0,5,5,,70,14000,,,04/12/2012,ALUIZIOLOPES,100,862.5
+2012,12,32,3,7,3346,0133.1070,0,N,9,5,9,0,70,70,,1470,21000,,,04/12/2012,ALUIZIOLOPES,100,475
+2012,12,32,3,7,3346,0133.2080,0,N,9,5,9,55,215,215,10,3225,15000,540.00,"80% da área banana da terra, 15% de banana nanica, 5% de outras variedades. dados reavaliados pelo técnico da Incaper.",04/12/2012,ALUIZIOLOPES,100,518.5
+2012,12,32,3,7,3346,0134.0021,0,N,9,5,9,400,3400,3400,5,4420,1300,4800.00,dados reavaliados pelo técnico do Incaper,04/12/2012,ALUIZIOLOPES,100,4960
+2012,12,32,3,7,3346,0139.9060,0,N,9,5,9,2,6,6,10,9,1500,5000.00,,04/12/2012,ALUIZIOLOPES,100,5000
+2012,12,32,3,7,3346,9119.4040,0,N,9,5,8,0,70,70,10,1400,20000,300.00,dados transferidos da industria para mesa(consumo in natura).,05/12/2012,ALUIZIOLOPES,100,165
+2012,12,32,3,7,5069,0111.0070,1,N,1,7,9,,600,600,,1600,2667,,,01/12/2012,SISTEMA,100,510
+2012,12,32,3,7,5069,0113.0010,0,N,1,6,9,0,20,20,,1000,50000,,,01/12/2012,SISTEMA,100,52.5
+2012,12,32,3,7,5069,0119.1040,1,N,1,6,9,,100,100,,60,600,,,01/12/2012,SISTEMA,100,1300
+2012,12,32,3,7,5069,0119.1040,2,S,1,6,9,,120,120,,81,675,,,01/12/2012,SISTEMA,100,2200
+2012,12,32,3,7,5069,0119.4020,1,N,1,6,9,,15,15,,300,20000,,,01/12/2012,SISTEMA,100,760
+2012,12,32,3,7,5069,0119.4020,2,S,1,6,9,,5,5,0,100,20000,1000.00,,06/12/2012,NEIDIMAR,100,765
+2012,12,32,3,7,5069,0119.4040,0,N,1,0,8,0,0,0,,0,0,,"Excluida por se tratar de aipim, destinado única e exclusivamente para consumo de mesa, pois não existe nas proximidades qualquer industria consumidora. Os registros passaram a constar na espécie correspondente.",01/12/2012,SISTEMA,1,175
+2012,12,32,3,7,5069,0121.1260,0,N,1,0,8,,0,0,,0,0,,"Área inexistente, pois todos os plantios são irrigados e ja lançados no espaço correspondente.",01/12/2012,SISTEMA,0,0
+2012,12,32,3,7,5069,0121.1260,0,S,1,6,9,,60,60,,4200,70000,,,01/12/2012,SISTEMA,100,260
+2012,12,32,3,7,5069,0121.2060,0,S,1,6,9,,20,20,,640,32000,,,01/12/2012,SISTEMA,100,2885
+2012,12,32,3,7,5069,0121.2100,0,N,1,6,9,,250,250,,17500,70000,,,01/12/2012,SISTEMA,100,790.55
+2012,12,32,3,7,5069,0121.3040,0,N,1,0,8,,0,0,,0,0,,"Área informada por duplicidade, pois a mesma não existe . Toda área plantada consiste em 25 ha que ja constam como plantios irrigados",01/12/2012,SISTEMA,0,0
+2012,12,32,3,7,5069,0121.3040,0,S,1,6,9,,25,25,,250,10000,,,01/12/2012,SISTEMA,100,1300
+2012,12,32,3,7,5069,0121.3060,0,S,1,6,9,,5,5,0,120,24000,800.00,,10/12/2012,NEIDIMAR,100,824
+2012,12,32,3,7,5069,0121.3080,0,S,1,6,9,,20,20,,400,20000,,,01/12/2012,SISTEMA,100,620
+2012,12,32,3,7,5069,0121.3110,0,N,1,0,8,,0,0,,0,0,,"àrea erradicada por estar em duplicidade, pois área sem irrigação nao existe no município , portando tal informação deve ser área irrigada ja constante do formulário.",01/12/2012,SISTEMA,1,640
+2012,12,32,3,7,5069,0121.3110,0,S,1,6,9,,40,40,,520,13000,,,01/12/2012,SISTEMA,100,730.9
+2012,12,32,3,7,5069,0131.0010,0,N,1,6,9,0,3,3,,24,8000,,,01/12/2012,SISTEMA,100,420
+2012,12,32,3,7,5069,0132.0010,0,N,1,6,9,1,5,5,,75,15000,,,01/12/2012,SISTEMA,100,2275
+2012,12,32,3,7,5069,0132.0010,0,S,1,6,9,1,5,5,0,75,15000,2200.00,,06/12/2012,NEIDIMAR,100,2200
+2012,12,32,3,7,5069,0132.0020,0,N,1,6,9,1,5,5,,75,15000,,,01/12/2012,SISTEMA,100,1843
+2012,12,32,3,7,5069,0132.0020,0,S,1,0,0,0,0,0,,0,0,,..,01/12/2012,SISTEMA,0,0
+2012,12,32,3,7,5069,0133.1040,0,N,1,6,9,0,2,2,,30,15000,,,01/12/2012,SISTEMA,100,1229.91
+2012,12,32,3,7,5069,0133.1070,0,N,1,6,9,0,70,70,,1470,21000,,,01/12/2012,SISTEMA,100,436
+2012,12,32,3,7,5069,0133.2010,0,N,1,6,9,0,150,150,,1800,12000,,,01/12/2012,SISTEMA,100,565
+2012,12,32,3,7,5069,0133.2080,0,N,1,6,9,0,40,40,,528,13200,,"ESPÉCIES E ÁREAS: NANICA 60%, TERRA 20% E PRATA 20%.",01/12/2012,SISTEMA,100,291.5
+2012,12,32,3,7,5069,0133.2220,0,S,1,6,9,0,6,6,,93,15500,,,01/12/2012,SISTEMA,100,957.15
+2012,12,32,3,7,5069,0134.0021,0,N,1,6,9,280,3620,3620,,3910,1080,,,01/12/2012,SISTEMA,100,15599.5
+2012,12,32,3,7,5069,0139.9060,0,N,1,6,9,0,15,15,0,19,1267,4000.00,,06/12/2012,NEIDIMAR,100,480.9
+2012,12,32,3,8,2702,0111.0020,1,S,9,6,9,,15,15,,55,3667,,,06/12/2012,ALUIZIOLOPES,100,763
+2012,12,32,3,8,2702,0111.0070,1,N,9,7,9,,1800,1800,,6480,3600,,melhoria sementes,06/12/2012,ALUIZIOLOPES,100,500
+2012,12,32,3,8,2702,0111.0070,1,S,9,7,9,,200,200,,960,4800,,reavaliação devido a irrigãção e melhoria na sementes.,06/12/2012,ALUIZIOLOPES,100,500
+2012,12,32,3,8,2702,0113.0010,0,N,9,6,9,0,50,50,10,3000,60000,44.00,,06/12/2012,ALUIZIOLOPES,100,199.4
+2012,12,32,3,8,2702,0119.1040,1,S,9,6,9,,30,30,,15,500,,,06/12/2012,ALUIZIOLOPES,100,2194.9
+2012,12,32,3,8,2702,0119.1040,2,S,9,6,9,,85,85,,85,1000,,,06/12/2012,ALUIZIOLOPES,100,2200
+2012,12,32,3,8,2702,0119.2050,0,N,9,6,9,0,75,75,10,3000,40000,44.00,,06/12/2012,ALUIZIOLOPES,100,118.9
+2012,12,32,3,8,2702,0119.4040,0,N,9,6,9,0,100,100,15,2000,20000,300.00,,06/12/2012,ALUIZIOLOPES,100,251.8
+2012,12,32,3,8,2702,0119.9010,0,S,9,6,9,,5,5,15,70,14000,1200.00,cultura estava como não irrigada,06/12/2012,ALUIZIOLOPES,100,1200
+2012,12,32,3,8,2702,0121.2090,0,S,9,6,9,,25,25,10,625,25000,1000.00,,06/12/2012,ALUIZIOLOPES,100,1025
+2012,12,32,3,8,2702,0121.2100,0,S,9,5,9,,10,10,,750,75000,,,01/12/2012,SISTEMA,90,979.44
+2012,12,32,3,8,2702,0121.3110,0,S,9,6,9,,20,20,10,360,18000,850.00,,06/12/2012,ALUIZIOLOPES,100,808.5
+2012,12,32,3,8,2702,0133.1040,0,S,9,6,8,0,20,20,20,300,15000,1000.00,toda a área estava como não irrigada.,06/12/2012,ALUIZIOLOPES,100,1000
+2012,12,32,3,8,2702,0133.2080,0,N,9,6,9,10,65,65,10,1170,18000,600.00,reavaliação rendimento médio. 90% da área é de banana da terra e 5% de banana nanica,06/12/2012,ALUIZIOLOPES,100,600
+2012,12,32,3,8,2702,0133.2080,0,S,9,6,9,100,485,485,10,9700,20000,600.00,reavaliação rendimento médio. 90% da área é de banana da terra e 5% de banana nanica,06/12/2012,ALUIZIOLOPES,100,600
+2012,12,32,3,8,2702,0133.2220,0,S,9,6,9,0,6,6,20,96,16000,1400.00,,06/12/2012,ALUIZIOLOPES,100,1400
+2012,12,32,3,8,2702,0133.2330,0,S,9,5,9,0,300,300,,15000,50000,,mamão havaí,01/12/2012,SISTEMA,90,1200
+2012,12,32,3,8,2702,0133.2340,0,N,9,6,9,15,75,75,15,750,10000,500.00,manga ubá,06/12/2012,ALUIZIOLOPES,100,565
+2012,12,32,3,8,2702,0133.3030,0,N,9,6,9,0,15,15,10,150,10000,500.00,,06/12/2012,ALUIZIOLOPES,100,520
+2012,12,32,3,8,2702,0134.0021,0,N,9,6,9,500,4000,4000,,5200,1300,,,06/12/2012,ALUIZIOLOPES,100,5000
+2012,12,32,3,8,2702,0134.0022,0,N,9,7,9,200,910,910,,1638,1800,,,06/12/2012,ALUIZIOLOPES,100,4156.5
+2012,12,32,3,8,2702,0134.0022,0,S,9,7,9,1800,8190,8190,,20434,2495,,reavaliação em decorrência área irrigada.,06/12/2012,ALUIZIOLOPES,100,4157.5
+2012,12,32,3,8,2702,0135.0010,0,N,9,6,9,9,9,9,10,5,556,4666.00,,06/12/2012,ALUIZIOLOPES,100,4666
+2012,12,32,3,8,2702,0135.0010,0,S,9,6,9,1,1,1,10,1,1000,4666.00,reavaliação área irrigada.,06/12/2012,ALUIZIOLOPES,100,4666
+2012,12,32,3,8,2900,0111.0020,1,S,9,6,9,,10,10,,25,2500,,,04/12/2012,ESTERHENRINGER,100,880
+2012,12,32,3,8,2900,0111.0070,1,N,9,7,9,,200,200,,600,3000,,,04/12/2012,ESTERHENRINGER,100,500
+2012,12,32,3,8,2900,0113.0010,0,N,9,6,9,0,24,24,0,1296,54000,44.00,,05/12/2012,ALUIZIOLOPES,100,42.05
+2012,12,32,3,8,2900,0113.0010,0,S,9,6,9,0,8,8,0,520,65000,44.00,,05/12/2012,ALUIZIOLOPES,100,40.7
+2012,12,32,3,8,2900,0119.1040,1,S,9,6,9,,80,80,,72,900,,,04/12/2012,ESTERHENRINGER,100,2300
+2012,12,32,3,8,2900,0119.1040,2,N,9,6,9,,25,25,,25,1000,,,04/12/2012,ESTERHENRINGER,100,2000
+2012,12,32,3,8,2900,0119.1040,2,S,9,6,9,,25,25,,30,1200,,reavaliação rendimento área irrigada,04/12/2012,ESTERHENRINGER,100,2000
+2012,12,32,3,8,2900,0119.2050,0,N,9,6,9,0,8,8,85,432,54000,43.00,,05/12/2012,ALUIZIOLOPES,100,41.8
+2012,12,32,3,8,2900,0119.4010,0,N,9,6,9,,3,3,,25,8333,,,04/12/2012,ESTERHENRINGER,100,1554
+2012,12,32,3,8,2900,0119.4010,0,S,9,6,9,,12,12,,110,9167,,,04/12/2012,ESTERHENRINGER,100,1554
+2012,12,32,3,8,2900,0119.9010,0,S,9,6,9,,5,5,,69,13800,,,04/12/2012,ESTERHENRINGER,100,763
+2012,12,32,3,8,2900,0121.1260,0,S,9,6,9,,20,20,,840,42000,,,04/12/2012,ESTERHENRINGER,100,439
+2012,12,32,3,8,2900,0121.2090,0,S,9,6,9,,42,42,,924,22000,,,04/12/2012,ESTERHENRINGER,100,1230
+2012,12,32,3,8,2900,0121.2100,0,S,9,6,9,,100,100,,8000,80000,,,04/12/2012,ESTERHENRINGER,100,1413
+2012,12,32,3,8,2900,0121.3060,0,S,9,6,9,,5,5,,77,15400,,,04/12/2012,ESTERHENRINGER,100,480
+2012,12,32,3,8,2900,0121.3110,0,S,9,6,9,,160,160,,2720,17000,,,04/12/2012,ESTERHENRINGER,100,700
+2012,12,32,3,8,2900,0131.0010,0,N,9,6,2,0,4,4,,28,7000,,,04/12/2012,ESTERHENRINGER,100,795
+2012,12,32,3,8,2900,0133.1040,0,N,9,6,2,3,17,17,,340,20000,,,04/12/2012,ESTERHENRINGER,100,746.5
+2012,12,32,3,8,2900,0133.1040,0,S,9,6,9,13,67,67,,1680,25075,,,04/12/2012,ESTERHENRINGER,100,746.5
+2012,12,32,3,8,2900,0133.2010,0,N,9,6,9,2,2,2,,30,15000,,,04/12/2012,ESTERHENRINGER,100,1330
+2012,12,32,3,8,2900,0133.2080,0,N,9,6,9,0,25,25,,625,25000,,reavaliação em dedorrência da variedade banana da terra,04/12/2012,ESTERHENRINGER,100,645
+2012,12,32,3,8,2900,0133.2080,0,S,9,6,9,0,167,167,,3000,17964,,reavaliação da área plantada em decorrência de novo levantamento de campo.,04/12/2012,ESTERHENRINGER,100,645
+2012,12,32,3,8,2900,0133.2220,0,S,9,6,9,0,5,5,,150,30000,,,04/12/2012,ESTERHENRINGER,100,1200
+2012,12,32,3,8,2900,0133.2330,0,S,9,6,9,5,31,31,,600,19355,,área 100% mamão papaia. - acrescimo na área plantada em decorrência de novo levantamento de campo realizado pelo técnico do incaper.,04/12/2012,ESTERHENRINGER,100,1030
+2012,12,32,3,8,2900,0133.2340,0,N,9,6,9,25,55,55,,825,15000,,,04/12/2012,ESTERHENRINGER,100,1150
+2012,12,32,3,8,2900,0133.3030,0,N,9,6,9,0,5,5,,75,15000,,,04/12/2012,ESTERHENRINGER,100,518
+2012,12,32,3,8,2900,0134.0021,0,N,9,6,9,891,2194,2194,,1645,750,,,04/12/2012,ESTERHENRINGER,100,5145
+2012,12,32,3,8,2900,0134.0021,0,S,9,6,9,99,115,115,,124,1078,,,04/12/2012,ESTERHENRINGER,100,5162.5
+2012,12,32,3,8,2900,0134.0022,0,N,9,6,9,174,696,696,,905,1300,,Dados da área em produção reavaliados pela incaper,04/12/2012,ESTERHENRINGER,100,4378
+2012,12,32,3,8,2900,0134.0022,0,S,9,6,9,116,464,464,,835,1800,,Dados da área em produção reavaliados pela incaper,04/12/2012,ESTERHENRINGER,100,4378
+2012,12,32,3,8,2900,0135.0010,0,N,9,6,9,5,15,15,,9,600,,,04/12/2012,ESTERHENRINGER,100,4296.1
+2012,12,32,3,8,2900,0135.0010,0,S,9,6,9,0,10,10,,15,1500,,reavaliação do rendimento em decorrência área irrigada,04/12/2012,ESTERHENRINGER,100,4293.6
+2012,12,32,3,8,2900,0139.9060,0,N,9,6,9,2,2,2,,3,1500,,,04/12/2012,ESTERHENRINGER,100,4697.5
+2012,12,32,3,8,2900,9119.4040,0,N,1,6,9,0,10,10,,180,18000,,,04/12/2012,ESTERHENRINGER,100,200
+2012,12,32,3,8,4500,0111.0070,1,N,9,6,9,,70,70,,210,3000,,,06/12/2012,ALUIZIOLOPES,100,546.2
+2012,12,32,3,8,4500,0113.0010,0,N,9,5,9,0,4,4,10,200,50000,44.00,reavaliação da área levando em consideração as lavouras para atender os alambiques,05/12/2012,ALUIZIOLOPES,100,255.65
+2012,12,32,3,8,4500,0119.1040,1,N,9,6,9,,120,120,,90,750,,,06/12/2012,ALUIZIOLOPES,100,2264
+2012,12,32,3,8,4500,0119.1040,2,N,9,6,9,,100,100,,80,800,,,06/12/2012,ALUIZIOLOPES,100,2000
+2012,12,32,3,8,4500,0119.2050,0,N,9,6,9,0,10,10,15,540,54000,44.00,,06/12/2012,ALUIZIOLOPES,100,291.85
+2012,12,32,3,8,4500,0121.1260,0,S,9,6,9,,40,40,10,2640,66000,400.00,,06/12/2012,ALUIZIOLOPES,100,373
+2012,12,32,3,8,4500,0121.2090,0,S,9,6,9,,5,5,10,60,12000,1250.00,,06/12/2012,ALUIZIOLOPES,100,1250
+2012,12,32,3,8,4500,0121.3060,0,S,9,6,9,,10,10,15,154,15400,830.00,,06/12/2012,ALUIZIOLOPES,100,830
+2012,12,32,3,8,4500,0121.3080,0,S,9,6,9,,10,10,10,250,25000,780.00,,06/12/2012,ALUIZIOLOPES,100,780
+2012,12,32,3,8,4500,0121.5200,0,S,9,6,9,,100,100,10,4000,40000,530.00,,06/12/2012,ALUIZIOLOPES,100,530
+2012,12,32,3,8,4500,0131.0010,0,N,9,6,9,0,84,84,10,1260,15000,600.00,,06/12/2012,ALUIZIOLOPES,100,528
+2012,12,32,3,8,4500,0132.0010,0,S,9,6,9,0,4,4,30,60,15000,4500.00,,06/12/2012,ALUIZIOLOPES,100,4500
+2012,12,32,3,8,4500,0133.1040,0,N,9,6,9,0,18,18,10,324,18000,600.00,,06/12/2012,ALUIZIOLOPES,100,725
+2012,12,32,3,8,4500,0133.1070,0,N,9,6,9,0,175,175,,3675,21000,,,06/12/2012,ALUIZIOLOPES,100,369.5
+2012,12,32,3,8,4500,0133.2080,0,N,9,6,8,110,340,340,10,4420,13000,500.00,Aréa de banana foi desmenbrada em duas irrigado e não irrigado. ficando o rendimento baixo por não ser irrigada,06/12/2012,ALUIZIOLOPES,100,560
+2012,12,32,3,8,4500,0133.2080,0,S,9,6,9,190,575,575,10,13725,23870,500.00,"Banana Terra 65% da área, Prata 25% área, outras 10%. para este mes foi separada a area irrigada ficando esta com rendimento maior que a não irrigada",06/12/2012,ALUIZIOLOPES,100,560
+2012,12,32,3,8,4500,0133.2220,0,S,9,6,9,0,3,3,10,110,36667,1500.00,,06/12/2012,ALUIZIOLOPES,100,1500
+2012,12,32,3,8,4500,0133.3030,0,N,9,6,9,0,10,10,10,100,10000,400.00,,06/12/2012,ALUIZIOLOPES,100,385
+2012,12,32,3,8,4500,0134.0021,0,N,9,5,9,200,1800,1800,,1620,900,,,06/12/2012,ALUIZIOLOPES,100,4944.5
+2012,12,32,3,8,4500,0134.0022,0,N,9,6,9,125,1470,1470,,2205,1500,,,06/12/2012,ALUIZIOLOPES,100,4050
+2012,12,32,3,8,4500,0134.0022,0,S,9,6,9,125,630,630,,1200,1905,,,06/12/2012,ALUIZIOLOPES,100,3780
+2012,12,32,3,8,4500,0139.9060,0,N,9,6,9,0,16,16,10,24,1500,7000.00,,06/12/2012,ALUIZIOLOPES,100,6390
+2012,12,32,3,8,4500,0139.9060,0,S,9,6,9,0,4,4,10,8,2000,7000.00,dados reavaliados pelo técnico Incaper.,06/12/2012,ALUIZIOLOPES,100,7000
+2012,12,32,3,8,4500,9119.4040,0,N,9,6,9,0,255,255,20,3315,13000,260.00,,06/12/2012,ALUIZIOLOPES,100,292
+2012,12,32,3,8,4559,0111.0070,1,N,9,7,9,,3500,3500,,11000,3143,,,05/12/2012,ALUIZIOLOPES,100,542
+2012,12,32,3,8,4559,0119.1040,1,N,9,6,9,,600,600,,300,500,,,05/12/2012,ESTERHENRINGER,100,2300
+2012,12,32,3,8,4559,0119.1040,2,N,9,6,9,,2000,2000,,1800,900,,Queda de área em virtude do alto custo de produção da cultura do feijão preto e aproveitamento da área de outras culturas no município com melhor preço de mercado.,05/12/2012,ESTERHENRINGER,100,2280
+2012,12,32,3,8,4559,0119.4010,0,S,9,6,9,,50,50,,650,13000,,"Em virtude do do alto preço de produção, a área total prevista para o ano, de 100ha, não foi plantada.",05/12/2012,ESTERHENRINGER,100,2675
+2012,12,32,3,8,4559,0119.4020,1,S,9,6,9,,70,70,,1400,20000,,,05/12/2012,ESTERHENRINGER,100,800
+2012,12,32,3,8,4559,0119.4020,2,S,9,6,9,,40,40,,800,20000,,,05/12/2012,ESTERHENRINGER,100,957
+2012,12,32,3,8,4559,0119.4030,0,S,9,6,9,,300,300,,10800,36000,,,05/12/2012,ESTERHENRINGER,100,800
+2012,12,32,3,8,4559,0121.1260,0,S,9,6,9,,1700,1700,,85000,50000,,,05/12/2012,ESTERHENRINGER,100,404.75
+2012,12,32,3,8,4559,0121.2060,0,S,9,6,9,,200,200,,3000,15000,,reavaliação da área de morango.,05/12/2012,ESTERHENRINGER,100,3325
+2012,12,32,3,8,4559,0121.2090,0,S,9,6,9,,10,10,90,200,20000,1000.00,,05/12/2012,ESTERHENRINGER,100,1025
+2012,12,32,3,8,4559,0121.2100,0,S,9,6,9,,200,200,,14000,70000,,,05/12/2012,ESTERHENRINGER,100,1651.5
+2012,12,32,3,8,4559,0121.3040,0,S,9,6,9,,100,100,,1500,15000,,,05/12/2012,ESTERHENRINGER,100,1079
+2012,12,32,3,8,4559,0121.3060,0,S,9,6,9,,640,640,,9856,15400,,,05/12/2012,ESTERHENRINGER,100,680
+2012,12,32,3,8,4559,0121.3080,0,S,9,6,9,,350,350,,8750,25000,,,05/12/2012,ESTERHENRINGER,100,650
+2012,12,32,3,8,4559,0121.3110,0,S,9,6,9,,500,500,,7500,15000,,,05/12/2012,ESTERHENRINGER,100,633
+2012,12,32,3,8,4559,0121.5200,0,S,9,6,9,,100,100,,3000,30000,,,05/12/2012,ESTERHENRINGER,100,517
+2012,12,32,3,8,4559,0131.0010,0,N,9,6,9,0,40,40,,400,10000,,,05/12/2012,ESTERHENRINGER,100,797.5
+2012,12,32,3,8,4559,0133.1040,0,N,9,6,9,0,10,10,,150,15000,,,05/12/2012,ESTERHENRINGER,100,1022.5
+2012,12,32,3,8,4559,0133.1070,0,N,9,6,9,0,40,40,,800,20000,,,05/12/2012,ESTERHENRINGER,100,894
+2012,12,32,3,8,4559,0133.2080,0,N,9,6,9,0,20,20,,300,15000,,90 % da área plantada do municipio é de banana Nanica.,05/12/2012,ESTERHENRINGER,100,569
+2012,12,32,3,8,4559,0133.2360,0,N,9,6,9,0,80,80,,1600,20000,,,05/12/2012,ESTERHENRINGER,100,1410
+2012,12,32,3,8,4559,0134.0021,0,N,9,6,9,700,2500,2500,,3000,1200,,reavaliação da área feita pelo técnico da incaper devido a erradicação por alguns produtores investindo em novas culturas.,05/12/2012,ESTERHENRINGER,100,4987.5
+2012,12,32,3,8,4559,9119.4040,0,N,9,6,9,0,100,100,,1300,13000,,,05/12/2012,ESTERHENRINGER,100,200
+2012,12,32,3,8,4609,0111.0020,1,N,1,0,9,,0,0,,0,0,,Confirmado os dados do rendimento pela incaper,01/12/2012,SISTEMA,0,0
+2012,12,32,3,8,4609,0111.0020,1,S,1,6,9,,50,50,,240,4800,,Confirmado os dados do rendimento pela incaper,05/12/2012,NEIDIMAR,100,800
+2012,12,32,3,8,4609,0111.0070,1,N,1,2,9,,280,280,,980,3500,,Reavaliação técnica.,05/12/2012,NEIDIMAR,100,680
+2012,12,32,3,8,4609,0111.0070,1,S,1,2,9,,120,120,,480,4000,,Aumento no rendimento após avaliação ténica.,05/12/2012,NEIDIMAR,100,680
+2012,12,32,3,8,4609,0113.0010,0,N,9,6,9,0,500,500,,30000,60000,,,05/12/2012,NEIDIMAR,100,45
+2012,12,32,3,8,4609,0119.1040,1,N,1,6,9,,60,60,,48,800,,"Queda de area em virtude de reavaliação do técnico, muita chuva .",05/12/2012,NEIDIMAR,100,3200
+2012,12,32,3,8,4609,0119.1040,1,S,2,6,9,,40,40,,48,1200,,Aumento de area no feijão 1ª safra conforme reavaliação técnica.,05/12/2012,NEIDIMAR,100,3200
+2012,12,32,3,8,4609,0119.1040,2,N,9,4,9,,25,25,,20,800,,Reavaliação técnica,05/12/2012,NEIDIMAR,100,2250
+2012,12,32,3,8,4609,0119.1040,2,S,9,6,9,,25,25,,30,1200,,Confirmado pelo Tecnico do Incaper,05/12/2012,NEIDIMAR,100,2250
+2012,12,32,3,8,4609,0119.9010,0,N,1,4,9,,0,0,,0,0,,,01/12/2012,SISTEMA,0,0
+2012,12,32,3,8,4609,0119.9010,0,S,9,6,9,,50,50,,650,13000,,,05/12/2012,NEIDIMAR,100,400
+2012,12,32,3,8,4609,0121.1260,0,S,9,6,9,,50,50,,2000,40000,,,05/12/2012,NEIDIMAR,100,260
+2012,12,32,3,8,4609,0121.2030,0,N,1,0,9,,0,0,,0,0,,,01/12/2012,SISTEMA,0,0
+2012,12,32,3,8,4609,0121.2030,0,S,9,6,9,,30,30,,1800,60000,,,05/12/2012,NEIDIMAR,100,500
+2012,12,32,3,8,4609,0121.2100,0,S,9,6,9,,150,150,,11250,75000,,,05/12/2012,NEIDIMAR,100,1830
+2012,12,32,3,8,4609,0121.3080,0,S,9,6,9,,25,25,,650,26000,,,05/12/2012,NEIDIMAR,100,630
+2012,12,32,3,8,4609,0121.3110,0,S,9,6,9,,30,30,,1200,40000,,,05/12/2012,NEIDIMAR,100,1080
+2012,12,32,3,8,4609,0121.5200,0,S,9,6,9,,6,6,,180,30000,,,05/12/2012,NEIDIMAR,100,530
+2012,12,32,3,8,4609,0131.0010,0,N,9,6,9,0,15,15,,250,16667,,,05/12/2012,NEIDIMAR,100,880
+2012,12,32,3,8,4609,0132.0020,0,S,9,6,9,13,32,32,,608,19000,,,05/12/2012,NEIDIMAR,100,3700
+2012,12,32,3,8,4609,0133.1040,0,N,9,6,9,0,15,15,,420,28000,,Cultura reavaliada pelo técnico.,05/12/2012,NEIDIMAR,100,1030
+2012,12,32,3,8,4609,0133.1070,0,N,9,6,9,0,40,40,,680,17000,,,05/12/2012,NEIDIMAR,100,890
+2012,12,32,3,8,4609,0133.2080,0,N,9,6,9,0,270,270,0,8100,30000,750.00,Reavaliação do técnico para área irrigado e não irrigado. Banana nânica 90% - Prata 5% - Terra - 5% .,05/12/2012,NEIDIMAR,100,450
+2012,12,32,3,8,4609,0133.2080,0,S,1,6,9,0,30,30,100,300,10000,750.00,Banana nânica 90% - Prata 5% - Terra 5%,05/12/2012,NEIDIMAR,100,750
+2012,12,32,3,8,4609,0133.2220,0,S,9,6,9,0,8,8,,320,40000,,Proxima reunião o tecnico apresentará nova avaliação.,05/12/2012,NEIDIMAR,100,950
+2012,12,32,3,8,4609,0133.2340,0,N,9,6,9,0,80,80,,1440,18000,,,05/12/2012,NEIDIMAR,100,980
+2012,12,32,3,8,4609,0133.3030,0,N,9,0,8,0,0,0,,0,0,,"Os produtores acabaram com o plantio, aproveitando as áreas no plantio de novas culturas principalmente café.",01/12/2012,SISTEMA,0,0
+2012,12,32,3,8,4609,0134.0021,0,N,9,6,9,0,4000,4000,,3600,900,,"Área reavaliada pela incaper, pois esta sendo informado ao IBGE",05/12/2012,NEIDIMAR,100,4991.6
+2012,12,32,3,8,4609,0134.0022,0,N,9,6,9,0,600,600,,600,1000,,Reavalizção de area feita pelo técnico .,05/12/2012,NEIDIMAR,100,4665.5
+2012,12,32,3,8,4609,0134.0022,0,S,9,6,9,0,4600,4600,,9936,2160,,Dados de área reavaliados pelo técnico,05/12/2012,NEIDIMAR,100,4665.5
+2012,12,32,3,8,4609,0135.0010,0,S,9,6,9,3,27,27,,11,407,,,05/12/2012,NEIDIMAR,100,4740
+2012,12,32,3,8,4609,0139.1060,0,N,1,6,9,0,2,2,,2,1000,,Dados confirmado pela incaper,05/12/2012,NEIDIMAR,100,12000
+2012,12,32,3,8,4609,0139.2010,0,S,9,12,9,7,0,0,,0,0,,cultura em formação sem produção,01/12/2012,SISTEMA,0,0
+2012,12,32,3,8,4609,9119.4040,0,N,9,6,9,0,50,50,,900,18000,,,05/12/2012,NEIDIMAR,100,210
+2012,12,32,3,8,4955,0111.0070,1,N,1,6,9,,80,80,,240,3000,,,03/12/2012,DANIELSSILVA,100,500
+2012,12,32,3,8,4955,0113.0010,0,N,1,6,9,0,400,400,,24000,60000,,,03/12/2012,DANIELSSILVA,100,52.5
+2012,12,32,3,8,4955,0119.1040,1,S,1,6,9,,15,15,,15,1000,,,03/12/2012,DANIELSSILVA,100,2135
+2012,12,32,3,8,4955,0119.1040,2,S,9,6,9,,15,15,,15,1000,,,03/12/2012,DANIELSSILVA,100,2250
+2012,12,32,3,8,4955,0119.4040,0,N,1,6,9,0,10,10,,160,16000,,,03/12/2012,DANIELSSILVA,100,290
+2012,12,32,3,8,4955,0121.2100,0,S,1,6,9,,50,50,,5000,100000,,"Aumento no Rendimento Médio, devido a tratos culturais, irrigação,etc.",03/12/2012,DANIELSSILVA,100,1040
+2012,12,32,3,8,4955,0131.0010,0,N,9,6,9,0,10,10,,47,4700,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,770
+2012,12,32,3,8,4955,0133.2080,0,S,9,6,9,50,200,200,,11000,55000,,"Trata-se de cultura altamente tecnificada, onde a produtividade é alta. Rendimento alterado em função da reavaliação.",03/12/2012,DANIELSSILVA,100,500
+2012,12,32,3,8,4955,0133.2220,0,S,9,6,9,0,80,80,,3200,40000,,Rendimento levemente superior a média tendo em vista as técnicas empregadas e condições do solo favoráveis.,03/12/2012,DANIELSSILVA,100,1560
+2012,12,32,3,8,4955,0133.2330,0,N,9,6,9,0,15,15,,1200,80000,,,03/12/2012,DANIELSSILVA,100,1000
+2012,12,32,3,8,4955,0133.2340,0,N,9,6,9,0,10,10,,140,14000,,,03/12/2012,DANIELSSILVA,100,470
+2012,12,32,3,8,4955,0133.3030,0,N,9,6,9,0,35,35,,308,8800,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,560
+2012,12,32,3,8,4955,0134.0021,0,N,1,6,9,0,1000,1000,,1050,1050,,,03/12/2012,DANIELSSILVA,100,5225
+2012,12,32,3,8,4955,0134.0022,0,N,1,6,9,0,200,200,,336,1680,,,03/12/2012,DANIELSSILVA,100,4166.5
+2012,12,32,3,8,4955,0134.0022,0,S,1,6,9,400,3800,3800,,11400,3000,,"FOI AUMENTADO O RENDIMENTO TENDO EM VISTA O ELEVADO NÍVEL TECNOLÓGICO EMPREGADO PELOS PRODUTORES E PELO BOM PERÍODO DE CHUVAS ESSE ANO, PRINCIPALMENTE NA FLORAÇÃO.",03/12/2012,DANIELSSILVA,100,4166.5
+2012,12,32,3,8,4955,0135.0010,0,N,9,6,9,0,10,10,,2,200,,Rendimento médio abaixo do esperado tendo em vista a falta de técnicas adequadas aplicadas pelos produtores.,03/12/2012,DANIELSSILVA,100,4500
+2012,12,32,3,9,1308,0111.0070,1,N,9,5,9,,6,6,,11,1833,,,04/12/2012,ALUIZIOLOPES,100,564
+2012,12,32,3,9,1308,0111.0070,1,S,9,5,9,,6,6,,14,2333,,,04/12/2012,ALUIZIOLOPES,100,564
+2012,12,32,3,9,1308,0113.0010,0,S,9,5,8,0,35,35,20,2100,60000,44.00,"dados reavaliados pelo técnico do Incaper, toda a área e irrigada.",05/12/2012,ALUIZIOLOPES,100,43.4
+2012,12,32,3,9,1308,0119.1040,1,N,9,6,9,,16,16,,11,688,,,04/12/2012,ALUIZIOLOPES,100,2330
+2012,12,32,3,9,1308,0119.1040,2,N,9,3,9,,12,12,,8,667,,,04/12/2012,ALUIZIOLOPES,100,2250
+2012,12,32,3,9,1308,0119.2050,0,S,9,5,8,0,15,15,20,771,51400,44.00,"dados reavaliados junto ao técnico do Incaper, mudança metodologia IBGE, separando o destino do produto.",05/12/2012,ALUIZIOLOPES,100,44
+2012,12,32,3,9,1308,0121.2090,0,N,9,5,9,,6,6,20,50,8333,500.00,,04/12/2012,ALUIZIOLOPES,100,660
+2012,12,32,3,9,1308,0121.2090,0,S,9,4,9,,2,2,15,20,10000,500.00,,04/12/2012,ALUIZIOLOPES,100,540
+2012,12,32,3,9,1308,0121.3110,0,N,9,6,9,,13,13,,150,11538,,,04/12/2012,ALUIZIOLOPES,100,637.5
+2012,12,32,3,9,1308,0121.3110,0,S,9,5,9,,3,3,10,39,13000,1000.00,,04/12/2012,ALUIZIOLOPES,100,755
+2012,12,32,3,9,1308,0133.1040,0,N,9,6,9,0,3,3,,50,16667,,,04/12/2012,ALUIZIOLOPES,100,650
+2012,12,32,3,9,1308,0133.1070,0,N,9,6,9,0,7,7,,140,20000,,,04/12/2012,ALUIZIOLOPES,100,480
+2012,12,32,3,9,1308,0133.2080,0,N,9,5,9,0,703,703,15,4539,6457,700.00,,04/12/2012,ALUIZIOLOPES,100,682.5
+2012,12,32,3,9,1308,0133.2080,0,S,9,5,9,5,60,60,15,420,7000,700.00,,04/12/2012,ALUIZIOLOPES,100,682.5
+2012,12,32,3,9,1308,0133.3030,0,N,9,5,9,0,15,15,10,180,12000,560.00,,04/12/2012,ALUIZIOLOPES,100,480
+2012,12,32,3,9,1308,0134.0021,0,N,9,6,9,0,35,35,,26,743,,,04/12/2012,ALUIZIOLOPES,100,5041.5
+2012,12,32,3,9,1308,0134.0022,0,N,9,6,9,0,300,300,,234,780,,,04/12/2012,ALUIZIOLOPES,100,4284.6
+2012,12,32,3,9,1308,9119.4040,0,N,9,5,8,85,85,85,20,1020,12000,300.00,dados corrigidos pelo técnico do Incaper. esta área estava para industria e e para mesa.,04/12/2012,ALUIZIOLOPES,100,300
+2012,12,32,3,9,5002,0111.0070,1,S,1,6,9,,17,17,,29,1706,,,06/12/2012,CARLOSOLIVEIRA,100,750
+2012,12,32,3,9,5002,0119.2050,0,N,1,6,9,0,6,6,100,240,40000,43.00,,06/12/2012,CARLOSOLIVEIRA,100,43
+2012,12,32,3,9,5002,0119.4040,0,N,2,6,9,0,12,12,,120,10000,,Queda de área motivada pelo preço baixo de mercado.,06/12/2012,CARLOSOLIVEIRA,100,175
+2012,12,32,3,9,5002,0121.2100,0,S,1,6,9,,10,10,,400,40000,,AREA REAVALIADA PELO TÉCNICO.,06/12/2012,CARLOSOLIVEIRA,100,1500
+2012,12,32,3,9,5002,0131.0010,0,N,1,6,9,0,20,20,,140,7000,,,06/12/2012,CARLOSOLIVEIRA,100,580
+2012,12,32,3,9,5002,0133.1040,0,N,1,6,9,0,5,5,100,110,22000,2000.00,,06/12/2012,CARLOSOLIVEIRA,100,2000
+2012,12,32,3,9,5002,0133.2080,0,N,1,6,9,0,12,12,100,84,7000,750.00,,06/12/2012,CARLOSOLIVEIRA,100,750
+2012,12,32,3,9,5002,0133.3030,0,N,1,6,9,0,120,120,100,1920,16000,450.00,"ABANDONO DE 30ha, EM VIRTUDE DE FORMAÇÃO DE PASTAGENS",06/12/2012,CARLOSOLIVEIRA,100,450
+2012,12,32,3,9,5002,0133.3050,0,N,1,6,9,0,28,28,100,17,607,4300.00,"ÁREAS RECUPERADAS, MOTIVADAS PELO BOM PREÇO .",06/12/2012,CARLOSOLIVEIRA,100,4300
+2012,12,32,3,9,5002,0134.0022,0,N,1,6,9,0,522,522,,406,778,,,06/12/2012,CARLOSOLIVEIRA,100,4160
+2012,12,32,3,9,5002,0134.0022,0,S,1,6,9,14,334,334,,805,2410,,REAVALIAÇÃO NA ÁREA PLANTADA E ÁREA EM FORMAÇÃO,06/12/2012,CARLOSOLIVEIRA,100,4160
+2012,12,32,3,9,5002,0139.2010,0,N,1,6,9,83,717,717,100,1355,1890,3200.00,NOVAS ÁREAS ENTRARAM EM PRODUÇÃO.,06/12/2012,CARLOSOLIVEIRA,100,3200
+2012,12,32,3,9,5101,0113.0010,0,N,9,5,9,0,85,85,10,5100,60000,44.00,,05/12/2012,ALUIZIOLOPES,100,145.9
+2012,12,32,3,9,5101,0119.1040,1,N,9,6,5,,4,4,,2,500,,,06/12/2012,ALUIZIOLOPES,100,2166
+2012,12,32,3,9,5101,0119.1040,1,S,9,6,5,,16,16,,12,750,,confirmamos perda de 50% na colheita devido a incidência de praga,06/12/2012,ALUIZIOLOPES,100,2166
+2012,12,32,3,9,5101,0119.1040,2,S,9,6,9,,10,10,,15,1500,,Rendimento médio fora do padrão em virtude da área ser inrrigada.,06/12/2012,ALUIZIOLOPES,100,2000
+2012,12,32,3,9,5101,0119.2050,0,N,9,6,9,0,15,15,10,900,60000,44.00,,06/12/2012,ALUIZIOLOPES,100,254.9
+2012,12,32,3,9,5101,0121.2090,0,S,9,6,9,,5,5,10,60,12000,1500.00,,06/12/2012,ALUIZIOLOPES,100,1460
+2012,12,32,3,9,5101,0133.1040,0,N,9,6,9,5,35,35,10,544,15543,1000.00,90 % da área é de Limão Thaiti,06/12/2012,ALUIZIOLOPES,100,918
+2012,12,32,3,9,5101,0133.1070,0,N,9,6,9,15,80,80,10,1520,19000,500.00,,06/12/2012,ALUIZIOLOPES,100,588
+2012,12,32,3,9,5101,0133.2080,0,N,9,6,9,350,1250,1250,10,15000,12000,700.00,"ÁREA -- > Banana prata 70 % - R$ 0,70 KG / Banana da terra 20% - R$ 0,70 KG / Banana Nanica 10% - R$ 0,55 KG",06/12/2012,ALUIZIOLOPES,100,682.5
+2012,12,32,3,9,5101,0133.3030,0,N,9,6,9,0,25,25,10,300,12000,400.00,,06/12/2012,ALUIZIOLOPES,100,470
+2012,12,32,3,9,5101,0134.0021,0,N,9,6,9,0,234,234,,253,1081,,,06/12/2012,ALUIZIOLOPES,100,4991.5
+2012,12,32,3,9,5101,0134.0022,0,N,9,6,9,15,760,760,,1003,1320,,,06/12/2012,ALUIZIOLOPES,100,3559.7
+2012,12,32,3,9,5101,0139.1070,0,N,9,6,9,0,15,15,10,24,1600,2800.00,,06/12/2012,ALUIZIOLOPES,100,3030
+2012,12,32,3,9,5101,0139.2010,0,N,9,6,9,37,283,283,10,566,2000,3200.00,,06/12/2012,ALUIZIOLOPES,100,3077.5
+2012,12,32,3,9,5101,0139.9060,0,N,9,6,9,0,25,25,10,39,1560,4500.00,,06/12/2012,ALUIZIOLOPES,100,4950
+2012,12,32,3,9,5101,9119.4040,0,N,9,6,9,0,140,140,10,1680,12000,350.00,,06/12/2012,ALUIZIOLOPES,100,355
+2012,12,32,3,9,5200,0111.0070,1,N,9,6,9,,25,25,,40,1600,,,06/12/2012,NEIDIMAR,100,535
+2012,12,32,3,9,5200,0113.0010,0,N,9,6,9,0,110,110,5,5400,49091,45.00,,06/12/2012,NEIDIMAR,100,41.9
+2012,12,32,3,9,5200,0119.1040,1,N,9,6,9,,20,20,,16,800,,,06/12/2012,NEIDIMAR,100,2099
+2012,12,32,3,9,5200,0119.1040,2,N,9,5,9,,20,20,,16,800,,,01/12/2012,SISTEMA,80,2187.5
+2012,12,32,3,9,5200,0119.4040,0,N,9,6,9,0,45,45,5,675,15000,195.00,,06/12/2012,NEIDIMAR,100,153.25
+2012,12,32,3,9,5200,0133.3030,0,N,1,6,9,0,31,31,20,110,3548,450.00,baixo rendimento,06/12/2012,NEIDIMAR,100,447.5
+2012,12,32,3,9,5200,0133.3030,0,S,9,6,9,0,59,59,50,256,4339,450.00,baixo rendimento,06/12/2012,NEIDIMAR,100,445
+2012,12,32,3,9,5200,0139.2010,0,N,9,6,9,2,205,205,30,246,1200,2050.00,,06/12/2012,NEIDIMAR,100,2520
+2012,12,32,3,9,5200,0139.9060,0,N,9,6,9,0,11,11,10,16,1455,4800.00,,06/12/2012,NEIDIMAR,100,4770
+2012,12,32,3,10,300,0111.0070,1,N,1,7,9,,40,40,,160,4000,,cultura bem cuidada,01/12/2012,SISTEMA,100,675
+2012,12,32,3,10,300,0111.0070,1,S,1,6,9,,160,160,,640,4000,,cultura bem adubada,01/12/2012,SISTEMA,100,675
+2012,12,32,3,10,300,0111.0070,2,N,1,7,9,,40,40,0,200,5000,750.00,excelente rendimento confirmado,04/12/2012,ELIOMARPIMENTEL,100,700
+2012,12,32,3,10,300,0111.0070,2,S,1,7,9,,160,160,0,800,5000,750.00,excelente rendimento confirmado,04/12/2012,ELIOMARPIMENTEL,100,700
+2012,12,32,3,10,300,0113.0010,0,N,1,7,9,40,40,40,0,3600,90000,50.00,área maior de cana forrageira. ajustada a área,04/12/2012,ELIOMARPIMENTEL,100,51
+2012,12,32,3,10,300,0119.1040,1,S,1,7,9,,80,80,,128,1600,,rodizio de cultura reduziu a área plantada.,01/12/2012,SISTEMA,100,180
+2012,12,32,3,10,300,0119.1040,2,N,1,7,9,,30,30,,48,1600,,"Área bem adubada, rendimento elevado. Ajustada a área de irrigada e não irrigada",01/12/2012,SISTEMA,100,2240
+2012,12,32,3,10,300,0119.1040,2,S,1,7,9,,50,50,,80,1600,,"área bem adubada, rendimento elevado. Ajustada a área entre o irrigado e não irrigado",01/12/2012,SISTEMA,100,2240
+2012,12,32,3,10,300,0119.1040,3,S,1,7,9,,40,40,0,64,1600,2200.00,"Cultura plantada no mês de julho, rendimento esperado bem elevado, para o região",04/12/2012,ELIOMARPIMENTEL,100,2190
+2012,12,32,3,10,300,0119.2050,0,N,1,7,9,0,150,150,0,13500,90000,50.00,àrea com rendimento excelente,04/12/2012,ELIOMARPIMENTEL,100,47
+2012,12,32,3,10,300,0119.4010,0,N,2,0,7,,0,0,,0,0,,Área erradicada.,01/12/2012,SISTEMA,0,0
+2012,12,32,3,10,300,0119.4020,1,S,1,7,9,,6,6,0,72,12000,1350.00,novos produtores entando no mercado.,04/12/2012,ELIOMARPIMENTEL,100,1225
+2012,12,32,3,10,300,0119.4040,0,N,1,7,9,0,40,40,0,800,20000,500.00,Preço subiu devido a seca no nordeste,04/12/2012,ELIOMARPIMENTEL,100,287.5
+2012,12,32,3,10,300,0119.9010,0,N,1,7,9,,6,6,0,180,30000,1400.00,,04/12/2012,ELIOMARPIMENTEL,100,1492.5
+2012,12,32,3,10,300,0121.1260,0,S,1,7,9,,60,60,0,3000,50000,500.00,,04/12/2012,ELIOMARPIMENTEL,100,470
+2012,12,32,3,10,300,0121.2030,0,S,1,6,9,,5,5,0,100,20000,450.00,,04/12/2012,ELIOMARPIMENTEL,100,435
+2012,12,32,3,10,300,0121.2060,0,S,1,7,9,,5,5,0,175,35000,1950.00,,04/12/2012,ELIOMARPIMENTEL,100,1850
+2012,12,32,3,10,300,0121.2100,0,S,1,7,9,,150,150,0,10500,70000,1500.00,,04/12/2012,ELIOMARPIMENTEL,100,1030
+2012,12,32,3,10,300,0121.3040,0,S,1,6,9,,150,150,0,1950,13000,2100.00,,04/12/2012,ELIOMARPIMENTEL,100,1670
+2012,12,32,3,10,300,0121.3110,0,S,1,7,9,,700,700,0,37800,54000,850.00,,04/12/2012,ELIOMARPIMENTEL,100,632.5
+2012,12,32,3,10,300,0121.5200,0,S,1,7,9,,2,2,0,50,25000,1800.00,,04/12/2012,ELIOMARPIMENTEL,100,1840
+2012,12,32,3,10,300,0131.0010,0,N,1,7,9,10,40,40,0,600,15000,450.00,retificada a área,04/12/2012,ELIOMARPIMENTEL,100,570
+2012,12,32,3,10,300,0132.0010,0,N,1,7,9,3,12,12,,132,11000,,confirmado rendimento na reunião,04/12/2012,ELIOMARPIMENTEL,100,4000
+2012,12,32,3,10,300,0132.0020,0,N,1,7,9,0,8,8,,88,11000,,rendimento confirmado na reunião,04/12/2012,ELIOMARPIMENTEL,100,4000
+2012,12,32,3,10,300,0133.1040,0,N,1,7,9,0,10,10,0,220,22000,1200.00,"Área sem trato, parte abandonada.",04/12/2012,ELIOMARPIMENTEL,100,1000
+2012,12,32,3,10,300,0133.1070,0,N,1,7,9,0,50,50,,1000,20000,,,04/12/2012,ELIOMARPIMENTEL,100,670
+2012,12,32,3,10,300,0133.2080,0,N,1,7,9,0,2700,2700,0,27000,10000,800.00,"80 % da cultura é de banana prata. 15% banana da terra, restante nanica",04/12/2012,ELIOMARPIMENTEL,100,823
+2012,12,32,3,10,300,0133.2220,0,N,1,7,9,0,2,2,0,36,18000,500.00,,04/12/2012,ELIOMARPIMENTEL,100,510
+2012,12,32,3,10,300,0133.2360,0,N,1,7,9,0,10,10,0,200,20000,1200.00,,04/12/2012,ELIOMARPIMENTEL,100,1140
+2012,12,32,3,10,300,0133.2410,0,N,1,4,9,6,0,0,,0,0,,"Não temos ainda uma estimativa de rendimento, favor colocar a média estadual.",04/12/2012,ELIOMARPIMENTEL,0,0
+2012,12,32,3,10,300,0133.3030,0,N,1,7,9,0,10,10,0,100,10000,400.00,,04/12/2012,ELIOMARPIMENTEL,100,375
+2012,12,32,3,10,300,0134.0021,0,N,1,7,9,100,2352,2352,0,3105,1320,4850.00,melhor rendimento devido ao clima e melhores variedades.,04/12/2012,ELIOMARPIMENTEL,100,4969
+2012,12,32,3,10,300,0134.0021,0,S,1,7,9,100,48,48,0,63,1313,4850.00,melhor rendimento devido ao clima e melhores variedades.,04/12/2012,ELIOMARPIMENTEL,100,4974
+2012,12,32,3,10,300,0134.0022,0,N,1,7,9,300,1666,1666,0,2999,1800,4500.00,melhor rendimento devido ao clima e melhores variedades.,04/12/2012,ELIOMARPIMENTEL,100,4090
+2012,12,32,3,10,300,0134.0022,0,S,1,7,9,300,34,34,0,61,1794,4500.00,melhor rendimento devido ao clima e melhores variedades.,04/12/2012,ELIOMARPIMENTEL,100,4100
+2012,12,32,3,10,300,0135.0010,0,N,1,7,9,0,18,18,0,11,611,4500.00,toda a área está em produção,04/12/2012,ELIOMARPIMENTEL,100,4492.5
+2012,12,32,3,10,300,0139.2010,0,N,1,7,9,14,5,5,0,5,1000,2500.00,área em expansão,04/12/2012,ELIOMARPIMENTEL,100,2080
+2012,12,32,3,10,300,0139.9060,0,N,1,7,9,40,50,50,0,100,2000,8000.00,cultura em expansão,04/12/2012,ELIOMARPIMENTEL,100,6454
+2012,12,32,3,10,409,0111.0020,1,N,1,7,9,,2,2,0,10,5000,800.00,áreas bem cuidadas melhoram rendimento,04/12/2012,ELIOMARPIMENTEL,100,450
+2012,12,32,3,10,409,0111.0070,1,N,2,7,9,,5,5,,6,1200,,Os produtores estão plantando o milho para silagem e ou verde. devido ao atraso na colheita parte do milho secou no pé. aumentando assim a área de milho em grão,01/12/2012,SISTEMA,100,568
+2012,12,32,3,10,409,0111.0070,2,N,1,7,1,,20,10,,30,3000,,"excesso de chuva alagou áreas, perdendo assim parte da cultura",01/12/2012,SISTEMA,100,646
+2012,12,32,3,10,409,0113.0010,0,N,1,7,9,0,50,50,0,1500,30000,50.00,"rendimento confirmado, redução de área, ajuste feito na reunião",04/12/2012,ELIOMARPIMENTEL,100,49.85
+2012,12,32,3,10,409,0119.1040,1,N,1,7,8,,15,15,,48,3200,,"retificada a área, não se plantou o esperado devido as dificuldades no preparo do solo. rendimento alto devido aos tratos culturais",01/12/2012,SISTEMA,100,500
+2012,12,32,3,10,409,0119.1040,2,N,1,7,1,,40,5,,3,600,,área inundada com as chuvas do mês. perda de 90% da área plantada,01/12/2012,SISTEMA,100,2080
+2012,12,32,3,10,409,0119.1040,3,N,1,7,9,,15,15,0,15,1000,2100.00,,04/12/2012,ELIOMARPIMENTEL,100,2300
+2012,12,32,3,10,409,0119.2050,0,N,1,7,9,0,100,100,0,3000,30000,50.00,cultura sem trato,04/12/2012,ELIOMARPIMENTEL,100,47
+2012,12,32,3,10,409,0119.4040,0,N,1,7,9,0,200,200,0,3600,18000,600.00,,04/12/2012,ELIOMARPIMENTEL,100,375
+2012,12,32,3,10,409,0119.9010,0,N,1,7,9,,1,1,0,30,30000,1400.00,,04/12/2012,ELIOMARPIMENTEL,100,1408
+2012,12,32,3,10,409,0121.3110,0,N,1,7,1,,15,7,0,126,18000,700.00,"excesso de chuva alagou áreas, perdendo assim parte da cultura",04/12/2012,ELIOMARPIMENTEL,100,665
+2012,12,32,3,10,409,0132.0020,0,S,1,7,9,1,2,2,0,20,10000,4000.00,Rendimento esperado para primeira safra,04/12/2012,ELIOMARPIMENTEL,100,4000
+2012,12,32,3,10,409,0133.2080,0,N,1,7,9,20,600,600,0,3600,6000,800.00,90% da cultura é de banana prata,04/12/2012,ELIOMARPIMENTEL,100,830
+2012,12,32,3,10,409,0133.2340,0,N,1,7,9,0,1,1,0,10,10000,1000.00,,04/12/2012,ELIOMARPIMENTEL,100,1000
+2012,12,32,3,10,409,0133.2360,0,N,1,7,9,0,4,4,0,144,36000,1300.00,"Cultura em ciclo de 2 anos e alto custo, reduziram a área.",04/12/2012,ELIOMARPIMENTEL,100,1315
+2012,12,32,3,10,409,0133.3030,0,N,1,7,9,0,50,50,0,700,14000,500.00,Dados retificados,04/12/2012,ELIOMARPIMENTEL,100,500
+2012,12,32,3,10,409,0134.0022,0,N,1,7,9,100,2000,2000,0,3540,1770,4500.00,"Dados da área plantada e em produção, reavaliados pelos técnicos presentes",04/12/2012,ELIOMARPIMENTEL,100,3982.8
+2012,12,32,3,10,409,0135.0010,0,N,1,7,9,0,13,13,0,8,615,4500.00,,04/12/2012,ELIOMARPIMENTEL,100,4500
+2012,12,32,3,10,409,0139.2010,0,N,1,7,9,130,500,500,0,600,1200,3000.00,,04/12/2012,ELIOMARPIMENTEL,100,3105
+2012,12,32,3,10,409,0139.9060,0,N,1,7,9,0,35,35,0,70,2000,7800.00,dados confirmados na reunião,04/12/2012,ELIOMARPIMENTEL,100,7652
+2012,12,32,3,10,2405,0111.0020,1,N,2,0,7,,0,0,,0,0,,Não se tem conhecimento de área.,01/12/2012,SISTEMA,0,0
+2012,12,32,3,10,2405,0111.0070,1,N,1,7,9,,70,70,,175,2500,,,01/12/2012,SISTEMA,100,680
+2012,12,32,3,10,2405,0111.0070,2,N,1,0,9,,0,0,,0,0,,O milho desta safra é para silo e espiga verde.,01/12/2012,SISTEMA,0,0
+2012,12,32,3,10,2405,0113.0010,0,N,1,7,9,0,100,100,0,8000,80000,50.00,,04/12/2012,ELIOMARPIMENTEL,100,50.1
+2012,12,32,3,10,2405,0119.1040,1,N,1,7,9,,15,15,,12,800,,"Espera-se melhor rendimento, devido ao tempo",01/12/2012,SISTEMA,100,3000
+2012,12,32,3,10,2405,0119.1040,2,N,1,7,9,,15,15,0,12,800,2000.00,,04/12/2012,ELIOMARPIMENTEL,100,2052.5
+2012,12,32,3,10,2405,0119.4040,0,N,1,7,9,0,100,100,0,2000,20000,450.00,,04/12/2012,ELIOMARPIMENTEL,100,311.5
+2012,12,32,3,10,2405,0121.2100,0,N,2,0,7,,0,0,,0,0,,Não se tem conhecimento de área plantada.,01/12/2012,SISTEMA,0,0
+2012,12,32,3,10,2405,0121.3110,0,N,1,7,9,,5,5,0,75,15000,750.00,,04/12/2012,ELIOMARPIMENTEL,100,624
+2012,12,32,3,10,2405,0131.0010,0,N,1,7,9,5,25,25,0,325,13000,450.00,"Só foi identificada áarea de fundo de quintal, sem expressão comercial.",04/12/2012,ELIOMARPIMENTEL,100,637.5
+2012,12,32,3,10,2405,0133.1040,0,N,1,7,9,0,15,15,0,330,22000,1200.00,,04/12/2012,ELIOMARPIMENTEL,100,940
+2012,12,32,3,10,2405,0133.1070,0,N,1,7,9,10,40,40,0,1400,35000,800.00,a confirmar o rendimento,04/12/2012,ELIOMARPIMENTEL,100,795
+2012,12,32,3,10,2405,0133.2080,0,N,1,7,9,0,2180,2180,0,10900,5000,600.00,"cultura sem adubação e melhores trato, rendimento muito baixo. cultura predominando de banana prata",04/12/2012,ELIOMARPIMENTEL,100,597.5
+2012,12,32,3,10,2405,0133.2220,0,N,1,7,9,0,10,10,0,280,28000,550.00,"área sendo reduzida, por falta de estimulo ao produtor",04/12/2012,ELIOMARPIMENTEL,100,650
+2012,12,32,3,10,2405,0133.2340,0,N,1,7,9,0,5,5,0,150,30000,800.00,a verificar rendimento,04/12/2012,ELIOMARPIMENTEL,100,880
+2012,12,32,3,10,2405,0133.2360,0,N,1,7,9,0,21,21,0,643,30619,1200.00,,04/12/2012,ELIOMARPIMENTEL,100,1142.5
+2012,12,32,3,10,2405,0133.3030,0,N,1,7,9,0,50,50,0,700,14000,500.00,"área sendo reduzida, por falta de preço.",04/12/2012,ELIOMARPIMENTEL,100,500
+2012,12,32,3,10,2405,0134.0021,0,N,1,7,9,0,700,700,0,868,1240,4800.00,,04/12/2012,ELIOMARPIMENTEL,100,4971
+2012,12,32,3,10,2405,0134.0022,0,N,1,7,9,100,900,900,0,1040,1156,4500.00,Dados da área em produção reavaliados pelo tenico da incaper,04/12/2012,ELIOMARPIMENTEL,100,4030
+2012,12,32,3,10,2405,0135.0010,0,N,1,7,9,10,56,56,0,13,232,4500.00,rendimento ratificado na reunião,04/12/2012,ELIOMARPIMENTEL,100,4500
+2012,12,32,3,10,2405,0139.2010,0,N,1,7,9,180,1270,1270,0,1715,1350,2700.00,,04/12/2012,ELIOMARPIMENTEL,100,2505
+2012,12,32,3,10,2405,0139.9060,0,N,1,7,9,70,100,100,0,250,2500,7000.00,produção confirmada,04/12/2012,ELIOMARPIMENTEL,100,7300
+2012,12,32,3,10,2603,0111.0070,1,N,1,7,9,,20,20,,18,900,,cultura sem muito trato reduziu o rendimento,01/12/2012,SISTEMA,100,620
+2012,12,32,3,10,2603,0111.0070,2,N,1,7,9,,6,6,0,6,1000,700.00,confirmado rendimento,04/12/2012,ELIOMARPIMENTEL,100,550
+2012,12,32,3,10,2603,0113.0010,0,N,1,7,9,0,15,15,0,675,45000,50.00,,04/12/2012,ELIOMARPIMENTEL,100,51.5
+2012,12,32,3,10,2603,0119.1040,1,N,1,7,8,,5,5,,3,600,,"Devido as chuvas incertas no período, os meses que se plantam o feijão, estão concentrados em fevereiro, março e julho.",01/12/2012,SISTEMA,100,1430
+2012,12,32,3,10,2603,0119.1040,2,N,1,7,9,,25,25,0,15,600,2100.00,,04/12/2012,ELIOMARPIMENTEL,100,2060
+2012,12,32,3,10,2603,0119.2050,0,N,1,7,9,0,10,10,0,240,24000,50.00,"cultura sem trato, baixo rendimento",04/12/2012,ELIOMARPIMENTEL,100,47.25
+2012,12,32,3,10,2603,0119.4040,0,N,1,7,9,0,40,40,0,720,18000,450.00,,04/12/2012,ELIOMARPIMENTEL,100,267
+2012,12,32,3,10,2603,0121.2100,0,N,1,7,9,,1,1,0,60,60000,1350.00,,04/12/2012,ELIOMARPIMENTEL,100,1256.6
+2012,12,32,3,10,2603,0121.3110,0,N,1,7,9,,10,10,0,200,20000,800.00,,04/12/2012,ELIOMARPIMENTEL,100,960
+2012,12,32,3,10,2603,0131.0010,0,N,1,7,9,0,8,8,0,84,10500,600.00,,04/12/2012,ELIOMARPIMENTEL,100,630
+2012,12,32,3,10,2603,0133.1040,0,N,1,7,9,0,1,1,0,20,20000,1100.00,,04/12/2012,ELIOMARPIMENTEL,100,969.5
+2012,12,32,3,10,2603,0133.1070,0,N,1,7,9,0,5,5,,70,14000,,,04/12/2012,ELIOMARPIMENTEL,100,762.5
+2012,12,32,3,10,2603,0133.2010,0,N,1,7,9,0,2,2,0,20,10000,1200.00,alterada a área para produção,04/12/2012,ELIOMARPIMENTEL,100,1100
+2012,12,32,3,10,2603,0133.2080,0,N,1,7,9,100,3060,3060,0,36000,11765,650.00,banana prata maior área /- 85%,04/12/2012,ELIOMARPIMENTEL,100,675
+2012,12,32,3,10,2603,0133.2360,0,N,1,7,9,0,1,1,0,20,20000,1400.00,,04/12/2012,ELIOMARPIMENTEL,100,1435
+2012,12,32,3,10,2603,0133.3030,0,N,1,7,9,0,6,6,0,60,10000,500.00,,04/12/2012,ELIOMARPIMENTEL,100,503
+2012,12,32,3,10,2603,0134.0021,0,N,1,7,9,0,30,30,0,35,1167,4800.00,,04/12/2012,ELIOMARPIMENTEL,100,5040
+2012,12,32,3,10,2603,0134.0022,0,N,1,7,9,200,2700,2700,0,5000,1852,4500.00,"Parte desta área passou a ser irrigada 5%, melhor rendimento",04/12/2012,ELIOMARPIMENTEL,100,4380
+2012,12,32,3,10,2603,0134.0022,0,S,1,7,9,0,150,150,0,360,2400,4500.00,,04/12/2012,ELIOMARPIMENTEL,100,5100
+2012,12,32,3,10,2603,0135.0010,0,N,1,7,9,9,23,23,0,16,696,4500.00,rendimento confirmado na reunião,04/12/2012,ELIOMARPIMENTEL,100,4500
+2012,12,32,3,10,2603,0139.2010,0,N,1,7,9,10,20,20,0,25,1250,3000.00,,04/12/2012,ELIOMARPIMENTEL,100,3060
+2012,12,32,3,10,2603,0139.9060,0,N,1,7,9,0,5,5,0,70,14000,7400.00,dados do rendimento a confirmar,04/12/2012,ELIOMARPIMENTEL,100,7240
+2012,12,32,3,10,4203,0111.0070,1,N,1,7,8,,5,5,,14,2800,,Grande parte do milho plantado é para colheita ainda verde e para silos.,01/12/2012,SISTEMA,100,570
+2012,12,32,3,10,4203,0111.0070,2,N,1,7,9,,5,5,,14,2800,,,04/12/2012,ELIOMARPIMENTEL,100,550
+2012,12,32,3,10,4203,0119.1040,1,N,1,7,8,,4,4,,3,750,,não conseguiram preparar a terra.,01/12/2012,SISTEMA,100,2300
+2012,12,32,3,10,4203,0119.1040,2,N,1,7,9,,4,4,,3,750,,,04/12/2012,ELIOMARPIMENTEL,100,1200
+2012,12,32,3,10,4203,0119.2050,0,N,1,7,9,0,2,2,0,60,30000,50.00,Cultura sem trato,04/12/2012,ELIOMARPIMENTEL,100,47
+2012,12,32,3,10,4203,0119.4040,0,N,1,7,9,0,5,5,0,300,60000,450.00,falta de preço desestimulou plantio,04/12/2012,ELIOMARPIMENTEL,100,291
+2012,12,32,3,10,4203,0119.9010,0,N,1,0,7,,0,0,,0,0,,área erradicada,01/12/2012,SISTEMA,0,0
+2012,12,32,3,10,4203,0132.0020,0,S,1,4,9,2,0,0,,0,0,,cultura em formação,04/12/2012,ELIOMARPIMENTEL,0,0
+2012,12,32,3,10,4203,0133.2080,0,N,1,7,9,0,10,10,0,200,20000,800.00,alterada para área sem irrigação,04/12/2012,ELIOMARPIMENTEL,100,710
+2012,12,32,3,10,4203,0133.2220,0,N,1,4,9,2,0,0,,0,0,,Área nova,04/12/2012,ELIOMARPIMENTEL,0,0
+2012,12,32,3,10,4203,0133.2340,0,N,1,7,9,0,1,1,0,20,20000,1000.00,Dados avaliados pelo INCAPER,04/12/2012,ELIOMARPIMENTEL,100,1260
+2012,12,32,3,10,4203,0133.2360,0,N,1,4,9,2,0,0,,0,0,,Área nova,04/12/2012,ELIOMARPIMENTEL,0,0
+2012,12,32,3,10,4203,0133.3030,0,N,1,7,9,0,20,20,0,140,7000,500.00,dados obtidos pelo INCAPER,04/12/2012,ELIOMARPIMENTEL,100,500
+2012,12,32,3,10,4203,0134.0022,0,N,1,7,9,0,140,140,0,235,1679,4500.00,Dados da área em produção reavaliados pelo tenico da incaper,04/12/2012,ELIOMARPIMENTEL,100,4150
+2012,12,32,3,10,4203,0134.0022,0,S,1,7,9,50,200,200,0,353,1765,4500.00,,04/12/2012,ELIOMARPIMENTEL,100,4110
+2012,12,32,3,10,4203,0135.0010,0,N,1,4,9,2,0,0,,0,0,,Dados fornecidos pelo INCAPER,01/12/2012,SISTEMA,0,0
+2012,12,32,3,10,4203,0139.2010,0,N,1,7,9,10,50,50,0,70,1400,2800.00,,04/12/2012,ELIOMARPIMENTEL,100,2892.5
+2012,12,32,3,10,4401,0111.0020,1,N,1,0,7,,0,0,,0,0,,Área erradicada,01/12/2012,SISTEMA,100,510
+2012,12,32,3,10,4401,0111.0070,1,N,1,7,8,,30,30,,90,3000,,A maior parte plantada é para silo ou colheita ainda verde,01/12/2012,SISTEMA,100,580
+2012,12,32,3,10,4401,0111.0070,2,N,1,7,9,,30,30,,90,3000,,,04/12/2012,ELIOMARPIMENTEL,100,520
+2012,12,32,3,10,4401,0113.0010,0,N,1,7,9,0,20,20,0,600,30000,50.00,Dado Obtido junto ao Incaper,04/12/2012,ELIOMARPIMENTEL,100,51
+2012,12,32,3,10,4401,0119.1040,1,N,1,7,9,,5,5,,3,600,,Dados obtidos pelo Incaper,01/12/2012,SISTEMA,100,3500
+2012,12,32,3,10,4401,0119.1040,2,N,1,7,9,,5,5,,2,400,,cultura sem adubação baixo rendimento,04/12/2012,ELIOMARPIMENTEL,100,1400
+2012,12,32,3,10,4401,0119.2050,0,N,1,7,9,0,50,50,0,1500,30000,50.00,cultura sem trato,04/12/2012,ELIOMARPIMENTEL,100,47.6
+2012,12,32,3,10,4401,0119.4040,0,N,1,7,8,0,50,50,0,900,18000,500.00,retifica a área,04/12/2012,ELIOMARPIMENTEL,100,215.75
+2012,12,32,3,10,4401,0121.3110,0,N,1,7,9,,7,7,,140,20000,,,04/12/2012,ELIOMARPIMENTEL,100,759.5
+2012,12,32,3,10,4401,0131.0010,0,N,1,7,9,0,30,30,0,360,12000,600.00,ajustado rendimento,04/12/2012,ELIOMARPIMENTEL,100,644
+2012,12,32,3,10,4401,0133.1040,0,N,1,7,9,0,5,5,43,125,25000,2300.00,,04/12/2012,ELIOMARPIMENTEL,100,1390
+2012,12,32,3,10,4401,0133.2080,0,N,1,7,9,110,900,900,0,8190,9100,800.00,Banana prata predomina 70%,04/12/2012,ELIOMARPIMENTEL,100,845
+2012,12,32,3,10,4401,0133.2330,0,N,1,6,9,0,3,3,,75,25000,,Cultura nova identificada pelo técnico da incaper em campo,03/12/2012,NEIDIMAR,100,2300
+2012,12,32,3,10,4401,0133.2360,0,N,1,7,9,0,3,3,0,60,20000,1200.00,,04/12/2012,ELIOMARPIMENTEL,100,1055
+2012,12,32,3,10,4401,0133.3030,0,N,1,7,8,0,10,10,0,150,15000,500.00,retificado a área,04/12/2012,ELIOMARPIMENTEL,100,500
+2012,12,32,3,10,4401,0134.0021,0,N,1,7,9,0,800,800,0,800,1000,4850.00,,04/12/2012,ELIOMARPIMENTEL,100,4980
+2012,12,32,3,10,4401,0134.0022,0,N,1,7,9,350,1000,1000,0,1600,1600,4500.00,,04/12/2012,ELIOMARPIMENTEL,100,4000
+2012,12,32,3,10,4401,0135.0010,0,N,1,7,9,5,5,5,0,3,600,4200.00,Dados avaliados pelo Incaper.,04/12/2012,ELIOMARPIMENTEL,100,4210
+2012,12,32,3,10,4401,0139.2010,0,N,1,7,9,50,50,50,0,70,1400,2820.00,,04/12/2012,ELIOMARPIMENTEL,100,2380
+2012,12,32,3,10,4401,0139.9060,0,N,1,7,9,0,20,20,0,40,2000,7600.00,Dados avaliados pelo Incaper,04/12/2012,ELIOMARPIMENTEL,100,7748
+2012,12,32,4,11,201,0111.0020,1,N,9,6,9,,2,2,,6,3000,,,05/12/2012,MARCIAV,100,750
+2012,12,32,4,11,201,0111.0070,1,N,9,6,2,,1000,1000,,1540,1540,,Queda no rendimento médio devido ao veranico de janeiro e fevereiro,05/12/2012,MARCIAV,100,501.6
+2012,12,32,4,11,201,0113.0010,0,N,9,6,9,0,50,50,100,2500,50000,42.00,,07/12/2012,MARCIAV,100,42
+2012,12,32,4,11,201,0119.1040,1,N,9,6,9,,100,100,,60,600,,,05/12/2012,MARCIAV,100,1300
+2012,12,32,4,11,201,0119.1040,2,N,9,6,9,,200,200,,140,700,,,05/12/2012,MARCIAV,100,2500
+2012,12,32,4,11,201,0119.2050,0,N,9,6,9,0,200,200,100,10000,50000,41.00,,07/12/2012,MARCIAV,100,41
+2012,12,32,4,11,201,0119.4040,0,N,9,6,9,0,30,30,100,600,20000,317.00,,07/12/2012,MARCIAV,100,317
+2012,12,32,4,11,201,0131.0010,0,N,9,6,9,4,10,10,100,100,10000,770.00,,07/12/2012,MARCIAV,100,770
+2012,12,32,4,11,201,0133.1040,0,N,9,6,9,0,2,2,100,13,6500,2000.00,Informação confirmada,07/12/2012,MARCIAV,100,2000
+2012,12,32,4,11,201,0133.2080,0,N,9,6,9,0,119,119,100,833,7000,500.00,,07/12/2012,MARCIAV,100,500
+2012,12,32,4,11,201,0133.2220,0,N,9,6,9,0,2,2,100,24,12000,1500.00,Aumento do rendimento médio devido a melhora do tratos culturais.,07/12/2012,MARCIAV,100,1500
+2012,12,32,4,11,201,0133.2340,0,N,9,6,9,0,11,11,100,165,15000,448.00,,07/12/2012,MARCIAV,100,448
+2012,12,32,4,11,201,0133.3030,0,N,9,6,9,0,14,14,100,87,6214,500.00,confirmo o rendimento médio,07/12/2012,MARCIAV,100,500
+2012,12,32,4,11,201,0134.0021,0,N,9,6,9,750,4344,4344,20,4692,1080,5000.00,Diferença a maior devido melhores tratos culturais e fitossanitários. Menor área em formação restante passou a produzir.,07/12/2012,MARCIAV,100,5198.8
+2012,12,32,4,11,201,0134.0022,0,N,9,6,9,100,1305,1305,,1958,1500,,Diferença a maior devido melhores tratos culturais e fitossanitários.,05/12/2012,MARCIAV,100,4165
+2012,12,32,4,11,201,0139.9060,0,N,9,6,9,5,20,20,100,40,2000,3000.00,Entrada de novas áreas em produção,07/12/2012,MARCIAV,100,3000
+2012,12,32,4,11,1803,0111.0020,1,N,1,6,9,,1,1,,1,1000,,O preço elevado é em decorrencia de ser arroz integral.,05/12/2012,MARCIAV,100,2000
+2012,12,32,4,11,1803,0111.0070,1,N,9,6,9,,550,550,20,1100,2000,360.00,,07/12/2012,MARCIAV,100,506.8
+2012,12,32,4,11,1803,0113.0010,0,N,9,6,9,0,15,15,100,600,40000,42.15,CONFIRMADO RM,07/12/2012,MARCIAV,100,42.15
+2012,12,32,4,11,1803,0119.1040,1,N,1,6,9,,16,16,,8,500,,,05/12/2012,MARCIAV,100,3000
+2012,12,32,4,11,1803,0119.1040,2,N,9,6,9,,300,300,20,198,660,1416.00,,07/12/2012,MARCIAV,100,1993
+2012,12,32,4,11,1803,0119.2050,0,N,9,6,9,0,20,20,100,800,40000,40.00,,07/12/2012,MARCIAV,100,40
+2012,12,32,4,11,1803,0131.0010,0,N,9,6,9,0,5,5,100,50,10000,500.00,,07/12/2012,MARCIAV,100,500
+2012,12,32,4,11,1803,0133.2080,0,N,9,6,9,0,2,2,95,20,10000,600.00,,07/12/2012,MARCIAV,100,665
+2012,12,32,4,11,1803,0134.0021,0,N,9,6,8,573,2857,2857,10,2914,1020,5050.00,Maior RM/ha esperado devido a utilização de tratos culturais mais adequados.,07/12/2012,MARCIAV,100,5042.35
+2012,12,32,4,11,2009,0111.0020,1,N,1,6,9,,2,2,,6,3000,,,05/12/2012,MARCIAV,100,600
+2012,12,32,4,11,2009,0111.0070,1,N,9,6,9,,1600,1600,,3360,2100,,,05/12/2012,MARCIAV,100,557
+2012,12,32,4,11,2009,0113.0010,0,N,9,6,9,0,26,26,,1040,40000,,CONFIRMADO RM/HA,05/12/2012,MARCIAV,100,45
+2012,12,32,4,11,2009,0119.1040,1,N,1,6,9,,770,770,,385,500,,,05/12/2012,MARCIAV,100,1250
+2012,12,32,4,11,2009,0119.1040,2,N,1,6,9,,330,330,,198,600,,,05/12/2012,MARCIAV,100,2000
+2012,12,32,4,11,2009,0119.2050,0,N,9,6,9,0,15,15,,750,50000,,,05/12/2012,MARCIAV,100,40
+2012,12,32,4,11,2009,0121.2100,0,S,9,6,9,,15,15,,750,50000,,,05/12/2012,MARCIAV,100,1100
+2012,12,32,4,11,2009,0121.3110,0,N,9,6,9,,15,15,,150,10000,,,05/12/2012,MARCIAV,100,560
+2012,12,32,4,11,2009,0131.0010,0,N,1,12,8,30,0,0,,0,0,,"Novas áreas plantadas, programa de distribuição de mudas pelio governo do Estado.",05/12/2012,MARCIAV,0,0
+2012,12,32,4,11,2009,0133.2080,0,N,9,6,9,0,5,5,,50,10000,,,05/12/2012,MARCIAV,100,660
+2012,12,32,4,11,2009,0134.0021,0,N,9,6,8,271,3700,3700,,3330,900,,Novas áreas plantadas.no ano.,05/12/2012,MARCIAV,100,5316.35
+2012,12,32,4,11,2306,0111.0070,1,N,9,6,9,,1100,1100,,3300,3000,,,07/12/2012,MARCIAV,100,445.8
+2012,12,32,4,11,2306,0113.0010,0,N,1,6,9,0,5,5,,250,50000,,REAVALIAMOS O RENDIMENTO MÉDIO; ESTAVA SUBESTIMADO.,07/12/2012,MARCIAV,100,43
+2012,12,32,4,11,2306,0119.1040,1,N,9,6,9,,20,20,,10,500,,,07/12/2012,MARCIAV,100,1295
+2012,12,32,4,11,2306,0119.1040,2,N,9,6,9,,100,100,,70,700,,,07/12/2012,MARCIAV,100,2033.2
+2012,12,32,4,11,2306,0119.2050,0,N,9,6,9,0,45,45,,2700,60000,,,07/12/2012,MARCIAV,100,40
+2012,12,32,4,11,2306,0121.2100,0,S,9,6,9,,15,15,,1050,70000,,,07/12/2012,MARCIAV,100,1130
+2012,12,32,4,11,2306,0131.0010,0,N,9,6,9,12,5,5,,100,20000,,RmQha confirmado,07/12/2012,MARCIAV,100,770
+2012,12,32,4,11,2306,0133.1040,0,N,9,6,9,0,3,3,,90,30000,,.,07/12/2012,MARCIAV,100,2000
+2012,12,32,4,11,2306,0133.1070,0,N,9,6,9,0,2,2,,30,15000,,,07/12/2012,MARCIAV,100,1070
+2012,12,32,4,11,2306,0133.2080,0,N,9,6,9,5,25,25,,200,8000,,,07/12/2012,MARCIAV,100,500
+2012,12,32,4,11,2306,0133.2340,0,N,9,12,9,7,0,0,,0,0,,Novas áreas em formação,07/12/2012,MARCIAV,0,0
+2012,12,32,4,11,2306,0134.0021,0,N,9,6,8,180,5387,5387,,6787,1260,,Menor RMha devido ao veranico por ocasião da granação.,07/12/2012,MARCIAV,100,5693.7
+2012,12,32,4,11,2306,9119.4040,0,N,9,6,8,0,50,50,,650,13000,,Acerto da área de industria para mesa.,07/12/2012,MARCIAV,100,300
+2012,12,32,4,11,2454,0111.0020,1,N,1,4,8,,0,0,,0,0,,"Área retirada do levantamento por não ter atingido 1ha, o alto custo de produção desestimula o plantio.",05/12/2012,MARCIAV,0,0
+2012,12,32,4,11,2454,0111.0070,1,N,1,6,9,,600,600,,1800,3000,,,05/12/2012,MARCIAV,100,477.7
+2012,12,32,4,11,2454,0119.1040,1,N,9,6,9,,100,100,,78,780,,,05/12/2012,MARCIAV,100,3440
+2012,12,32,4,11,2454,0119.1040,2,N,9,6,8,,500,500,,390,780,,Maior RM/ha obtido devido às condições climáticas favoráveis.,05/12/2012,MARCIAV,100,2000
+2012,12,32,4,11,2454,0121.2100,0,S,9,6,9,,50,50,,5000,100000,,CONFIRMADO O RM/HA ESPERADO,05/12/2012,MARCIAV,100,1970
+2012,12,32,4,11,2454,0131.0010,0,N,9,6,7,3,15,15,,188,12533,,"Novas áreas plantadas no ano, programa de distribuição de mudas pelo governo do estado.",05/12/2012,MARCIAV,100,750
+2012,12,32,4,11,2454,0133.2080,0,S,9,6,9,0,3,3,,36,12000,,,05/12/2012,MARCIAV,100,400
+2012,12,32,4,11,2454,0134.0021,0,N,9,6,9,1000,9500,9500,,10450,1100,,PREVISÃO DE QUEDA DO RM/HA ESPERADO EM FUNÇÃO DA BIANUIDADE DA CULTURA.,05/12/2012,MARCIAV,100,4980.81
+2012,12,32,4,11,2553,0111.0020,1,N,9,6,9,,1,1,1,3,3000,800.00,,07/12/2012,MARCIAV,100,742.2
+2012,12,32,4,11,2553,0111.0070,1,N,9,6,2,,800,800,5,2000,2500,370.00,PREVISÃO DE QUEDA DE 40% NO RM/HA EM VIRTUDE DAS ALTAS TEMPERATURAS NA EPOCA DO EMBONECAMENTO.,07/12/2012,MARCIAV,100,471.7
+2012,12,32,4,11,2553,0113.0010,0,N,9,6,9,0,8,8,100,400,50000,42.00,DADOS DE ÁREA REAVALIADOS PELO INCAPER POR ESTAR SUPERESTIMADA.,07/12/2012,MARCIAV,100,42
+2012,12,32,4,11,2553,0119.1040,1,N,1,6,9,,70,70,,35,500,,,07/12/2012,MARCIAV,100,3600
+2012,12,32,4,11,2553,0119.1040,2,N,9,6,9,,400,400,10,280,700,1377.00,,07/12/2012,MARCIAV,100,1970.7
+2012,12,32,4,11,2553,0119.2050,0,N,9,6,9,0,30,30,100,1800,60000,39.00,AREA REAVALIADA PELO INCAPER DEVIDO AO CRESCIMENTO DA PECUÁRIA DE LEITE NO MUNICIPIO,07/12/2012,MARCIAV,100,39
+2012,12,32,4,11,2553,0119.4040,0,N,9,6,9,0,40,40,100,1200,30000,315.90,CONFIRMADO RM/HA,07/12/2012,MARCIAV,100,315.9
+2012,12,32,4,11,2553,0121.2100,0,S,9,6,9,,1,1,100,60,60000,1110.00,"Detectadas novas áreas no município, diversificação de cultura.",07/12/2012,MARCIAV,100,1110
+2012,12,32,4,11,2553,0121.3110,0,N,9,6,9,,5,5,100,125,25000,1100.00,"Novas áreas, em substituição ao morango, e também em decorrencia do programa de merenda escolar, estimulando o plantio",07/12/2012,MARCIAV,100,1100
+2012,12,32,4,11,2553,0131.0010,0,N,1,12,8,2,0,0,,0,0,,"Área em produção retirada do levantamento por se tratar de pés esparsos, não tendo nenhum valor econônico. Incluidos 2ha em formação de área extensiva.",07/12/2012,MARCIAV,0,0
+2012,12,32,4,11,2553,0133.2080,0,N,9,6,9,0,50,50,100,750,15000,959.00,"AREA REAVALIADA PELO INCAPER POR SE TRATAR DE PES ESPARSOS SEM REPRESENTAÇÃO ECONOMICA PARA O MUNICIPIO, E O DADO ESTAR SUPERESTIMADO.",07/12/2012,MARCIAV,100,959
+2012,12,32,4,11,2553,0133.2410,0,N,1,12,9,5,0,0,,0,0,,PLANTIO NOVO AINDA SEM PRODUÇÃO,07/12/2012,MARCIAV,0,0
+2012,12,32,4,11,2553,0134.0021,0,N,9,6,9,800,7700,7700,5,8316,1080,5500.00,,07/12/2012,MARCIAV,100,5703.15
+2012,12,32,4,11,2553,0139.9060,0,N,9,6,9,0,4,4,90,12,3000,3000.00,"Cultura detectada, programa de incentivo do governo adquirindo para merenda escolar.",07/12/2012,MARCIAV,100,4200
+2012,12,32,4,11,2652,0111.0020,1,N,9,0,8,,0,0,,0,0,,DEVIDO AO ALTO CUSTO DE PRODUÇÃO NÃO FOI EFETUADO O PLANTIO ESPERADO.,05/12/2012,MARCIAV,0,0
+2012,12,32,4,11,2652,0111.0070,1,N,9,6,9,,400,400,,920,2300,,,05/12/2012,MARCIAV,100,504
+2012,12,32,4,11,2652,0113.0010,0,N,9,6,9,0,5,5,,125,25000,,CONFIRMADO O RM/HA,05/12/2012,MARCIAV,100,45.1
+2012,12,32,4,11,2652,0119.1040,1,N,9,6,9,,100,100,,50,500,,,05/12/2012,MARCIAV,100,3600
+2012,12,32,4,11,2652,0119.1040,2,N,9,6,9,,300,300,,180,600,,,05/12/2012,MARCIAV,100,2558.6
+2012,12,32,4,11,2652,0119.2050,0,N,9,6,9,0,70,70,,4900,70000,,confirmado Rendimento Médio,05/12/2012,MARCIAV,100,48.04
+2012,12,32,4,11,2652,0119.4040,0,N,9,6,9,0,3,3,,30,10000,,CONFIRMADO O RM/HA ESPERADO.,05/12/2012,MARCIAV,100,332
+2012,12,32,4,11,2652,0121.2060,0,N,9,6,9,,2,2,,120,60000,,,05/12/2012,MARCIAV,100,4160
+2012,12,32,4,11,2652,0121.2100,0,N,9,0,8,,0,0,,0,0,,Toda área plantada é irrigada.,05/12/2012,MARCIAV,0,0
+2012,12,32,4,11,2652,0121.2100,0,S,9,6,9,,3,3,,180,60000,,"Queda na área plantada, devido a queda de preço do produto e a migaração dos produtores para municípios onde seja mais fácio escoar a produção.",05/12/2012,MARCIAV,100,863
+2012,12,32,4,11,2652,0131.0010,0,N,9,6,9,1,10,10,100,100,10000,500.00,,07/12/2012,MARCIAV,100,500
+2012,12,32,4,11,2652,0133.2080,0,N,9,6,9,0,20,20,,296,14800,,,05/12/2012,MARCIAV,100,610
+2012,12,32,4,11,2652,0134.0021,0,N,9,6,9,1200,10412,10412,,12733,1223,,"AUMENTO DO RM/HA E ÁREA, DEVIDO AO PREÇOS NO MERCADO MELHORIA NOS TRATOS CULTURAIS DAS LAVOURAS.",05/12/2012,MARCIAV,100,5630.2
+2012,12,32,4,11,3007,0111.0020,1,N,1,0,8,,0,0,,0,0,,NÃO FOI CONFIRMADO A INTENÇÃO DE PLANTIO DEVIDO AO ALTO CUSTO DE PRODUÇÃO.,05/12/2012,MARCIAV,0,0
+2012,12,32,4,11,3007,0111.0070,1,N,9,6,9,,720,720,,1080,1500,,`MENOR RM/HA DEVIDO A FALTA DE CHUVAS NA EPOCA DO EMBONECAMENTO.,05/12/2012,MARCIAV,100,572.6
+2012,12,32,4,11,3007,0113.0010,0,N,9,6,8,0,10,10,,300,30000,,"Queda do RMha devido ao excesso de chuvas em janeiro, e seca nos meses seguintes",05/12/2012,MARCIAV,100,50
+2012,12,32,4,11,3007,0119.1040,1,N,9,6,9,,200,200,,120,600,,,05/12/2012,MARCIAV,100,3110
+2012,12,32,4,11,3007,0119.1040,2,N,9,6,9,,800,800,,560,700,,,05/12/2012,MARCIAV,100,1600
+2012,12,32,4,11,3007,0119.2050,0,N,9,6,8,0,10,10,0,300,30000,50.00,"Queda do RMha devido ao excesso de chuvas em janeiro, e seca nos meses seguintes",06/12/2012,NEIDIMAR,100,50
+2012,12,32,4,11,3007,0119.4040,0,N,9,0,8,0,0,0,,0,0,,"feito acerto da área, passou para mesa.",05/12/2012,MARCIAV,0,0
+2012,12,32,4,11,3007,0121.2060,0,S,9,6,9,,5,5,,250,50000,,,05/12/2012,MARCIAV,100,4050
+2012,12,32,4,11,3007,0131.0010,0,N,9,6,9,10,31,31,,310,10000,,,05/12/2012,MARCIAV,100,545
+2012,12,32,4,11,3007,0133.1070,0,N,9,6,9,0,14,14,,252,18000,,,05/12/2012,MARCIAV,100,1070
+2012,12,32,4,11,3007,0133.2080,0,N,9,6,9,2,28,28,,420,15000,,,05/12/2012,MARCIAV,100,50
+2012,12,32,4,11,3007,0133.2340,0,N,9,6,9,0,8,8,,168,21000,,,05/12/2012,MARCIAV,100,470
+2012,12,32,4,11,3007,0134.0021,0,N,9,6,8,1590,14328,14328,,14041,980,,"QUEDA NO RM/HA DEVIDO Á IDADE AVANÇADA DAS LAVOURAS, ALÉM DA OCORRÊNCIA DO FUNGO (PHOMA), PROBLEMAS DE CHUVA NA FLORADA.",05/12/2012,MARCIAV,100,4916.67
+2012,12,32,4,11,3007,0134.0021,0,S,9,12,9,2,0,0,,0,0,,Detectados 2 ha irrigados em formação.,05/12/2012,MARCIAV,0,0
+2012,12,32,4,11,3007,0134.0022,0,N,9,6,9,0,10,10,,15,1500,,,05/12/2012,MARCIAV,100,4500
+2012,12,32,4,11,3007,0139.9060,0,N,9,7,9,0,3,3,,9,3000,,CONFIRMADO RM/HA,05/12/2012,MARCIAV,100,1500
+2012,12,32,4,11,3007,9119.4040,0,N,9,6,8,0,25,25,,263,10520,,"Acerto na área, a área existente é de mesa e não industria.",05/12/2012,MARCIAV,100,500
+2012,12,32,4,11,3700,0111.0020,1,N,9,6,9,,5,5,,10,2000,,,05/12/2012,MARCIAV,100,500
+2012,12,32,4,11,3700,0111.0070,1,N,1,5,9,,1000,1000,,2000,2000,,,05/12/2012,MARCIAV,100,470.21
+2012,12,32,4,11,3700,0119.1040,1,N,9,6,9,,300,300,,150,500,,,05/12/2012,MARCIAV,100,2000
+2012,12,32,4,11,3700,0119.1040,2,N,9,6,9,,300,300,,210,700,,,05/12/2012,MARCIAV,100,2666
+2012,12,32,4,11,3700,0119.2050,0,N,9,6,9,0,15,15,,900,60000,,,05/12/2012,MARCIAV,100,40
+2012,12,32,4,11,3700,0119.4020,1,N,9,6,9,,10,10,,140,14000,,,05/12/2012,MARCIAV,100,1016
+2012,12,32,4,11,3700,0119.4020,1,S,9,6,9,,10,10,,140,14000,,,05/12/2012,MARCIAV,100,2200
+2012,12,32,4,11,3700,0119.4020,2,S,9,6,9,,25,25,,350,14000,,,05/12/2012,MARCIAV,100,1740
+2012,12,32,4,11,3700,0119.4040,0,N,9,0,8,0,0,0,,0,0,,"Acerto de área, passou para mandioca para mesa",05/12/2012,MARCIAV,0,0
+2012,12,32,4,11,3700,0121.1260,0,S,9,6,9,,80,80,,2400,30000,,,05/12/2012,MARCIAV,100,425.3
+2012,12,32,4,11,3700,0121.2060,0,S,9,6,9,,10,10,,500,50000,,,05/12/2012,MARCIAV,100,5188
+2012,12,32,4,11,3700,0121.2100,0,S,9,6,9,,200,200,,14000,70000,,,05/12/2012,MARCIAV,100,1167.3
+2012,12,32,4,11,3700,0121.3040,0,N,9,6,9,,60,60,,900,15000,,,05/12/2012,MARCIAV,100,1830.65
+2012,12,32,4,11,3700,0121.3110,0,N,9,6,9,,12,12,,120,10000,,,05/12/2012,MARCIAV,100,1006
+2012,12,32,4,11,3700,0121.3110,0,S,9,6,9,,18,18,,225,12500,,,05/12/2012,MARCIAV,100,1113.6
+2012,12,32,4,11,3700,0131.0010,0,N,9,6,9,3,10,10,,250,25000,,Confirmado o Rendimento Médio.,05/12/2012,MARCIAV,100,751.25
+2012,12,32,4,11,3700,0133.1040,0,N,9,6,9,0,2,2,,40,20000,,,05/12/2012,MARCIAV,100,1950
+2012,12,32,4,11,3700,0133.1070,0,N,9,6,9,0,20,20,,400,20000,,,05/12/2012,MARCIAV,100,1113
+2012,12,32,4,11,3700,0133.2080,0,N,9,6,9,0,150,150,,2250,15000,,,05/12/2012,MARCIAV,100,422.95
+2012,12,32,4,11,3700,0134.0021,0,N,9,6,8,2057,9563,9563,,10328,1080,,Maior RM/ha devido às condições de clima e tratos culturais adequados.,05/12/2012,MARCIAV,100,4986.6
+2012,12,32,4,11,3700,0134.0022,0,N,9,6,9,0,600,600,,828,1380,,,05/12/2012,MARCIAV,100,4500
+2012,12,32,4,11,3700,0139.9060,0,N,9,6,9,0,30,30,,150,5000,,Confirmado RM/Ha,05/12/2012,MARCIAV,100,4950
+2012,12,32,4,11,3700,9119.4040,0,N,9,6,8,0,20,20,,300,15000,,Acerto da área estava sendo informada indevidamente como para industria.,05/12/2012,MARCIAV,100,580
+2012,12,32,4,12,508,0111.0020,1,N,9,6,9,,3,3,,8,2667,,,05/12/2012,MARCIAV,100,833
+2012,12,32,4,12,508,0111.0070,1,N,9,6,9,,125,125,,225,1800,,,05/12/2012,MARCIAV,100,463.45
+2012,12,32,4,12,508,0113.0010,0,N,1,0,8,0,0,0,,0,0,,DADOS REAVALIADAS PELO INCAPER POIS TODA CANA EXISTENTE NO MUNICIPIO TEM FINALIDADE DE TRATO ANIMAL,05/12/2012,MARCIAV,0,0
+2012,12,32,4,12,508,0119.1040,1,N,9,6,1,,5,5,,2,400,,AREA REAVALIADA PELO INCAPER DEVIDO AO EXCESSO DE CHUVAS NO PLANTIO,05/12/2012,MARCIAV,100,1916
+2012,12,32,4,12,508,0119.1040,2,N,9,6,2,,30,30,,15,500,,Menor área plantada devido à falta de chuvas por ocasião do plantio.,05/12/2012,MARCIAV,100,4000
+2012,12,32,4,12,508,0119.2050,0,N,9,6,9,5,15,15,,600,40000,,,05/12/2012,MARCIAV,100,61
+2012,12,32,4,12,508,0119.4040,0,N,1,6,9,0,8,8,,160,20000,,,05/12/2012,MARCIAV,100,135
+2012,12,32,4,12,508,0121.2100,0,S,9,0,8,,0,0,,0,0,,"OS PRODUTORES MIGRARAM PARA OUTROS MUNICÍPIOS, ROTAÇÃO DE ÁREA.",05/12/2012,MARCIAV,0,0
+2012,12,32,4,12,508,0133.2080,0,N,9,6,9,0,30,30,,810,27000,,confirmado RM/ha,05/12/2012,MARCIAV,100,2379
+2012,12,32,4,12,508,0134.0021,0,N,9,6,9,100,1900,1900,,1520,800,,,05/12/2012,MARCIAV,100,5008.3
+2012,12,32,4,12,508,0134.0022,0,N,9,6,9,5,170,170,,255,1500,,,05/12/2012,MARCIAV,100,4666
+2012,12,32,4,12,508,0139.2010,0,N,9,6,9,8,50,50,,60,1200,,,05/12/2012,MARCIAV,100,2942
+2012,12,32,4,12,508,0139.9060,0,N,9,6,9,0,2,2,,3,1500,,,05/12/2012,MARCIAV,100,2825
+2012,12,32,4,12,706,0111.0070,1,N,1,7,9,,70,70,,180,2571,,,01/12/2012,SISTEMA,100,325
+2012,12,32,4,12,706,0113.0010,0,N,1,6,9,0,20,20,,1200,60000,,,10/12/2012,PAULOROBERTOMOURA,100,45
+2012,12,32,4,12,706,0119.1040,1,N,1,7,9,,10,10,,6,600,,,01/12/2012,SISTEMA,100,1400
+2012,12,32,4,12,706,0119.1040,2,N,1,6,9,,30,30,,18,600,,,01/12/2012,SISTEMA,100,1850
+2012,12,32,4,12,706,0119.2050,0,N,1,6,9,0,10,10,0,400,40000,45.00,,10/12/2012,PAULOROBERTOMOURA,100,47
+2012,12,32,4,12,706,0119.4040,0,N,1,6,9,0,140,140,,2520,18000,,,10/12/2012,PAULOROBERTOMOURA,100,270
+2012,12,32,4,12,706,0121.2090,0,N,1,6,9,,6,6,,60,10000,,,10/12/2012,PAULOROBERTOMOURA,100,644.5
+2012,12,32,4,12,706,0121.2100,0,N,1,6,9,,3,3,,135,45000,,,10/12/2012,PAULOROBERTOMOURA,100,940.25
+2012,12,32,4,12,706,0121.2100,0,S,2,4,9,,0,0,,0,0,,Toda produção que estava como não irrigado passou para irrigado,10/12/2012,PAULOROBERTOMOURA,0,0
+2012,12,32,4,12,706,0121.3110,0,N,1,6,9,,1,1,,16,16000,,,10/12/2012,PAULOROBERTOMOURA,100,635
+2012,12,32,4,12,706,0131.0010,0,N,1,6,9,2,8,8,,80,10000,,,01/12/2012,SISTEMA,100,650
+2012,12,32,4,12,706,0133.1040,0,N,1,6,9,0,1,1,,25,25000,,,10/12/2012,PAULOROBERTOMOURA,100,1275
+2012,12,32,4,12,706,0133.2080,0,N,1,6,9,0,210,210,,2016,9600,,,10/12/2012,PAULOROBERTOMOURA,100,326
+2012,12,32,4,12,706,0133.2220,0,S,1,6,9,0,2,2,,32,16000,,,01/12/2012,SISTEMA,100,460.5
+2012,12,32,4,12,706,0133.2340,0,N,1,6,9,0,1,1,,15,15000,,,10/12/2012,PAULOROBERTOMOURA,100,235
+2012,12,32,4,12,706,0133.3030,0,N,1,6,9,0,12,12,,120,10000,,,10/12/2012,PAULOROBERTOMOURA,100,499.2
+2012,12,32,4,12,706,0134.0021,0,N,1,6,9,0,10,10,,7,700,,Rendimento abaixo da média por elevado número de lavouras velhas e outras em início de produção vindas de recepas realizadas em anos anteriores.,10/12/2012,PAULOROBERTOMOURA,100,4737
+2012,12,32,4,12,706,0134.0022,0,N,1,6,9,290,1085,1085,,1493,1376,,,10/12/2012,PAULOROBERTOMOURA,100,4435
+2012,12,32,4,12,706,0134.0022,0,S,1,5,9,290,1085,1085,,1493,1376,,,10/12/2012,PAULOROBERTOMOURA,100,4370
+2012,12,32,4,12,706,0139.2010,0,N,1,6,9,10,34,34,,40,1176,,,10/12/2012,PAULOROBERTOMOURA,100,2700
+2012,12,32,4,12,706,0139.9060,0,N,1,6,9,0,3,3,,3,1000,,,10/12/2012,PAULOROBERTOMOURA,100,1042
+2012,12,32,4,12,1100,0111.0070,1,N,1,6,9,,1,1,,2,2000,,,05/12/2012,MARCIAV,100,416.66
+2012,12,32,4,12,1100,0119.1040,1,N,9,6,9,,2,2,,1,500,,,05/12/2012,MARCIAV,100,1340.8
+2012,12,32,4,12,1100,0119.1040,2,N,9,0,2,,0,0,,0,0,,"Não houve plantio devido à falta de chuvas e a escasses de prestadores de serviço para preparo da área, bem como pela falta de sementes.",05/12/2012,MARCIAV,0,0
+2012,12,32,4,12,1100,0119.2050,0,N,1,6,9,0,60,60,,2700,45000,,,05/12/2012,MARCIAV,100,60
+2012,12,32,4,12,1100,0119.4040,0,N,9,0,8,0,0,0,,0,0,,Passado para Mandioca de mesa.,05/12/2012,MARCIAV,0,0
+2012,12,32,4,12,1100,0131.0010,0,N,9,12,8,3,0,0,,0,0,,"Novas áreas, programa de distribuição de mudas pela Secretaria de Estado da Agricultura e Incaper",05/12/2012,MARCIAV,0,0
+2012,12,32,4,12,1100,0133.2080,0,N,9,6,9,0,15,15,,105,7000,,,05/12/2012,MARCIAV,100,1000
+2012,12,32,4,12,1100,0133.3030,0,N,9,6,9,3,3,3,,75,25000,,CONFIRMADO O RM/HA,05/12/2012,MARCIAV,100,500
+2012,12,32,4,12,1100,0134.0021,0,N,9,6,9,10,270,270,,243,900,,,05/12/2012,MARCIAV,100,5144
+2012,12,32,4,12,1100,0134.0022,0,N,9,6,9,0,10,10,,12,1200,,,05/12/2012,MARCIAV,100,4500
+2012,12,32,4,12,1100,0139.9060,0,N,9,6,8,0,2,2,,4,2000,,Detectaddas novas áreas no município.,05/12/2012,MARCIAV,100,1500
+2012,12,32,4,12,1100,9119.4040,0,N,9,6,8,0,10,10,,200,20000,,"Inclusão do produto, estava sendo informado como industria.",05/12/2012,MARCIAV,100,500
+2012,12,32,4,12,1209,0111.0020,1,N,1,6,9,,10,10,,20,2000,,,01/12/2012,SISTEMA,100,720
+2012,12,32,4,12,1209,0111.0070,1,N,1,7,9,,550,550,,1150,2091,,,01/12/2012,SISTEMA,100,320
+2012,12,32,4,12,1209,0113.0010,0,N,1,6,9,0,300,300,,13500,45000,,,01/12/2012,SISTEMA,100,50.4
+2012,12,32,4,12,1209,0119.1040,1,N,1,7,9,,100,100,,60,600,,,01/12/2012,SISTEMA,100,1500
+2012,12,32,4,12,1209,0119.1040,2,N,1,6,9,,100,100,,60,600,,,01/12/2012,SISTEMA,100,1885
+2012,12,32,4,12,1209,0119.2050,0,N,1,6,9,0,100,100,0,4000,40000,45.00,,10/12/2012,PAULOROBERTOMOURA,100,47
+2012,12,32,4,12,1209,0119.3010,0,N,1,6,9,0,2,2,,44,22000,,,01/12/2012,SISTEMA,100,650
+2012,12,32,4,12,1209,0119.4040,0,N,1,6,9,0,120,120,,2400,20000,,,10/12/2012,PAULOROBERTOMOURA,100,279.1
+2012,12,32,4,12,1209,0119.9010,0,S,1,6,9,,6,6,,90,15000,,,10/12/2012,PAULOROBERTOMOURA,100,810
+2012,12,32,4,12,1209,0121.2090,0,N,1,4,9,,10,10,,100,10000,,,10/12/2012,PAULOROBERTOMOURA,100,435
+2012,12,32,4,12,1209,0121.2100,0,N,1,4,9,,0,0,,0,0,,"Não houve perda de área, pois todo plantio passou a ser irrigado. Não existe outro tipo.",01/12/2012,SISTEMA,0,0
+2012,12,32,4,12,1209,0121.2100,0,S,1,6,9,,25,25,,1800,72000,,,10/12/2012,PAULOROBERTOMOURA,100,814.95
+2012,12,32,4,12,1209,0121.3110,0,N,1,6,9,,20,20,,200,10000,,,10/12/2012,PAULOROBERTOMOURA,100,831.15
+2012,12,32,4,12,1209,0131.0010,0,S,1,6,9,3,12,12,,180,15000,,,10/12/2012,PAULOROBERTOMOURA,100,634
+2012,12,32,4,12,1209,0133.1040,0,S,1,6,9,0,20,20,,500,25000,,,10/12/2012,PAULOROBERTOMOURA,100,1313
+2012,12,32,4,12,1209,0133.1070,0,S,1,6,9,0,15,15,,182,12133,,,10/12/2012,PAULOROBERTOMOURA,100,131.4
+2012,12,32,4,12,1209,0133.2080,0,N,1,6,9,0,250,250,,1160,4640,,"ESPÉCIES E ÁREAS: PRATA 70%, TERRA 15% E NANICA 15%",10/12/2012,PAULOROBERTOMOURA,100,320.65
+2012,12,32,4,12,1209,0133.2220,0,S,1,4,8,0,12,12,,96,8000,,"Baixo rendimento médio por se tratar de lavouras com poucos tratos culturais, além do espaçamento excessivo entre pés.",10/12/2012,PAULOROBERTOMOURA,100,460.5
+2012,12,32,4,12,1209,0133.3030,0,N,1,6,9,10,40,40,,400,10000,,,10/12/2012,PAULOROBERTOMOURA,100,469.5
+2012,12,32,4,12,1209,0134.0021,0,N,1,6,9,58,362,362,,384,1061,,,01/12/2012,SISTEMA,100,4724
+2012,12,32,4,12,1209,0134.0022,0,N,1,6,9,420,4261,4261,,5368,1260,,,01/12/2012,SISTEMA,100,4309.5
+2012,12,32,4,12,1209,0134.0022,0,S,1,6,9,120,954,954,,1259,1320,,,01/12/2012,SISTEMA,100,4309.5
+2012,12,32,4,12,1209,0135.0010,0,N,1,10,9,0,15,15,,6,400,,,10/12/2012,PAULOROBERTOMOURA,100,4280
+2012,12,32,4,12,1209,0139.2010,0,N,1,6,9,7,30,30,,33,1100,,,10/12/2012,PAULOROBERTOMOURA,100,2700
+2012,12,32,4,12,1209,0139.9060,0,S,1,6,9,0,15,15,,15,1000,,,10/12/2012,PAULOROBERTOMOURA,100,1380
+2012,12,32,4,12,1407,0111.0070,1,N,1,7,9,,1985,1985,,3176,1600,,,01/12/2012,SISTEMA,100,350
+2012,12,32,4,12,1407,0113.0010,0,N,1,6,8,0,117,117,0,4680,40000,45.00,Baixo rendimento por poucos tratos culturais em plantios sem qualquer seleção das mudas.,06/12/2012,NEIDIMAR,100,50.4
+2012,12,32,4,12,1407,0119.1040,1,N,1,7,9,,98,98,,59,602,,,01/12/2012,SISTEMA,100,1500
+2012,12,32,4,12,1407,0119.1040,1,S,1,7,9,,42,42,,25,595,,,01/12/2012,SISTEMA,100,1450
+2012,12,32,4,12,1407,0119.1040,2,N,1,6,9,,98,98,,59,602,,,01/12/2012,SISTEMA,100,1850
+2012,12,32,4,12,1407,0119.1040,2,S,1,6,9,,42,42,,25,595,,,01/12/2012,SISTEMA,100,1850
+2012,12,32,4,12,1407,0119.4020,1,N,1,7,9,,15,15,,157,10467,,,01/12/2012,SISTEMA,100,660
+2012,12,32,4,12,1407,0119.4020,2,N,1,6,9,,12,12,,127,10583,,,10/12/2012,PAULOROBERTOMOURA,100,771.5
+2012,12,32,4,12,1407,0119.4040,0,N,1,6,9,0,80,80,0,1200,15000,210.00,,06/12/2012,NEIDIMAR,100,3.09
+2012,12,32,4,12,1407,0121.1260,0,N,1,6,9,,60,60,,1800,30000,,,10/12/2012,PAULOROBERTOMOURA,100,276.09
+2012,12,32,4,12,1407,0121.2060,0,S,1,6,9,,25,25,,750,30000,,,10/12/2012,PAULOROBERTOMOURA,100,2850
+2012,12,32,4,12,1407,0121.2100,0,N,1,6,9,,130,130,,6680,51385,,,10/12/2012,PAULOROBERTOMOURA,100,922
+2012,12,32,4,12,1407,0121.3040,0,N,1,6,9,,10,10,,80,8000,,,10/12/2012,PAULOROBERTOMOURA,100,1220
+2012,12,32,4,12,1407,0121.3060,0,S,1,6,9,,3,3,0,30,10000,800.00,,10/12/2012,NEIDIMAR,100,824
+2012,12,32,4,12,1407,0121.3080,0,S,1,6,9,,10,10,,60,6000,,,10/12/2012,PAULOROBERTOMOURA,100,620
+2012,12,32,4,12,1407,0121.3110,0,N,1,6,8,,30,30,,360,12000,,Rendimento médio alterado por correção da informação anterior.,10/12/2012,PAULOROBERTOMOURA,100,810
+2012,12,32,4,12,1407,0121.3110,0,S,1,6,9,,30,30,,405,13500,,,10/12/2012,PAULOROBERTOMOURA,100,753.75
+2012,12,32,4,12,1407,0131.0010,0,N,1,6,9,0,9,9,,108,12000,,,10/12/2012,PAULOROBERTOMOURA,100,620
+2012,12,32,4,12,1407,0132.0010,0,N,1,6,8,1,2,2,,20,10000,,Baixo rendimento por se tratar de lavouras novas e parreirais ainda pequenos.,01/12/2012,SISTEMA,100,2000
+2012,12,32,4,12,1407,0132.0020,0,N,1,6,8,0,2,2,0,20,10000,1710.00,Baixo rendimento por se tratar de lavouras novas e parreirais ainda pequenos.,06/12/2012,NEIDIMAR,100,4000
+2012,12,32,4,12,1407,0132.0020,0,S,1,6,8,0,2,2,,25,12500,,Baixo rendimento por se tratar de lavouras novas e parreirais ainda pequenos.,01/12/2012,SISTEMA,100,1710
+2012,12,32,4,12,1407,0133.1070,0,N,1,6,9,2,5,5,,100,20000,,,10/12/2012,PAULOROBERTOMOURA,100,380.75
+2012,12,32,4,12,1407,0133.2010,0,N,1,6,9,2,10,10,,100,10000,,,01/12/2012,SISTEMA,100,620
+2012,12,32,4,12,1407,0133.2080,0,N,1,6,9,0,250,250,,2375,9500,,"ESPÉCIES E ÁREAS: PRATA 65%, NANICA 25% E TERRA 10%",10/12/2012,PAULOROBERTOMOURA,100,320.65
+2012,12,32,4,12,1407,0133.2220,0,N,1,6,8,0,2,2,,24,12000,,Baixo rendimento por se tratar de plantios antigos com poucos tratos culturais.,10/12/2012,PAULOROBERTOMOURA,100,912.5
+2012,12,32,4,12,1407,0133.2340,0,N,1,6,9,0,2,2,,20,10000,,,10/12/2012,PAULOROBERTOMOURA,100,225
+2012,12,32,4,12,1407,0133.3030,0,N,1,6,9,0,25,25,,238,9520,,,10/12/2012,PAULOROBERTOMOURA,100,450
+2012,12,32,4,12,1407,0133.3050,0,N,3,6,9,2,33,33,0,44,1333,4200.00,,10/12/2012,PAULOROBERTOMOURA,100,4220
+2012,12,32,4,12,1407,0134.0021,0,N,1,6,9,415,5385,5385,,5169,960,,,10/12/2012,PAULOROBERTOMOURA,100,4732.5
+2012,12,32,4,12,1407,0134.0022,0,N,1,6,9,600,3640,3640,,4628,1271,,,10/12/2012,PAULOROBERTOMOURA,100,4396
+2012,12,32,4,12,1407,0134.0022,0,S,1,6,9,600,1560,1560,,1984,1272,,,10/12/2012,PAULOROBERTOMOURA,100,4396
+2012,12,32,4,12,1407,0139.9060,0,N,1,6,9,0,120,120,0,120,1000,4500.00,,06/12/2012,NEIDIMAR,100,1290
+2012,12,32,4,12,3106,0111.0020,1,N,9,6,9,,2,2,,8,4000,,menor áre prevista devido alto custo de produção.,05/12/2012,MARCIAV,100,830
+2012,12,32,4,12,3106,0111.0070,1,N,9,6,9,,400,400,,720,1800,,,05/12/2012,MARCIAV,100,500
+2012,12,32,4,12,3106,0119.1040,1,N,9,6,9,,5,5,,2,400,,Confirmado o RM/HA,05/12/2012,MARCIAV,100,2990.1
+2012,12,32,4,12,3106,0119.1040,2,N,9,6,9,,30,30,,18,600,,,05/12/2012,MARCIAV,100,2400
+2012,12,32,4,12,3106,0119.2050,0,N,9,6,9,0,40,40,,600,15000,,Confirmado o RM/ha,05/12/2012,MARCIAV,100,40
+2012,12,32,4,12,3106,0119.4040,0,N,9,0,8,0,0,0,,0,0,,"Acerto da área, foi passada para mandioca de mesa.",05/12/2012,MARCIAV,0,0
+2012,12,32,4,12,3106,0131.0010,0,N,9,6,9,60,70,70,,1050,15000,,,05/12/2012,MARCIAV,100,541.25
+2012,12,32,4,12,3106,0133.2340,0,N,9,0,7,0,0,0,,0,0,,Area retirada do levantamento pois o plantio comercia que existia foi transformado em pastagens ficando os pés esparsos não sendo possível fazer o acompanhamento da cultura,05/12/2012,MARCIAV,0,0
+2012,12,32,4,12,3106,0133.3030,0,N,9,6,9,0,20,20,,200,10000,,,05/12/2012,MARCIAV,100,500
+2012,12,32,4,12,3106,0134.0021,0,N,9,6,9,42,178,178,,170,955,,,05/12/2012,MARCIAV,100,5213.1
+2012,12,32,4,12,3106,0134.0022,0,N,9,6,9,220,2000,2000,,3432,1716,,,05/12/2012,MARCIAV,100,4165
+2012,12,32,4,12,3106,9119.4040,0,N,9,6,8,0,10,10,,200,20000,,"Acerto da área, estava sendo informada como para industria.",05/12/2012,MARCIAV,100,500
+2012,12,32,4,12,3403,0111.0020,1,N,1,6,9,,40,40,,137,3425,,,01/12/2012,SISTEMA,100,735
+2012,12,32,4,12,3403,0111.0070,1,N,1,7,9,,850,850,,1700,2000,,,01/12/2012,SISTEMA,100,475
+2012,12,32,4,12,3403,0119.1040,1,N,1,7,9,,15,15,,9,600,,,01/12/2012,SISTEMA,100,1811.59
+2012,12,32,4,12,3403,0119.1040,2,N,1,6,9,,100,100,,60,600,,,01/12/2012,SISTEMA,100,1850
+2012,12,32,4,12,3403,0119.4040,0,N,1,6,9,0,200,200,,3000,15000,,,10/12/2012,PAULOROBERTOMOURA,100,264.75
+2012,12,32,4,12,3403,0131.0010,0,N,1,6,9,0,30,30,,330,11000,,,01/12/2012,SISTEMA,100,620
+2012,12,32,4,12,3403,0133.2080,0,N,1,6,9,30,1020,1020,,4896,4800,,"ESPÉCIES E ÁREAS: PRATA 80%, NANICA 15% E TERRA 5%.",10/12/2012,PAULOROBERTOMOURA,100,335.25
+2012,12,32,4,12,3403,0133.2220,0,N,1,6,8,0,3,3,,24,8000,,Baixa produtividade por motivo de falta de tratos culturais na maior parte das áreas de plantios.,01/12/2012,SISTEMA,100,787.5
+2012,12,32,4,12,3403,0133.3030,0,N,1,6,8,0,80,80,,640,8000,,Baixo rendimento devido a existencia de elevado número de lavouras sem receber os devidos tratos.,10/12/2012,PAULOROBERTOMOURA,100,499.8
+2012,12,32,4,12,3403,0134.0021,0,N,1,6,9,618,6162,6162,,6285,1020,,,10/12/2012,PAULOROBERTOMOURA,100,4741.5
+2012,12,32,4,12,3403,0134.0022,0,N,1,6,9,400,2800,2800,,3802,1358,,,10/12/2012,PAULOROBERTOMOURA,100,4322
+2012,12,32,4,12,3403,0134.0022,0,S,1,6,9,400,700,700,,950,1357,,,10/12/2012,PAULOROBERTOMOURA,100,4322
+2012,12,32,4,12,3403,0139.2010,0,N,1,6,9,0,311,311,,373,1199,,,10/12/2012,PAULOROBERTOMOURA,100,2700
+2012,12,32,4,12,3403,0139.9060,0,N,1,6,9,0,15,15,,15,1000,,,10/12/2012,PAULOROBERTOMOURA,100,1137
+2012,12,32,4,12,3809,0111.0020,1,N,1,6,9,,20,20,,64,3200,,,01/12/2012,SISTEMA,100,720
+2012,12,32,4,12,3809,0111.0070,1,N,1,7,9,,800,800,,1600,2000,,,10/12/2012,PAULOROBERTOMOURA,100,450
+2012,12,32,4,12,3809,0119.1040,1,N,1,7,9,,10,10,,6,600,,,01/12/2012,SISTEMA,100,1500
+2012,12,32,4,12,3809,0119.1040,2,N,1,6,9,,20,20,,12,600,,,01/12/2012,SISTEMA,100,2000
+2012,12,32,4,12,3809,0119.4040,0,N,1,6,9,0,25,25,,375,15000,,,10/12/2012,PAULOROBERTOMOURA,100,275
+2012,12,32,4,12,3809,0119.4040,0,S,9,0,7,0,0,0,,0,0,,"Não existe o produto irrigado, no município.",01/12/2012,SISTEMA,1,240
+2012,12,32,4,12,3809,0131.0010,0,N,1,6,9,1,11,11,,136,12364,,,10/12/2012,PAULOROBERTOMOURA,100,620
+2012,12,32,4,12,3809,0133.2080,0,N,1,6,9,5,90,90,,648,7200,,,10/12/2012,PAULOROBERTOMOURA,100,335.25
+2012,12,32,4,12,3809,0133.2080,0,S,1,0,8,0,0,0,,0,0,,INFORMAÇÕES EXCLUÍDAS POR SE TRATAR DE LAVOURAS SEM QUAISQUER IRRIGAÇÕES. LANÇADAS EM CAMPO PRÓPRIO.,01/12/2012,SISTEMA,0,0
+2012,12,32,4,12,3809,0133.2360,0,N,1,6,8,0,2,2,,20,10000,,"Menor rendimento por se tratar lavouras velhas, dotadas de poucos tratos culturais.",10/12/2012,PAULOROBERTOMOURA,100,765
+2012,12,32,4,12,3809,0133.3030,0,N,1,6,9,0,5,5,,48,9600,,,10/12/2012,PAULOROBERTOMOURA,100,499.8
+2012,12,32,4,12,3809,0134.0021,0,N,1,6,9,95,985,985,,887,901,,,01/12/2012,SISTEMA,100,4728
+2012,12,32,4,12,3809,0134.0022,0,N,1,6,9,428,2850,2850,,3357,1178,,,01/12/2012,SISTEMA,100,4419.5
+2012,12,32,4,12,3809,0134.0022,0,S,1,6,9,23,150,150,,177,1180,,,01/12/2012,SISTEMA,100,4419.5
+2012,12,32,4,12,4807,0111.0020,1,N,9,6,9,,5,5,,15,3000,,,05/12/2012,MARCIAV,100,800
+2012,12,32,4,12,4807,0111.0070,1,N,9,6,9,,200,200,,400,2000,,,05/12/2012,MARCIAV,100,506
+2012,12,32,4,12,4807,0119.1040,1,N,9,6,9,,30,30,,15,500,,,05/12/2012,MARCIAV,100,2960
+2012,12,32,4,12,4807,0119.1040,2,N,9,6,9,,30,30,,15,500,,CONFIRMADO RM,05/12/2012,MARCIAV,100,3500
+2012,12,32,4,12,4807,0119.2050,0,N,9,6,8,0,40,40,,2400,60000,,"Área reavaliada, expansão da bovinocultura.",05/12/2012,MARCIAV,100,60
+2012,12,32,4,12,4807,0119.2050,0,S,9,6,8,0,10,10,,800,80000,,"Área reavaliada, por estar subestimada, expansao da bovinocultura.",01/12/2012,SISTEMA,100,60
+2012,12,32,4,12,4807,0119.4040,0,N,9,0,8,0,0,0,,0,0,,Acerto de área passou para mesa.,05/12/2012,MARCIAV,1,150
+2012,12,32,4,12,4807,0131.0010,0,N,9,6,8,5,44,44,,484,11000,,"Area em produção reavaliada, erradicação das lavouras muito velhas. Plantio de 5 ha no ano com incentivo do programa de distribuição de mudas pelo governo do estado.",05/12/2012,MARCIAV,100,900
+2012,12,32,4,12,4807,0133.1040,0,N,9,6,8,0,1,1,,22,22000,,Inclusão do produto pelo Técnico do Incaper.,05/12/2012,MARCIAV,100,2000
+2012,12,32,4,12,4807,0133.1070,0,N,9,6,9,0,3,3,,45,15000,,,05/12/2012,MARCIAV,100,1000
+2012,12,32,4,12,4807,0133.2080,0,N,9,6,9,10,50,50,,600,12000,,Plantio de 10 ha no ano.,05/12/2012,MARCIAV,100,287
+2012,12,32,4,12,4807,0133.2360,0,N,1,4,8,0,0,0,,0,0,,EXCLUSÃO DA ÁREA A CULTURA É IRRIGADA.,05/12/2012,MARCIAV,0,0
+2012,12,32,4,12,4807,0133.2360,0,S,9,6,8,0,3,3,,75,25000,,Área em produção reavaliada foram detectados mais 1 ha.,05/12/2012,MARCIAV,100,1400
+2012,12,32,4,12,4807,0133.3030,0,N,9,6,9,0,9,9,,45,5000,,"RM/HA BAIXO DEVIODO AS LAVOURAS NÃO SEREM TRATADAS. Área em formação reavaliada, toda área está em produção.",05/12/2012,MARCIAV,100,370
+2012,12,32,4,12,4807,0134.0021,0,N,9,6,8,300,2700,2700,,2400,889,,Maior Rm/ha em função das condições de clima favoráveis na safra.,05/12/2012,MARCIAV,100,5000
+2012,12,32,4,12,4807,0134.0022,0,N,9,6,9,11,389,389,,373,959,,,05/12/2012,MARCIAV,100,4660
+2012,12,32,4,12,4807,0139.9060,0,N,9,6,8,0,4,4,,6,1500,,"Detectadas novas áreas no município, proveniente de programa de incentivo da Prefeitura Municipal.",05/12/2012,MARCIAV,100,4050
+2012,12,32,4,12,4807,9119.4040,0,N,9,6,8,0,60,60,,900,15000,,Acerto da área estava sendo informada como para industria.,05/12/2012,MARCIAV,100,450
+2012,12,32,4,12,5036,0111.0020,1,N,1,6,9,,5,5,,10,2000,,,01/12/2012,SISTEMA,100,750
+2012,12,32,4,12,5036,0111.0070,1,N,1,7,9,,800,800,,1280,1600,,,01/12/2012,SISTEMA,100,435
+2012,12,32,4,12,5036,0113.0010,0,N,1,6,9,0,30,30,0,1200,40000,45.00,A COMEA confirma o rendimento por se tratar de plantios em lugares mais frios onde a produtividade normalmente é menor.,06/12/2012,NEIDIMAR,100,250
+2012,12,32,4,12,5036,0119.1040,1,N,1,6,9,,200,200,,120,600,,,01/12/2012,SISTEMA,100,1400
+2012,12,32,4,12,5036,0119.1040,2,N,1,6,9,,400,400,,240,600,,,01/12/2012,SISTEMA,100,1917.5
+2012,12,32,4,12,5036,0119.4020,1,N,1,6,9,,5,5,,60,12000,,,01/12/2012,SISTEMA,100,640
+2012,12,32,4,12,5036,0119.4040,0,N,1,6,9,0,40,40,,500,12500,,,10/12/2012,PAULOROBERTOMOURA,100,247.5
+2012,12,32,4,12,5036,0121.1260,0,N,1,6,9,,3,3,0,60,20000,260.00,,06/12/2012,NEIDIMAR,100,380
+2012,12,32,4,12,5036,0121.2060,0,S,1,6,9,,3,3,,90,30000,,,01/12/2012,SISTEMA,100,2750
+2012,12,32,4,12,5036,0121.2100,0,N,2,6,9,,40,40,,2400,60000,,,10/12/2012,PAULOROBERTOMOURA,100,1307.5
+2012,12,32,4,12,5036,0121.3040,0,N,1,4,9,,3,3,,84,28000,,,01/12/2012,SISTEMA,0,1220
+2012,12,32,4,12,5036,0121.3110,0,N,1,6,9,,10,10,,90,9000,,,10/12/2012,PAULOROBERTOMOURA,100,781.35
+2012,12,32,4,12,5036,0121.3110,0,S,1,6,9,,60,60,,600,10000,,,10/12/2012,PAULOROBERTOMOURA,100,781.35
+2012,12,32,4,12,5036,0131.0010,0,N,1,6,9,0,20,20,,300,15000,,,01/12/2012,SISTEMA,100,520
+2012,12,32,4,12,5036,0132.0010,0,N,1,6,9,0,3,3,,37,12333,,,01/12/2012,SISTEMA,100,2200
+2012,12,32,4,12,5036,0132.0010,0,S,1,6,9,0,3,3,,38,12667,,,01/12/2012,SISTEMA,100,2200
+2012,12,32,4,12,5036,0133.1070,0,N,1,6,9,0,4,4,,76,19000,,,01/12/2012,SISTEMA,100,450
+2012,12,32,4,12,5036,0133.1070,0,S,1,6,9,0,6,6,,126,21000,,,01/12/2012,SISTEMA,100,480
+2012,12,32,4,12,5036,0133.2010,0,N,1,6,9,0,85,85,,1020,12000,,,10/12/2012,PAULOROBERTOMOURA,100,565
+2012,12,32,4,12,5036,0133.2080,0,N,1,6,9,50,750,750,,6300,8400,,,01/12/2012,SISTEMA,100,365.15
+2012,12,32,4,12,5036,0133.2080,0,S,1,0,9,0,0,0,,0,0,,iNFORMAÇÕES EXCLUÍDAS POR SE TRATAR DE LAVOURAS NÃO IRRIGADAS.,01/12/2012,SISTEMA,0,0
+2012,12,32,4,12,5036,0134.0021,0,N,1,6,9,380,10420,10420,,10836,1040,,,01/12/2012,SISTEMA,100,4735
+2012,12,32,4,12,5036,0134.0022,0,N,1,6,9,150,750,750,,765,1020,,,01/12/2012,SISTEMA,100,4382
+2012,12,32,4,13,2801,0111.0070,1,N,1,7,9,,50,50,,100,2000,,,01/12/2012,SISTEMA,100,580
+2012,12,32,4,13,2801,0111.0070,2,N,1,7,9,,50,50,,100,2000,,"cultura sem adubação, rendimento baixo",04/12/2012,ELIOMARPIMENTEL,100,535
+2012,12,32,4,13,2801,0113.0010,0,N,1,7,9,500,6500,6500,0,390000,60000,50.00,Área revisada de acordo com os dados da Usina Paineras e Cooperativa.,04/12/2012,ELIOMARPIMENTEL,100,54
+2012,12,32,4,13,2801,0119.1040,1,N,1,7,9,,20,20,,7,350,,cultura sem trato reduziu rendimento,01/12/2012,SISTEMA,100,1360
+2012,12,32,4,13,2801,0119.1040,2,N,1,7,9,,20,20,,7,350,,"cultura sem trato e adubação, baixo rendimento",04/12/2012,ELIOMARPIMENTEL,100,2210
+2012,12,32,4,13,2801,0119.3010,0,N,1,7,9,150,150,150,0,3300,22000,900.00,,04/12/2012,ELIOMARPIMENTEL,100,1050
+2012,12,32,4,13,2801,0119.4040,0,N,1,7,9,0,800,800,0,16000,20000,480.00,,04/12/2012,ELIOMARPIMENTEL,100,314
+2012,12,32,4,13,2801,0121.2100,0,N,2,3,7,,0,0,,0,0,,,01/12/2012,SISTEMA,0,0
+2012,12,32,4,13,2801,0121.3110,0,N,2,0,7,,0,0,,0,0,,,01/12/2012,SISTEMA,0,0
+2012,12,32,4,13,2801,0131.0010,0,N,1,7,9,0,15,15,,150,10000,,,04/12/2012,ELIOMARPIMENTEL,100,665
+2012,12,32,4,13,2801,0133.2080,0,N,1,7,9,0,40,40,0,142,3550,700.00,"rendimento confirmado na reunião, muito baixo. 85% da área é de banana prata",04/12/2012,ELIOMARPIMENTEL,100,737.5
+2012,12,32,4,13,2801,0133.2220,0,N,1,7,9,0,3,3,0,36,12000,700.00,rendimento confirmado,04/12/2012,ELIOMARPIMENTEL,100,705
+2012,12,32,4,13,2801,0133.2330,0,S,1,7,9,0,10,10,0,600,60000,2300.00,mamão papaya,04/12/2012,ELIOMARPIMENTEL,100,1200
+2012,12,32,4,13,2801,0133.2360,0,N,2,0,7,0,0,0,,0,0,,,01/12/2012,SISTEMA,0,0
+2012,12,32,4,13,2801,0133.3030,0,N,1,7,9,0,70,50,,500,10000,,"Área abandonada, virou pasto.",04/12/2012,ELIOMARPIMENTEL,100,520
+2012,12,32,4,13,2801,0134.0022,0,N,1,7,9,40,360,360,,272,756,,"Dados da área em produção reavaliados, rendimento baixo devido a falta de tratos culturais e de adubação",04/12/2012,ELIOMARPIMENTEL,100,4050
+2012,12,32,4,13,2801,0139.2010,0,N,1,7,9,11,53,53,0,66,1245,2800.00,,04/12/2012,ELIOMARPIMENTEL,100,2880
+2012,12,32,4,13,3320,0113.0010,0,N,1,7,9,500,2000,2000,0,120000,60000,50.00,"Remdimento médio reavaliado pelo tecnico, área realvaliada pela cooperativa",04/12/2012,ELIOMARPIMENTEL,100,54
+2012,12,32,4,13,3320,0119.3010,0,N,1,7,9,100,1400,1400,0,30800,22000,900.00,espera-se melhor rendimento,04/12/2012,ELIOMARPIMENTEL,100,1017.5
+2012,12,32,4,13,3320,0119.3010,0,S,1,7,9,14,14,14,0,308,22000,900.00,,04/12/2012,ELIOMARPIMENTEL,100,1017.5
+2012,12,32,4,13,3320,0119.4040,0,N,1,7,9,0,350,350,0,6300,18000,480.00,,04/12/2012,ELIOMARPIMENTEL,100,314
+2012,12,32,4,13,3320,0133.2360,0,N,1,7,9,0,10,10,0,300,30000,1300.00,Dados informados pelo INCAPER.,04/12/2012,ELIOMARPIMENTEL,100,1280
+2012,12,32,4,13,3320,0133.3030,0,N,1,7,9,0,10,10,0,100,10000,500.00,,04/12/2012,ELIOMARPIMENTEL,100,500
+2012,12,32,4,13,3320,0139.2010,0,N,1,7,9,0,15,15,0,15,1000,2800.00,,04/12/2012,ELIOMARPIMENTEL,100,2835
+2012,12,32,4,13,4302,0111.0020,1,N,1,7,9,,5,5,,10,2000,,"cultura sem expressão, estão fazendo rodizio de cultura.",04/12/2012,ELIOMARPIMENTEL,100,665
+2012,12,32,4,13,4302,0111.0070,1,N,1,7,9,,100,100,,330,3300,,cultura recebe tratos culturais e adubação,01/12/2012,SISTEMA,100,642
+2012,12,32,4,13,4302,0111.0070,2,N,1,5,9,,40,40,,132,3300,,"Revista a área planta para grãos, a maior parte é plantada para silos",04/12/2012,ELIOMARPIMENTEL,100,500
+2012,12,32,4,13,4302,0113.0010,0,N,1,7,9,0,2300,2300,0,115000,50000,50.00,Cultura recebe tratos culturais,04/12/2012,ELIOMARPIMENTEL,100,55
+2012,12,32,4,13,4302,0119.1040,1,N,1,7,9,,5,5,,3,600,,Cultura sem adubação ou irrigação. confirmo redução da área,01/12/2012,SISTEMA,100,3400
+2012,12,32,4,13,4302,0119.1040,2,N,1,6,9,,15,15,,12,800,,rendimento baixo devido a falta de adubação,04/12/2012,ELIOMARPIMENTEL,100,2425
+2012,12,32,4,13,4302,0119.2050,0,N,1,5,9,0,150,150,,3300,22000,,,01/12/2012,SISTEMA,60,43.83
+2012,12,32,4,13,4302,0119.3010,0,N,1,7,9,600,500,500,0,11000,22000,950.00,tendencia é aumentar a área plantada,04/12/2012,ELIOMARPIMENTEL,100,1094
+2012,12,32,4,13,4302,0119.3020,0,N,1,7,9,,30,30,0,600,20000,700.00,,04/12/2012,ELIOMARPIMENTEL,100,720
+2012,12,32,4,13,4302,0119.4040,0,N,1,7,9,0,1900,1900,0,38000,20000,500.00,,04/12/2012,ELIOMARPIMENTEL,100,328
+2012,12,32,4,13,4302,0119.9010,0,N,1,7,9,,110,110,0,1200,10909,1200.00,"Maior demanda, aumentou a área plantada. Cultura de abobora maranhão",04/12/2012,ELIOMARPIMENTEL,100,725
+2012,12,32,4,13,4302,0121.2100,0,N,1,7,9,,1,1,0,60,60000,1200.00,"rodizio de cultura, área sem expressão",04/12/2012,ELIOMARPIMENTEL,100,1198
+2012,12,32,4,13,4302,0121.3050,0,N,1,7,9,,5,5,,50,10000,,"Não se tem conhecimento do rendimento, adotar a média estadual",04/12/2012,ELIOMARPIMENTEL,100,875
+2012,12,32,4,13,4302,0131.0010,0,N,1,7,9,0,10,10,0,150,15000,600.00,,04/12/2012,ELIOMARPIMENTEL,100,680
+2012,12,32,4,13,4302,0133.1040,0,N,1,7,9,3,3,3,0,15,5000,1100.00,Cultura iniciando produção,04/12/2012,ELIOMARPIMENTEL,100,857
+2012,12,32,4,13,4302,0133.2080,0,N,1,7,9,2,40,40,0,400,10000,800.00,predomina a banana prata,04/12/2012,ELIOMARPIMENTEL,100,820
+2012,12,32,4,13,4302,0133.2330,0,S,1,7,9,8,3,3,0,220,73333,2200.00,"papya - grande parte da área foi erradicada,",04/12/2012,ELIOMARPIMENTEL,100,1681
+2012,12,32,4,13,4302,0133.2340,0,N,1,7,8,1,7,7,0,80,11429,1800.00,retificado a área,04/12/2012,ELIOMARPIMENTEL,100,1785
+2012,12,32,4,13,4302,0133.2360,0,N,1,7,9,12,30,30,0,660,22000,1300.00,,04/12/2012,ELIOMARPIMENTEL,100,1341
+2012,12,32,4,13,4302,0133.3030,0,N,1,7,9,10,55,55,0,1320,24000,500.00,,04/12/2012,ELIOMARPIMENTEL,100,500
+2012,12,32,4,13,4302,0134.0022,0,N,1,7,9,30,450,450,,518,1151,,Dados da área em produção reavaliados pelo tenico da incaper,04/12/2012,ELIOMARPIMENTEL,100,4190
+2012,12,32,4,13,4302,0139.2010,0,N,1,7,9,10,50,50,0,60,1200,2800.00,,04/12/2012,ELIOMARPIMENTEL,100,2587.5
